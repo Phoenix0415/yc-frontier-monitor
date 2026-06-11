@@ -161,6 +161,12 @@ section > h2 { font-size: 21px; margin: 0 0 4px; }
 .badge.new { color: var(--green); background: var(--green-soft); }
 .badge.hiring { color: var(--blue); background: var(--blue-soft); }
 .badge.star { color: var(--accent); background: var(--accent-soft); }
+/* verdicts: one color per action, undecided = grey (SPEC §5) */
+.badge.v-build { color: var(--green); background: var(--green-soft); }
+.badge.v-copy { color: var(--blue); background: var(--blue-soft); }
+.badge.v-partner { color: #c4b5fd; background: rgba(167, 139, 250, .15); }
+.badge.v-ignore { color: var(--muted); background: var(--panel-2); text-decoration: line-through; }
+.badge.v-undecided { color: var(--muted); background: transparent; border: 1px dashed var(--line); }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .chip {
   font-size: 11.5px; color: var(--muted);

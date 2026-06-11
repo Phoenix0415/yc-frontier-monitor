@@ -18,6 +18,50 @@ from store import (ANALYSIS_PATH, CHANGELOG_PATH, CONFIG_PATH, DIST_DIR,
 EMPTY_WATCHLIST = {"updated_at": None, "summary": [], "methodology": "",
                    "themes": [], "picks": []}
 
+# verdict semantics (SPEC §5): build = we build in this space ourselves,
+# copy = adapt the model for the China market, partner = integration/channel
+# candidate, ignore = reviewed, not relevant. Absent verdict = undecided.
+VERDICT_ACTIONS = ("build", "copy", "partner", "ignore")
+
+
+def _bad_date(value):
+    """True unless value parses as an ISO date or datetime."""
+    for parse in (date.fromisoformat, datetime.fromisoformat):
+        try:
+            parse(value)
+            return False
+        except (TypeError, ValueError):
+            pass
+    return True
+
+
+def validate_watchlist(wl):
+    """Fail the build loudly on schema violations; absent keys are fine.
+
+    Checks the Phase-1 keys (SPEC §5): picked_at / verdict.decided_at must be
+    ISO dates, verdict.action must be one of VERDICT_ACTIONS.
+    """
+    problems = []
+    for p in wl.get("picks", []):
+        where = "pick %r" % p.get("slug", "?")
+        if p.get("picked_at") is not None and _bad_date(p["picked_at"]):
+            problems.append("%s: picked_at %r is not an ISO date" % (where, p["picked_at"]))
+        v = p.get("verdict")
+        if v is None:
+            continue
+        if not isinstance(v, dict):
+            problems.append("%s: verdict must be an object" % where)
+            continue
+        if v.get("action") not in VERDICT_ACTIONS:
+            problems.append("%s: verdict.action %r must be one of %s"
+                            % (where, v.get("action"), "/".join(VERDICT_ACTIONS)))
+        if v.get("decided_at") is not None and _bad_date(v["decided_at"]):
+            problems.append("%s: verdict.decided_at %r is not an ISO date"
+                            % (where, v["decided_at"]))
+    if problems:
+        raise SystemExit("analysis/watchlist.json failed validation:\n  "
+                         + "\n  ".join(problems))
+
 
 def build_payload():
     cfg = load_json(CONFIG_PATH, {})
@@ -42,6 +86,7 @@ def build_payload():
 
 def build():
     payload = build_payload()
+    validate_watchlist(payload["watchlist"])
     known = {c["slug"] for b in payload["batches"] for c in b["companies"]}
     for pick in payload["watchlist"].get("picks", []):
         if pick["slug"] not in known:

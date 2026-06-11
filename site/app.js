@@ -52,6 +52,9 @@
       pitchNote: "Auto-extracted from the company's own description — can reference a previous company or a problem statement, not necessarily this company's traction",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
+      verdictBuild: "build", verdictCopy: "copy", verdictPartner: "partner",
+      verdictIgnore: "ignore", verdictUndecided: "undecided",
+      decisionLabel: "Decision:",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
       firstSeen: "first seen {d}",
       searchPh: "Search name, pitch, tags…",
@@ -96,6 +99,9 @@
       pitchNote: "自动从公司自述中提取——可能指创始人上一家公司或问题陈述，不一定是这家公司自己的业绩",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
+      verdictBuild: "自建", verdictCopy: "复制", verdictPartner: "合作",
+      verdictIgnore: "忽略", verdictUndecided: "未定",
+      decisionLabel: "决策：",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
       firstSeen: "收录于 {d}",
       searchPh: "搜索名称、简介、标签…",
@@ -193,10 +199,22 @@
   const moreBlock = c => (c.long_description
     ? `<details class="more"><summary>${t("fullIntro")}</summary><p>${esc(c.long_description)}</p></details>` : "");
 
+  // verdict layer (SPEC §5): absent verdict renders as "undecided"
+  const VERDICT_KEYS = { build: "verdictBuild", copy: "verdictCopy",
+                         partner: "verdictPartner", ignore: "verdictIgnore" };
+  const verdictBadge = p => {
+    const v = p.verdict || null;
+    const action = v && VERDICT_KEYS[v.action] ? v.action : "undecided";
+    const decided = v && v.decided_at ? ` title="${esc(v.decided_at)}"` : "";
+    return `<span class="badge v-${action}"${decided}>${t(VERDICT_KEYS[action] || "verdictUndecided")}</span>`;
+  };
+  const verdictNote = p => (p.verdict && p.verdict.note
+    ? `<p class="why"><strong>${t("decisionLabel")}</strong> ${esc(loc(p.verdict.note))}</p>` : "");
+
   const companyCard = c => {
     const p = pickBySlug[c.slug];
     let badges = "";
-    if (p) badges += `<span class="badge star">${t("badgeWatchlist")}</span>`;
+    if (p) badges += `<span class="badge star">${t("badgeWatchlist")}</span>` + verdictBadge(p);
     if (c.new_in_last_update) badges += `<span class="badge new">${t("badgeNew")}</span>`;
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
     const tags = (c.tags || []).slice(0, 5)
@@ -221,9 +239,11 @@
       .map(s => `<span class="chip soft">${esc(s)}</span>`).join("");
     return `<article class="card pick">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
+      <div class="badges">${verdictBadge(p)}</div>
       <p class="oneliner">${esc(c.one_liner)}</p>
       <p class="why"><strong>${t("whyWatch")}</strong> ${esc(loc(p.why))}</p>
       <p class="learn"><strong>${t("worthLearning")}</strong> ${esc(loc(p.learn))}</p>
+      ${verdictNote(p)}
       ${signals ? `<div class="tags">${signals}</div>` : ""}
       <p class="meta">${metaLine(c)}</p>
       <div class="actions">${linkBtns(c)}</div>
