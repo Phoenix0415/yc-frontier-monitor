@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YC Frontier Monitor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="ylogo">Y</span>
+      <div>
+        <h1 id="site-title">YC Frontier Monitor</h1>
+        <p class="sub" id="site-sub"></p>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="report">Report</button>
+      <button class="tab" data-tab="companies">Companies</button>
+      <button class="tab" data-tab="updates">Updates</button>
+    </nav>
+    <div class="langswitch" id="lang-switch" role="group" aria-label="Language">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="zh">中文</button>
+    </div>
+  </div>
+</header>
+<main class="wrap" id="view"><noscript>This page needs JavaScript to render.</noscript></main>
+<footer class="wrap foot" id="foot"></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

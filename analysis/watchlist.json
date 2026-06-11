@@ -1,0 +1,946 @@
+{
+ "updated_at": "2026-06-11T04:00:00+00:00",
+ "summary": [
+  {
+   "en": "This report covers the 558 companies YC has publicly listed from Fall 2025 through today: Fall 2025 (148), Winter 2026 (198), Spring 2026 (194), plus early listings for Summer 2026 (15) and even Fall 2026 (3). The young batches keep filling in for months — that's what the update command is for. 81% of the cohort is explicitly AI/ML, and 43% of all companies mention agents. The question is no longer 'is it AI', but which layer of the AI economy a company occupies.",
+   "zh": "本报告覆盖 YC 自 2025 年秋季批次以来公开收录的全部 558 家公司：2025 秋季（148 家）、2026 冬季（198 家）、2026 春季（194 家），以及刚开始收录的 2026 夏季（15 家）和 2026 秋季（3 家）。年轻批次会在之后数月里持续补充——这正是 update 命令的用途。本期公司中 81% 明确属于 AI/ML，43% 提到智能体（agent）。如今的问题已不是“是不是 AI”，而是公司位于 AI 经济的哪一层。"
+  },
+  {
+   "en": "The clearest shift since earlier YC eras: startups are no longer selling software to professionals — they're replacing the firm itself. This cohort contains at least four AI-native law firms (all Winter 2026), AI accounting and audit firms, AI insurance brokerages and a carrier, an AI customs brokerage, an AI CRO for clinical trials, an AI FDA consultancy, and a one-person AI hedge fund. The pitch is services-market TAM at software margins, with pricing moving from seats to outcomes.",
+   "zh": "与以往 YC 时代相比，最明显的转变是：创业公司不再向专业人士卖软件，而是直接取代那家公司本身。本期至少有四家 AI 原生律师事务所（全部来自 2026 冬季批次）、AI 会计与审计事务所、AI 保险经纪与一家保险承保公司、一家 AI 报关行、一家服务临床试验的 AI CRO、一家 AI FDA 咨询公司，以及一家单人 AI 对冲基金。他们的逻辑是：以软件的毛利去吃服务市场的盘子，定价也从按席位转向按结果。"
+  },
+  {
+   "en": "Underneath the application layer, an 'agent economy' stack is forming fast: money rails for agents (Sponge, Agentcard, Allowance, Maven), identity and permissions (Agentic Fabriq, Didit, MultiFactor), liability insurance for deployed agents (Klaimee and Mount — two startups in the same new niche, same batch), reliability tooling (guardrails, simulation environments, drift monitoring, agent-safe sandboxes), and even labor markets where agents hire humans (RentAHuman, Humwork). This is the most direct read on where founders think the next platform shift is.",
+   "zh": "“智能体经济”的底层设施正在快速成形：给 agent 用的资金通道（Sponge、Agentcard、Allowance、Maven），身份与权限（Agentic Fabriq、Didit、MultiFactor），面向已部署 agent 的责任保险（Klaimee 与 Mount——同一批次撞进同一个全新细分），可靠性工具（运行时护栏、模拟环境、漂移监控、对 agent 安全的沙盒），甚至还有 agent 雇人类干活的劳务市场（RentAHuman、Humwork）。这是观察创业者押注下一次平台迁移方向的最直接窗口。"
+  },
+  {
+   "en": "Hard tech is back in force. Defense went from a fringe category in Fall 2025 (stratospheric surveillance aircraft, missile-defense satellites) to a visible cluster by Spring 2026: mass-produced strike drones, submarine drones, counter-drone systems, drone-detection radar, AI mission systems — plus rocket cargo delivery in the early Summer 2026 listings. Robotics rides the same wave, split between robot builders (humanoids for homes and elder care, farm robots) and the data supply chain feeding robotics foundation models (human-movement data, world models, robot evals).",
+   "zh": "硬科技强势回归。国防从 2025 秋季的零星个例（平流层侦察飞行器、反导卫星）到 2026 春季已是清晰可见的集群：量产攻击无人机、水下无人机、反无人机系统、无人机探测雷达、AI 任务系统——2026 夏季的早期名单里还出现了火箭货运。机器人沿着同一波浪潮，分成造机器人的（家用与养老人形机器人、农业机器人）和喂养机器人基础模型的数据供应链（人体动作数据、世界模型、机器人评测）。"
+  },
+  {
+   "en": "Two more structural signals. First, prediction markets are financializing: eight companies across the window are building their market data APIs, prime brokerage, institutional tooling, derivatives, and even an exchange for trading attention itself. Second, the frontier-lab supply chain has become a YC category: olympiad-grade reasoning data, rights-cleared multimodal data, training environments for AI research agents — and remarkably, François Chollet's ARC Prize Foundation and his AGI lab Ndea are both in Winter 2026.",
+   "zh": "另外两个结构性信号。其一，预测市场正在金融化：窗口期内有八家公司在为它修建行情数据 API、主经纪商、机构工具、衍生品，甚至一家直接交易“注意力”的交易所。其二，前沿实验室的供应链已经成为 YC 的一个品类：奥赛级推理数据、版权清晰的多模态数据、训练 AI 研究智能体的环境——更标志性的是，François Chollet 的 ARC Prize 基金会和他的 AGI 实验室 Ndea 双双出现在 2026 冬季批次。"
+  },
+  {
+   "en": "The texture of the companies themselves: tiny and traction-led. Median team size at listing is 3, roughly one in six is a solo founder, and only ~4% have 10+ people. About 70% of recent batches sit in the SF Bay Area (up from 64% in Fall 2025). And the traction bar has risen sharply — Spring 2026 listings routinely lead with revenue ($2.5M ARR profitable at 10 months, $500K ARR two months after launch), something Fall 2025 descriptions rarely did.",
+   "zh": "公司本身的质地：小而以收入说话。收录时团队规模中位数为 3 人，约六分之一是单人创始人，只有约 4% 的公司超过 10 人。最近批次约 70% 位于旧金山湾区（2025 秋季为 64%）。叙事方式也变了——2026 春季的公司常常开头就报收入（10 个月做到 250 万美元 ARR 且盈利、上线两个月 50 万美元 ARR），这在 2025 秋季的介绍里还很少见。"
+  }
+ ],
+ "methodology": {
+  "en": "Picks are editorial, not algorithmic: I read all 558 listed companies (one-liners, full descriptions, team size, founder count, stated traction) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Revenue figures are quoted only when the company claims them for itself (several descriptions cite founders' previous companies — those are flagged as pedigree, not traction). Not investment advice.",
+  "zh": "名单为人工编辑判断，而非算法筛选：我通读了全部 558 家公司（一句话简介、完整介绍、团队规模、创始人数、自述业绩），挑出最能说明前沿创业走向的公司——或因技术野心、或因切入点新颖、或因难以造假的业绩、或因定义品类的“怪”。收入数字只在公司为自己声明时引用（多家公司的介绍引用的是创始人上一家公司的数字——这类会被标注为履历而非业绩）。不构成投资建议。"
+ },
+ "themes": [
+  {
+   "id": "agent-economy",
+   "title": {
+    "en": "Rails for the agent economy",
+    "zh": "智能体经济的基础轨道"
+   },
+   "narrative": {
+    "en": "If agents are going to transact, someone has to build their bank accounts, their ID badges, and their insurance policies. This cohort is building all three. The tell: two Spring 2026 companies (Klaimee, Mount) independently picked 'liability insurance for deployed agents' as the wedge, while payments rails (Sponge, Agentcard, Allowance, Maven for voice), identity (Agentic Fabriq's 'Okta for agents', Didit), and agent-to-human labor markets (RentAHuman, Humwork) fill out the stack. When infrastructure founders cluster like this, they're betting the application layer is about to explode.",
+    "zh": "如果 agent 要参与交易，就得有人给它们办银行账户、发工牌、上保险。本期公司正同时把这三样都造出来。最能说明问题的是：两家 2026 春季公司（Klaimee、Mount）不约而同选了“已部署 agent 的责任保险”作为切入点；支付轨道（Sponge、Agentcard、Allowance、面向语音的 Maven）、身份（Agentic Fabriq 的“agent 版 Okta”、Didit）以及 agent 雇佣人类的市场（RentAHuman、Humwork）把这一层补齐。当基础设施创业者这样扎堆时，他们赌的是应用层即将爆发。"
+   }
+  },
+  {
+   "id": "agent-reliability",
+   "title": {
+    "en": "Making agents reliable enough to matter",
+    "zh": "让智能体可靠到能托付正事"
+   },
+   "narrative": {
+    "en": "The gap between demo and production is where this whole category lives: runtime guardrails (Salus), drift detection for long-running agents (BentoLabs), memory layers (Hyperspell), simulation worlds to train long-horizon agents (Polymath), fake-but-stateful API clones so agents can be tested without breaking production (Archal), browser layers built for agents rather than humans (StableBrowse), agent observability (Sentrial, Moda), and orchestration for fleets of background agents (Terminal Use). Anyone building agentic products will end up buying or rebuilding several of these.",
+    "zh": "Demo 与生产环境之间的鸿沟，养活了整个品类：运行时护栏（Salus）、长程 agent 的漂移检测（BentoLabs）、记忆层（Hyperspell）、训练长程 agent 的模拟世界（Polymath）、让 agent 不碰生产系统也能被测试的有状态 API 克隆（Archal）、为 agent 而非人类设计的浏览器层（StableBrowse）、agent 可观测性（Sentrial、Moda）、后台 agent 编排（Terminal Use）。做 agent 产品的团队，迟早要么买要么重造其中几样。"
+   }
+  },
+  {
+   "id": "ai-firms",
+   "title": {
+    "en": "AI doesn't sell the software — it becomes the firm",
+    "zh": "AI 不卖软件——它直接成为那家事务所"
+   },
+   "narrative": {
+    "en": "The most consequential business-model shift in the cohort. Winter 2026 alone listed four AI-native law firms (General Legal, Moritz, LegalOS, Vector Legal); around them: AI accounting firms (Cranston, Balance, Denki's audit firm), AI insurance brokerages (Casey, Fernstone, Panta) and a carrier (Mount), an AI customs brokerage (Alchemize), an AI recruiting agency (Prism), an AI CRO (Harbor), AI FDA consulting (Panacea), and an AI hedge fund (Standard Signal). These companies keep humans for the last 20% and judgment, charge for outcomes instead of seats, and attack labor budgets that dwarf software budgets.",
+    "zh": "这是本期最具分量的商业模式转变。仅 2026 冬季就有四家 AI 原生律所（General Legal、Moritz、LegalOS、Vector Legal）；周围还有 AI 会计事务所（Cranston、Balance、做审计的 Denki）、AI 保险经纪（Casey、Fernstone、Panta）和承保公司（Mount）、AI 报关行（Alchemize）、AI 猎头（Prism）、AI CRO（Harbor）、AI FDA 咨询（Panacea）、AI 对冲基金（Standard Signal）。这些公司把人留给最后 20% 和判断本身，按结果而非席位收费，攻击的是远大于软件预算的人力预算。"
+   }
+  },
+  {
+   "id": "lab-supply-chain",
+   "title": {
+    "en": "The frontier-lab supply chain",
+    "zh": "前沿实验室的供应链"
+   },
+   "narrative": {
+    "en": "Frontier labs' hunger for data, environments, and evaluation has spawned its own startup category. The high end is striking: olympiad-medalist-authored reasoning problems that frontier models score 0-5% on (Sciloop), training data aimed at making models into AI research scientists (hillclimb), rights-cleared multimodal data at scale (Luel, Velvet, Perfectbit), and a one-person lab attacking non-verifiable work (Traverse). Most telling, benchmark-and-research institutions themselves now route through YC: the ARC Prize Foundation and François Chollet's AGI lab Ndea are both Winter 2026.",
+    "zh": "前沿实验室对数据、环境与评测的饥渴，催生了独立的创业品类。高端部分相当惊人：奥赛奖牌得主出的、前沿模型只能得 0-5 分的推理题（Sciloop），旨在把模型训练成 AI 研究科学家的数据（hillclimb），规模化、版权清晰的多模态数据（Luel、Velvet、Perfectbit），还有单人攻关“不可验证工作”的实验室（Traverse）。最有标志性的是，基准与研究机构本身也开始走 YC：ARC Prize 基金会和 François Chollet 的 AGI 实验室 Ndea 同在 2026 冬季批次。"
+   }
+  },
+  {
+   "id": "physical-ai",
+   "title": {
+    "en": "Physical AI: the robots and the data they eat",
+    "zh": "具身智能：机器人，和喂它们的数据"
+   },
+   "narrative": {
+    "en": "Robotics here splits cleanly in two. Builders: artificial-muscle humanoids targeting iPhone-level price points (Piggy), elder-care semi-humanoids (Twolabs), strawberry-picking farm robots (Synphony), autonomous robotic factories (Tensr), warehouse robots (Inloop), even drone cowboys herding cattle (GrazeMate). And the supply chain feeding robot foundation models: human-movement data (Asimov), egocentric workplace data (Cortex), world models for robot training and evals (One Robot), robot data marketplaces (Hub.xyz, Shotwell). Valgo ties the room together: insurance risk models for autonomy, because nobody can price a robot's mistakes yet.",
+    "zh": "这里的机器人赛道清晰地一分为二。造机器人的：瞄准 iPhone 价位的人工肌肉人形机器人（Piggy）、养老半人形机器人（Twolabs）、草莓采摘农业机器人（Synphony）、全自动机器人工厂（Tensr）、仓库机器人（Inloop），甚至放牛的无人机牛仔（GrazeMate）。以及喂养机器人基础模型的供应链：人体动作数据（Asimov）、第一视角工作场景数据（Cortex）、机器人训练与评测的世界模型（One Robot）、机器人数据市场（Hub.xyz、Shotwell）。Valgo 把整个房间串起来：给自主系统做保险风险模型——因为眼下没人能给机器人的失误定价。"
+   }
+  },
+  {
+   "id": "hard-frontier",
+   "title": {
+    "en": "Defense, space, energy: the hard-tech rearmament",
+    "zh": "国防、太空、能源：硬科技再武装"
+   },
+   "narrative": {
+    "en": "Defense grew from a couple of Fall 2025 outliers into a visible Spring 2026 cluster (six Defense-subindustry companies, plus drones and aerospace adjacents): mass-produced strike drones (Tenet), submarine drones (AICE), counter-drone systems (Surtr), passive drone-tracking sensor meshes (Arlo), AI mission systems (9 Mothers, 19 people). Space follows (missile-defense satellites at Wardstone, in-space manufacturing, orbital solar, even in-orbit fusion at Zephyr), and the energy-for-compute theme runs underneath: AI-driven uranium exploration (Terranox), compact nuclear, datacenter cooling (Madrone), solar-powered datacenters. Geopolitics and the compute build-out are now first-class YC themes.",
+    "zh": "国防从 2025 秋季的两三个个例，长成 2026 春季肉眼可见的集群（六家国防子行业公司，外加无人机与航天相邻者）：量产攻击无人机（Tenet）、水下无人机（AICE）、反无人机系统（Surtr）、被动无人机追踪传感网（Arlo）、AI 任务系统（19 人的 9 Mothers）。太空紧随其后（Wardstone 的反导卫星、太空制造、轨道太阳能、Zephyr 的在轨聚变），算力的能源主题在底下贯穿始终：AI 找铀（Terranox）、紧凑核电、数据中心冷却（Madrone）、太阳能数据中心。地缘政治与算力建设已是 YC 的一级主题。"
+   }
+  },
+  {
+   "id": "prediction-markets",
+   "title": {
+    "en": "Prediction markets become an asset class",
+    "zh": "预测市场长成一个资产类别"
+   },
+   "narrative": {
+    "en": "Eight companies across the window are industrializing event markets: unified data APIs (Dome), prime brokerage (River), institutional analytics (Oddpool), cross-venue execution (Sequence), derivatives (Totalis), belief-to-market search (ValCtrl), retail platforms (Valence) — and Forum, an exchange for trading attention itself. This is the classic financialization sequence (data → brokerage → derivatives) compressed into three batches, betting that Kalshi/Polymarket volume becomes a permanent market structure.",
+    "zh": "窗口期内八家公司在把事件市场工业化：统一数据 API（Dome）、主经纪商（River）、机构分析（Oddpool）、跨场所执行（Sequence）、衍生品（Totalis）、信念到市场的搜索（ValCtrl）、零售平台（Valence）——还有 Forum，一家直接交易“注意力”的交易所。这是经典的金融化序列（数据 → 经纪 → 衍生品）被压缩进三个批次，赌的是 Kalshi/Polymarket 的交易量会成为永久的市场结构。"
+   }
+  },
+  {
+   "id": "traction",
+   "title": {
+    "en": "Tiny teams, real revenue: the new GTM playbook",
+    "zh": "极小团队、真实收入：新的增长打法"
+   },
+   "narrative": {
+    "en": "The loudest cultural change between Fall 2025 and Spring 2026 listings: companies now arrive with revenue in the first paragraph. Five or fewer people, an agent doing the labor, weekly growth quoted like a heartbeat — Gojiberry ($2.5M ARR in 10 months, profitable), Trellis ($500K ARR two months after launch), LunaBill ($764K contracted ARR in healthcare billing), Manicule ($53K/month doing AI-native devrel for AI companies). Worth studying less for the products than for the playbook: pick a labor line-item, automate it end-to-end, charge for the outcome, publish the graph.",
+    "zh": "2025 秋季与 2026 春季的介绍文案之间，最响亮的文化变化是：公司第一段就报收入。五人以内、agent 干活、周增长挂在嘴边——Gojiberry（10 个月 250 万美元 ARR、盈利）、Trellis（上线两个月 50 万美元 ARR）、LunaBill（医疗账单领域 76.4 万美元合同 ARR）、Manicule（给 AI 公司做 AI 原生 DevRel，月入 5.3 万美元）。值得研究的与其说是产品，不如说是打法：挑一条人力成本线，把它端到端自动化，按结果收费，把增长曲线晒出来。"
+   }
+  },
+  {
+   "id": "wildcards",
+   "title": {
+    "en": "Left field",
+    "zh": "野路子"
+   },
+   "narrative": {
+    "en": "Every batch has companies that don't fit the grid but mark where the edges are: the first YC-backed 'AI founder' running its own companies (Thomas), mosquito-killing micro-drones aimed at malaria (Tornyol), AI for the world's COBOL mainframes (Hypercubic) — the counter-trade to frontier hype, and an open-source alternative to Claude Cowork (OpenWork) plus hosted OpenClaw (Klaus) showing how fast an ecosystem forms around agent platforms themselves.",
+    "zh": "每个批次都有不入格子的公司，它们标记着边界在哪里：第一个 YC 投资的“AI 创始人”，自己开公司自己运营（Thomas）；瞄准疟疾的灭蚊微型无人机（Tornyol）；面向全球 COBOL 主机的 AI（Hypercubic）——对前沿炒作的反向交易；还有 Claude Cowork 的开源替代品（OpenWork）和托管版 OpenClaw（Klaus），说明围绕 agent 平台本身的生态成形得有多快。"
+   }
+  }
+ ],
+ "picks": [
+  {
+   "slug": "klaimee",
+   "theme": "agent-economy",
+   "why": {
+    "en": "Liability insurance for deployed AI agents — covering exactly what E&O and cyber policies now carve out. Regulation is forcing the issue (they cite California AB 316 liability and EU AI Act enforcement from August 2026), and enterprises already ask 'who pays if your agent breaks something?'. Claims $5M→$60M revenue experience from launching insurance products previously.",
+    "zh": "为已部署的 AI agent 提供责任保险——恰好覆盖 E&O 和网络险如今明确除外的部分。监管在逼问题落地（他们引用加州 AB 316 的责任认定和 2026 年 8 月开始执行的欧盟 AI 法案），企业法务已经在问“agent 闯祸谁赔”。创始人自述有把保险产品从 500 万美元做到 6000 万美元收入的操盘经历。"
+   },
+   "learn": {
+    "en": "How a brand-new risk category gets underwritten before loss data exists — and note the validation-by-collision: Mount (same batch) is building 'the AI insurance carrier' on the same wedge.",
+    "zh": "看一个全新风险品类如何在没有损失数据的情况下完成承保——还要注意“撞车即验证”：同批次的 Mount 在同一切入点上造 AI 保险承保公司。"
+   },
+   "signals": {
+    "en": [
+     "Same-niche competitor in same batch (Mount)",
+     "Regulatory tailwind dated to Aug 2026",
+     "Insurance-operator founder pedigree"
+    ],
+    "zh": [
+     "同批次同细分的竞争者（Mount）",
+     "监管东风明确到 2026 年 8 月",
+     "保险操盘手履历"
+    ]
+   }
+  },
+  {
+   "slug": "sponge",
+   "theme": "agent-economy",
+   "why": {
+    "en": "A bank for agents: agents hold funds and transact autonomously (accounts, cards, crypto), and businesses can accept agent customers with no code changes. It's the most complete 'agents as economic actors' thesis in the cohort — not a feature, but the financial substrate.",
+    "zh": "给 agent 开的银行：agent 可自主持有资金并交易（账户、卡、加密），商家无需改代码即可接待 agent 客户。这是本期对“agent 作为经济主体”最完整的论述——不是功能，而是金融底座。"
+   },
+   "learn": {
+    "en": "Two-sided framing for agent commerce: don't just equip agents to pay — make it trivial for merchants to *sell to agents*. Whoever owns that interface owns agent GTM.",
+    "zh": "agent 商业的双边框架：别只让 agent 会付款——要让商家*向 agent 卖东西*变得轻而易举。谁握住那个界面，谁就握住 agent 时代的获客入口。"
+   },
+   "signals": {
+    "en": [
+     "Both sides of agent commerce in one product",
+     "Competing rails: Agentcard, Allowance, Maven nearby"
+    ],
+    "zh": [
+     "一个产品同时吃下 agent 商业两侧",
+     "相邻轨道：Agentcard、Allowance、Maven"
+    ]
+   }
+  },
+  {
+   "slug": "rentahuman",
+   "theme": "agent-economy",
+   "why": {
+    "en": "A marketplace where AI agents hire humans — the cleanest inversion of the labor relationship in the entire cohort, listed while still at concept stage (no public description yet). If agents become economic actors, human-in-the-loop labor becomes an API they call.",
+    "zh": "一个让 AI agent 反过来雇人类的市场——整期里把劳动关系倒置得最干净的设定，且在还没有公开介绍的概念阶段就被收录。如果 agent 成为经济主体，“人类兜底”就会变成它们调用的一个 API。"
+   },
+   "learn": {
+    "en": "Watch how 'humans as a tool call' gets priced and trust-scored; it previews the mechanics every agentic product will need when automation hits its competence boundary.",
+    "zh": "盯住“人类作为工具调用”如何定价、如何建立信任评分；这预演了所有 agent 产品撞到能力边界时都需要的机制。"
+   },
+   "signals": {
+    "en": [
+     "Pure concept-stage listing",
+     "Solo founder",
+     "Humwork (same batch) attacks the same gap"
+    ],
+    "zh": [
+     "纯概念阶段即被收录",
+     "单人创始人",
+     "同批次 Humwork 攻同一缺口"
+    ]
+   }
+  },
+  {
+   "slug": "polymath",
+   "theme": "agent-reliability",
+   "why": {
+    "en": "Simulated worlds for training and evaluating long-horizon agents — the RL-environments thesis applied to real work. Team out of Berkeley, Hume, Plaid and Amazon with frontier post-training experience; environments are arguably the scarcest input for the next capability jump.",
+    "zh": "训练与评测长程 agent 的模拟世界——把 RL 环境的论题用到真实工作上。团队来自 Berkeley、Hume、Plaid 和 Amazon，有前沿模型后训练经验；预训练见顶之后，环境可能是下一次能力跃迁里最稀缺的原料。"
+   },
+   "learn": {
+    "en": "Where agent capability actually comes from after pretraining plateaus: environment design as the new dataset. Relevant to anyone evaluating agents beyond static benchmarks.",
+    "zh": "agent 能力的真正来源：环境设计是新的数据集。任何想在静态基准之外评估 agent 的人都该关注。"
+   },
+   "signals": {
+    "en": [
+     "Frontier post-training team",
+     "Sister category to Archal's stateful API clones"
+    ],
+    "zh": [
+     "前沿后训练团队",
+     "与 Archal 的有状态 API 克隆互为姊妹品类"
+    ]
+   }
+  },
+  {
+   "slug": "salus",
+   "theme": "agent-reliability",
+   "why": {
+    "en": "Runtime guardrails that inspect and block an agent's action *before it executes* — refunds without an order lookup, deletes without checks. Evals and observability are after-the-fact; the pre-execution checkpoint is the missing primitive for giving agents real authority.",
+    "zh": "运行时护栏：在 agent 动作*执行前*拦截检查——没查订单就退款、没确认就删除。评测和可观测性都是事后诸葛，行动前的检查点才是给 agent 真正授权时缺失的原语。"
+   },
+   "learn": {
+    "en": "The control-plane position in the agent stack: sit between intent and side effect. That's where trust (and pricing power) concentrates as agents get write access.",
+    "zh": "agent 技术栈里的控制面位置：站在意图与副作用之间。当 agent 拿到写权限，信任（和定价权）都会向这里集中。"
+   },
+   "signals": {
+    "en": [
+     "Action-time enforcement, not post-hoc",
+     "Stanford CS founder pair"
+    ],
+    "zh": [
+     "行动时拦截而非事后复盘",
+     "斯坦福 CS 创始人组合"
+    ]
+   }
+  },
+  {
+   "slug": "bentolabs-ai",
+   "theme": "agent-reliability",
+   "why": {
+    "en": "Drift and silent-failure detection for long-running agents — when an agent slowly diverges from the user's goal or tool contracts, BentoLabs spots it, shows root cause, and proposes the prompt/harness fix. Founders hit this problem operating Emergent (YC S24) at scale.",
+    "zh": "长程 agent 的漂移与静默失败检测——当 agent 慢慢偏离用户目标或工具契约时，BentoLabs 发现它、定位根因并给出 prompt/harness 修复建议。创始人在运营 Emergent（YC S24）时切身踩过这个坑。"
+   },
+   "learn": {
+    "en": "Long-running agents fail differently: not crashes but goal drift. 'Monitoring + auto-suggested fixes' is the shape of ops tooling when the artifact being operated is a prompt-and-harness, not a binary.",
+    "zh": "长程 agent 的失败方式不一样：不是崩溃，而是目标漂移。当被运维的对象是 prompt 加 harness 而非二进制时，运维工具就长成“监控 + 自动修复建议”这个形状。"
+   },
+   "signals": {
+    "en": [
+     "Problem learned firsthand at Emergent (S24)",
+     "Team of 5"
+    ],
+    "zh": [
+     "问题源自 Emergent（S24）一线运营",
+     "5 人团队"
+    ]
+   }
+  },
+  {
+   "slug": "hyperspell",
+   "theme": "agent-reliability",
+   "why": {
+    "en": "Memory and context layer for agents — 'clueless geniuses' that ace benchmarks but lack the hundreds of scattered context points a human accumulates at a real job. Connects workspace data into a personalized, growing memory. Memory is the most-cited missing piece in production agents.",
+    "zh": "agent 的记忆与上下文层——“不通世事的天才”考试碾压人类，却撑不过真实工作的一天，缺的就是人类从数百个零散接触点攒出来的语境。接入工作区数据，构建持续生长的个性化记忆。记忆是生产环境 agent 最常被点名的缺件。"
+   },
+   "learn": {
+    "en": "Context engineering as a product category: if memory becomes a pluggable layer, agent applications commoditize faster — and whoever holds the memory holds the switching costs.",
+    "zh": "上下文工程作为产品品类：如果记忆变成可插拔层，agent 应用会更快同质化——而握着记忆的人握着切换成本。"
+   },
+   "signals": {
+    "en": [
+     "Hot category (agent memory)",
+     "Team of 6, hiring"
+    ],
+    "zh": [
+     "热门品类（agent 记忆）",
+     "6 人团队，招聘中"
+    ]
+   }
+  },
+  {
+   "slug": "general-legal",
+   "theme": "ai-firms",
+   "why": {
+    "en": "An elite AI-native law firm for high-growth companies — already 15 people, the largest of *four* AI law firms in Winter 2026 alone. Law is the cleanest test of the AI-firm thesis: high hourly rates, text-native work, and clients who care about speed and price, not process.",
+    "zh": "面向高成长公司的精英 AI 原生律所——已有 15 人，是 2026 冬季*四家* AI 律所中最大的一家。法律是 AI 事务所论题最干净的试验场：高时薪、文本原生的工作、客户在意速度与价格而非过程。"
+   },
+   "learn": {
+    "en": "How 'AI firm' beats 'legal SaaS': sell the work product, not the tool. Watch their leverage ratio (lawyers vs. agents) — it's the unit economics of this whole category.",
+    "zh": "“AI 事务所”如何胜过“法律 SaaS”：卖工作成果，而不是工具。盯他们的杠杆率（律师数比 agent 数）——那是整个品类的单位经济学。"
+   },
+   "signals": {
+    "en": [
+     "15-person team (top 4% of cohort)",
+     "4 AI law firms in one batch",
+     "Moritz claims $2bn closed deals, 4-hour turnarounds"
+    ],
+    "zh": [
+     "15 人团队（位列整期前 4%）",
+     "一个批次四家 AI 律所",
+     "Moritz 自称成交 20 亿美元、4 小时出活"
+    ]
+   }
+  },
+  {
+   "slug": "cranston-ai",
+   "theme": "ai-firms",
+   "why": {
+    "en": "A full-stack AI accounting firm explicitly sized against the $900B accounting-labor market: reconciliation, tax compliance, analysis, pulling context from a company's whole app stack. Founders spent five years each building an ERP and an accounting firm — rare domain depth.",
+    "zh": "全栈 AI 会计事务所，对标 9000 亿美元的会计人力市场：对账、税务合规、财务分析，从公司全部应用与数据里拉取上下文。两位创始人分别花了五年造 ERP、五年开会计事务所——少见的领域深度。"
+   },
+   "learn": {
+    "en": "The wedge logic of AI firms: own the system-of-record context (every app, not just the ledger) and the labor follows. Also a case study in founders productizing their own former service business.",
+    "zh": "AI 事务所的楔子逻辑：握住系统级上下文（所有应用，而不只是总账），人力活就跟着来了。也是创始人把自己旧服务生意产品化的样本。"
+   },
+   "signals": {
+    "en": [
+     "$900B labor-market framing",
+     "ERP + accounting-firm founder pedigree",
+     "Balance (W26) and Denki (F25) validate the niche"
+    ],
+    "zh": [
+     "9000 亿美元人力市场的叙事",
+     "ERP + 会计事务所双履历",
+     "Balance（W26）与 Denki（F25）验证同一细分"
+    ]
+   }
+  },
+  {
+   "slug": "panacea",
+   "theme": "ai-firms",
+   "why": {
+    "en": "AI-native FDA regulatory services: ex-FDA consultants with decades of filings, paired with an AI platform, sold at fixed outcome-based prices (pay on milestone) instead of hourly billing — across every pathway from IND to PMA. Regulatory consulting is slow, scarce, and brutally priced; this attacks all three.",
+    "zh": "AI 原生的 FDA 法规服务：前 FDA、有数百份申报经验的顾问搭配 AI 平台，以固定的按里程碑付费取代按小时计费——覆盖从 IND 到 PMA 的全部通道。法规咨询又慢又稀缺又贵，这是三连击。"
+   },
+   "learn": {
+    "en": "Outcome-based pricing as the natural pricing model for AI firms — when AI does the hours, billing hours becomes absurd. Watch how they make 'milestone complete' contractually crisp.",
+    "zh": "按结果定价是 AI 事务所的自然定价模型——当 AI 干掉工时，按小时计费就荒谬了。看他们如何把“里程碑完成”写得在合同上无可争议。"
+   },
+   "signals": {
+    "en": [
+     "Outcome-based pricing",
+     "Expert-in-the-loop model",
+     "Adjacent: Harbor's AI CRO, Scoop's regulatory submissions"
+    ],
+    "zh": [
+     "按结果定价",
+     "专家在环模式",
+     "相邻者：Harbor 的 AI CRO、Scoop 的法规申报"
+    ]
+   }
+  },
+  {
+   "slug": "runharbor",
+   "theme": "ai-firms",
+   "why": {
+    "en": "An AI-native CRO: started as clinical-trial software (seven trials, $187K contracted), then jumped the fence into full-service trial execution with a first $1.93M three-year CRO contract. Clinical trials eat 45% of drug-development spend, mostly in services — exactly the budget AI firms hunt.",
+    "zh": "AI 原生 CRO：先做临床试验软件（七个试验、18.7 万美元合同额），随后翻墙进入全流程试验执行，签下第一份三年 193 万美元的 CRO 合同。临床试验吃掉新药研发 45% 的开销，大头都在服务——正是 AI 事务所猎杀的预算。"
+   },
+   "learn": {
+    "en": "The software-first, services-second ladder: prove the system of record, then take over the workflow it records. The $187K→$1.93M contract jump is the whole thesis in two numbers.",
+    "zh": "“先软件后服务”的阶梯：先证明系统记录的价值，再接管它所记录的工作流。18.7 万到 193 万美元的合同跳变，就是整个论题的两行注脚。"
+   },
+   "signals": {
+    "en": [
+     "$1.93M CRO contract signed",
+     "Software wedge → services expansion",
+     "45% of dev spend is trial ops"
+    ],
+    "zh": [
+     "已签 193 万美元 CRO 合同",
+     "软件楔子 → 服务扩张",
+     "试验运营占研发开销 45%"
+    ]
+   }
+  },
+  {
+   "slug": "standard-signal",
+   "theme": "ai-firms",
+   "why": {
+    "en": "A hedge fund where AI does all research and execution — one person, New York, no software customers at all. The terminal form of the AI-firm thesis: don't sell the tool to funds, *be* the fund and keep the carry.",
+    "zh": "一家研究和交易全由 AI 完成的对冲基金——一个人、纽约、完全不卖软件。AI 事务所论题的终极形态：别把工具卖给基金，自己*成为*基金，把 carry 留给自己。"
+   },
+   "learn": {
+    "en": "When AI capability is the edge, selling it as SaaS may be leaving money on the table. The build-vs-sell decision for AI advantage, in its purest form.",
+    "zh": "当 AI 能力本身就是超额收益，把它做成 SaaS 也许是把钱留在桌上。这是“自用还是出售 AI 优势”决策的最纯粹版本。"
+   },
+   "signals": {
+    "en": [
+     "Solo founder, full fund",
+     "Mirror image of Kelai/Withai selling AI to funds"
+    ],
+    "zh": [
+     "单人撑起一支基金",
+     "与卖 AI 给基金的 Kelai/Withai 互为镜像"
+    ]
+   }
+  },
+  {
+   "slug": "ndea-com",
+   "theme": "lab-supply-chain",
+   "why": {
+    "en": "François Chollet's AGI lab — program synthesis plus deep learning ('intuitive pattern recognition and formal reasoning in a unified architecture') aimed at AI that can genuinely innovate, with science as the goal. A 15-person frontier lab choosing to route through a YC batch is a story in itself.",
+    "zh": "François Chollet 的 AGI 实验室——把直觉式模式识别与形式推理融为一体的架构（程序合成 + 深度学习），目标是真正能创新的 AI，并以科学为目的地。一家 15 人的前沿实验室选择走 YC 批次，本身就是个故事。"
+   },
+   "learn": {
+    "en": "The strongest articulated alternative to pure scale: if scaling stalls, this architecture bet is the hedge everyone will study. Also: even celebrity labs now use YC for distribution and recruiting gravity.",
+    "zh": "对纯堆算力路线最有章法的替代方案：如果 scaling 失速，这个架构赌注就是所有人要研究的对冲。另外：连明星实验室也开始用 YC 获取分发与招聘引力。"
+   },
+   "signals": {
+    "en": [
+     "Chollet co-founded",
+     "15-person research team",
+     "Remote-first outlier in an SF cohort"
+    ],
+    "zh": [
+     "Chollet 联合创办",
+     "15 人研究团队",
+     "全员远程，在 SF 扎堆的批次里是异类"
+    ]
+   }
+  },
+  {
+   "slug": "arc-prize-foundation",
+   "theme": "lab-supply-chain",
+   "why": {
+    "en": "The ARC-AGI benchmark institution itself — used by OpenAI, Anthropic, DeepMind, and xAI — now a YC nonprofit. Benchmarks steer the entire field's research agenda; ARC is the canonical 'measure fluid intelligence, not memorization' counterweight to leaderboard saturation.",
+    "zh": "ARC-AGI 基准背后的机构——OpenAI、Anthropic、DeepMind、xAI 都在用——如今是 YC 里的非营利组织。基准引导整个领域的研究议程；ARC 是“测流体智能而非记忆”的标杆，对冲排行榜饱和。"
+   },
+   "learn": {
+    "en": "How evaluation shapes capability: whoever defines 'what intelligence means' redirects billions in lab spend. Watch ARC-AGI iterations as a leading indicator of where frontier research turns next.",
+    "zh": "评测如何塑造能力：谁定义“什么算智能”，谁就能改写数十亿美元的实验室开支方向。把 ARC-AGI 的迭代当作前沿研究转向的先行指标。"
+   },
+   "signals": {
+    "en": [
+     "Nonprofit in a YC batch",
+     "Benchmark adopted by every major lab",
+     "Knoop + Chollet founded"
+    ],
+    "zh": [
+     "YC 批次里的非营利组织",
+     "各大实验室都采用的基准",
+     "Knoop 与 Chollet 创办"
+    ]
+   }
+  },
+  {
+   "slug": "sciloop",
+   "theme": "lab-supply-chain",
+   "why": {
+    "en": "IPhO/IMO medalists writing math and physics problems frontier models score 0–5% on, sold to labs as training and eval data. As public data exhausts, the binding constraint on reasoning progress is exactly this: fresh problems beyond the frontier.",
+    "zh": "IPhO/IMO 奖牌得主出题，前沿模型在他们最难的题集上只能拿 0–5 分——把这些数据卖给实验室做训练与评测。当公开数据耗尽，推理能力进步的硬约束正是：源源不断的、超出前沿的新题。"
+   },
+   "learn": {
+    "en": "The economics of expert data: tiny team, top-0.01% talent network, recurring 'data subscription' to labs. A template for monetizing scarce human expertise into the training pipeline.",
+    "zh": "专家数据的经济学：极小团队、全球前 0.01% 的人才网络、对实验室的“数据订阅”。把稀缺人类专长货币化进训练管线的模板。"
+   },
+   "signals": {
+    "en": [
+     "Models score 0–5% on their hardest sets",
+     "Olympiad-medalist founders (MIT)",
+     "Two people"
+    ],
+    "zh": [
+     "模型在最难题集上 0–5 分",
+     "奥赛奖牌创始人（MIT）",
+     "两个人"
+    ]
+   }
+  },
+  {
+   "slug": "hillclimb",
+   "theme": "lab-supply-chain",
+   "why": {
+    "en": "Training data aimed at the most leveraged task there is: turning frontier agents into AI research scientists. 'Training data for recursive self-improvement' is the most audacious one-liner in the cohort, and labs are visibly paying for exactly this capability.",
+    "zh": "瞄准杠杆最大的任务的训练数据：把前沿 agent 训练成 AI 研究科学家。“递归自我改进的训练数据”是整期最大胆的一句话简介，而实验室确实在为这种能力掏钱。"
+   },
+   "learn": {
+    "en": "Where the automation-of-AI-research trend creates a vendor layer — and what 'data for self-improvement' even looks like operationally. If this works, timelines compress.",
+    "zh": "AI 研究自动化趋势如何催生供应商层——以及“自我改进数据”在操作层面到底长什么样。如果成了，时间线会被压缩。"
+   },
+   "signals": {
+    "en": [
+     "Solo founder, 4-person team",
+     "Sells directly to frontier labs",
+     "Hiring"
+    ],
+    "zh": [
+     "单人创始人，4 人团队",
+     "直接卖给前沿实验室",
+     "招聘中"
+    ]
+   }
+  },
+  {
+   "slug": "piggy-robotics",
+   "theme": "physical-ai",
+   "why": {
+    "en": "Humanoids built around artificial muscles — a tube wrapped in braided fibre, one pump for the whole robot — to escape the motor cost-and-assembly bottleneck and mass-produce at iPhone prices. 15 people already; the bet is that home-scale fleets generate the data moat, like cars did for self-driving.",
+    "zh": "围绕人工肌肉造的人形机器人——一根编织纤维包裹的管子，整机靠一个泵驱动——绕开电机的成本与装配瓶颈，目标 iPhone 价位的量产。已有 15 人；赌注是家用规模的机群产生数据护城河，就像汽车之于自动驾驶。"
+   },
+   "learn": {
+    "en": "A first-principles cost attack on the actuator (the part everyone else treats as fixed), and the data-flywheel argument for why *cheap* beats *capable* in early humanoids.",
+    "zh": "对执行器（所有人都当作既定成本的部件）的第一性原理成本攻击，以及为什么在早期人形机器人里*便宜*比*能干*更重要的数据飞轮论证。"
+   },
+   "signals": {
+    "en": [
+     "15-person team",
+     "Novel actuator architecture",
+     "London outlier"
+    ],
+    "zh": [
+     "15 人团队",
+     "全新执行器架构",
+     "伦敦，地理上的异类"
+    ]
+   }
+  },
+  {
+   "slug": "twolabs",
+   "theme": "physical-ai",
+   "why": {
+    "en": "Semi-humanoid robots for elder care — feeding, dressing, medication, retrieval, plus deliberate social companionship — full stack, hardware and AI in-house. While the field optimizes box-moving, they picked the demographically inevitable market with chronic staffing shortages.",
+    "zh": "养老护理的半人形机器人——喂饭、穿衣、用药、取物，外加刻意设计的社交陪伴——硬件与 AI 全栈自研。当全行业在优化搬箱子时，他们挑了人口结构上注定爆发、长期人手短缺的市场。"
+   },
+   "learn": {
+    "en": "Market selection in robotics: care work is where labor scarcity, willingness to pay, and emotional value all stack. Also a test of 'social capability' as a robotics differentiator, not a gimmick.",
+    "zh": "机器人赛道的选市场功课：照护工作同时叠加了劳动力稀缺、付费意愿与情感价值。也是“社交能力是不是机器人的真实差异化”的试金石。"
+   },
+   "signals": {
+    "en": [
+     "Full-stack hardware+AI, 2 people",
+     "Demographic tailwind"
+    ],
+    "zh": [
+     "2 人做硬件+AI 全栈",
+     "人口结构顺风"
+    ]
+   }
+  },
+  {
+   "slug": "synphony",
+   "theme": "physical-ai",
+   "why": {
+    "en": "Strawberry-picking robots ($3B in California alone, 60% labor cost) with a stated side business selling data, evals, and demos to robot foundation labs while scaling deployments. The dual revenue model — operations now, data forever — is the most commercially literate robotics plan in the batch.",
+    "zh": "草莓采摘机器人（仅加州就是 30 亿美元市场、60% 是人力成本），同时明牌做副业：向机器人基础模型实验室卖数据、评测和演示。“现在赚运营的钱、永远赚数据的钱”的双收入模型，是本批商业上最清醒的机器人计划。"
+   },
+   "learn": {
+    "en": "How young robotics companies can monetize the journey: farm margins fund the fleet, the fleet's outdoor data becomes a moat labs will pay for. Watch the 'robots as data business' pattern spread.",
+    "zh": "年轻机器人公司如何把路途本身变现：农田毛利养机群，机群的户外数据成为实验室愿意买单的护城河。盯着“机器人即数据生意”模式扩散。"
+   },
+   "signals": {
+    "en": [
+     "10-person team",
+     "Explicit data side-business",
+     "NVIDIA ML pedigree"
+    ],
+    "zh": [
+     "10 人团队",
+     "明确的数据副业",
+     "NVIDIA ML 履历"
+    ]
+   }
+  },
+  {
+   "slug": "one-robot",
+   "theme": "physical-ai",
+   "why": {
+    "en": "World-model-based simulation environments realistic enough to train and evaluate robot policies without burning scarce robot time — built per-task for hard manipulation (textiles, box folding). Robot-hours are the bottleneck on every VLA team's iteration loop; this attacks it directly.",
+    "zh": "基于世界模型的仿真环境，逼真到能直接训练和评测机器人策略，不再被机器人实机时间卡脖子——按任务定制，专攻难的操作类任务（纺织品、折叠箱体）。实机小时数是每个 VLA 团队迭代环的瓶颈；这是正面强攻。"
+   },
+   "learn": {
+    "en": "The eval/training-environment layer is repeating in robotics exactly as it did for agents (compare Polymath) — same picks-and-shovels logic, one modality over.",
+    "zh": "评测/训练环境层正在机器人领域重演 agent 领域的剧本（对照 Polymath）——同样的卖铲子逻辑，换了一个模态。"
+   },
+   "signals": {
+    "en": [
+     "Task-specific world models",
+     "Mirrors agent-sim trend (Polymath, Archal)"
+    ],
+    "zh": [
+     "按任务定制的世界模型",
+     "与 agent 仿真趋势互为镜像（Polymath、Archal）"
+    ]
+   }
+  },
+  {
+   "slug": "valgo",
+   "theme": "physical-ai",
+   "why": {
+    "en": "Risk quantification for physical AI: car insurance rests on 30 billion claims records; autonomous trucks and robots have near zero. Valgo builds bottom-up probabilistic models of routes, tasks, and environments so insurers can price autonomy at all. No insurance, no large-scale deployment.",
+    "zh": "具身智能的风险定价：车险背后是 300 多亿条理赔记录，自动驾驶卡车和机器人几乎为零。Valgo 自下而上为路线、任务与环境建概率模型，输出保险公司定价所需的模拟损失估计。没有保险，就没有规模化部署。"
+   },
+   "learn": {
+    "en": "The unglamorous gate on the robotics rollout — underwriting. Stanford-PhD risk modeling plus insurance-industry experience is the kind of pairing that defines a category before anyone notices it exists.",
+    "zh": "机器人铺开路上最不性感的闸门——承保。斯坦福博士的风险建模加保险业老兵，是那种在所有人注意到之前就定义了品类的组合。"
+   },
+   "signals": {
+    "en": [
+     "Stanford PhD founders + insurance veterans",
+     "Bridges physical AI and the Klaimee/Mount agent-insurance wave"
+    ],
+    "zh": [
+     "斯坦福博士 + 保险业老兵",
+     "连接具身智能与 Klaimee/Mount 的 agent 保险浪潮"
+    ]
+   }
+  },
+  {
+   "slug": "icarus",
+   "theme": "hard-frontier",
+   "why": {
+    "en": "Solar-powered autonomous aircraft loitering at 60,000 ft for weeks — 'a modern U-2 at $100K, built by the thousands'. At 29 people it's the largest team in the entire tracked cohort, an extreme outlier for a company this young and a strong hint about funding and demand pull.",
+    "zh": "太阳能自主飞行器在 6 万英尺巡航数周——“现代 U-2，单价 10 万美元，按千架造”。29 人团队是整个追踪期的最大团队，对这个阶段的公司是极端异常值，强烈暗示资金与需求拉动。"
+   },
+   "learn": {
+    "en": "The defense-tech formula of this cycle: take an exquisite capability (U-2-class persistent surveillance), rebuild it attritable and mass-producible, price it two orders of magnitude lower.",
+    "zh": "本轮国防科技的公式：拿一个精贵能力（U-2 级持续侦察），重造成可消耗、可量产，价格砍两个数量级。"
+   },
+   "signals": {
+    "en": [
+     "29-person team — cohort maximum",
+     "LA defense corridor",
+     "Hiring"
+    ],
+    "zh": [
+     "29 人团队——整期最大",
+     "洛杉矶国防走廊",
+     "招聘中"
+    ]
+   }
+  },
+  {
+   "slug": "tenet-industries",
+   "theme": "hard-frontier",
+   "why": {
+    "en": "Strike drones designed first for manufacturability — their own hardware and software platform optimized for automated production across FPV, fixed-wing, Shahed-type, and missile categories, starting with a kamikaze quadcopter. Ukraine-era lesson industrialized: magazine depth wins.",
+    "zh": "为可制造性而生的攻击无人机——自研软硬件平台，为自动化生产优化，覆盖 FPV、固定翼、Shahed 型、导弹等品类，首款产品是自杀式四旋翼。乌克兰时代的教训工业化：弹药纵深定胜负。"
+   },
+   "learn": {
+    "en": "Design-for-manufacturing as *the* defense moat — the contest has moved from capability to cost-per-unit and production rate. Compare AICE (submarine drones) and Surtr (counter-UAS) in the same batch.",
+    "zh": "面向制造的设计（DFM）就是这轮国防的护城河——竞争已从能力转向单位成本与产能。对照同批次的 AICE（水下无人机）与 Surtr（反无人机）。"
+   },
+   "signals": {
+    "en": [
+     "DFM-first defense platform",
+     "Spring 2026 defense cluster (6+ companies)"
+    ],
+    "zh": [
+     "DFM 优先的国防平台",
+     "2026 春季国防集群（6+ 家）"
+    ]
+   }
+  },
+  {
+   "slug": "hop-aero",
+   "theme": "hard-frontier",
+   "why": {
+    "en": "Rocket cargo: point-to-point hypersonic delivery of supplies into contested environments hundreds of miles away in minutes — one of only 15 Summer 2026 companies listed so far, signaling the defense wave is still building, not cresting.",
+    "zh": "火箭货运：点对点高超音速，把补给在几分钟内送进数百英里外的对抗环境——目前 2026 夏季仅 15 家公司之一，说明国防浪潮仍在涨而非见顶。"
+   },
+   "learn": {
+    "en": "Logistics-as-deterrence framing, and how the earliest listings of a forming batch telegraph YC's current conviction areas (S26 so far: agents infra, defense, healthcare ops).",
+    "zh": "“后勤即威慑”的叙事框架，以及一个正在成形批次的最早名单如何预告 YC 当前的信念领域（S26 目前：agent 基础设施、国防、医疗运营）。"
+   },
+   "signals": {
+    "en": [
+     "Early S26 listing",
+     "6-person team pre-batch",
+     "Hypersonic logistics niche"
+    ],
+    "zh": [
+     "S26 早期收录",
+     "入营前已 6 人",
+     "高超音速后勤生态位"
+    ]
+   }
+  },
+  {
+   "slug": "axionorbital-space",
+   "theme": "hard-frontier",
+   "why": {
+    "en": "Foundation models that translate satellite radar (SAR) into photorealistic optical imagery in real time — defeating the 70% of the time optical satellites are blinded by clouds and night. One model wedge, three markets: defense, commodities trading, disaster response.",
+    "zh": "把卫星雷达（SAR）实时翻译成照片级光学影像的基础模型——攻克光学卫星 70% 时间被云层与黑夜致盲的问题。一个模型楔子，三个市场：国防、大宗商品交易、灾害响应。"
+   },
+   "learn": {
+    "en": "The 'foundation model for one sensor modality' pattern — pick a physics-limited data type humans can't read, make it legible, and you own the interpretation layer for an entire industry.",
+    "zh": "“单一传感器模态的基础模型”模式——挑一种受物理限制、人类读不懂的数据，把它变得可读，你就拥有了整个行业的解释层。"
+   },
+   "signals": {
+    "en": [
+     "One-step diffusion architecture claim",
+     "Dual-use: defense + trading + disaster"
+    ],
+    "zh": [
+     "单步扩散架构主张",
+     "军民两用：国防 + 交易 + 救灾"
+    ]
+   }
+  },
+  {
+   "slug": "dome",
+   "theme": "prediction-markets",
+   "why": {
+    "en": "The developer infrastructure for prediction markets: one API over Polymarket, Kalshi and others for data, trading, and strategy deployment. Picks-and-shovels positioning in a market whose venues are fragmenting as fast as they're growing — the Plaid move, run early.",
+    "zh": "预测市场的开发者基础设施：一个 API 打通 Polymarket、Kalshi 等的行情、交易与策略部署。在场所碎片化与增长同样迅猛的市场里做卖铲子生意——Plaid 的打法，提前跑。"
+   },
+   "learn": {
+    "en": "How a data/API layer bootstraps a new asset class (every quant tool, dashboard, and strategy builds on whoever standardizes access first). The whole financialization sequence starts here.",
+    "zh": "数据/API 层如何为一个新资产类别奠基（每个量化工具、看板、策略都会建在最先标准化接入的人身上）。整条金融化链路从这里开始。"
+   },
+   "signals": {
+    "en": [
+     "First-mover API layer (F25)",
+     "Seven downstream companies in later batches prove the demand"
+    ],
+    "zh": [
+     "先发 API 层（F25）",
+     "后续批次七家下游公司证明需求"
+    ]
+   }
+  },
+  {
+   "slug": "river-markets",
+   "theme": "prediction-markets",
+   "why": {
+    "en": "Prime brokerage for event contracts: every major venue in one account, best execution, portfolio/order management, unified API — the institutional plumbing that turns a retail curiosity into a tradable asset class for professional desks.",
+    "zh": "事件合约的主经纪商：所有主要场所一个账户，最优执行、组合与订单管理、统一 API——把零售猎奇变成专业交易台可交易资产的机构级管道。"
+   },
+   "learn": {
+    "en": "Market-structure pattern recognition: data API (Dome) → prime brokerage (River) → derivatives (Totalis) is exactly how crypto institutionalized, replayed at 4x speed.",
+    "zh": "市场结构的模式识别：数据 API（Dome）→ 主经纪（River）→ 衍生品（Totalis），正是加密机构化的路径，以四倍速重播。"
+   },
+   "signals": {
+    "en": [
+     "Classic financialization sequence, step two",
+     "2 founders"
+    ],
+    "zh": [
+     "金融化序列第二步",
+     "2 位创始人"
+    ]
+   }
+  },
+  {
+   "slug": "forum",
+   "theme": "prediction-markets",
+   "why": {
+    "en": "An exchange for trading attention itself — indices built from search, social, and streaming data so users can go long or short on cultural relevance. The most conceptually radical market in the cohort: attention drives business value but has never been directly tradable.",
+    "zh": "交易“注意力”本身的交易所——用搜索、社交与流媒体数据编制指数，让用户做多或做空文化热度。整期概念上最激进的市场：注意力驱动商业价值，却从未被直接交易过。"
+   },
+   "learn": {
+    "en": "How new asset classes get manufactured: find an economically load-bearing quantity (attention), build a credible index, then let hedgers (brands, studios) and speculators meet. Even if it fails, the mechanism is instructive.",
+    "zh": "新资产类别如何被制造出来：找到一个经济上承重的量（注意力），建一个可信指数，然后让套保者（品牌、片厂）与投机者相遇。即便失败，机制也值得学。"
+   },
+   "signals": {
+    "en": [
+     "Genuinely novel asset class",
+     "Hedging demand from brands is the wedge to watch"
+    ],
+    "zh": [
+     "真正新颖的资产类别",
+     "品牌方的套保需求是关键看点"
+    ]
+   }
+  },
+  {
+   "slug": "gojiberry-ai",
+   "theme": "traction",
+   "why": {
+    "en": "AI GTM agents that run B2B outbound end-to-end (find intent, enrich, outreach, follow-up, book meetings): $0→$2.5M ARR in 10 months, profitable, 2,000+ customers, 30% MoM — the strongest publicly claimed traction in the tracked cohort, with a cross-customer learning loop as the moat story.",
+    "zh": "端到端跑 B2B 外呼的 AI GTM agent（找到有意向的买家、补全信息、触达、跟进、约成会议）：10 个月 0→250 万美元 ARR、盈利、2000+ 客户、月增 30%——整个追踪期内公开声明的最强业绩，护城河故事是跨客户的学习循环。"
+   },
+   "learn": {
+    "en": "Replace-the-stack positioning ('one AI team' vs. tools+SDRs+agencies) and how compounding campaign data across customers becomes the defensibility narrative for agent businesses.",
+    "zh": "“替换整套打法”的定位（“一支 AI 团队” vs 工具+SDR+代理商），以及跨客户的投放数据复利如何成为 agent 生意的防御性叙事。"
+   },
+   "signals": {
+    "en": [
+     "$2.5M ARR / 10 months / profitable",
+     "2,000+ customers",
+     "7-person team"
+    ],
+    "zh": [
+     "250 万美元 ARR / 10 个月 / 盈利",
+     "2000+ 客户",
+     "7 人团队"
+    ]
+   }
+  },
+  {
+   "slug": "lunabill",
+   "theme": "traction",
+   "why": {
+    "en": "Voice agents for the dullest, densest job in healthcare admin: insurance claim follow-up calls (80% of a billing team's day, 30 minutes each). $764K contracted ARR within months of launch, 100% pilot-to-paid conversion, 50,000+ automated calls, partnerships citing UC health systems, Mayo, Experian Health.",
+    "zh": "把医疗行政里最枯燥稠密的活——保险理赔跟进电话（占账单团队 80% 工时、每通 30 分钟）——交给语音 agent。上线数月 76.4 万美元合同 ARR、试点付费转化 100%、自动化 5 万+ 通电话，合作名单提到 UC 体系、Mayo、Experian Health。"
+   },
+   "learn": {
+    "en": "The vertical voice-agent playbook at its best: pick one phone-call type with brutal volume and clear ROI, automate only that, and let 10x throughput sell itself. (27 voice companies in the cohort; this is the cleanest execution.)",
+    "zh": "垂直语音 agent 打法的最佳示范：挑一种量大、ROI 清晰的电话，只自动化它，让 10 倍吞吐自己卖自己。（本期 27 家语音公司；这是执行最干净的。）"
+   },
+   "signals": {
+    "en": [
+     "$764K cARR, 100% pilot conversion",
+     "Named health-system partners",
+     "4-person team"
+    ],
+    "zh": [
+     "76.4 万美元合同 ARR、试点 100% 转化",
+     "点名的医疗系统伙伴",
+     "4 人团队"
+    ]
+   }
+  },
+  {
+   "slug": "trellistech",
+   "theme": "traction",
+   "why": {
+    "en": "Agents that run short-term-rental operations end-to-end (guest messages, cleaners, maintenance, owner updates): $500K ARR across 35 customers and 3,000 listings within *two months* of launch, ~15% week-over-week growth, one customer already running with zero human involvement.",
+    "zh": "agent 端到端运营短租（客人消息、保洁、维修、业主汇报）：上线*两个月* 50 万美元 ARR、35 个客户、3000 套房源、周增约 15%，已有客户完全无人运营。"
+   },
+   "learn": {
+    "en": "Ops-heavy SMB verticals as agent beachheads: fragmented stack, measurable labor cost, and a tolerance for delegation. The 'property runs itself' end-state is the same story every vertical agent company is telling — this one has the growth curve.",
+    "zh": "运营繁重的 SMB 垂直是 agent 的滩头阵地：技术栈碎、人力成本可量化、对授权的容忍高。“物业自己运转”的终局每家垂直 agent 公司都在讲——这家有增长曲线。"
+   },
+   "signals": {
+    "en": [
+     "$500K ARR in 2 months",
+     "15% WoW growth",
+     "First fully autonomous customer"
+    ],
+    "zh": [
+     "两个月 50 万美元 ARR",
+     "周增 15%",
+     "第一个全自动客户"
+    ]
+   }
+  },
+  {
+   "slug": "manicule",
+   "theme": "traction",
+   "why": {
+    "en": "AI-native developer relations as a service — owning docs and technical content for AI companies. $53K monthly revenue growing 100% MoM, and the customer list is itself a market map: Supermemory, Greptile, Reducto, Mastra, AgentMail. The AI boom is generating service businesses optimized for AI companies.",
+    "zh": "AI 原生的 DevRel 服务——替 AI 公司包办文档与技术内容。月收入 5.3 万美元、连续三个月环比翻倍，客户名单本身就是一张市场地图：Supermemory、Greptile、Reducto、Mastra、AgentMail。AI 热潮正在催生为 AI 公司优化的服务业。"
+   },
+   "learn": {
+    "en": "Second-order opportunities: when hundreds of AI startups can't hire $300K devrel, the picks-and-shovels move is a service firm. Their customer list doubles as a who's-launching index for agent tooling.",
+    "zh": "二阶机会：当几百家 AI 创业公司招不到 30 万美元年薪的 DevRel，卖铲子的方式是开一家服务公司。他们的客户名单可以当作 agent 工具圈的发布索引来读。"
+   },
+   "signals": {
+    "en": [
+     "$53K MRR, 100% MoM growth",
+     "Customer list = agent-infra who's-who"
+    ],
+    "zh": [
+     "5.3 万美元 MRR、环比 100% 增长",
+     "客户名单 = agent 基础设施名人录"
+    ]
+   }
+  },
+  {
+   "slug": "thomas",
+   "theme": "wildcards",
+   "why": {
+    "en": "Billed as the first YC-backed AI founder: 'Thomas' is a virtual human who starts, runs, and grows his own internet companies, with a human creator behind the curtain. Part performance art, part genuine probe of whether agentic systems can run a business end-to-end.",
+    "zh": "号称第一个 YC 投资的“AI 创始人”：Thomas 是一个虚拟人，自己在互联网上创办、运营、增长自己的公司，幕后有一位人类创造者。一半行为艺术，一半对“agent 能否端到端经营企业”的真实探针。"
+   },
+   "learn": {
+    "en": "A live experiment in the outer limit of the AI-firm thesis (no employees at all, not even one). Whatever Thomas actually ships, the legal and narrative questions it raises — who owns it, who's liable — arrive for everyone else next.",
+    "zh": "AI 事务所论题外边界的现场实验（一个员工都没有，连一个都不剩）。无论 Thomas 真做出什么，它抛出的法律与叙事问题——归谁所有、谁担责——接下来会落到所有人头上。"
+   },
+   "signals": {
+    "en": [
+     "Concept-maximalist",
+     "Solo (human) founder",
+     "Same batch as RentAHuman — labor inversion twins"
+    ],
+    "zh": [
+     "概念最大化",
+     "单人（人类）创始人",
+     "与 RentAHuman 同批——劳动倒置双子星"
+    ]
+   }
+  },
+  {
+   "slug": "tornyol",
+   "theme": "wildcards",
+   "why": {
+    "en": "40-gram toy drones turned into autonomous mosquito killers using phone mics and parking-sensor hardware — targeting 100x cheaper mosquito control, framed as city-scale eradication against malaria, dengue, West Nile. Paris-based, 7 people, gloriously concrete.",
+    "zh": "用手机麦克风、倒车雷达级传感器和信号处理，把 40 克玩具无人机改造成自主灭蚊机——目标把灭蚊成本降低 100 倍，叙事直指城市级灭蚊与疟疾、登革热。巴黎，7 人，具体得发亮。"
+   },
+   "learn": {
+    "en": "Frugal-engineering pattern: commodity consumer hardware + clever signal processing can attack a public-health problem usually addressed with chemicals and NGOs. Also a reminder that 'drones' isn't only a defense story.",
+    "zh": "省钱工程的范式：消费级硬件 + 聪明的信号处理，去打一个通常靠化学品和 NGO 解决的公共卫生问题。也提醒一句：“无人机”不只是国防故事。"
+   },
+   "signals": {
+    "en": [
+     "100x cost-reduction claim",
+     "Consumer-hardware supply chain",
+     "Paris outlier"
+    ],
+    "zh": [
+     "100 倍降本主张",
+     "消费级硬件供应链",
+     "巴黎，地理异类"
+    ]
+   }
+  },
+  {
+   "slug": "hypercubic",
+   "theme": "wildcards",
+   "why": {
+    "en": "AI for COBOL mainframes — the systems still running 70% of the Fortune 500's core banking, insurance, and airline operations as their original authors retire. The deliberate counter-trade to frontier hype: the oldest software stack on earth, suddenly legible to LLMs.",
+    "zh": "面向 COBOL 主机的 AI——这些系统仍跑着财富 500 强 70% 的核心银行、保险、航司业务，而原作者正在退休。这是对前沿炒作的刻意反向交易：地球上最老的软件栈，突然能被 LLM 读懂了。"
+   },
+   "learn": {
+    "en": "Where LLM value might be most durable: not greenfield apps but the trillion-dollar legacy estate nobody can read anymore. Enterprise modernization budgets are enormous, recurring, and allergic to startups — watch how an AI-native vendor cracks them.",
+    "zh": "LLM 价值可能最持久的落点：不是新应用，而是没人读得懂的万亿美元遗留资产。企业现代化预算巨大、常年存在、又对创业公司过敏——看一家 AI 原生供应商怎么敲开它。"
+   },
+   "signals": {
+    "en": [
+     "70% of Fortune 500 on mainframes",
+     "Zero competition from new grads",
+     "2 people vs. Accenture"
+    ],
+    "zh": [
+     "财富 500 强 70% 仍在主机上",
+     "没有新毕业生跟你抢",
+     "2 个人 vs 埃森哲"
+    ]
+   }
+  }
+ ]
+}

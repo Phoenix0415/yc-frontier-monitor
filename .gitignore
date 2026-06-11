@@ -1,0 +1,8 @@
+# generated / machine state — rebuilt by `python3 scripts/yc.py update|build`
+data/
+dist/
+site/data.js
+__pycache__/
+*.pyc
+.DS_Store
+.claude/settings.local.json
