@@ -61,6 +61,7 @@
       alertFlagged: "They are flagged on the Updates tab until the watchlist is refreshed.",
       alertBtn: "Review queue →",
       noAnalysis: "No curated analysis yet — ask Claude to review the dataset and fill analysis/watchlist.json.",
+      summaryTitle: "Executive summary",
       shapeTitle: "The shape of the cohort",
       shapeLede: "Numbers cover all {n} tracked companies; in-progress batches keep filling in, so expect these to move.",
       statTeam: "median team size", statSolo: "solo founders (of {n} known)",
@@ -125,6 +126,7 @@
       alertFlagged: "在重点名单刷新前，它们会一直标记在“更新”页。",
       alertBtn: "查看待复盘队列 →",
       noAnalysis: "尚无人工分析——可让 Claude 通读数据集并填写 analysis/watchlist.json。",
+      summaryTitle: "执行摘要",
       shapeTitle: "这一代公司的画像",
       shapeLede: "数据覆盖全部 {n} 家被追踪公司；进行中的批次仍在补充，数字会持续变化。",
       statTeam: "团队规模中位数", statSolo: "单人创始人（已知 {n} 家）",
@@ -287,7 +289,7 @@
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
     const topicChips = (c.topics || []).slice(0, 3)
       .map(id => `<button class="chip tpc" data-topic="${esc(id)}">${esc(topicLabel(id))}</button>`).join("");
-    const tags = topicChips + (c.tags || []).slice(0, 4)
+    const tags = topicChips + (c.tags || []).slice(0, 3)
       .map(tg => `<button class="chip" data-tag="${esc(tg)}">${esc(tg)}</button>`).join("");
     return `<article class="card">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
@@ -398,7 +400,7 @@
        </button>`).join("");
 
     const summary = (wl.summary && wl.summary.length)
-      ? `<section class="panel">${wl.summary.map(p => `<p>${esc(loc(p))}</p>`).join("")}</section>`
+      ? `<section><h2>${t("summaryTitle")}</h2><div class="panel prose">${wl.summary.map(p => `<p>${esc(loc(p))}</p>`).join("")}</div></section>`
       : `<section class="panel"><p class="empty">${t("noAnalysis")}</p></section>`;
 
     const themeBlocks = themes.map(th => {
