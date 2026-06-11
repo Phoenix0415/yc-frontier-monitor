@@ -81,6 +81,25 @@ Each pick may carry a decision; absent = rendered as "undecided" (grey badge):
 - When the owner reviews a due pick, append a `reviews[]` entry (bilingual
   note), do NOT touch `picked_at`; the new review date resets the clock.
 
+## Frontier topics (owner-requested upgrade over YC categories)
+
+- YC's own industry fields are too coarse to read trends from, so
+  `analysis/topics.json` defines ~20 curated topics (agent-infra, ai-firms,
+  defense, lab-data, …) as transparent regex keyword rules — deterministic,
+  NO LLM calls (this supersedes SPEC §6b's "YC fields only" by owner request;
+  the no-LLM-in-pipeline constraint stands).
+- Matching runs at build time (`sitebuild.load_topic_rules` /
+  `classify_topics`) over name + one-liner + description + tags + industry;
+  multi-label; no match → "(unclassified)" (`__none`). Topics are derived
+  into the payload only — never written back to `data/`. Bad regex → build
+  fails loudly.
+- UI: "Frontier topics" chart and the momentum table run on topics (both
+  clickable → filtered Companies list), topic dropdown filter, accent topic
+  chips on cards. The "YC industries" chart stays for raw provenance.
+- Tuning loop when distribution drifts or unclassified grows: edit patterns
+  in topics.json → `python3 scripts/yc.py build` → check the report. Keep
+  unclassified under ~5%; current state ~2%. Labels are bilingual {en, zh}.
+
 ## Delta engine (SPEC §6 — shipped)
 
 - Field-level diffing (`store.WATCHED_FIELDS`: one_liner, long_description,

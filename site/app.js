@@ -28,6 +28,16 @@
     ? companies.filter(c => c.first_seen > wl.updated_at)
     : [];
 
+  // curated frontier topics (analysis/topics.json, applied at build time);
+  // c.topics carries matched ids, "__none" is the synthetic unclassified id
+  const topicDefs = D.topics || [];
+  const topicLabel = id => {
+    if (id === "__none") return t("unclassified");
+    const def = topicDefs.find(d => d.id === id);
+    return def ? loc(def.label) : id;
+  };
+  const topicIdsOf = c => (c.topics && c.topics.length ? c.topics : ["__none"]);
+
   // slug -> field-change records from the most recent update run (SPEC §6a);
   // drives the CHANGED badge, mirroring how NEW works
   const changedNow = {};
@@ -56,7 +66,8 @@
       statTeam: "median team size", statSolo: "solo founders (of {n} known)",
       statHiring: "actively hiring", statBay: "SF Bay Area based",
       statRevenue: "state revenue figures publicly",
-      chartTags: "Top tags", chartIndustries: "Industries",
+      chartTopics: "Frontier topics", chartIndustries: "YC industries (official)",
+      allTopics: "All topics", unclassified: "(unclassified)",
       watchlistTitle: "The watchlist",
       whyWatch: "Why watch:", worthLearning: "Worth learning:",
       fromPitch: "From their pitch:",
@@ -100,8 +111,8 @@
       listedLine: "{n} listed ({s})",
       addedNew: "+{n} new", delistedN: "−{n} delisted", changedN: "~{n} changed",
       badgeChanged: "CHANGED",
-      momentumTitle: "Theme momentum across batches",
-      momentumLede: "Industry mix per batch, using YC's own categories: count and share of that batch. Young batches are small samples — expect the numbers to move.",
+      momentumTitle: "Topic momentum across batches",
+      momentumLede: "Curated frontier topics — transparent keyword rules over each company's name, pitch and description (analysis/topics.json; a company can match several): count and share of that batch. Young batches are small samples.",
       footer: "Data: the public YC company directory (live Algolia index; yc-oss daily mirror as fallback) — listed companies only, so young batches keep growing. Watchlist picks are editorial, not investment advice. Generated {d}.",
     },
     zh: {
@@ -119,7 +130,8 @@
       statTeam: "团队规模中位数", statSolo: "单人创始人（已知 {n} 家）",
       statHiring: "正在招聘", statBay: "位于旧金山湾区",
       statRevenue: "公开披露收入数字",
-      chartTags: "高频标签", chartIndustries: "行业分布",
+      chartTopics: "前沿主题", chartIndustries: "YC 官方行业",
+      allTopics: "全部主题", unclassified: "（未分类）",
       watchlistTitle: "重点关注名单",
       whyWatch: "为什么值得关注：", worthLearning: "值得借鉴：",
       fromPitch: "出自其自述：",
@@ -164,7 +176,7 @@
       addedNew: "新增 {n}", delistedN: "下架 {n}", changedN: "变更 {n}",
       badgeChanged: "有变化",
       momentumTitle: "批次间的主题动量",
-      momentumLede: "各批次的行业构成（YC 自有分类）：数量与该批次内占比。年轻批次样本小，数字会持续变动。",
+      momentumLede: "人工维护的前沿主题——基于公司名称、简介与介绍的透明关键词规则（analysis/topics.json，一家公司可命中多个主题）：数量与该批次内占比。年轻批次样本小。",
       footer: "数据来源：YC 公开公司目录（实时 Algolia 索引；yc-oss 每日镜像兜底）——仅含已公开收录的公司，年轻批次会持续增长。重点名单为编辑判断，不构成投资建议。生成于 {d}。",
     },
   };
@@ -179,8 +191,8 @@
   };
 
   const state = { tab: "report", lang: defaultLang(), q: "", batch: "all",
-                  industry: "all", hiring: false, fresh: false, watch: false,
-                  revenue: false, sort: "batch" };
+                  industry: "all", topic: "all", hiring: false, fresh: false,
+                  watch: false, revenue: false, sort: "batch" };
 
   const t = key => I18N[state.lang][key] != null ? I18N[state.lang][key] : I18N.en[key];
   const tf = (key, vars) => Object.entries(vars).reduce(
@@ -273,7 +285,9 @@
     if (c.new_in_last_update) badges += `<span class="badge new">${t("badgeNew")}</span>`;
     if (changedNow[c.slug]) badges += `<span class="badge changed" title="${esc(changedNow[c.slug].map(r => r.field).join(" · "))}">${t("badgeChanged")}</span>`;
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
-    const tags = (c.tags || []).slice(0, 5)
+    const topicChips = (c.topics || []).slice(0, 3)
+      .map(id => `<button class="chip tpc" data-topic="${esc(id)}">${esc(topicLabel(id))}</button>`).join("");
+    const tags = topicChips + (c.tags || []).slice(0, 4)
       .map(tg => `<button class="chip" data-tag="${esc(tg)}">${esc(tg)}</button>`).join("");
     return `<article class="card">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
@@ -318,30 +332,31 @@
       </div>`).join("") + `</div>`;
   };
 
-  // theme momentum (SPEC §6b): rows = top industries overall, columns =
-  // batches, cells = count + share-of-batch. Derived at render time from the
-  // dataset — nothing persisted. Industry names stay as YC provides them.
+  // topic momentum (SPEC §6b, upgraded by owner request from YC categories to
+  // curated topics): rows = topics by overall count, columns = batches,
+  // cells = count + share-of-batch. Derived at render time, nothing persisted.
   const momentumBlock = () => {
-    const top = tally(companies, c => [c.subindustry || c.industry]).slice(0, 10);
+    const top = tally(companies, topicIdsOf);
     if (!top.length) return "";
     const perBatch = batches.map(b => {
       const m = {};
-      (b.companies || []).forEach(c => {
-        const k = c.subindustry || c.industry;
-        if (k) m[k] = (m[k] || 0) + 1;
-      });
+      (b.companies || []).forEach(c => topicIdsOf(c).forEach(id => {
+        m[id] = (m[id] || 0) + 1;
+      }));
       return { display: b.display, total: (b.companies || []).length, m };
     });
     let maxShare = 0;
-    top.forEach(([k]) => perBatch.forEach(p => {
-      const s = p.total ? (p.m[k] || 0) / p.total : 0;
+    top.forEach(([id]) => perBatch.forEach(p => {
+      const s = p.total ? (p.m[id] || 0) / p.total : 0;
       if (s > maxShare) maxShare = s;
     }));
     const head = `<div class="mrow mhead"><span class="mlabel"></span>` +
       perBatch.map(p => `<span class="mcell">${esc(locBatch(p.display))}<em>${p.total}</em></span>`).join("") + `</div>`;
-    const rows = top.map(([k]) => `<div class="mrow"><span class="mlabel" title="${esc(k)}">${esc(k)}</span>` +
+    const rows = top.map(([id]) =>
+      `<div class="mrow${id === "__none" ? " dimrow" : ""}">` +
+      `<button class="mlabel" data-topic="${esc(id)}" title="${esc(topicLabel(id))}">${esc(topicLabel(id))}</button>` +
       perBatch.map(p => {
-        const n = p.m[k] || 0;
+        const n = p.m[id] || 0;
         if (!n) return `<span class="mcell dim">–</span>`;
         const share = p.total ? n / p.total : 0;
         return `<span class="mcell"><b>${n}</b> · ${Math.round(100 * share)}%` +
@@ -349,6 +364,18 @@
       }).join("") + `</div>`).join("");
     return `<div class="panel momentum" style="--mcols:${perBatch.length}">
       <h3>${t("momentumTitle")}</h3><p class="lede">${t("momentumLede")}</p>${head}${rows}</div>`;
+  };
+
+  // clickable topic distribution chart (labels jump to the filtered list)
+  const topicChart = () => {
+    const rows = tally(companies, topicIdsOf).slice(0, 14);
+    const max = rows.length ? rows[0][1] : 1;
+    return `<div class="panel"><h3>${t("chartTopics")}</h3>` + rows.map(([id, n]) =>
+      `<div class="bar-row">
+        <button class="bar-label aslink" data-topic="${esc(id)}" title="${esc(topicLabel(id))}">${esc(topicLabel(id))}</button>
+        <span class="bar-track"><span class="bar-fill" style="width:${Math.max(2, 100 * n / max)}%"></span></span>
+        <span class="bar-num">${n}</span>
+      </div>`).join("") + `</div>`;
   };
 
   const renderReport = () => {
@@ -403,7 +430,7 @@
           <div class="stat"><div class="v">${revenue.length}</div><div class="l">${t("statRevenue")}</div></div>
         </div>
         <div class="cols">
-          ${barChart(t("chartTags"), tally(companies, c => c.tags).slice(0, 12))}
+          ${topicChart()}
           ${barChart(t("chartIndustries"), tally(companies, c => [c.subindustry || c.industry]).slice(0, 12))}
         </div>
         ${momentumBlock()}
@@ -450,6 +477,7 @@
     const list = companies.filter(c => {
       if (state.batch !== "all" && c.batch !== state.batch) return false;
       if (state.industry !== "all" && c.industry !== state.industry) return false;
+      if (state.topic !== "all" && !topicIdsOf(c).includes(state.topic)) return false;
       if (state.hiring && !c.is_hiring) return false;
       if (state.fresh && !c.new_in_last_update) return false;
       if (state.watch && !pickBySlug[c.slug]) return false;
@@ -488,10 +516,15 @@
       .concat(tally(companies, c => [c.industry]).map(([k]) =>
         `<option ${state.industry === k ? "selected" : ""}>${esc(k)}</option>`))
       .join("");
+    const topicOpts = [`<option value="all">${t("allTopics")}</option>`]
+      .concat(tally(companies, topicIdsOf).map(([id, n]) =>
+        `<option value="${esc(id)}" ${state.topic === id ? "selected" : ""}>${esc(topicLabel(id))} (${n})</option>`))
+      .join("");
 
     view.innerHTML = `
       <div class="toolbar">
         <input id="f-q" type="search" placeholder="${esc(t("searchPh"))}" value="${esc(state.q)}">
+        <select id="f-topic">${topicOpts}</select>
         <select id="f-batch">${batchOpts}</select>
         <select id="f-industry">${industryOpts}</select>
         <select id="f-sort">
@@ -512,6 +545,7 @@
     // so typing in the search box never loses focus
     const on = (id, ev, fn) => document.getElementById(id).addEventListener(ev, fn);
     on("f-q", "input", e => { state.q = e.target.value; updateGrid(); });
+    on("f-topic", "change", e => { state.topic = e.target.value; updateGrid(); });
     on("f-batch", "change", e => { state.batch = e.target.value; updateGrid(); });
     on("f-industry", "change", e => { state.industry = e.target.value; updateGrid(); });
     on("f-sort", "change", e => { state.sort = e.target.value; updateGrid(); });
@@ -650,8 +684,12 @@
     render();
   });
 
-  // clicks inside the view: tag chips filter, batch chips jump, goto buttons
+  // clicks inside the view: topic/tag chips filter, batch chips jump, goto
   view.addEventListener("click", e => {
+    const topic = e.target.closest("[data-topic]");
+    if (topic) {
+      state.topic = topic.dataset.topic; state.tab = "companies"; render(); return;
+    }
     const tag = e.target.closest("[data-tag]");
     if (tag) {
       state.q = tag.dataset.tag; state.tab = "companies"; render(); return;

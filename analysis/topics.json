@@ -1,0 +1,417 @@
+{
+  "_readme": "Curated frontier topics. Each company is matched against every topic's regex patterns (case-insensitive, python re) over its name + one-liner + description + tags + industry; a company can carry several topics, or none ('unclassified'). Edit freely — this file is editorial, the pipeline never writes it. Build fails loudly on a bad regex. Tune by running: python3 scripts/yc.py build, then checking the report.",
+  "updated_at": "2026-06-11",
+  "topics": [
+    {
+      "id": "agent-infra",
+      "label": {"en": "Agent infrastructure", "zh": "智能体基础设施"},
+      "patterns": [
+        "\\b(?:infra(?:structure)?|memory|payments?|identity|auth\\w*|insurance|guardrails?|sandbox(?:es)?|evals?|observability|monitoring|orchestrat\\w+|reliability|runtime|browser|context|harness(?:es)?|sdk|cloud)\\s+(?:layer\\s+|platform\\s+)?for\\s+(?:ai\\s+|voice\\s+|autonomous\\s+|coding\\s+|background\\s+)?(?:agents?|software)\\b",
+        "\\bagent(?:ic)?[- ](?:infra\\w*|economy|payments?|identity|memory|reliability|observability|orchestration|harness(?:es)?|experience|sandbox\\w*|native|first)\\b",
+        "\\bagents?\\s+(?:can\\s+)?(?:hold|spend|hire|transact)\\b",
+        "\\b(?:okta|stripe|datadog|vercel|aws|plaid|vanta) for agents?\\b",
+        "\\bcomputer[- ]use\\b",
+        "\\bmcp\\b",
+        "\\b(?:background|long[- ]running|deployed|sandboxed) agents?\\b",
+        "\\bliability insurance for ai\\b",
+        "\\bdebit cards? for ai\\b",
+        "\\bphone numbers? for ai\\b",
+        "\\bguardrails?\\b",
+        "\\bmemory for ai\\b",
+        "\\bagents? (?:to|that) (?:answer|execute|browse)\\b.{0,30}\\bapi\\b",
+        "\\bagent platform\\b",
+        "\\bopenclaw\\b",
+        "\\bclaude cowork\\b",
+        "\\bshared (?:context|memory)\\b",
+        "\\b(?:infra\\w*|verification|reasoning) (?:layers? |platforms? )?for ai\\b"
+      ]
+    },
+    {
+      "id": "ai-ops",
+      "label": {"en": "Applied AI agents & automation", "zh": "应用型智能体与自动化"},
+      "patterns": [
+        "\\bai (?:agents?|employees?|workers?|workforce|teammates?|team|coworkers?|associates?|recruiters?|analysts?|engineers?|assistants?|copilots?|secretar\\w+)\\b",
+        "\\bagents? (?:for|that|to|run|running)\\b",
+        "\\bautomat\\w* (?:workflows?|operations?|back[- ]?office|admin\\w*|claims?|compliance|reconciliation|servicing)\\b",
+        "\\bback[- ]?office\\b",
+        "\\bai[- ]native (?:os\\b|operating system|erp|crm|servicenow)",
+        "\\boperating system for\\b",
+        "\\bworkflow automation\\b",
+        "\\bautomation for\\b",
+        "\\bautonomous (?:customer|business|medical|operations?)\\b",
+        "\\bai voice (?:callers?|agents?)\\b",
+        "\\b(?:run|runs|running) (?:their|your|its) operations\\b",
+        "\\bforward[- ]deployed\\b"
+      ]
+    },
+    {
+      "id": "coding",
+      "label": {"en": "Coding agents & dev tools", "zh": "编程智能体与开发工具"},
+      "patterns": [
+        "\\bcoding agents?\\b",
+        "\\bcode review\\b",
+        "\\bide\\b",
+        "\\bdeveloper tools?\\b",
+        "\\bvibe.?cod\\w+",
+        "\\bdevops\\b",
+        "\\bsre\\b",
+        "\\bcodebases?\\b",
+        "\\bqa engineer\\b",
+        "\\bsoftware (?:teams?|engineering)\\b",
+        "\\bclaude code\\b",
+        "\\bself[- ]healing\\b",
+        "\\bgit ?(?:hub|worktree)?\\b",
+        "\\bproduction incidents?\\b",
+        "\\bstaging environments?\\b",
+        "\\bbuild(?:s|ing)? (?:real )?(?:apps?|software|games)\\b"
+      ]
+    },
+    {
+      "id": "voice",
+      "label": {"en": "Voice AI", "zh": "语音 AI"},
+      "patterns": [
+        "\\bvoice\\b",
+        "\\btts\\b",
+        "\\bspeech\\b",
+        "\\bphone (?:calls?|numbers?|agents?)\\b",
+        "\\bcall (?:center|centre)s?\\b",
+        "\\bconversational ai\\b",
+        "\\banswer(?:s|ing)? every (?:call|phone)\\b",
+        "\\btelephony\\b"
+      ]
+    },
+    {
+      "id": "ai-firms",
+      "label": {"en": "AI-as-the-firm (services)", "zh": "AI 事务所（服务替代）"},
+      "patterns": [
+        "\\bai[- ]native (?:law|legal|account\\w*|audit\\w*|insur\\w+|broker\\w+|recruit\\w+|consult\\w+|cro\\b|agency|carrier|firm|bank\\w*|customs|med[- ]?legal|fda|investment|immigration)",
+        "\\bai (?:law firm|accounting firm|audit firm|insurance (?:carrier|company|brokerage)|hedge fund|consulting firm|brokerage)\\b",
+        "\\bfull[- ]stack ai\\b",
+        "\\bai[- ]powered \\w{0,15} ?(?:firm|agency|brokerage)\\b",
+        "\\bfirst ai (?:founder|bank)\\b",
+        "\\b(?:law|legal|accounting|audit) firm\\b",
+        "\\bai[- ]native consulting\\b"
+      ]
+    },
+    {
+      "id": "lab-data",
+      "label": {"en": "Data & evals for AI labs", "zh": "实验室数据与评测"},
+      "patterns": [
+        "\\btraining data\\b",
+        "\\beval(?:s|uation)? (?:data|platforms?|sets?|environments?)\\b",
+        "\\bbenchmarks?\\b",
+        "\\brlhf\\b",
+        "\\breinforcement learning\\b",
+        "\\bdata labeling\\b",
+        "\\bworld models?\\b",
+        "\\bsimulation environments?\\b",
+        "\\bfrontier (?:ai )?labs?\\b",
+        "\\breasoning data\\b",
+        "\\brights[- ]cleared\\b",
+        "\\bsynthetic data\\b",
+        "\\begocentric\\b",
+        "\\bhuman movement data\\b",
+        "\\bpost[- ]training\\b",
+        "\\bdata (?:provider|collections?|moat)\\b",
+        "\\bdigital twins?\\b"
+      ]
+    },
+    {
+      "id": "models",
+      "label": {"en": "Foundation models & AGI labs", "zh": "基础模型与 AGI 实验室"},
+      "patterns": [
+        "\\bfoundation models?\\b",
+        "\\bagi\\b",
+        "\\bsuperintelligen\\w+",
+        "\\bresearch labs?\\b",
+        "\\bfrontier (?:ai|systems?|models?)\\b",
+        "\\bgeneral intelligence\\b",
+        "\\b(?:speech|voice|video|vision) (?:foundation )?models?\\b",
+        "\\bautonomous ai research\\b"
+      ]
+    },
+    {
+      "id": "robotics",
+      "label": {"en": "Robotics & embodied AI", "zh": "机器人与具身智能"},
+      "patterns": [
+        "\\brobots?\\b",
+        "\\brobotics?\\b",
+        "\\bhumanoids?\\b",
+        "\\bembodied\\b",
+        "\\bvla\\b",
+        "\\bteleoperat\\w+",
+        "\\bmanipulat(?:e|ion|ors?)\\b",
+        "\\bautonomous (?:drones?|vehicles?|machines?|factor\\w+|fleets?|depots?)\\b",
+        "\\bphysical ai\\b",
+        "\\bartificial muscles?\\b",
+        "\\bactuators?\\b",
+        "\\bself[- ]driving\\b"
+      ]
+    },
+    {
+      "id": "defense",
+      "label": {"en": "Defense & space", "zh": "国防与航天"},
+      "patterns": [
+        "\\bdefen[cs]e\\b",
+        "\\bmilitary\\b",
+        "\\bmissiles?\\b",
+        "\\bcounter[- ]?uas\\b",
+        "\\b(?:strike|attack|kamikaze) drones?\\b",
+        "\\bbattlefield\\b",
+        "\\bcontested\\b",
+        "\\bsurveillance\\b",
+        "\\btactical\\b",
+        "\\bwarfare\\b",
+        "\\baerospace\\b",
+        "\\bsatellites?\\b",
+        "\\bin[- ]orbit\\b",
+        "\\borbital\\b",
+        "\\brockets?\\b",
+        "\\bhypersonic\\b",
+        "\\bstratospher\\w+",
+        "\\bspace (?:solar|manufactur\\w+|cargo|r&d|defense|stations?)\\b",
+        "\\bmaritime\\b",
+        "\\bsubmarines?\\b",
+        "\\bnational security\\b",
+        "\\bmission systems?\\b"
+      ]
+    },
+    {
+      "id": "health",
+      "label": {"en": "Healthcare & bio", "zh": "医疗与生物"},
+      "patterns": [
+        "\\bhealth(?:care)?\\b",
+        "\\bmedical\\b",
+        "\\bclinic(?:al|s|ians)?\\b",
+        "\\bpatients?\\b",
+        "\\bbio(?:tech|logy|logical|sciences?)\\b",
+        "\\bdrug(?:s| discovery| manufactur\\w+)?\\b",
+        "\\bcancer\\b",
+        "\\btherapeutics?\\b",
+        "\\bdiagnos\\w+",
+        "\\bfda\\b",
+        "\\bpharma\\w*",
+        "\\bdental\\b",
+        "\\bnursing\\b",
+        "\\belder care\\b",
+        "\\bmental health\\b",
+        "\\bgenom\\w+",
+        "\\bsurg(?:ery|ical|eons?)\\b",
+        "\\bprimary care\\b",
+        "\\bhospitals?\\b",
+        "\\bmicrobial\\b",
+        "\\bproteins?\\b",
+        "\\bdna\\b",
+        "\\bultrasound\\b",
+        "\\bmalaria\\b",
+        "\\bmosquito\\w*"
+      ]
+    },
+    {
+      "id": "fintech",
+      "label": {"en": "Fintech & insurance", "zh": "金融科技与保险"},
+      "patterns": [
+        "\\bfintech\\b",
+        "\\bpayments?\\b",
+        "\\bbank(?:ing|s)?\\b",
+        "\\blending\\b",
+        "\\bcredit\\b",
+        "\\bunderwrit\\w+",
+        "\\btreasury\\b",
+        "\\baccounting\\b",
+        "\\bpayroll\\b",
+        "\\binvoic\\w+",
+        "\\bstablecoins?\\b",
+        "\\bwallets?\\b",
+        "\\binsur(?:ance|ers?|tech)\\b",
+        "\\bactuarial\\b",
+        "\\bmortgages?\\b",
+        "\\bloans?\\b",
+        "\\breconciliation\\b",
+        "\\btax(?:es)?\\b",
+        "\\bfinance\\b",
+        "\\bfinancial\\b"
+      ]
+    },
+    {
+      "id": "markets",
+      "label": {"en": "Markets & trading", "zh": "市场与交易"},
+      "patterns": [
+        "\\bprediction markets?\\b",
+        "\\bevent contracts?\\b",
+        "\\bkalshi\\b",
+        "\\bpolymarket\\b",
+        "\\btrad(?:e|ing|ers?)\\b",
+        "\\bexchanges?\\b",
+        "\\bbrokerages?\\b",
+        "\\bquant\\w*\\b",
+        "\\bhedge funds?\\b",
+        "\\bderivatives?\\b",
+        "\\bperps?\\b",
+        "\\bcrypto\\w*\\b",
+        "\\bdefi\\b",
+        "\\btokenized\\b",
+        "\\binvest(?:ing|ments?|ors?)\\b"
+      ]
+    },
+    {
+      "id": "industrial",
+      "label": {"en": "Industrial, logistics & agri", "zh": "工业、物流与农业"},
+      "patterns": [
+        "\\bmanufactur\\w+",
+        "\\bfactor(?:y|ies)\\b",
+        "\\bindustrial\\b",
+        "\\bsupply chains?\\b",
+        "\\blogistics\\b",
+        "\\bfreight\\b",
+        "\\bwarehouses?\\b",
+        "\\bconstruction\\b",
+        "\\bwelding\\b",
+        "\\bprocurement\\b",
+        "\\bdistributors?\\b",
+        "\\bagricultur\\w+",
+        "\\bfarm(?:s|ing|ers)?\\b",
+        "\\bcattle\\b",
+        "\\btruck(?:s|ing)?\\b",
+        "\\bcustoms\\b",
+        "\\btariffs?\\b",
+        "\\bfield services?\\b",
+        "\\bmaintenance\\b"
+      ]
+    },
+    {
+      "id": "compute",
+      "label": {"en": "AI compute & chips", "zh": "AI 算力与芯片"},
+      "patterns": [
+        "\\bgpus?\\b",
+        "\\binference\\b",
+        "\\bcompute\\b",
+        "\\bsemiconductors?\\b",
+        "\\bchips?\\b",
+        "\\bsilicon\\b",
+        "\\bon[- ]device\\b",
+        "\\bdata ?cent(?:er|re)s?\\b",
+        "\\bcooling\\b",
+        "\\bmodel[- ]hardware\\b",
+        "\\bcompression\\b",
+        "\\bai (?:spend|costs?)\\b",
+        "\\bvirtual machines?\\b",
+        "\\bcloud (?:vms?|computing|infrastructure)\\b"
+      ]
+    },
+    {
+      "id": "energy",
+      "label": {"en": "Energy", "zh": "能源"},
+      "patterns": [
+        "\\benergy\\b",
+        "\\bnuclear\\b",
+        "\\bfusion\\b",
+        "\\buranium\\b",
+        "\\bsolar\\b",
+        "\\bpower grids?\\b",
+        "\\bgrid\\b",
+        "\\bbatter(?:y|ies)\\b",
+        "\\breactors?\\b",
+        "\\bgeothermal\\b"
+      ]
+    },
+    {
+      "id": "gtm",
+      "label": {"en": "Sales & marketing", "zh": "销售与营销"},
+      "patterns": [
+        "\\bsales\\b",
+        "\\bgtm\\b",
+        "\\boutbound\\b",
+        "\\bmarketing\\b",
+        "\\badvertis\\w+",
+        "\\bads\\b",
+        "\\bseo\\b",
+        "\\bgrowth (?:teams?|engines?)\\b",
+        "\\bcrm\\b",
+        "\\bleads?\\b",
+        "\\bdevrel\\b",
+        "\\bdeveloper relations\\b",
+        "\\bbrands?\\b",
+        "\\bcustomer (?:acquisition|success|support|service)\\b",
+        "\\bdemos?\\b"
+      ]
+    },
+    {
+      "id": "work",
+      "label": {"en": "Recruiting & future of work", "zh": "招聘与未来工作"},
+      "patterns": [
+        "\\brecruit\\w+",
+        "\\bhiring\\b",
+        "\\btalent\\b",
+        "\\bstaffing\\b",
+        "\\bjobs?\\b",
+        "\\bcareers?\\b",
+        "\\binterviews?\\b",
+        "\\bhr\\b",
+        "\\bemployees? (?:onboard|interview)\\w*"
+      ]
+    },
+    {
+      "id": "legal",
+      "label": {"en": "Legal, gov & compliance", "zh": "法律、政务与合规"},
+      "patterns": [
+        "\\blegal\\b",
+        "\\blaw\\b",
+        "\\blawyers?\\b",
+        "\\bcompliance\\b",
+        "\\bregulat\\w+",
+        "\\bcontracts?\\b",
+        "\\bpatents?\\b",
+        "\\bimmigration\\b",
+        "\\bgov(?:ernment|tech)\\b",
+        "\\bpermit\\w*\\b",
+        "\\bfoia\\b",
+        "\\bsox\\b",
+        "\\baudits?\\b"
+      ]
+    },
+    {
+      "id": "security",
+      "label": {"en": "Security & fraud", "zh": "安全与反欺诈"},
+      "patterns": [
+        "\\bsecurity\\b",
+        "\\bcyber\\w*",
+        "\\bfraud\\w*",
+        "\\bpentest\\w*",
+        "\\boffensive security\\b",
+        "\\bauthenticat\\w+",
+        "\\bauthoriz\\w+",
+        "\\bprompt injection\\b",
+        "\\bredact\\w+",
+        "\\bzero[- ]trust\\b",
+        "\\bthreats?\\b",
+        "\\bsocial engineering\\b"
+      ]
+    },
+    {
+      "id": "consumer",
+      "label": {"en": "Consumer, media & gaming", "zh": "消费、媒体与游戏"},
+      "patterns": [
+        "\\bconsumers?\\b",
+        "\\bsocial\\b",
+        "\\bgam(?:e|es|ing)\\b",
+        "\\bentertainment\\b",
+        "\\bfitness\\b",
+        "\\bdating\\b",
+        "\\blanguage learning\\b",
+        "\\bkids?\\b",
+        "\\beducation\\b",
+        "\\btiktok\\b",
+        "\\bcreators?\\b",
+        "\\bvideos?\\b",
+        "\\bfilm\\w*",
+        "\\bmusic\\b",
+        "\\bmedia\\b",
+        "\\bavatars?\\b",
+        "\\bcartoons?\\b",
+        "\\bsports?\\b",
+        "\\btravel\\b"
+      ]
+    }
+  ]
+}

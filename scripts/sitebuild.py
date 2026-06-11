@@ -8,12 +8,13 @@ file:// with no server.
 """
 
 import json
+import re
 from datetime import date, datetime, timezone
 
 import automate
 import batches as batchmod
 from store import (ANALYSIS_PATH, CHANGELOG_PATH, CONFIG_PATH, DIST_DIR,
-                   SITE_DIR, SNAPSHOT_DIR, load_json, load_state)
+                   SITE_DIR, SNAPSHOT_DIR, TOPICS_PATH, load_json, load_state)
 
 EMPTY_WATCHLIST = {"updated_at": None, "summary": [], "methodology": "",
                    "themes": [], "picks": []}
@@ -76,6 +77,47 @@ def validate_watchlist(wl):
     if problems:
         raise SystemExit("analysis/watchlist.json failed validation:\n  "
                          + "\n  ".join(problems))
+
+
+# ------------------------------------------------------------ topic tagging
+# YC's own categories are too coarse to read trends from ("B2B" covers half
+# the batch), so analysis/topics.json defines frontier topics as transparent
+# keyword rules — deterministic, no LLM calls (owner-approved deviation from
+# SPEC §6b's "YC fields only"; the no-LLM constraint stands). A company can
+# match several topics, or none.
+def load_topic_rules():
+    spec = load_json(TOPICS_PATH, {"topics": []})
+    rules, problems = [], []
+    for topic in spec.get("topics", []):
+        if not topic.get("id") or not topic.get("label"):
+            problems.append("topic with missing id/label: %r" % topic)
+            continue
+        compiled = []
+        for pattern in topic.get("patterns", []):
+            try:
+                compiled.append(re.compile(pattern, re.I))
+            except re.error as exc:
+                problems.append("topic %s: bad pattern %r (%s)"
+                                % (topic["id"], pattern, exc))
+        rules.append({"id": topic["id"], "label": topic["label"],
+                      "patterns": compiled})
+    if problems:
+        raise SystemExit("analysis/topics.json failed validation:\n  "
+                         + "\n  ".join(problems))
+    return rules
+
+
+def classify_topics(company, rules):
+    blob = " ".join([
+        company.get("name") or "",
+        company.get("one_liner") or "",
+        company.get("long_description") or "",
+        " ".join(company.get("tags") or []),
+        company.get("industry") or "",
+        company.get("subindustry") or "",
+    ])
+    return [r["id"] for r in rules
+            if any(p.search(blob) for p in r["patterns"])]
 
 
 # ----------------------------------------------------------- review cadence
@@ -176,6 +218,7 @@ def build_payload():
         next_pull = None
     wl = load_json(ANALYSIS_PATH, EMPTY_WATCHLIST)
     interval = cfg.get("review_interval_days", 180)
+    rules = load_topic_rules()
     return {
         "site_title": cfg.get("site_title", "YC Monitor"),
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -183,7 +226,13 @@ def build_payload():
         "next_update": next_pull.isoformat() if next_pull else None,
         "review_interval_days": interval,
         "due_reviews": compute_due_reviews(wl, state, interval),
-        "batches": [dict(b, slug=slug) for slug, b in ordered],
+        "topics": [{"id": r["id"], "label": r["label"]} for r in rules],
+        # companies are shallow-copied so derived topics never leak back into
+        # data/companies.json via the shared state dicts
+        "batches": [dict(b, slug=slug,
+                         companies=[dict(c, topics=classify_topics(c, rules))
+                                    for c in b["companies"]])
+                    for slug, b in ordered],
         "changelog": load_json(CHANGELOG_PATH, []),
         "watchlist": wl,
     }

@@ -177,6 +177,8 @@ section > h2 { font-size: 21px; margin: 0 0 4px; }
 .chip:hover { color: var(--text); border-color: var(--accent); }
 .chip.soft { cursor: default; color: var(--text); }
 .chip.soft:hover { border-color: var(--line); }
+.chip.tpc { color: var(--accent); background: var(--accent-soft); border-color: rgba(251, 101, 30, .3); }
+.chip.tpc:hover { color: #fff; background: var(--accent); }
 
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 4px; }
 .btn {
@@ -226,7 +228,20 @@ details.more p { margin: 8px 0 0; white-space: pre-line; }
 .mrow:last-child { border-bottom: 0; }
 .mhead { color: var(--muted); font-size: 12px; border-bottom: 1px solid var(--line); }
 .mhead .mcell em { display: block; font-style: normal; opacity: .7; }
-.mlabel { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mlabel {
+  font-size: 13px; color: var(--muted); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+  background: none; border: 0; padding: 0; text-align: left; cursor: pointer;
+}
+.mlabel:hover { color: var(--accent); }
+.mhead .mlabel, span.mlabel { cursor: default; }
+.dimrow { opacity: .55; }
+button.bar-label.aslink {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  color: var(--muted); text-align: left; font-size: 13px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+button.bar-label.aslink:hover { color: var(--accent); }
 .mcell { position: relative; font-size: 12.5px; color: var(--muted); padding-bottom: 6px; }
 .mcell b { color: var(--text); font-size: 13.5px; }
 .mcell.dim { opacity: .35; padding-bottom: 0; }
