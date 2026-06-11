@@ -41,6 +41,19 @@ def atomic_write_json(path, obj):
     os.replace(tmp, path)
 
 
+# fields whose changes are tracked between runs (SPEC §6a); these are the
+# normalized schema's names (see sources.normalize)
+WATCHED_FIELDS = ("one_liner", "long_description", "team_size", "website", "status")
+
+
+def _comparable(value):
+    """Whitespace-insensitive view of a value, so trivial edits don't count
+    as changes. The changelog still stores the raw values."""
+    if isinstance(value, str):
+        return " ".join(value.split())
+    return value
+
+
 def load_state():
     return load_json(COMPANIES_PATH, {"updated_at": None, "batches": {}})
 
@@ -67,12 +80,19 @@ def apply_run(state, results, run_at):
         prev = state["batches"].get(slug, {})
         prev_by_slug = {c["slug"]: c for c in prev.get("companies", [])}
 
+        changed = []
         for c in res["companies"]:
             old = prev_by_slug.get(c["slug"])
             c["first_seen"] = old["first_seen"] if old else run_at
             c["new_in_last_update"] = old is None and not initial
             if old and c.get("founder_count") is None:
                 c["founder_count"] = old.get("founder_count")
+            if old:
+                for field in WATCHED_FIELDS:
+                    if _comparable(old.get(field)) != _comparable(c.get(field)):
+                        changed.append({"slug": c["slug"], "name": c["name"],
+                                        "field": field,
+                                        "old": old.get(field), "new": c.get(field)})
 
         added = [c for c in res["companies"] if c["slug"] not in prev_by_slug]
         fetched_slugs = {c["slug"] for c in res["companies"]}
@@ -93,6 +113,7 @@ def apply_run(state, results, run_at):
             "added": [] if initial else [{"slug": c["slug"], "name": c["name"],
                                           "one_liner": c["one_liner"]} for c in added],
             "removed": [{"slug": c["slug"], "name": c["name"]} for c in removed],
+            "changed": changed,
         }
 
     state["updated_at"] = run_at

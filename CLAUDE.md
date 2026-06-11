@@ -58,6 +58,22 @@ Each pick may carry a decision; absent = rendered as "undecided" (grey badge):
   tab (zh labels: 自建/复制/合作/忽略/未定); the note shows on pick cards as
   "Decision:"/"决策：". `status` prints the verdict breakdown.
 - Verdict-filter on the Companies tab was deliberately skipped (P1 in spec).
+
+## Delta engine (SPEC §6 — shipped)
+
+- Field-level diffing (`store.WATCHED_FIELDS`: one_liner, long_description,
+  team_size, website, status): every `update` compares whitespace-normalized
+  values for companies present in both states and appends
+  `changed: [{slug, name, field, old, new}]` (raw values) to that run's
+  changelog entry, per batch. Older entries without `changed` stay valid.
+- UI: change lines in the Updates tab history (`team_size: 5 → 9`, text
+  truncated to ~70 chars); companies changed in the LATEST run get a yellow
+  CHANGED/有变化 badge whose tooltip lists the fields.
+- Theme momentum: Report tab table, rows = top-10 `subindustry || industry`
+  (YC's own categories) overall, columns = batches, cells = count · share of
+  batch with a CSS bar scaled to the table max. Derived in app.js at render
+  time from the dataset — nothing persisted (satisfies §6b "no new file").
+  Missing cells render as dim "–"; young batches are small samples.
 4. `python3 scripts/yc.py build`, then sanity-check `site/index.html`.
 
 ## Conventions

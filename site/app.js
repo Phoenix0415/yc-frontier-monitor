@@ -28,6 +28,17 @@
     ? companies.filter(c => c.first_seen > wl.updated_at)
     : [];
 
+  // slug -> field-change records from the most recent update run (SPEC §6a);
+  // drives the CHANGED badge, mirroring how NEW works
+  const changedNow = {};
+  const latestRun = changelog[0];
+  if (latestRun && !latestRun.initial) {
+    Object.values(latestRun.batches || {}).forEach(b =>
+      (b.changed || []).forEach(r => {
+        (changedNow[r.slug] = changedNow[r.slug] || []).push(r);
+      }));
+  }
+
   // ---------- i18n ----------
   const I18N = {
     en: {
@@ -74,7 +85,10 @@
       noRuns: "No update runs recorded yet.",
       initialImport: " — initial import",
       listedLine: "{n} listed ({s})",
-      addedNew: "+{n} new", delistedN: "−{n} delisted",
+      addedNew: "+{n} new", delistedN: "−{n} delisted", changedN: "~{n} changed",
+      badgeChanged: "CHANGED",
+      momentumTitle: "Theme momentum across batches",
+      momentumLede: "Industry mix per batch, using YC's own categories: count and share of that batch. Young batches are small samples — expect the numbers to move.",
       footer: "Data: the public YC company directory (live Algolia index; yc-oss daily mirror as fallback) — listed companies only, so young batches keep growing. Watchlist picks are editorial, not investment advice. Generated {d}.",
     },
     zh: {
@@ -121,7 +135,10 @@
       noRuns: "还没有更新记录。",
       initialImport: " — 首次导入",
       listedLine: "已收录 {n} 家（{s}）",
-      addedNew: "新增 {n}", delistedN: "下架 {n}",
+      addedNew: "新增 {n}", delistedN: "下架 {n}", changedN: "变更 {n}",
+      badgeChanged: "有变化",
+      momentumTitle: "批次间的主题动量",
+      momentumLede: "各批次的行业构成（YC 自有分类）：数量与该批次内占比。年轻批次样本小，数字会持续变动。",
       footer: "数据来源：YC 公开公司目录（实时 Algolia 索引；yc-oss 每日镜像兜底）——仅含已公开收录的公司，年轻批次会持续增长。重点名单为编辑判断，不构成投资建议。生成于 {d}。",
     },
   };
@@ -163,6 +180,7 @@
     .replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const day = iso => (iso ? String(iso).slice(0, 10) : "–");
+  const trunc = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
   const pct = (part, whole) => (whole ? Math.round(100 * part / whole) + "%" : "–");
 
   const median = nums => {
@@ -216,6 +234,7 @@
     let badges = "";
     if (p) badges += `<span class="badge star">${t("badgeWatchlist")}</span>` + verdictBadge(p);
     if (c.new_in_last_update) badges += `<span class="badge new">${t("badgeNew")}</span>`;
+    if (changedNow[c.slug]) badges += `<span class="badge changed" title="${esc(changedNow[c.slug].map(r => r.field).join(" · "))}">${t("badgeChanged")}</span>`;
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
     const tags = (c.tags || []).slice(0, 5)
       .map(tg => `<button class="chip" data-tag="${esc(tg)}">${esc(tg)}</button>`).join("");
@@ -260,6 +279,39 @@
         <span class="bar-track"><span class="bar-fill" style="width:${Math.max(2, 100 * n / max)}%"></span></span>
         <span class="bar-num">${n}</span>
       </div>`).join("") + `</div>`;
+  };
+
+  // theme momentum (SPEC §6b): rows = top industries overall, columns =
+  // batches, cells = count + share-of-batch. Derived at render time from the
+  // dataset — nothing persisted. Industry names stay as YC provides them.
+  const momentumBlock = () => {
+    const top = tally(companies, c => [c.subindustry || c.industry]).slice(0, 10);
+    if (!top.length) return "";
+    const perBatch = batches.map(b => {
+      const m = {};
+      (b.companies || []).forEach(c => {
+        const k = c.subindustry || c.industry;
+        if (k) m[k] = (m[k] || 0) + 1;
+      });
+      return { display: b.display, total: (b.companies || []).length, m };
+    });
+    let maxShare = 0;
+    top.forEach(([k]) => perBatch.forEach(p => {
+      const s = p.total ? (p.m[k] || 0) / p.total : 0;
+      if (s > maxShare) maxShare = s;
+    }));
+    const head = `<div class="mrow mhead"><span class="mlabel"></span>` +
+      perBatch.map(p => `<span class="mcell">${esc(locBatch(p.display))}<em>${p.total}</em></span>`).join("") + `</div>`;
+    const rows = top.map(([k]) => `<div class="mrow"><span class="mlabel" title="${esc(k)}">${esc(k)}</span>` +
+      perBatch.map(p => {
+        const n = p.m[k] || 0;
+        if (!n) return `<span class="mcell dim">–</span>`;
+        const share = p.total ? n / p.total : 0;
+        return `<span class="mcell"><b>${n}</b> · ${Math.round(100 * share)}%` +
+          `<i style="width:${Math.max(2, Math.round(100 * share / (maxShare || 1)))}%"></i></span>`;
+      }).join("") + `</div>`).join("");
+    return `<div class="panel momentum" style="--mcols:${perBatch.length}">
+      <h3>${t("momentumTitle")}</h3><p class="lede">${t("momentumLede")}</p>${head}${rows}</div>`;
   };
 
   const renderReport = () => {
@@ -317,6 +369,7 @@
           ${barChart(t("chartTags"), tally(companies, c => c.tags).slice(0, 12))}
           ${barChart(t("chartIndustries"), tally(companies, c => [c.subindustry || c.industry]).slice(0, 12))}
         </div>
+        ${momentumBlock()}
       </section>
       ${themeBlocks ? `<section><h2>${t("watchlistTitle")}</h2>
         <p class="lede">${esc(loc(wl.methodology))}</p>${themeBlocks}</section>` : ""}
@@ -399,18 +452,32 @@
   };
 
   // ---------- updates tab ----------
+  // one field-change record -> "old → new" body; numbers plain, text truncated
+  const changeBody = r => {
+    if (typeof r.old === "number" || typeof r.new === "number") {
+      return `${r.old == null ? "–" : r.old} → ${r.new == null ? "–" : r.new}`;
+    }
+    return `${esc(trunc(String(r.old == null ? "–" : r.old), 70))} → ${esc(trunc(String(r.new == null ? "–" : r.new), 70))}`;
+  };
+
   const logEntry = e => {
     const lines = Object.values(e.batches).map(b => {
+      const changed = b.changed || [];
       const delta = e.initial ? "" :
-        ` — <strong>${tf("addedNew", { n: b.added.length })}</strong>${b.removed.length ? ` / ${tf("delistedN", { n: b.removed.length })}` : ""}`;
+        ` — <strong>${tf("addedNew", { n: b.added.length })}</strong>${b.removed.length ? ` / ${tf("delistedN", { n: b.removed.length })}` : ""}${changed.length ? ` / ${tf("changedN", { n: changed.length })}` : ""}`;
       const adds = b.added.map(c => {
         const full = bySlug[c.slug];
         return `<li><a href="${esc(full ? full.yc_url : "https://www.ycombinator.com/companies/" + c.slug)}"
                   target="_blank" rel="noopener">${esc(c.name)}</a> — ${esc(c.one_liner)}</li>`;
       }).join("");
       const dels = b.removed.map(c => `<li class="removed">${esc(c.name)}</li>`).join("");
+      const chgs = changed.map(r => {
+        const full = bySlug[r.slug];
+        return `<li><a href="${esc(full ? full.yc_url : "https://www.ycombinator.com/companies/" + r.slug)}"
+                  target="_blank" rel="noopener">${esc(r.name || r.slug)}</a> — <code>${esc(r.field)}</code>: ${changeBody(r)}</li>`;
+      }).join("");
       return `<div><strong>${esc(locBatch(b.display))}</strong>: ${tf("listedLine", { n: b.total, s: esc(b.source) })}${delta}
-        ${adds || dels ? `<ul>${adds}${dels}</ul>` : ""}</div>`;
+        ${adds || dels || chgs ? `<ul>${adds}${dels}${chgs}</ul>` : ""}</div>`;
     }).join("");
     return `<div class="logentry">
       <h3>${day(e.run_at)}${e.initial ? t("initialImport") : ""}</h3>${lines}</div>`;

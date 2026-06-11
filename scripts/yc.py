@@ -93,10 +93,17 @@ def cmd_update(args):
     else:
         added = sum(len(b["added"]) for b in entry["batches"].values())
         removed = sum(len(b["removed"]) for b in entry["batches"].values())
-        print("\nDone: +%d new / -%d delisted since last update." % (added, removed))
+        changed = sum(len(b.get("changed", [])) for b in entry["batches"].values())
+        print("\nDone: +%d new / -%d delisted / ~%d field changes since last update."
+              % (added, removed, changed))
         for b in entry["batches"].values():
             for c in b["added"]:
                 print("  + [%s] %s — %s" % (b["display"], c["name"], c["one_liner"][:70]))
+            per_company = {}
+            for r in b.get("changed", []):
+                per_company.setdefault((r["slug"], r["name"]), []).append(r["field"])
+            for (_slug, name), fields in per_company.items():
+                print("  ~ [%s] %s — %s" % (b["display"], name, ", ".join(fields)))
     print("Site rebuilt -> site/index.html (portable copy: dist/yc-monitor.html)")
 
     pending = pending_review(state, store.load_json(store.ANALYSIS_PATH, None))
