@@ -66,6 +66,18 @@
       verdictBuild: "build", verdictCopy: "copy", verdictPartner: "partner",
       verdictIgnore: "ignore", verdictUndecided: "undecided",
       decisionLabel: "Decision:",
+      dueTitle: "Due for review — {n}",
+      dueLede: "No review in {n}+ days. Evidence is whatever the dataset knows; record outcomes in analysis/watchlist.json → picks[].reviews.",
+      dueSince: "clock running since {d} · {n} days",
+      evTeam: "team size", evOneLiner: "one-liner changed {d}",
+      evDelisted: "delisted from the YC directory",
+      evNone: "no movement in the dataset",
+      hitTitle: "Pick outcomes — calibration",
+      hitLede: "Latest outcome per pick × the verdict made at pick time. Of the build calls, how many actually grew?",
+      hitCoverage: "{x} of {y} picks reviewed",
+      outThriving: "thriving", outGrowing: "growing", outFlat: "flat",
+      outPivoted: "pivoted", outDead: "dead", outUnclear: "unclear",
+      outUnreviewed: "unreviewed",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
       firstSeen: "first seen {d}",
       searchPh: "Search name, pitch, tags…",
@@ -116,6 +128,18 @@
       verdictBuild: "自建", verdictCopy: "复制", verdictPartner: "合作",
       verdictIgnore: "忽略", verdictUndecided: "未定",
       decisionLabel: "决策：",
+      dueTitle: "待复盘 — {n} 个",
+      dueLede: "超过 {n} 天未复盘。证据来自数据集已知信息；复盘结果记入 analysis/watchlist.json 的 picks[].reviews。",
+      dueSince: "计时起点 {d} · 已 {n} 天",
+      evTeam: "团队规模", evOneLiner: "一句话简介变更 {d}",
+      evDelisted: "已从 YC 目录下架",
+      evNone: "数据集中暂无变化信号",
+      hitTitle: "判断成绩单 · 校准",
+      hitLede: "每个关注对象的最新复盘结果 × 当时的决策。当初判定要自建的，有几个真长起来了？",
+      hitCoverage: "已复盘 {x} / {y}",
+      outThriving: "兴旺", outGrowing: "增长", outFlat: "平淡",
+      outPivoted: "转型", outDead: "倒闭", outUnclear: "不明",
+      outUnreviewed: "未复盘",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
       firstSeen: "收录于 {d}",
       searchPh: "搜索名称、简介、标签…",
@@ -228,6 +252,17 @@
   };
   const verdictNote = p => (p.verdict && p.verdict.note
     ? `<p class="why"><strong>${t("decisionLabel")}</strong> ${esc(loc(p.verdict.note))}</p>` : "");
+
+  // feedback loop (SPEC §7)
+  const OUTCOME_KEYS = { thriving: "outThriving", growing: "outGrowing",
+                         flat: "outFlat", pivoted: "outPivoted",
+                         dead: "outDead", unclear: "outUnclear" };
+  const latestOutcome = p => {
+    const rs = (p.reviews || []).filter(r => r && r.date && r.outcome);
+    if (!rs.length) return null;
+    return rs.slice().sort((a, b) => String(a.date).localeCompare(String(b.date)))
+             .pop().outcome;
+  };
 
   const companyCard = c => {
     const p = pickBySlug[c.slug];
@@ -373,7 +408,38 @@
       </section>
       ${themeBlocks ? `<section><h2>${t("watchlistTitle")}</h2>
         <p class="lede">${esc(loc(wl.methodology))}</p>${themeBlocks}</section>` : ""}
+      ${hitrateBlock()}
     `;
+  };
+
+  // calibration view (SPEC §7): verdict action × latest outcome, plain table.
+  // Renders at zero coverage too — the empty grid is the nudge to review.
+  const hitrateBlock = () => {
+    if (!picks.length) return "";
+    const outcomes = Object.keys(OUTCOME_KEYS).concat(["unreviewed"]);
+    const actions = ["build", "copy", "partner", "ignore", "undecided"];
+    const cellCounts = {};
+    let reviewed = 0;
+    picks.forEach(p => {
+      const a = p.verdict && VERDICT_KEYS[p.verdict.action] ? p.verdict.action : "undecided";
+      const o = latestOutcome(p) || "unreviewed";
+      if (o !== "unreviewed") reviewed += 1;
+      cellCounts[a + "|" + o] = (cellCounts[a + "|" + o] || 0) + 1;
+    });
+    const outLabel = o => t(OUTCOME_KEYS[o] || "outUnreviewed");
+    const head = `<tr><th></th>${outcomes.map(o => `<th>${outLabel(o)}</th>`).join("")}</tr>`;
+    const rows = actions.map(a => {
+      const cells = outcomes.map(o => {
+        const n = cellCounts[a + "|" + o] || 0;
+        return `<td class="${n ? "" : "zero"}">${n}</td>`;
+      }).join("");
+      return `<tr><th>${t(VERDICT_KEYS[a] || "verdictUndecided")}</th>${cells}</tr>`;
+    }).join("");
+    return `<section class="panel">
+      <h2>${t("hitTitle")}</h2>
+      <p class="lede">${t("hitLede")} <strong>${tf("hitCoverage", { x: reviewed, y: picks.length })}</strong></p>
+      <div class="tablewrap"><table class="hitrate">${head}${rows}</table></div>
+    </section>`;
   };
 
   // ---------- companies tab ----------
@@ -483,6 +549,36 @@
       <h3>${day(e.run_at)}${e.initial ? t("initialImport") : ""}</h3>${lines}</div>`;
   };
 
+  // due-for-review panel (SPEC §7): overdue picks with dataset evidence
+  const dueBlock = () => {
+    const due = D.due_reviews || [];
+    if (!due.length) return "";
+    const cards = due.map(d => {
+      const c = bySlug[d.slug];
+      const p = pickBySlug[d.slug];
+      const ev = [];
+      const e = d.evidence || {};
+      if (e.team_then != null || e.team_now != null) {
+        ev.push(`${t("evTeam")}: ${e.team_then == null ? "–" : e.team_then} → ${e.team_now == null ? "–" : e.team_now}`);
+      }
+      (e.one_liner_changes || []).forEach(ch => ev.push(
+        `${tf("evOneLiner", { d: day(ch.date) })}: ${esc(trunc(String(ch.old || "–"), 55))} → ${esc(trunc(String(ch.new || "–"), 55))}`));
+      if (e.delisted) ev.push(`<strong>${t("evDelisted")}</strong>`);
+      return `<div class="duecard">
+        <div class="cardhead"><h3>${esc(c ? c.name : d.slug)}</h3>${p ? verdictBadge(p) : ""}</div>
+        <p class="meta">${tf("dueSince", { d: day(d.anchor), n: d.days })}</p>
+        ${ev.length ? `<ul class="evlist">${ev.map(x => `<li>${x}</li>`).join("")}</ul>`
+                    : `<p class="meta">${t("evNone")}</p>`}
+        ${c ? `<div class="actions">${linkBtns(c)}</div>` : ""}
+      </div>`;
+    }).join("");
+    return `<section class="panel warn">
+      <h2>${tf("dueTitle", { n: due.length })}</h2>
+      <p class="lede">${tf("dueLede", { n: D.review_interval_days || 180 })}</p>
+      <div class="grid">${cards}</div>
+    </section>`;
+  };
+
   const renderUpdates = () => {
     const pending = pendingReview.length ? `
       <section class="panel warn">
@@ -498,6 +594,7 @@
         <p>${t("updAuto")}</p>
         ${D.next_update ? `<p class="meta">${tf("updNext", { d: D.next_update })}</p>` : ""}
       </section>
+      ${dueBlock()}
       ${pending}
       <section><h2>${t("historyTitle")}</h2>
         ${changelog.map(logEntry).join("") || `<p class="empty">${t("noRuns")}</p>`}

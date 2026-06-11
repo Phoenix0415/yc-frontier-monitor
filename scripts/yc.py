@@ -179,6 +179,12 @@ def cmd_status(_args):
         print("  verdicts: " + " · ".join(
             "%s %d" % (a, counts.get(a, 0))
             for a in sitebuild.VERDICT_ACTIONS + ("undecided",)))
+        cfg = store.load_json(store.CONFIG_PATH, {})
+        due = sitebuild.compute_due_reviews(
+            wl, state, cfg.get("review_interval_days", 180))
+        reviewed = sum(1 for p in wl.get("picks", []) if p.get("reviews"))
+        print("  reviews: %d picks due for review · %d ever reviewed"
+              % (len(due), reviewed))
     else:
         print("Watchlist: not curated yet (analysis/watchlist.json).")
     due, reason = automate.update_due(state)

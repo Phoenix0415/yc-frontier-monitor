@@ -59,6 +59,28 @@ Each pick may carry a decision; absent = rendered as "undecided" (grey badge):
   "Decision:"/"决策：". `status` prints the verdict breakdown.
 - Verdict-filter on the Companies tab was deliberately skipped (P1 in spec).
 
+## Feedback loop (SPEC §7 — shipped)
+
+- Reviews are human judgments appended to picks (pipeline never writes them):
+
+  ```json
+  "reviews": [{"date": "2026-12-11",
+               "outcome": "thriving | growing | flat | pivoted | dead | unclear",
+               "note": {"en": "…", "zh": "…"}}]
+  ```
+
+  Validated like verdicts (enum + ISO date, build fails loudly).
+- Cadence: a pick is due when `today − max(picked_at, latest review date) ≥
+  review_interval_days` (config.json, default 180). `status` prints the due
+  count; the Updates tab shows due picks with dataset-only evidence —
+  team_size at pick time (nearest `data/snapshots/` entry) vs now, one-liner
+  changes since picked_at (Phase-2 records), and a delisted flag. Computed at
+  build time in `sitebuild.compute_due_reviews()` (read-only).
+- Report tab "calibration" block: latest outcome per pick × verdict action
+  cross-tab plus coverage count; renders at zero coverage by design.
+- When the owner reviews a due pick, append a `reviews[]` entry (bilingual
+  note), do NOT touch `picked_at`; the new review date resets the clock.
+
 ## Delta engine (SPEC §6 — shipped)
 
 - Field-level diffing (`store.WATCHED_FIELDS`: one_liner, long_description,

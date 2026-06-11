@@ -236,6 +236,23 @@ details.more p { margin: 8px 0 0; white-space: pre-line; }
   border-radius: 2px;
 }
 
+/* review cadence + calibration (SPEC §7) */
+.duecard {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.evlist { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+.evlist li { margin: 3px 0; }
+.tablewrap { overflow-x: auto; }
+table.hitrate { border-collapse: collapse; font-size: 13px; min-width: 560px; }
+table.hitrate th, table.hitrate td {
+  border: 1px solid var(--line); padding: 6px 12px; text-align: center;
+}
+table.hitrate th { color: var(--muted); font-weight: 600; background: var(--panel-2); }
+table.hitrate tr th:first-child { text-align: left; }
+table.hitrate td.zero { color: var(--line); }
+
 /* changelog */
 .logentry { border-left: 3px solid var(--accent); padding-left: 14px; margin-bottom: 18px; }
 .logentry h3 { margin: 0 0 6px; font-size: 15px; }

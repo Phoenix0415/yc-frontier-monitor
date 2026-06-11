@@ -13,7 +13,7 @@ from datetime import date, datetime, timezone
 import automate
 import batches as batchmod
 from store import (ANALYSIS_PATH, CHANGELOG_PATH, CONFIG_PATH, DIST_DIR,
-                   SITE_DIR, load_json, load_state)
+                   SITE_DIR, SNAPSHOT_DIR, load_json, load_state)
 
 EMPTY_WATCHLIST = {"updated_at": None, "summary": [], "methodology": "",
                    "themes": [], "picks": []}
@@ -22,6 +22,9 @@ EMPTY_WATCHLIST = {"updated_at": None, "summary": [], "methodology": "",
 # copy = adapt the model for the China market, partner = integration/channel
 # candidate, ignore = reviewed, not relevant. Absent verdict = undecided.
 VERDICT_ACTIONS = ("build", "copy", "partner", "ignore")
+
+# review outcomes (SPEC §7) — human judgments recorded in picks[].reviews
+REVIEW_OUTCOMES = ("thriving", "growing", "flat", "pivoted", "dead", "unclear")
 
 
 def _bad_date(value):
@@ -58,9 +61,107 @@ def validate_watchlist(wl):
         if v.get("decided_at") is not None and _bad_date(v["decided_at"]):
             problems.append("%s: verdict.decided_at %r is not an ISO date"
                             % (where, v["decided_at"]))
+    for p in wl.get("picks", []):
+        where = "pick %r" % p.get("slug", "?")
+        for i, r in enumerate(p.get("reviews") or []):
+            at = "%s.reviews[%d]" % (where, i)
+            if not isinstance(r, dict):
+                problems.append("%s must be an object" % at)
+                continue
+            if r.get("outcome") not in REVIEW_OUTCOMES:
+                problems.append("%s: outcome %r must be one of %s"
+                                % (at, r.get("outcome"), "/".join(REVIEW_OUTCOMES)))
+            if not r.get("date") or _bad_date(r["date"]):
+                problems.append("%s: date %r is not an ISO date" % (at, r.get("date")))
     if problems:
         raise SystemExit("analysis/watchlist.json failed validation:\n  "
                          + "\n  ".join(problems))
+
+
+# ----------------------------------------------------------- review cadence
+def _review_anchor(pick):
+    """The date the review clock runs from: max(picked_at, latest review)."""
+    dates = [pick.get("picked_at")] + [r.get("date") for r in pick.get("reviews") or []]
+    dates = [d[:10] for d in dates if d]
+    return max(dates) if dates else None  # ISO date strings compare correctly
+
+
+def _snapshot_team_size(slug, batch_slug, picked_at):
+    """team_size from the snapshot nearest to picked_at -> (value, snap_date).
+
+    Snapshots are per-run directories named by run timestamp; we walk them in
+    order of date distance and return the first one containing the company.
+    (None, None) when nothing matches — evidence is best-effort by design.
+    """
+    if not SNAPSHOT_DIR.exists():
+        return None, None
+    target = date.fromisoformat(picked_at[:10])
+    dirs = []
+    for d in SNAPSHOT_DIR.iterdir():
+        if not d.is_dir():
+            continue
+        try:
+            dirs.append((abs((date.fromisoformat(d.name[:10]) - target).days), d))
+        except ValueError:
+            continue
+    for _, d in sorted(dirs, key=lambda x: x[0]):
+        names = [d / ("%s.json" % batch_slug)] if batch_slug else []
+        names += sorted(p for p in d.glob("*.json") if p not in names)
+        for path in names:
+            if not path.exists():
+                continue
+            try:
+                companies = load_json(path, [])
+            except ValueError:
+                continue
+            for c in companies:
+                if c.get("slug") == slug:
+                    return c.get("team_size"), d.name[:10]
+    return None, None
+
+
+def compute_due_reviews(wl, state, interval_days, today=None):
+    """Picks whose review is overdue, each with dataset-only evidence
+    (SPEC §7): team_size then vs now, one-liner changes since picked_at,
+    delisted flag. Read-only — never touches the watchlist."""
+    today = today or date.today()
+    current = {c["slug"]: (bslug, c)
+               for bslug, b in state.get("batches", {}).items()
+               for c in b["companies"]}
+    changelog = load_json(CHANGELOG_PATH, [])
+    due = []
+    for p in wl.get("picks", []):
+        anchor = _review_anchor(p)
+        if not anchor:
+            continue
+        days = (today - date.fromisoformat(anchor)).days
+        if days < interval_days:
+            continue
+        slug = p["slug"]
+        batch_slug, company = current.get(slug, (None, None))
+        picked_at = (p.get("picked_at") or anchor)[:10]
+        one_liner_changes = [
+            {"date": entry["run_at"][:10], "old": r["old"], "new": r["new"]}
+            for entry in changelog if entry["run_at"][:10] >= picked_at
+            for b in entry.get("batches", {}).values()
+            for r in b.get("changed", [])
+            if r["slug"] == slug and r["field"] == "one_liner"
+        ]
+        team_then, team_then_at = _snapshot_team_size(slug, batch_slug, picked_at)
+        due.append({
+            "slug": slug,
+            "anchor": anchor,
+            "days": days,
+            "evidence": {
+                "team_then": team_then,
+                "team_then_at": team_then_at,
+                "team_now": company.get("team_size") if company else None,
+                "one_liner_changes": one_liner_changes,
+                "delisted": company is None,
+            },
+        })
+    due.sort(key=lambda d: -d["days"])
+    return due
 
 
 def build_payload():
@@ -73,14 +174,18 @@ def build_payload():
         next_pull = date.today() if due else automate.next_due(state)[0]
     else:
         next_pull = None
+    wl = load_json(ANALYSIS_PATH, EMPTY_WATCHLIST)
+    interval = cfg.get("review_interval_days", 180)
     return {
         "site_title": cfg.get("site_title", "YC Monitor"),
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "updated_at": state.get("updated_at"),
         "next_update": next_pull.isoformat() if next_pull else None,
+        "review_interval_days": interval,
+        "due_reviews": compute_due_reviews(wl, state, interval),
         "batches": [dict(b, slug=slug) for slug, b in ordered],
         "changelog": load_json(CHANGELOG_PATH, []),
-        "watchlist": load_json(ANALYSIS_PATH, EMPTY_WATCHLIST),
+        "watchlist": wl,
     }
 
 
