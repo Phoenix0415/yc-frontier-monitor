@@ -85,6 +85,7 @@
       sortBatch: "Newest batch first", sortRecent: "Recently listed",
       sortTeam: "Largest team", sortName: "Name A–Z",
       fHiring: "hiring", fFresh: "new in last update", fWatch: "watchlist",
+      fRevenue: "states revenue",
       countLine: "{x} of {y} companies",
       noMatch: "Nothing matches these filters.",
       updTitle: "Keeping this current",
@@ -147,6 +148,7 @@
       sortBatch: "最新批次优先", sortRecent: "最近收录",
       sortTeam: "团队最大", sortName: "名称 A–Z",
       fHiring: "招聘中", fFresh: "本次更新新增", fWatch: "重点关注",
+      fRevenue: "披露收入",
       countLine: "共 {y} 家 · 符合条件 {x} 家",
       noMatch: "没有符合当前筛选的公司。",
       updTitle: "如何保持更新",
@@ -178,7 +180,7 @@
 
   const state = { tab: "report", lang: defaultLang(), q: "", batch: "all",
                   industry: "all", hiring: false, fresh: false, watch: false,
-                  sort: "batch" };
+                  revenue: false, sort: "batch" };
 
   const t = key => I18N[state.lang][key] != null ? I18N[state.lang][key] : I18N.en[key];
   const tf = (key, vars) => Object.entries(vars).reduce(
@@ -451,6 +453,7 @@
       if (state.hiring && !c.is_hiring) return false;
       if (state.fresh && !c.new_in_last_update) return false;
       if (state.watch && !pickBySlug[c.slug]) return false;
+      if (state.revenue && !c.revenue_mention) return false;
       if (q) {
         const hay = [c.name, c.one_liner, (c.tags || []).join(" "), c.industry,
                      c.subindustry, c.location, c.long_description]
@@ -500,6 +503,7 @@
         <label class="check"><input type="checkbox" id="f-hiring" ${state.hiring ? "checked" : ""}>${t("fHiring")}</label>
         <label class="check"><input type="checkbox" id="f-fresh" ${state.fresh ? "checked" : ""}>${t("fFresh")}</label>
         <label class="check"><input type="checkbox" id="f-watch" ${state.watch ? "checked" : ""}>${t("fWatch")}</label>
+        <label class="check"><input type="checkbox" id="f-revenue" ${state.revenue ? "checked" : ""}>${t("fRevenue")}</label>
       </div>
       <p class="count" id="count"></p>
       <div class="grid" id="grid"></div>`;
@@ -514,6 +518,7 @@
     on("f-hiring", "change", e => { state.hiring = e.target.checked; updateGrid(); });
     on("f-fresh", "change", e => { state.fresh = e.target.checked; updateGrid(); });
     on("f-watch", "change", e => { state.watch = e.target.checked; updateGrid(); });
+    on("f-revenue", "change", e => { state.revenue = e.target.checked; updateGrid(); });
     updateGrid();
   };
 
