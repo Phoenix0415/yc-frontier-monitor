@@ -113,6 +113,27 @@ def extract_revenue(text):
     return snippet[i:].strip(" .,") if i > 0 else snippet
 
 
+# --- funding mentions --------------------------------------------------------
+# Owner rule (2026-06): a self-announced raise or named investors in the
+# description is a watch signal on its own. "raised" alone is too loose
+# ("raised the bar"), so it must be followed by money; the other phrases are
+# unambiguous on their own.
+_FUNDING = re.compile(
+    _NOTDOT + r'*(?:'
+    r'\brais(?:ed|ing)\s+(?:over\s+|nearly\s+|more than\s+)?[\$€£]'
+    r'|\bbacked by\b|\bfunded by\b|\binvestment from\b|\binvestors? behind\b'
+    r'|\bventure[- ]backed\b|\b(?:pre-?seed|seed) (?:round|funding)\b'
+    r'|\bseries [a-d]\b'
+    r')' + _NOTDOT + r'*\.',
+    re.I)
+
+
+def extract_funding(text):
+    """First sentence announcing a raise or naming investors, if any."""
+    m = _FUNDING.search(text or "")
+    return re.sub(r'\s+', ' ', m.group(0)).strip() if m else ""
+
+
 def _int_or_none(v):
     try:
         return int(v)
@@ -147,4 +168,5 @@ def normalize(raw):
         "top_company": bool(raw.get("top_company")),
         "launched_at": _int_or_none(raw.get("launched_at")),
         "revenue_mention": extract_revenue(desc),
+        "funding_mention": extract_funding(desc),
     }

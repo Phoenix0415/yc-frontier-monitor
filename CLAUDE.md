@@ -28,6 +28,11 @@ an automatic pull lands new companies, the owner will ask for a review.
      `founder_count` (≥4× or ≥8 people) — payroll is the costliest signal a
      startup sends; a vague one-liner is not a reason to skip (Brickanta
      lesson: "Agentic AI for Society Builders" hid $8M raised, 2→11 people).
+   - **Funding screen**: review every company with a `funding_mention`
+     (pipeline-extracted from descriptions: raises, named investors). A
+     self-announced raise is a watch signal on its own. Caveats: "backed by
+     Y Combinator" alone is true of everyone here; "investors behind X" means
+     X's VCs, not X itself — read the quote before crediting it.
    - **Owner interest areas**: scan online education, e-commerce, and AI
      software each refresh; add picks only when they genuinely clear the bar —
      owner explicitly does not want force-fitted picks.

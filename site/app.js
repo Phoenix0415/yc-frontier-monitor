@@ -67,12 +67,15 @@
       statTeam: "median team size", statSolo: "solo founders (of {n} known)",
       statHiring: "actively hiring", statBay: "SF Bay Area based",
       statRevenue: "state revenue figures publicly",
+      statFunding: "announce outside funding",
       chartTopics: "Frontier topics", chartIndustries: "YC industries (official)",
       allTopics: "All topics", unclassified: "(unclassified)",
       watchlistTitle: "The watchlist",
       whyWatch: "Why watch:", worthLearning: "Worth learning:",
       fromPitch: "From their pitch:",
       pitchNote: "Auto-extracted from the company's own description — can reference a previous company or a problem statement, not necessarily this company's traction",
+      fundingLabel: "Funding:",
+      fundingNote: "Auto-extracted from the company's own description — can reference YC itself, a founder's previous company, or their customers; verify before relying on it",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
       verdictBuild: "build", verdictCopy: "copy", verdictPartner: "partner",
@@ -97,7 +100,7 @@
       sortBatch: "Newest batch first", sortRecent: "Recently listed",
       sortTeam: "Largest team", sortName: "Name A–Z",
       fHiring: "hiring", fFresh: "new in last update", fWatch: "watchlist",
-      fRevenue: "states revenue",
+      fRevenue: "states revenue", fFunding: "announced funding",
       countLine: "{x} of {y} companies",
       noMatch: "Nothing matches these filters.",
       updTitle: "Keeping this current",
@@ -132,12 +135,15 @@
       statTeam: "团队规模中位数", statSolo: "单人创始人（已知 {n} 家）",
       statHiring: "正在招聘", statBay: "位于旧金山湾区",
       statRevenue: "公开披露收入数字",
+      statFunding: "披露外部融资",
       chartTopics: "前沿主题", chartIndustries: "YC 官方行业",
       allTopics: "全部主题", unclassified: "（未分类）",
       watchlistTitle: "重点关注名单",
       whyWatch: "为什么值得关注：", worthLearning: "值得借鉴：",
       fromPitch: "出自其自述：",
       pitchNote: "自动从公司自述中提取——可能指创始人上一家公司或问题陈述，不一定是这家公司自己的业绩",
+      fundingLabel: "融资：",
+      fundingNote: "自动从公司自述中提取——可能指 YC 本身、创始人上家公司或其客户；采信前请核实",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
       verdictBuild: "自建", verdictCopy: "复制", verdictPartner: "合作",
@@ -162,7 +168,7 @@
       sortBatch: "最新批次优先", sortRecent: "最近收录",
       sortTeam: "团队最大", sortName: "名称 A–Z",
       fHiring: "招聘中", fFresh: "本次更新新增", fWatch: "重点关注",
-      fRevenue: "披露收入",
+      fRevenue: "披露收入", fFunding: "已披露融资",
       countLine: "共 {y} 家 · 符合条件 {x} 家",
       noMatch: "没有符合当前筛选的公司。",
       updTitle: "如何保持更新",
@@ -194,7 +200,7 @@
 
   const state = { tab: "report", lang: defaultLang(), q: "", batch: "all",
                   industry: "all", topic: "all", hiring: false, fresh: false,
-                  watch: false, revenue: false, sort: "batch" };
+                  watch: false, revenue: false, funding: false, sort: "batch" };
 
   const t = key => I18N[state.lang][key] != null ? I18N[state.lang][key] : I18N.en[key];
   const tf = (key, vars) => Object.entries(vars).reduce(
@@ -297,6 +303,7 @@
       <div class="badges">${badges}</div>
       <p class="oneliner">${esc(c.one_liner)}</p>
       ${c.revenue_mention ? `<p class="rev" title="${esc(t("pitchNote"))}">${t("fromPitch")} “${esc(c.revenue_mention)}”</p>` : ""}
+      ${c.funding_mention ? `<p class="fund" title="${esc(t("fundingNote"))}">${t("fundingLabel")} “${esc(c.funding_mention)}”</p>` : ""}
       ${p ? `<p class="why"><strong>${t("whyWatch")}</strong> ${esc(loc(p.why))}</p>` : ""}
       <p class="meta">${metaLine(c)}</p>
       <div class="tags">${tags}</div>
@@ -392,6 +399,7 @@
     const solo = withFounders.filter(c => c.founder_count === 1);
     const hiring = companies.filter(c => c.is_hiring);
     const revenue = companies.filter(c => c.revenue_mention);
+    const funded = companies.filter(c => c.funding_mention);
     const bay = companies.filter(c => /san francisco|palo alto|mountain view|menlo park|oakland|berkeley|san jose|sunnyvale|redwood/i.test(c.location || ""));
 
     const alert = pendingReview.length ? `<div class="alert">
@@ -443,6 +451,7 @@
           <div class="stat"><div class="v">${pct(hiring.length, companies.length)}</div><div class="l">${t("statHiring")}</div></div>
           <div class="stat"><div class="v">${pct(bay.length, companies.length)}</div><div class="l">${t("statBay")}</div></div>
           <div class="stat"><div class="v">${revenue.length}</div><div class="l">${t("statRevenue")}</div></div>
+          <div class="stat"><div class="v">${funded.length}</div><div class="l">${t("statFunding")}</div></div>
         </div>
         <div class="cols">
           ${topicChart()}
@@ -497,6 +506,7 @@
       if (state.fresh && !c.new_in_last_update) return false;
       if (state.watch && !pickBySlug[c.slug]) return false;
       if (state.revenue && !c.revenue_mention) return false;
+      if (state.funding && !c.funding_mention) return false;
       if (q) {
         const hay = [c.name, c.one_liner, (c.tags || []).join(" "), c.industry,
                      c.subindustry, c.location, c.long_description]
@@ -552,6 +562,7 @@
         <label class="check"><input type="checkbox" id="f-fresh" ${state.fresh ? "checked" : ""}>${t("fFresh")}</label>
         <label class="check"><input type="checkbox" id="f-watch" ${state.watch ? "checked" : ""}>${t("fWatch")}</label>
         <label class="check"><input type="checkbox" id="f-revenue" ${state.revenue ? "checked" : ""}>${t("fRevenue")}</label>
+        <label class="check"><input type="checkbox" id="f-funding" ${state.funding ? "checked" : ""}>${t("fFunding")}</label>
       </div>
       <p class="count" id="count"></p>
       <div class="grid" id="grid"></div>`;
@@ -568,6 +579,7 @@
     on("f-fresh", "change", e => { state.fresh = e.target.checked; updateGrid(); });
     on("f-watch", "change", e => { state.watch = e.target.checked; updateGrid(); });
     on("f-revenue", "change", e => { state.revenue = e.target.checked; updateGrid(); });
+    on("f-funding", "change", e => { state.funding = e.target.checked; updateGrid(); });
     updateGrid();
   };
 

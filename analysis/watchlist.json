@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-06-11T07:30:00+00:00",
+ "updated_at": "2026-06-11T09:00:00+00:00",
  "summary": [
   {
    "en": "This report covers the 558 companies YC has publicly listed from Fall 2025 through today: Fall 2025 (148), Winter 2026 (198), Spring 2026 (194), plus early listings for Summer 2026 (15) and even Fall 2026 (3). The young batches keep filling in for months — that's what the update command is for. 81% of the cohort is explicitly AI/ML, and 43% of all companies mention agents. The question is no longer 'is it AI', but which layer of the AI economy a company occupies.",
@@ -27,8 +27,8 @@
   }
  ],
  "methodology": {
-  "en": "Picks are editorial, not algorithmic: I read all 558 listed companies (one-liners, full descriptions, team size, founder count, stated traction) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Revenue figures are quoted only when the company claims them for itself (several descriptions cite founders' previous companies — those are flagged as pedigree, not traction). Not investment advice. Two standing rules added by the owner (June 2026): the expansion screen — a team far larger than its founder count means someone is funding that payroll, so such companies get reviewed even when the pitch says little; and a scan of the owner's interest areas (online education, e-commerce, AI software) on every refresh, with picks added only when they genuinely clear the bar.",
-  "zh": "名单为人工编辑判断，而非算法筛选：我通读了全部 558 家公司（一句话简介、完整介绍、团队规模、创始人数、自述业绩），挑出最能说明前沿创业走向的公司——或因技术野心、或因切入点新颖、或因难以造假的业绩、或因定义品类的“怪”。收入数字只在公司为自己声明时引用（多家公司的介绍引用的是创始人上一家公司的数字——这类会被标注为履历而非业绩）。不构成投资建议。另有两条所有者新增的固定规则（2026 年 6 月）：扩张筛查——团队规模远超创始人数量，说明有人在为这份工资单买单，即使简介平平也必须复核；以及每次刷新都对所有者关注领域（在线教育、电商、AI 软件）做一次扫描，但只有真正过线的公司才进名单。"
+  "en": "Picks are editorial, not algorithmic: I read all 558 listed companies (one-liners, full descriptions, team size, founder count, stated traction) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Revenue figures are quoted only when the company claims them for itself (several descriptions cite founders' previous companies — those are flagged as pedigree, not traction). Not investment advice. Two standing rules added by the owner (June 2026): the expansion screen — a team far larger than its founder count means someone is funding that payroll, so such companies get reviewed even when the pitch says little; and a scan of the owner's interest areas (online education, e-commerce, AI software) on every refresh, with picks added only when they genuinely clear the bar. Third standing rule: the funding screen — any company whose own description announces an outside raise or names its investors gets reviewed (the pipeline extracts these as funding_mention; note that \"backed by Y Combinator\" alone is true of the whole dataset, so read the quote, not just the flag).",
+  "zh": "名单为人工编辑判断，而非算法筛选：我通读了全部 558 家公司（一句话简介、完整介绍、团队规模、创始人数、自述业绩），挑出最能说明前沿创业走向的公司——或因技术野心、或因切入点新颖、或因难以造假的业绩、或因定义品类的“怪”。收入数字只在公司为自己声明时引用（多家公司的介绍引用的是创始人上一家公司的数字——这类会被标注为履历而非业绩）。不构成投资建议。另有两条所有者新增的固定规则（2026 年 6 月）：扩张筛查——团队规模远超创始人数量，说明有人在为这份工资单买单，即使简介平平也必须复核；以及每次刷新都对所有者关注领域（在线教育、电商、AI 软件）做一次扫描，但只有真正过线的公司才进名单。第三条固定规则：融资筛查——凡是在自述中宣布外部融资或点名投资人的公司都必须复核（管道会将其提取为 funding_mention；注意仅写「backed by Y Combinator」对全数据集都成立，所以要读引文本身，而不是只看标记）。"
  },
  "themes": [
   {
