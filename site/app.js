@@ -55,7 +55,7 @@
       tabReport: "Report", tabCompanies: "Companies", tabUpdates: "Updates",
       subLine: "{n} companies · {a} → {b} · updated {d}", noDataSub: "no data yet",
       noData: "No data yet — run <code>python3 scripts/yc.py update</code> first.",
-      heroTitle: "Where the frontier batch is going",
+      heroTitle: "Endless Frontier",
       heroLede: "Every company Y Combinator has listed publicly from Fall 2025 onward — what the cohort looks like, and the ones worth your attention. Updated {d}.",
       alertArrived: "{n} companies arrived after the last analyst review ({d}).",
       alertFlagged: "They are flagged on the Updates tab until the watchlist is refreshed.",
@@ -120,7 +120,7 @@
       tabReport: "报告", tabCompanies: "公司", tabUpdates: "更新",
       subLine: "{n} 家公司 · {a} → {b} · 更新于 {d}", noDataSub: "暂无数据",
       noData: "还没有数据——请先运行 <code>python3 scripts/yc.py update</code>。",
-      heroTitle: "前沿批次正往哪里去",
+      heroTitle: "无尽的前沿",
       heroLede: "Y Combinator 自 2025 年秋季以来公开收录的全部公司——这一代公司长什么样，哪些值得你重点关注。更新于 {d}。",
       alertArrived: "自上次人工复盘（{d}）后新增 {n} 家公司。",
       alertFlagged: "在重点名单刷新前，它们会一直标记在“更新”页。",
@@ -266,8 +266,9 @@
     const decided = v && v.decided_at ? ` title="${esc(v.decided_at)}"` : "";
     return `<span class="badge v-${action}"${decided}>${t(VERDICT_KEYS[action] || "verdictUndecided")}</span>`;
   };
+  const eyebrow = key => esc(t(key).replace(/[:：]\s*$/, ""));
   const verdictNote = p => (p.verdict && p.verdict.note
-    ? `<p class="why"><strong>${t("decisionLabel")}</strong> ${esc(loc(p.verdict.note))}</p>` : "");
+    ? `<p class="note"><span class="ptlabel">${eyebrow("decisionLabel")}</span>${esc(loc(p.verdict.note))}</p>` : "");
 
   // feedback loop (SPEC §7)
   const OUTCOME_KEYS = { thriving: "outThriving", growing: "outGrowing",
@@ -313,8 +314,8 @@
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
       <div class="badges">${verdictBadge(p)}</div>
       <p class="oneliner">${esc(c.one_liner)}</p>
-      <p class="why"><strong>${t("whyWatch")}</strong> ${esc(loc(p.why))}</p>
-      <p class="learn"><strong>${t("worthLearning")}</strong> ${esc(loc(p.learn))}</p>
+      <div class="pickpt"><span class="ptlabel">${eyebrow("whyWatch")}</span><p>${esc(loc(p.why))}</p></div>
+      <div class="pickpt learnpt"><span class="ptlabel">${eyebrow("worthLearning")}</span><p>${esc(loc(p.learn))}</p></div>
       ${verdictNote(p)}
       ${signals ? `<div class="tags">${signals}</div>` : ""}
       <p class="meta">${metaLine(c)}</p>
@@ -324,13 +325,19 @@
   };
 
   // ---------- report tab ----------
-  const barChart = (title, rows) => {
+  // bar fill: width is relative to the chart max; opacity deepens with it so
+  // color also reads as magnitude. The right column shows count + share of
+  // the whole tracked cohort.
+  const barBits = (n, max, total) =>
+    `<span class="bar-track"><span class="bar-fill" style="width:${Math.max(2, 100 * n / max)}%;opacity:${(0.4 + 0.6 * n / max).toFixed(2)}"></span></span>
+     <span class="bar-num">${n}<em>${pct(n, total)}</em></span>`;
+
+  const barChart = (title, rows, total) => {
     const max = rows.length ? rows[0][1] : 1;
     return `<div class="panel"><h3>${esc(title)}</h3>` + rows.map(([label, n]) =>
       `<div class="bar-row">
         <span class="bar-label" title="${esc(label)}">${esc(label)}</span>
-        <span class="bar-track"><span class="bar-fill" style="width:${Math.max(2, 100 * n / max)}%"></span></span>
-        <span class="bar-num">${n}</span>
+        ${barBits(n, max, total)}
       </div>`).join("") + `</div>`;
   };
 
@@ -375,8 +382,7 @@
     return `<div class="panel"><h3>${t("chartTopics")}</h3>` + rows.map(([id, n]) =>
       `<div class="bar-row">
         <button class="bar-label aslink" data-topic="${esc(id)}" title="${esc(topicLabel(id))}">${esc(topicLabel(id))}</button>
-        <span class="bar-track"><span class="bar-fill" style="width:${Math.max(2, 100 * n / max)}%"></span></span>
-        <span class="bar-num">${n}</span>
+        ${barBits(n, max, companies.length)}
       </div>`).join("") + `</div>`;
   };
 
@@ -403,12 +409,19 @@
       ? `<section><h2>${t("summaryTitle")}</h2><div class="panel prose">${wl.summary.map(p => `<p>${esc(loc(p))}</p>`).join("")}</div></section>`
       : `<section class="panel"><p class="empty">${t("noAnalysis")}</p></section>`;
 
+    let themeNo = 0;
     const themeBlocks = themes.map(th => {
       const cards = picks.filter(p => p.theme === th.id).map(pickCard).join("");
       if (!cards) return "";
+      themeNo += 1;
       return `<div class="theme">
-        <h3>${esc(loc(th.title))}</h3>
-        <p>${esc(loc(th.narrative))}</p>
+        <div class="themehead">
+          <span class="thnum">${String(themeNo).padStart(2, "0")}</span>
+          <div>
+            <h3>${esc(loc(th.title))}</h3>
+            <p>${esc(loc(th.narrative))}</p>
+          </div>
+        </div>
         <div class="grid">${cards}</div>
       </div>`;
     }).join("");
@@ -433,7 +446,7 @@
         </div>
         <div class="cols">
           ${topicChart()}
-          ${barChart(t("chartIndustries"), tally(companies, c => [c.subindustry || c.industry]).slice(0, 12))}
+          ${barChart(t("chartIndustries"), tally(companies, c => [c.subindustry || c.industry]).slice(0, 12), companies.length)}
         </div>
         ${momentumBlock()}
       </section>

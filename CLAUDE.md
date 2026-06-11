@@ -23,6 +23,15 @@ an automatic pull lands new companies, the owner will ask for a review.
    review (they're also on the site's Updates tab).
 2. Read the newcomers in `data/companies.json` (filter
    `first_seen > watchlist.updated_at`); judge against the existing themes.
+   Standing judgment rules (owner-set, 2026-06):
+   - **Expansion screen**: review every company whose `team_size` far exceeds
+     `founder_count` (≥4× or ≥8 people) — payroll is the costliest signal a
+     startup sends; a vague one-liner is not a reason to skip (Brickanta
+     lesson: "Agentic AI for Society Builders" hid $8M raised, 2→11 people).
+   - **Owner interest areas**: scan online education, e-commerce, and AI
+     software each refresh; add picks only when they genuinely clear the bar —
+     owner explicitly does not want force-fitted picks.
+   - Don't quote $ figures without checking whose they are (see memory).
 3. Edit `analysis/watchlist.json` — schema:
    `summary[]` (exec-summary paragraphs), `methodology` (one para),
    `themes[] {id, title, narrative}`,

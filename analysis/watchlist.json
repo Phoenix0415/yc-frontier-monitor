@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-06-11T04:00:00+00:00",
+ "updated_at": "2026-06-11T07:30:00+00:00",
  "summary": [
   {
    "en": "This report covers the 558 companies YC has publicly listed from Fall 2025 through today: Fall 2025 (148), Winter 2026 (198), Spring 2026 (194), plus early listings for Summer 2026 (15) and even Fall 2026 (3). The young batches keep filling in for months — that's what the update command is for. 81% of the cohort is explicitly AI/ML, and 43% of all companies mention agents. The question is no longer 'is it AI', but which layer of the AI economy a company occupies.",
@@ -27,8 +27,8 @@
   }
  ],
  "methodology": {
-  "en": "Picks are editorial, not algorithmic: I read all 558 listed companies (one-liners, full descriptions, team size, founder count, stated traction) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Revenue figures are quoted only when the company claims them for itself (several descriptions cite founders' previous companies — those are flagged as pedigree, not traction). Not investment advice.",
-  "zh": "名单为人工编辑判断，而非算法筛选：我通读了全部 558 家公司（一句话简介、完整介绍、团队规模、创始人数、自述业绩），挑出最能说明前沿创业走向的公司——或因技术野心、或因切入点新颖、或因难以造假的业绩、或因定义品类的“怪”。收入数字只在公司为自己声明时引用（多家公司的介绍引用的是创始人上一家公司的数字——这类会被标注为履历而非业绩）。不构成投资建议。"
+  "en": "Picks are editorial, not algorithmic: I read all 558 listed companies (one-liners, full descriptions, team size, founder count, stated traction) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Revenue figures are quoted only when the company claims them for itself (several descriptions cite founders' previous companies — those are flagged as pedigree, not traction). Not investment advice. Two standing rules added by the owner (June 2026): the expansion screen — a team far larger than its founder count means someone is funding that payroll, so such companies get reviewed even when the pitch says little; and a scan of the owner's interest areas (online education, e-commerce, AI software) on every refresh, with picks added only when they genuinely clear the bar.",
+  "zh": "名单为人工编辑判断，而非算法筛选：我通读了全部 558 家公司（一句话简介、完整介绍、团队规模、创始人数、自述业绩），挑出最能说明前沿创业走向的公司——或因技术野心、或因切入点新颖、或因难以造假的业绩、或因定义品类的“怪”。收入数字只在公司为自己声明时引用（多家公司的介绍引用的是创始人上一家公司的数字——这类会被标注为履历而非业绩）。不构成投资建议。另有两条所有者新增的固定规则（2026 年 6 月）：扩张筛查——团队规模远超创始人数量，说明有人在为这份工资单买单，即使简介平平也必须复核；以及每次刷新都对所有者关注领域（在线教育、电商、AI 软件）做一次扫描，但只有真正过线的公司才进名单。"
  },
  "themes": [
   {
@@ -120,14 +120,36 @@
    }
   },
   {
+   "id": "expanders",
+   "title": {
+    "en": "Quiet expanders: payroll as proof",
+    "zh": "低调扩张者：工资单即证据"
+   },
+   "narrative": {
+    "en": "An owner-added screen, now a standing rule: when team size runs far ahead of founder count, someone is funding that payroll — revenue or investors — whatever the pitch says. The rule surfaced companies whose one-liners undersell them: Brickanta (2 founders, 11 people), Bolna (21), Uplane (19), Didit (12). It also independently confirms picks already on the list (Icarus 29, Piggy 15, Ndea 15, General Legal 15, Synphony 10) and flags ones to keep an eye on: Luel (12), Complir (13), Moritz (10), Hub.xyz (10), Sazabi (10), and Care GP — 10 people before its batch even starts.",
+    "zh": "这是所有者新增、现已固定下来的筛选规则：当团队规模远超创始人数量，说明有人在为这份工资单买单——不管简介怎么写，背后要么有收入要么有投资人。这条规则筛出了一批被一句话简介低估的公司：Brickanta（2 位创始人、11 人）、Bolna（21 人）、Uplane（19 人）、Didit（12 人）；也独立印证了已在名单上的 Icarus（29 人）、Piggy（15 人）、Ndea（15 人）、General Legal（15 人）、Synphony（10 人）；另外值得盯住的还有 Luel（12）、Complir（13）、Moritz（10）、Hub.xyz（10）、Sazabi（10），以及开营之前就已有 10 人的 Care GP。"
+   }
+  },
+  {
+   "id": "agentic-commerce",
+   "title": {
+    "en": "When agents do the selling",
+    "zh": "当智能体开始做生意"
+   },
+   "narrative": {
+    "en": "E-commerce in this cohort isn't storefront SaaS — it's agents taking over the selling itself. SellRaze turns a camera frame into priced, cross-marketplace listings; Corvera makes a CPG brand's data legible to any AI tool over MCP; Light Anchor skips the customer entirely and runs its own AI-operated brands; Amboras builds and optimizes the whole store autonomously — 'today it sells to humans, tomorrow it sells to AI agents.' Combined with the agent-payment rails (Sponge, Agentcard), the direction is clear: commerce infrastructure is being rebuilt for machine buyers and machine sellers.",
+    "zh": "本期的电商不是店铺 SaaS，而是智能体直接接管「卖」这件事。SellRaze 把相机取景变成已定价、跨平台同步的商品上架；Corvera 通过 MCP 让 CPG 品牌的数据对任意 AI 工具可读；Light Anchor 干脆跳过客户，自己运营 AI 驱动的品牌；Amboras 自主搭建并持续优化整个店铺——「今天卖给人，明天卖给 AI agent」。再叠加智能体支付轨道（Sponge、Agentcard），方向已经清晰：商业基础设施正在为机器买家和机器卖家重建。"
+   }
+  },
+  {
    "id": "wildcards",
    "title": {
     "en": "Left field",
     "zh": "野路子"
    },
    "narrative": {
-    "en": "Every batch has companies that don't fit the grid but mark where the edges are: the first YC-backed 'AI founder' running its own companies (Thomas), mosquito-killing micro-drones aimed at malaria (Tornyol), AI for the world's COBOL mainframes (Hypercubic) — the counter-trade to frontier hype, and an open-source alternative to Claude Cowork (OpenWork) plus hosted OpenClaw (Klaus) showing how fast an ecosystem forms around agent platforms themselves.",
-    "zh": "每个批次都有不入格子的公司，它们标记着边界在哪里：第一个 YC 投资的“AI 创始人”，自己开公司自己运营（Thomas）；瞄准疟疾的灭蚊微型无人机（Tornyol）；面向全球 COBOL 主机的 AI（Hypercubic）——对前沿炒作的反向交易；还有 Claude Cowork 的开源替代品（OpenWork）和托管版 OpenClaw（Klaus），说明围绕 agent 平台本身的生态成形得有多快。"
+    "en": "Every batch has companies that don't fit the grid but mark where the edges are: the first YC-backed 'AI founder' running its own companies (Thomas), mosquito-killing micro-drones aimed at malaria (Tornyol), AI for the world's COBOL mainframes (Hypercubic) — the counter-trade to frontier hype, and an open-source alternative to Claude Cowork (OpenWork) plus hosted OpenClaw (Klaus) showing how fast an ecosystem forms around agent platforms themselves. The cohort's thin education slice clusters here too: short-video immersion learning (Doomersion, Parrot) and kid-made AI cartoons (Pixley).",
+    "zh": "每个批次都有不入格子的公司，它们标记着边界在哪里：第一个 YC 投资的“AI 创始人”，自己开公司自己运营（Thomas）；瞄准疟疾的灭蚊微型无人机（Tornyol）；面向全球 COBOL 主机的 AI（Hypercubic）——对前沿炒作的反向交易；还有 Claude Cowork 的开源替代品（OpenWork）和托管版 OpenClaw（Klaus），说明围绕 agent 平台本身的生态成形得有多快。本期单薄的教育赛道也聚在这里：短视频沉浸式语言学习（Doomersion、Parrot）和孩子自创的 AI 动画（Pixley）。"
    }
   }
  ],
@@ -976,6 +998,206 @@
     ]
    },
    "picked_at": "2026-06-11"
+  },
+  {
+   "slug": "brickanta",
+   "theme": "expanders",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Construction-specific agent swarms — 'hundreds of agents' for tenders, procurement and project analysis — sold into one of the least digitized big industries. The expansion signal that put it on the list: 2 founders, 11 people, hiring, and their own description states $8M raised from investors behind OpenAI, Klarna and Spotify, plus Lovable founder Anton Osika and Northzone. Stockholm, not SF.",
+    "zh": "面向建筑行业的智能体集群——「数百个」用于投标、采购、项目分析的建筑专用 agent，切入数字化程度最低的大行业之一。让它进入名单的正是扩张信号：2 位创始人、11 人团队、仍在招聘，且其介绍自述已从 OpenAI、Klarna、Spotify 背后的投资机构以及 Lovable 创始人 Anton Osika、Northzone 融到 800 万美元。总部在斯德哥尔摩，而非旧金山。"
+   },
+   "learn": {
+    "en": "What the payroll rule catches that pitch-reading misses: an opaque one-liner ('Society Builders') hiding a funded, scaling company. Also a European counter-example to the SF-default playbook.",
+    "zh": "工资单规则能抓住读简介抓不到的东西：一句晦涩的「Society Builders」背后，是一家有钱、正在扩张的公司。同时也是「非硅谷打法」的欧洲样本。"
+   },
+   "signals": {
+    "en": [
+     "2 founders → 11 staff, hiring",
+     "$8M raised (their statement)",
+     "Stockholm outlier"
+    ],
+    "zh": [
+     "2 位创始人 → 11 人团队，招聘中",
+     "自述融资 800 万美元",
+     "斯德哥尔摩，非硅谷样本"
+    ]
+   }
+  },
+  {
+   "slug": "bolna-ai",
+   "theme": "expanders",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Voice AI orchestration for Indian enterprises — build agents straight from call transcripts and FAQs to automate the tens of thousands of daily calls in sales, support and collections. At 21 people on 2 founders it's the second-largest team in the tracked cohort, and it never states revenue — the team is the traction statement.",
+    "zh": "面向印度企业的语音 AI 编排平台——直接用通话转录和 FAQ 生成语音 agent，自动化销售、客服、催收等每天数以万计的电话。2 位创始人带 21 人，是整个追踪期第二大团队，而它从不公布收入——团队本身就是业绩声明。"
+   },
+   "learn": {
+    "en": "The geography arbitrage: massive call volume, cost-sensitive enterprises, local-language complexity — a playbook that maps almost one-to-one onto the China market.",
+    "zh": "地理套利的范本：巨大话务量、对成本敏感的企业客户、本地语言的复杂性——这套打法几乎可以一比一映射到中国市场。"
+   },
+   "signals": {
+    "en": [
+     "2 founders → 21 staff — cohort #2",
+     "Bengaluru, India-first",
+     "Voice infra for enterprise call volume"
+    ],
+    "zh": [
+     "2 位创始人 → 21 人，整期第二大团队",
+     "班加罗尔，印度优先",
+     "面向企业话务量的语音底座"
+    ]
+   }
+  },
+  {
+   "slug": "uplane",
+   "theme": "expanders",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Replaces the marketing agency outright: generates hundreds of ads with matched landing pages, steers spend across Meta, Google and LinkedIn, and learns from CRM and ERP data what actually drives profit. 3 founders carrying a 19-person team — agency replacement is working well enough to staff like an agency.",
+    "zh": "直接取代营销代理公司：批量生成数百条广告与配套落地页，在 Meta、Google、LinkedIn 之间调度预算，并接入 CRM 与 ERP 数据学习什么真正带来利润。3 位创始人带 19 人团队——「替代代理商」这件事做得足够好，以至于自己长成了代理商的规模。"
+   },
+   "learn": {
+    "en": "The AI-firm pattern applied to marketing: own the full loop (creative → spend → revenue attribution) instead of selling tools into it. Watch how 'self-improving campaigns' get priced against agency retainers.",
+    "zh": "AI 事务所模式在营销上的应用：吃下完整闭环（创意 → 投放 → 收入归因），而不是往里卖工具。值得盯：「自我改进的投放」如何对标代理商月费定价。"
+   },
+   "signals": {
+    "en": [
+     "3 founders → 19 staff, hiring",
+     "Closes the loop to CRM/ERP profit data",
+     "Agency-replacement framing"
+    ],
+    "zh": [
+     "3 位创始人 → 19 人，招聘中",
+     "打通 CRM/ERP 利润数据闭环",
+     "定位直接取代营销代理"
+    ]
+   }
+  },
+  {
+   "slug": "didit",
+   "theme": "expanders",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "One API for KYC, KYB, AML, biometrics and fraud — 1,000+ data sources, 200+ signals, in-house models, with 500 free checks a month as the wedge. Identity is the least glamorous, most load-bearing rail of both fintech and the agent economy, and a 12-person team on 2 founders says the wedge is converting.",
+    "zh": "一个 API 打包 KYC、KYB、反洗钱、生物识别与反欺诈——1000+ 数据源、200+ 信号、自研模型，以每月 500 次免费核验作楔子。身份核验是金融科技与智能体经济中最不性感、却最承重的一条轨道；2 位创始人带 12 人团队，说明这个楔子正在转化。"
+   },
+   "learn": {
+    "en": "Freemium applied to compliance infrastructure (500 free checks) — an unusually consumer-style GTM for a regulated-infra product. Also the identity rail the agent-economy theme was missing.",
+    "zh": "把免费增值打法用在合规基础设施上（每月 500 次免费）——受监管基础设施产品里少见的消费级 GTM。这也是智能体经济主题此前缺失的「身份」一环。"
+   },
+   "signals": {
+    "en": [
+     "2 founders → 12 staff",
+     "1,000+ data sources, global coverage",
+     "Freemium wedge in regulated infra"
+    ],
+    "zh": [
+     "2 位创始人 → 12 人",
+     "1000+ 数据源、全球覆盖",
+     "合规基础设施做免费增值"
+    ]
+   }
+  },
+  {
+   "slug": "sellraze",
+   "theme": "agentic-commerce",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Point your camera at anything — it identifies, prices and lists it across multiple marketplaces at once. Their numbers are usage, not revenue: 2,500+ items added daily, $326K of inventory value a day flowing through. Listing friction is the real moat of incumbent marketplaces; melting it changes where sellers live.",
+    "zh": "把相机对准任何东西——自动识别、定价，并同时上架多个交易平台。他们晒的是使用量而非收入：每天新增 2500+ 件商品、约 32.6 万美元库存价值流过平台。上架摩擦正是现有平台的真实护城河；把它熔掉，卖家的栖息地就会改变。"
+   },
+   "learn": {
+    "en": "Camera-as-onboarding for commerce, and a marketplace-aggregator wedge built on the seller's first 60 seconds. Relevant anywhere secondhand and social commerce are big — very much including China.",
+    "zh": "「相机即开店」的电商引导方式，以及围绕卖家头 60 秒体验做聚合的楔子。凡是二手与社交电商发达的市场都适用——尤其是中国。"
+   },
+   "signals": {
+    "en": [
+     "2,500+ items listed daily",
+     "$326K daily inventory value",
+     "6-person team"
+    ],
+    "zh": [
+     "日均新增 2500+ 件商品",
+     "日均流入库存价值 32.6 万美元",
+     "6 人团队"
+    ]
+   }
+  },
+  {
+   "slug": "corvera",
+   "theme": "agentic-commerce",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "The context layer for CPG brands: unify the brand's data and expose it over MCP so any AI tool — Claude, ChatGPT, Cursor — can run category management, dashboards and workflows on it. $0→$33K MRR in 4 weeks, 12 brands, 130% week-on-week: the fastest-converting pick in the commerce cluster.",
+    "zh": "CPG 品牌的上下文层：统一品牌数据并通过 MCP 暴露，让任何 AI 工具——Claude、ChatGPT、Cursor——都能直接跑品类管理、看板和工作流。4 周内 MRR 从 0 到 3.3 万美元、12 个品牌、周环比增长 130%：商业集群里转化最快的一家。"
+   },
+   "learn": {
+    "en": "MCP as a GTM strategy: instead of building the agent, become the data socket every agent plugs into. A pattern worth copying in any vertical with fragmented operational data.",
+    "zh": "把 MCP 当作 GTM 策略：不自己做 agent，而是成为所有 agent 都要插的「数据插座」。凡是运营数据碎片化的垂直行业都值得抄这一招。"
+   },
+   "signals": {
+    "en": [
+     "$33K MRR in 4 weeks, 130% WoW",
+     "MCP-native positioning",
+     "12 brands live"
+    ],
+    "zh": [
+     "4 周做到 3.3 万美元 MRR、周增 130%",
+     "MCP 原生定位",
+     "已服务 12 个品牌"
+    ]
+   }
+  },
+  {
+   "slug": "light-anchor",
+   "theme": "agentic-commerce",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Doesn't sell AI to brands — it is the brand: AI agents run operations end-to-end on a shared platform, one flagship plus experiment stores, on the thesis that consumer businesses become 'capped by compute, not headcount.' The AI-as-the-firm pattern applied to e-commerce.",
+    "zh": "不向品牌卖 AI——它自己就是品牌：AI agent 在共享平台上端到端运营，一个旗舰品牌加多家实验店，论点是消费品生意将「受算力而非人手限制」。这是 AI 事务所模式在电商上的版本。"
+   },
+   "learn": {
+    "en": "If agent costs keep falling, a portfolio of software-run brands is the end state of DTC. Watch whether the shared platform compounds — each new launch getting cheaper is the whole bet.",
+    "zh": "如果 agent 成本持续下降，「软件运营的品牌组合」就是 DTC 的终局。盯住共享平台是否在复利——每开一家新店成本更低，整个赌注就在这里。"
+   },
+   "signals": {
+    "en": [
+     "AI-run brand portfolio model",
+     "2 people operating multiple stores",
+     "'Capped by compute, not headcount'"
+    ],
+    "zh": [
+     "AI 运营的品牌组合模式",
+     "2 个人运营多家店铺",
+     "「上限是算力，不是人手」"
+    ]
+   }
+  },
+  {
+   "slug": "doomersion",
+   "theme": "wildcards",
+   "picked_at": "2026-06-11",
+   "why": {
+    "en": "Language learning smuggled into the doomscroll: TikTok-style videos in your target language, auto-matched to your level and getting incrementally harder as you scroll. ~15K downloads in the first two weeks, power users at 3+ hours a day, and a solo founder already carrying a team of 4. Education in this cohort is thin — this is its sharpest idea.",
+    "zh": "把语言学习偷偷塞进「刷视频」里：目标语言的短视频流，自动匹配水平、越刷越难。上线两周约 1.5 万次下载，重度用户每天刷 3 小时以上，单人创始人已带起 4 人团队。本期教育赛道整体很薄——这是其中最锋利的一个想法。"
+   },
+   "learn": {
+    "en": "Don't fight the dominant behavior — ride it: difficulty-laddered immersion inside an addiction loop. The mechanic (and the Parrot/Pixley cluster around it) is directly portable to China's short-video ecosystem.",
+    "zh": "不要对抗主流行为，要骑上去：把按难度爬梯的沉浸式学习装进成瘾循环里。这套机制（以及它周围的 Parrot、Pixley 小集群）可以直接平移到中国的短视频生态。"
+   },
+   "signals": {
+    "en": [
+     "15K downloads in 2 weeks",
+     "Power users 3+ h/day",
+     "Solo founder → team of 4"
+    ],
+    "zh": [
+     "两周 1.5 万次下载",
+     "重度用户日均 3 小时以上",
+     "单人创始人 → 4 人团队"
+    ]
+   }
   }
  ]
 }
