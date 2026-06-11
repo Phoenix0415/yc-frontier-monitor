@@ -401,9 +401,9 @@
       </div>` : "";
 
     const chips = batches.map(b =>
-      `<button class="batchstat" data-gobatch="${esc(b.display)}">
+      `<span class="batchstat">
          <strong>${(b.companies || []).length}</strong>${esc(locBatch(b.display))}
-       </button>`).join("");
+       </span>`).join("");
 
     const summary = (wl.summary && wl.summary.length)
       ? `<section><h2>${t("summaryTitle")}</h2><div class="panel prose">${wl.summary.map(p => `<p>${esc(loc(p))}</p>`).join("")}</div></section>`
