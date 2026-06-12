@@ -1,8 +1,12 @@
 # YC Frontier Monitor
 
-Tracks Y Combinator's newest batches (Fall 2025 onward), keeps a local dataset
-up to date, and renders an HTML report + browser: which companies are worth
-watching, why, and what's new since you last checked.
+Tracks Y Combinator's newest batches (Fall 2025 onward), keeps a dataset up to
+date, and renders a bilingual (EN/中文) report + browser: which companies are
+worth watching, why, and what's new since you last checked.
+
+Not affiliated with Y Combinator. Company data comes from YC's public company
+directory; the watchlist is editorial opinion, not investment advice. MIT
+licensed (code) — see LICENSE.
 
 ## Quick start
 
@@ -24,6 +28,27 @@ share it, email it, drop it anywhere.
 | `python3 scripts/yc.py schedule install` | Install the macOS launchd agent that runs `auto` daily at 10:00. `status` / `uninstall` manage it. |
 | `python3 scripts/yc.py build` | Rebuild the site from data already on disk — run after editing `analysis/watchlist.json`. |
 | `python3 scripts/yc.py status` | Batch counts, review backlog, and when the next automatic pull will happen. |
+
+## Publishing (GitHub Pages — no domain needed)
+
+The repo ships a workflow (`.github/workflows/monitor.yml`) that turns GitHub
+into both the scheduler and the host:
+
+1. Create a public repo on github.com and push this project to it.
+2. Repo **Settings → Pages → Source: "GitHub Actions"** (one click, one time).
+3. Run the **Monitor & deploy** workflow once from the Actions tab (or just
+   push) — the site appears at `https://<username>.github.io/<repo>/`.
+
+After that it maintains itself: a daily Action tick runs `yc.py auto` (same
+cadence policy as the local agent — monthly baseline + ~1 week after each
+batch kickoff), commits refreshed `data/*.json` back to the repo, rebuilds,
+and redeploys. `data/companies.json` and `data/changelog.json` are tracked in
+git precisely so the cloud runs can diff against the previous state.
+
+If the Action is doing the updating, retire the local launchd agent
+(`python3 scripts/yc.py schedule uninstall`) and `git pull` before editing the
+watchlist locally — two writers just create noise. A custom domain can be
+added later in the Pages settings; until then the github.io URL is free.
 
 ## Automatic updates
 

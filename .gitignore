@@ -1,5 +1,8 @@
 # generated / machine state — rebuilt by `python3 scripts/yc.py update|build`
-data/
+# (data/companies.json and data/changelog.json ARE tracked: the GitHub Action
+# needs the previous state to diff against, and the history is the point)
+data/snapshots/
+data/auto.log
 dist/
 site/data.js
 __pycache__/

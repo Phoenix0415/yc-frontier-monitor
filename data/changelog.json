@@ -1,0 +1,247 @@
+[
+ {
+  "run_at": "2026-06-11T03:33:06+00:00",
+  "initial": true,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 148,
+    "added": [],
+    "removed": []
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [],
+    "removed": []
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 194,
+    "added": [],
+    "removed": []
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 15,
+    "added": [],
+    "removed": []
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 3,
+    "added": [],
+    "removed": []
+   }
+  }
+ },
+ {
+  "run_at": "2026-06-11T03:33:31+00:00",
+  "initial": false,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 148,
+    "added": [],
+    "removed": []
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [],
+    "removed": []
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 194,
+    "added": [],
+    "removed": []
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 15,
+    "added": [],
+    "removed": []
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 3,
+    "added": [],
+    "removed": []
+   }
+  }
+ },
+ {
+  "run_at": "2026-06-11T05:32:19+00:00",
+  "initial": false,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 148,
+    "added": [],
+    "removed": []
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [],
+    "removed": []
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 194,
+    "added": [],
+    "removed": []
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 15,
+    "added": [],
+    "removed": []
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 3,
+    "added": [],
+    "removed": []
+   }
+  }
+ },
+ {
+  "run_at": "2026-06-11T05:58:55+00:00",
+  "initial": false,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 148,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [],
+    "removed": [],
+    "changed": [
+     {
+      "slug": "hex-security",
+      "name": "Hex Security",
+      "field": "team_size",
+      "old": 6,
+      "new": 7
+     }
+    ]
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 194,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 3,
+    "added": [],
+    "removed": [],
+    "changed": []
+   }
+  }
+ },
+ {
+  "run_at": "2026-06-11T15:44:12+00:00",
+  "initial": false,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 148,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 194,
+    "added": [],
+    "removed": [],
+    "changed": [
+     {
+      "slug": "armature",
+      "name": "Armature",
+      "field": "one_liner",
+      "old": "Armature helps companies monitor and optimize the agent experience.",
+      "new": "Armature builds, monitors and optimizes products' agent experience."
+     },
+     {
+      "slug": "enjamb-labs",
+      "name": "Enjamb Labs",
+      "field": "one_liner",
+      "old": "Claude code for Drug Discovery",
+      "new": "Claude Code for Drug Discovery"
+     },
+     {
+      "slug": "enjamb-labs",
+      "name": "Enjamb Labs",
+      "field": "long_description",
+      "old": "Enjamb puts agents across the entire drug program, from preclinical research through clinical trials and approval. Our agents synthesize up-to-date clinical evidence from the literature and real-world data to pinpoint the right endpoints and patient populations; draft and audit regulatory documents like INDs, protocols, SAPs, and NDAs; and run the statistical programming behind them, including SDTM, ADaM, TFLs, and QC, all in one auditable workspace that cuts months off the path from preclinical to clinic and clinic to market.",
+      "new": "Enjamb is Claude Code for drug development. Describe what you need, and agents execute it across the entire program, from discovery to FDA approval. Enjamb synthesizes the clinical evidence, designs the trials, runs the data analysis and statistical programming, and drafts and audits the regulatory submissions, all in one auditable workspace."
+     }
+    ]
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 3,
+    "added": [],
+    "removed": [],
+    "changed": []
+   }
+  }
+ }
+]

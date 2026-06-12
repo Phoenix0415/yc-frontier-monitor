@@ -1,0 +1,61 @@
+# Cloud twin of the local launchd agent: a daily tick runs `yc.py auto`,
+# which only really pulls when due (monthly baseline + ~1 week after each
+# batch kickoff — policy in scripts/automate.py). Fresh data is committed
+# back so the next run can diff against it, then the site deploys to Pages.
+#
+# One-time setup: repo Settings → Pages → Source: "GitHub Actions".
+name: Monitor & deploy
+
+on:
+  schedule:
+    - cron: "23 10 * * *" # daily tick (UTC); the cadence policy decides if a pull happens
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: monitor-deploy
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull latest YC data if due
+        if: github.event_name != 'push'
+        run: python3 scripts/yc.py auto
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          if ! git diff --quiet data/; then
+            git config user.name "yc-monitor-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/companies.json data/changelog.json
+            git commit -m "data: automatic update $(date -u +%F)"
+            git push
+          else
+            echo "No data changes."
+          fi
+
+      - name: Build site
+        run: python3 scripts/yc.py build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
