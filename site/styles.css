@@ -275,12 +275,6 @@ button.bar-label.aslink:hover { color: var(--accent-ink); text-decoration: under
 .badge.hiring { background: var(--blue); }
 .badge.star { background: var(--accent); color: #fff; }
 .badge.changed { background: var(--amber); }
-/* verdicts: one color per action, undecided = grey (SPEC §5) */
-.badge.v-build { background: var(--green); }
-.badge.v-copy { background: var(--blue); }
-.badge.v-partner { background: var(--violet); }
-.badge.v-ignore { background: var(--line-soft); color: var(--muted); text-decoration: line-through; }
-.badge.v-undecided { background: transparent; color: var(--muted); border: 1px dashed var(--muted); }
 
 .tags { display: flex; gap: 5px; flex-wrap: wrap; }
 .chip {
@@ -342,18 +336,6 @@ details.more p { margin: 8px 0 0; white-space: pre-line; line-height: 1.65; }
 }
 .learnpt .ptlabel { color: var(--muted); }
 .pickpt p { margin: 0; font-size: 13px; color: var(--text); line-height: 1.6; text-wrap: pretty; }
-.note {
-  margin: 0;
-  font-size: 13px; color: var(--amber-ink); line-height: 1.6;
-  background: rgba(255, 210, 61, .14);
-  border: 1px dashed var(--amber-ink);
-  padding: 9px 12px;
-}
-.note .ptlabel { color: var(--amber-ink); }
-
-/* verdict chips stay loud on pick cards — the primary skim anchor */
-.card.pick .badge { font-size: 10.5px; padding: 3px 9px; font-weight: 700; box-shadow: 2px 2px 0 rgba(22, 21, 15, .25); }
-.card.pick .badge.v-undecided { box-shadow: none; }
 
 /* ------------------------------------------------------ companies toolbar */
 .toolbar {
@@ -425,31 +407,6 @@ details.more p { margin: 8px 0 0; white-space: pre-line; line-height: 1.65; }
     var(--accent) 0, var(--accent) 4px, transparent 4px, transparent 6px);
   border-radius: 0;
 }
-
-/* ------------------------------------- review cadence + calibration (§7) */
-.duecard {
-  background: var(--panel); border: 1px solid var(--ink);
-  border-radius: 0; padding: 16px 18px;
-  display: flex; flex-direction: column; gap: 8px;
-  box-shadow: 3px 3px 0 rgba(22, 21, 15, .12);
-}
-.duecard:hover { box-shadow: 5px 5px 0 rgba(22, 21, 15, .2); transform: translate(-1px, -1px); }
-.evlist { margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
-.evlist li { margin: 3px 0; line-height: 1.55; }
-.tablewrap { overflow-x: auto; }
-table.hitrate {
-  border-collapse: collapse; font-family: var(--mono); font-size: 12px; min-width: 560px;
-}
-table.hitrate th, table.hitrate td {
-  border-bottom: 1px solid var(--line-soft); padding: 8px 14px; text-align: center;
-}
-table.hitrate tr:first-child th { border-bottom: 2px solid var(--ink); }
-table.hitrate th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
-table.hitrate tr th:first-child { text-align: left; color: var(--ink); }
-table.hitrate tr:first-child th:first-child { color: var(--muted); }
-table.hitrate tr:hover td { background: rgba(22, 21, 15, .025); }
-table.hitrate td { color: var(--ink); }
-table.hitrate td.zero { color: var(--line-soft); }
 
 /* -------------------------------------------------------------- changelog */
 .logentry { border-left: 3px solid var(--accent); padding-left: 18px; margin-bottom: 26px; }

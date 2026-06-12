@@ -12,7 +12,7 @@ spotting frontier-startup trends, and one-click access to each company's site.
   `scripts/automate.py`, agent `com.yc-monitor.auto`, log `data/auto.log`)
 - `python3 scripts/yc.py schedule install|status|uninstall` — manage the agent
 - `python3 scripts/yc.py build` — rebuild site after editing `analysis/`
-- `python3 scripts/yc.py status` — counts, review backlog, next scheduled pull
+- `python3 scripts/yc.py status` — counts, watchlist backlog, next scheduled pull
 
 Data updates are automated; the watchlist refresh (step below) is not — after
 an automatic pull lands new companies, the owner will ask for a review.
@@ -40,7 +40,7 @@ an automatic pull lands new companies, the owner will ask for a review.
 3. Edit `analysis/watchlist.json` — schema:
    `summary[]` (exec-summary paragraphs), `methodology` (one para),
    `themes[] {id, title, narrative}`,
-   `picks[] {slug, theme, why, learn, signals, picked_at, verdict?}`.
+   `picks[] {slug, theme, why, learn, signals, picked_at}`.
    The site is bilingual (EN/中文 toggle): every editorial field is an
    `{"en": ..., "zh": ...}` object (`signals` is `{"en": [...], "zh": [...]}`).
    Always write both languages; a plain string is a legal fallback shown in
@@ -50,50 +50,16 @@ an automatic pull lands new companies, the owner will ask for a review.
    Refresh stats quoted in narratives if the cohort shifted.
    Set `updated_at` to now (UTC ISO) — it drives the "awaiting review" queue.
 
-## Verdicts (decision layer, SPEC §5 — shipped)
+## Removed features (owner decision, 2026-06-11 — pre-publication)
 
-Each pick may carry a decision; absent = rendered as "undecided" (grey badge):
-
-```json
-"verdict": {
-  "action": "build | copy | partner | ignore",
-  "note": {"en": "…", "zh": "…"},
-  "decided_at": "2026-06-11"
-}
-```
-
-- Semantics: `build` we build in this space · `copy` adapt for the China
-  market · `partner` integration/channel candidate · `ignore` reviewed, not
-  relevant. Verdicts are the OWNER's strategy calls — never invent one; only
-  record what Phoenix decides. `note` is bilingual like other editorial text.
-- `sitebuild.validate_watchlist()` enforces the action enum and ISO dates and
-  fails the build loudly; it runs on every `build`/`update`.
-- Badges render on Report pick cards and on picked companies in the Companies
-  tab (zh labels: 自建/复制/合作/忽略/未定); the note shows on pick cards as
-  "Decision:"/"决策：". `status` prints the verdict breakdown.
-- Verdict-filter on the Companies tab was deliberately skipped (P1 in spec).
-
-## Feedback loop (SPEC §7 — shipped)
-
-- Reviews are human judgments appended to picks (pipeline never writes them):
-
-  ```json
-  "reviews": [{"date": "2026-12-11",
-               "outcome": "thriving | growing | flat | pivoted | dead | unclear",
-               "note": {"en": "…", "zh": "…"}}]
-  ```
-
-  Validated like verdicts (enum + ISO date, build fails loudly).
-- Cadence: a pick is due when `today − max(picked_at, latest review date) ≥
-  review_interval_days` (config.json, default 180). `status` prints the due
-  count; the Updates tab shows due picks with dataset-only evidence —
-  team_size at pick time (nearest `data/snapshots/` entry) vs now, one-liner
-  changes since picked_at (Phase-2 records), and a delisted flag. Computed at
-  build time in `sitebuild.compute_due_reviews()` (read-only).
-- Report tab "calibration" block: latest outcome per pick × verdict action
-  cross-tab plus coverage count; renders at zero coverage by design.
-- When the owner reviews a due pick, append a `reviews[]` entry (bilingual
-  note), do NOT touch `picked_at`; the new review date resets the clock.
+The verdict layer (SPEC §5: build/copy/partner/ignore tags + calibration
+cross-tab) and the review/feedback loop (SPEC §7: reviews[], due-for-review
+cadence, evidence) were REMOVED before making the site public — they were the
+owner's private decision machinery. Do not re-add them unless Phoenix asks;
+the full implementation lives in git history (commits d01057f/8b90715, removal
+in the "Remove verdict & review tracking" commit). `picked_at` on picks stays
+(provenance), and the "awaiting analyst review" queue (new companies since
+watchlist.updated_at) is a different feature and stays.
 
 ## Frontier topics (owner-requested upgrade over YC categories)
 
