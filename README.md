@@ -8,6 +8,8 @@
 
 # YC 前沿公司监测站
 
+**在线站点：** https://phoenix0415.github.io/yc-frontier-monitor/
+
 追踪 Y Combinator 最新批次（从 2025 年秋季起），持续更新数据集，并生成双语（中文/英文）报告：哪些公司值得关注、原因何在、以及自上次检查以来有哪些新动态。
 
 本项目与 Y Combinator 无关。公司数据来自 YC 公开的公司目录；关注名单仅代表编辑观点，不构成投资建议。代码采用 MIT 许可证，详见 LICENSE。
@@ -111,6 +113,8 @@ dist/
 <a name="english"></a>
 
 # YC Frontier Monitor
+
+**Live site:** https://phoenix0415.github.io/yc-frontier-monitor/
 
 Tracks Y Combinator's newest batches (Fall 2025 onward), keeps a dataset up to
 date, and renders a bilingual (EN/中文) report + browser: which companies are

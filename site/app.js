@@ -102,7 +102,7 @@
       badgeChanged: "CHANGED",
       momentumTitle: "Topic momentum across batches",
       momentumLede: "Curated frontier topics — transparent keyword rules over each company's name, pitch and description (analysis/topics.json; a company can match several): count and share of that batch. Young batches are small samples.",
-      footer: "Data: the public YC company directory (live Algolia index; yc-oss daily mirror as fallback) — listed companies only, so young batches keep growing. Watchlist picks are editorial, not investment advice. Not affiliated with Y Combinator. Generated {d}.",
+      footer: "Data: the public YC company directory (live Algolia index; yc-oss daily mirror as fallback) — listed companies only, so young batches keep growing. Watchlist picks are editorial, not investment advice. Not affiliated with Y Combinator. Generated {d}. · <a href=\"https://github.com/Phoenix0415/yc-frontier-monitor\" target=\"_blank\" rel=\"noopener\">Source on GitHub</a>",
     },
     zh: {
       tabReport: "报告", tabCompanies: "公司", tabUpdates: "更新",
@@ -155,7 +155,7 @@
       badgeChanged: "有变化",
       momentumTitle: "批次间的主题动量",
       momentumLede: "人工维护的前沿主题——基于公司名称、简介与介绍的透明关键词规则（analysis/topics.json，一家公司可命中多个主题）：数量与该批次内占比。年轻批次样本小。",
-      footer: "数据来源：YC 公开公司目录（实时 Algolia 索引；yc-oss 每日镜像兜底）——仅含已公开收录的公司，年轻批次会持续增长。重点名单为编辑判断，不构成投资建议。本站与 Y Combinator 无关联。生成于 {d}。",
+      footer: "数据来源：YC 公开公司目录（实时 Algolia 索引；yc-oss 每日镜像兜底）——仅含已公开收录的公司，年轻批次会持续增长。重点名单为编辑判断，不构成投资建议。本站与 Y Combinator 无关联。生成于 {d}。· <a href=\"https://github.com/Phoenix0415/yc-frontier-monitor\" target=\"_blank\" rel=\"noopener\">GitHub 源码</a>",
     },
   };
   const SEASON_ZH = { Winter: "冬季", Spring: "春季", Summer: "夏季", Fall: "秋季" };
