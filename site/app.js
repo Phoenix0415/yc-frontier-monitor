@@ -243,9 +243,9 @@
     if (changedNow[c.slug]) badges += `<span class="badge changed" title="${esc(changedNow[c.slug].map(r => r.field).join(" · "))}">${t("badgeChanged")}</span>`;
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
     const topicChips = (c.topics || []).slice(0, 3)
-      .map(id => `<button class="chip tpc" data-topic="${esc(id)}">${esc(topicLabel(id))}</button>`).join("");
+      .map(id => `<span class="chip tpc">${esc(topicLabel(id))}</span>`).join("");
     const tags = topicChips + (c.tags || []).slice(0, 3)
-      .map(tg => `<button class="chip" data-tag="${esc(tg)}">${esc(tg)}</button>`).join("");
+      .map(tg => `<span class="chip">${esc(tg)}</span>`).join("");
     return `<article class="card">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
       <div class="badges">${badges}</div>
@@ -316,7 +316,7 @@
       perBatch.map(p => `<span class="mcell">${esc(locBatch(p.display))}<em>${p.total}</em></span>`).join("") + `</div>`;
     const rows = top.map(([id]) =>
       `<div class="mrow${id === "__none" ? " dimrow" : ""}">` +
-      `<button class="mlabel" data-topic="${esc(id)}" title="${esc(topicLabel(id))}">${esc(topicLabel(id))}</button>` +
+      `<span class="mlabel">${esc(topicLabel(id))}</span>` +
       perBatch.map(p => {
         const n = p.m[id] || 0;
         if (!n) return `<span class="mcell dim">–</span>`;
@@ -334,7 +334,7 @@
     const max = rows.length ? rows[0][1] : 1;
     return `<div class="panel"><h3>${t("chartTopics")}</h3>` + rows.map(([id, n]) =>
       `<div class="bar-row">
-        <button class="bar-label aslink" data-topic="${esc(id)}" title="${esc(topicLabel(id))}">${esc(topicLabel(id))}</button>
+        <span class="bar-label">${esc(topicLabel(id))}</span>
         ${barBits(n, max, companies.length)}
       </div>`).join("") + `</div>`;
   };
@@ -595,20 +595,8 @@
     render();
   });
 
-  // clicks inside the view: topic/tag chips filter, batch chips jump, goto
+  // clicks inside the view: goto buttons only (topic/tag chips are decorative)
   view.addEventListener("click", e => {
-    const topic = e.target.closest("[data-topic]");
-    if (topic) {
-      state.topic = topic.dataset.topic; state.tab = "companies"; render(); return;
-    }
-    const tag = e.target.closest("[data-tag]");
-    if (tag) {
-      state.q = tag.dataset.tag; state.tab = "companies"; render(); return;
-    }
-    const gb = e.target.closest("[data-gobatch]");
-    if (gb) {
-      state.batch = gb.dataset.gobatch; state.tab = "companies"; render(); return;
-    }
     const go = e.target.closest("[data-goto]");
     if (go) { state.tab = go.dataset.goto; render(); }
   });
