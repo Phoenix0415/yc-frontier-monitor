@@ -127,6 +127,19 @@ a, button, input, select, .card, .chip, .badge, .check, summary {
 .langswitch button:hover { color: var(--ink); }
 .langswitch button.active { background: var(--ink); color: #fff; }
 
+/* header repo link — square, mono, hard accent shadow so it reads at first sight */
+.headend { display: flex; align-items: center; gap: 10px; }
+.ghlink {
+  display: inline-flex; align-items: center;
+  background: var(--ink); color: #fff;
+  border: 1px solid var(--ink); border-radius: 0;
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .06em;
+  padding: 6px 12px; text-decoration: none; white-space: nowrap;
+  box-shadow: 2px 2px 0 var(--accent);
+}
+.ghlink:hover { background: var(--accent); box-shadow: 2px 2px 0 var(--ink); }
+
 main { padding: 36px 24px 10px; }
 .foot {
   color: var(--muted); font-family: var(--mono); font-size: 11.5px; line-height: 1.7;
