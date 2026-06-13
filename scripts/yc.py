@@ -4,6 +4,9 @@
 Usage:
   python3 scripts/yc.py update                 fetch -> diff -> enrich -> build
   python3 scripts/yc.py update --no-founders   skip the founder-count page reads
+  python3 scripts/yc.py enrich --dry-run       LLM traction extraction on a sample,
+                                               printing quality + cost (writes nothing)
+  python3 scripts/yc.py enrich                 run the hash-gated traction pass + build
   python3 scripts/yc.py auto                   update only if due (daily scheduler
                                                entry point: monthly baseline +
                                                ~1 week after each batch kickoff)
@@ -24,6 +27,7 @@ from datetime import datetime, timezone
 import automate
 import batches as batchmod
 import enrich
+import enrich_text
 import sitebuild
 import sources
 import store
@@ -83,6 +87,20 @@ def cmd_update(args):
         enrich.enrich_founders(all_companies(state),
                                workers=cfg.get("founder_workers", 8))
 
+    # Traction extraction (SPEC 002 §5): key-gated, hash-gated, capped. Runs on
+    # the manual `update` only — never on the daily `auto` tick (§4a sets
+    # no_enrich there), and a clean no-op without a key.
+    if cfg.get("text_enrichment", True) and not getattr(args, "no_enrich", False):
+        api_key = enrich_text.load_api_key()
+        if api_key:
+            enrich_text.enrich_traction(
+                all_companies(state), api_key,
+                model=cfg.get("enrich_model", enrich_text.DEFAULT_MODEL),
+                max_companies=cfg.get("max_companies_per_run", 40),
+                workers=cfg.get("enrich_workers", 6))
+        else:
+            print("No ANTHROPIC_API_KEY — traction extraction skipped.")
+
     store.save_state(state)
     store.append_changelog(entry)
     sitebuild.build()
@@ -122,7 +140,96 @@ def cmd_auto(args):
         print("[%s] auto: not due — %s; next pull %s (%s)" % (stamp, reason, nxt[0], nxt[1]))
         return
     print("[%s] auto: update due — %s" % (stamp, reason))
+    args.no_enrich = True  # SPEC 002 §4a: enrichment never runs on the daily tick
     cmd_update(args)
+
+
+def _dry_run_sample(companies, n):
+    """A representative ~n for cost/quality review: about a third drawn from
+    companies the regex already flags (so real extractions show up), the rest an
+    even spread across the dataset (so the no-invention case is exercised too).
+    Deterministic."""
+    desc = sorted((c for c in companies if (c.get("long_description") or "").strip()),
+                  key=lambda c: c["slug"])
+    flagged = [c for c in desc if c.get("revenue_mention") or c.get("funding_mention")]
+    chosen, seen = [], set()
+    for c in flagged[:max(1, n // 3)]:
+        chosen.append(c)
+        seen.add(c["slug"])
+    rest = [c for c in desc if c["slug"] not in seen]
+    need = n - len(chosen)
+    if need > 0 and rest:
+        for c in rest[:: max(1, len(rest) // need)]:
+            if len(chosen) >= n:
+                break
+            chosen.append(c)
+    return chosen[:n]
+
+
+def cmd_enrich(args):
+    """Traction extraction (SPEC 002 §5). --dry-run writes nothing and reports
+    quality + cost on a sample; without it, runs the hash-gated pass and saves."""
+    cfg = store.load_json(store.CONFIG_PATH, {})
+    api_key = enrich_text.load_api_key()
+    if not api_key:
+        print("No ANTHROPIC_API_KEY (env or .env) — traction extraction is a no-op.")
+        return
+    model = cfg.get("enrich_model", enrich_text.DEFAULT_MODEL)
+    state = store.load_state()
+    if not state["batches"]:
+        sys.exit("No data yet — run: python3 scripts/yc.py update")
+    companies = all_companies(state)
+
+    if args.dry_run:
+        sample = _dry_run_sample(companies, args.limit or 20)
+        print("DRY RUN — %d companies via %s. Nothing will be written.\n"
+              % (len(sample), model))
+        in_tok = out_tok = hits = errs = 0
+        for i, c in enumerate(sample, 1):
+            traction, usage, err = enrich_text.extract_one(api_key, model, c)
+            in_tok += usage.get("input_tokens", 0)
+            out_tok += usage.get("output_tokens", 0)
+            print("[%2d] %s  (%s)" % (i, c["name"], c.get("batch", "")))
+            if err:
+                errs += 1
+                print("     ! %s" % err)
+                print()
+                continue
+            nonempty = [(k, traction[k]) for k in enrich_text.TRACTION_KEYS if traction[k]]
+            if nonempty:
+                hits += 1
+                for k, v in nonempty:
+                    print("     %-16s %s" % (k + ":", v))
+            else:
+                print("     (no traction stated)")
+            if c.get("revenue_mention") or c.get("funding_mention"):
+                print("     · regex previously caught: rev=%r fund=%r"
+                      % (c.get("revenue_mention", ""), c.get("funding_mention", "")))
+            print()
+        cost = enrich_text.estimate_cost(model, in_tok, out_tok)
+        eligible = sum(1 for c in companies if enrich_text.needs_extraction(c))
+        print("-" * 64)
+        print("Reviewed %d companies: %d with traction, %d empty, %d errors."
+              % (len(sample), hits, len(sample) - hits - errs, errs))
+        print("Tokens: %d in / %d out.  Estimated cost: $%.4f (%s)."
+              % (in_tok, out_tok, cost, model))
+        if in_tok:
+            per = cost / len(sample)
+            print("Per company ~$%.5f  ->  full run of %d eligible ~$%.2f."
+                  % (per, eligible, per * eligible))
+        print("\nNothing written. Review the above, then run the full pass when ready.")
+        return
+
+    stats = enrich_text.enrich_traction(
+        companies, api_key, model=model,
+        max_companies=args.limit or cfg.get("max_companies_per_run", 40),
+        workers=cfg.get("enrich_workers", 6))
+    store.save_state(state)
+    sitebuild.build()
+    print("Traction: %d extracted (%d disclosed), %d errors. Tokens %d/%d, est $%.4f."
+          % (stats["extracted"], stats["with_traction"], stats["errors"],
+             stats["in_tokens"], stats["out_tokens"], stats.get("cost", 0.0)))
+    print("Site rebuilt -> site/index.html")
 
 
 def cmd_schedule(args):
@@ -167,6 +274,12 @@ def cmd_status(_args):
         print("  %-12s %4d companies  (%s%s)" %
               (b["display"], len(b["companies"]), b["source"],
                ", %d founder counts missing" % missing if missing else ""))
+    comps = all_companies(state)
+    extracted = [c for c in comps if c.get("traction")]
+    disclosed = sum(1 for c in extracted
+                    if any(c["traction"].get(k) for k in enrich_text.TRACTION_KEYS))
+    print("Traction: %d/%d companies extracted, %d disclose traction."
+          % (len(extracted), len(comps), disclosed))
     wl = store.load_json(store.ANALYSIS_PATH, None)
     if wl and wl.get("updated_at"):
         pending = pending_review(state, wl)
@@ -189,11 +302,19 @@ def main():
     p_update = sub.add_parser("update", help="fetch latest data, diff, rebuild site")
     p_update.add_argument("--no-founders", action="store_true",
                           help="skip founder-count page fetches")
+    p_update.add_argument("--no-enrich", action="store_true",
+                          help="skip LLM traction extraction")
     p_update.set_defaults(fn=cmd_update)
     p_auto = sub.add_parser("auto", help="update only if due (daily scheduler hook)")
     p_auto.add_argument("--no-founders", action="store_true",
                         help="skip founder-count page fetches")
     p_auto.set_defaults(fn=cmd_auto)
+    p_enrich = sub.add_parser("enrich", help="LLM traction extraction (SPEC 002 Phase 1)")
+    p_enrich.add_argument("--dry-run", action="store_true",
+                          help="extract a sample, print quality + cost, write nothing")
+    p_enrich.add_argument("--limit", type=int, default=None,
+                          help="cap companies (dry-run sample size; default 20)")
+    p_enrich.set_defaults(fn=cmd_enrich)
     p_sched = sub.add_parser("schedule", help="manage the automatic update agent")
     p_sched.add_argument("action", choices=["install", "uninstall", "status"])
     p_sched.set_defaults(fn=cmd_schedule)

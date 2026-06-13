@@ -258,6 +258,19 @@ button.bar-label.aslink:hover { color: var(--accent-ink); text-decoration: under
   border-left: 3px solid var(--blue);
   border-radius: 0; padding: 7px 12px;
 }
+/* structured traction — earned facts, so it shares the green pull-quote family */
+.traction {
+  margin: 0; list-style: none; padding: 7px 12px;
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.6; color: var(--green-ink);
+  background: var(--green-soft);
+  border-left: 3px solid var(--green);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.traction li { margin: 0; }
+.tlabel {
+  display: inline-block; min-width: 60px;
+  text-transform: uppercase; letter-spacing: .04em; font-size: 10px; opacity: .7;
+}
 .meta { margin: 0; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
 /* badges: square, mono, uppercase — bright fills, black border */

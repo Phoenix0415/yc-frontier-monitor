@@ -3,5 +3,9 @@
   "start_batch": "fall-2025",
   "lookahead_months": 6,
   "founder_enrichment": true,
-  "founder_workers": 8
+  "founder_workers": 8,
+  "text_enrichment": true,
+  "enrich_model": "claude-haiku-4-5",
+  "enrich_workers": 6,
+  "max_companies_per_run": 40
 }

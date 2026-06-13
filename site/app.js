@@ -76,6 +76,10 @@
       pitchNote: "Auto-extracted from the company's own description — can reference a previous company or a problem statement, not necessarily this company's traction",
       fundingLabel: "Funding:",
       fundingNote: "Auto-extracted from the company's own description — can reference YC itself, a founder's previous company, or their customers; verify before relying on it",
+      tractionNote: "Traction the company states in its own YC description, extracted into structured fields — disclosed facts, not editorial.",
+      trRevenue: "Revenue", trArr: "ARR", trGrowth: "Growth",
+      trCustomers: "Customers", trFunding: "Funding", trCustomersNamed: "Named",
+      fTraction: "discloses traction", sortTraction: "Traction first",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
@@ -129,6 +133,10 @@
       pitchNote: "自动从公司自述中提取——可能指创始人上一家公司或问题陈述，不一定是这家公司自己的业绩",
       fundingLabel: "融资：",
       fundingNote: "自动从公司自述中提取——可能指 YC 本身、创始人上家公司或其客户；采信前请核实",
+      tractionNote: "公司在 YC 简介中自述的业绩，已提取为结构化字段——是公司披露的事实，非编辑判断。",
+      trRevenue: "营收", trArr: "ARR", trGrowth: "增长",
+      trCustomers: "客户/用量", trFunding: "融资", trCustomersNamed: "已披露客户",
+      fTraction: "披露业绩", sortTraction: "业绩优先",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
@@ -170,7 +178,8 @@
 
   const state = { tab: "report", lang: defaultLang(), q: "", batch: "all",
                   industry: "all", topic: "all", hiring: false, fresh: false,
-                  watch: false, revenue: false, funding: false, sort: "batch" };
+                  watch: false, revenue: false, funding: false,
+                  traction: false, sort: "batch" };
 
   const t = key => I18N[state.lang][key] != null ? I18N[state.lang][key] : I18N.en[key];
   const tf = (key, vars) => Object.entries(vars).reduce(
@@ -235,6 +244,25 @@
 
   const eyebrow = key => esc(t(key).replace(/[:：]\s*$/, ""));
 
+  // structured traction (SPEC 002 Phase 1) — company-stated facts, escaped
+  const TRACTION_FIELDS = [["revenue", "trRevenue"], ["arr", "trArr"],
+    ["growth", "trGrowth"], ["customers_count", "trCustomers"], ["funding", "trFunding"]];
+  const discloses = c => {
+    const tr = c.traction;
+    if (!tr) return false;
+    return TRACTION_FIELDS.some(([k]) => tr[k]) || (tr.named_customers || []).some(Boolean);
+  };
+  const tractionBlock = c => {
+    if (!discloses(c)) return "";
+    const tr = c.traction;
+    const rows = TRACTION_FIELDS.filter(([k]) => tr[k])
+      .map(([k, lk]) => `<li><span class="tlabel">${esc(t(lk))}</span> ${esc(tr[k])}</li>`).join("");
+    const named = (tr.named_customers || []).filter(Boolean);
+    const namedRow = named.length
+      ? `<li><span class="tlabel">${esc(t("trCustomersNamed"))}</span> ${named.map(esc).join(", ")}</li>` : "";
+    return `<ul class="traction" title="${esc(t("tractionNote"))}">${rows}${namedRow}</ul>`;
+  };
+
   const companyCard = c => {
     const p = pickBySlug[c.slug];
     let badges = "";
@@ -246,12 +274,14 @@
       .map(id => `<span class="chip tpc">${esc(topicLabel(id))}</span>`).join("");
     const tags = topicChips + (c.tags || []).slice(0, 3)
       .map(tg => `<span class="chip">${esc(tg)}</span>`).join("");
+    const tblock = tractionBlock(c);  // when present, supersedes the regex mention pull-quotes
     return `<article class="card">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
       <div class="badges">${badges}</div>
       <p class="oneliner">${esc(c.one_liner)}</p>
-      ${c.revenue_mention ? `<p class="rev" title="${esc(t("pitchNote"))}">${t("fromPitch")} “${esc(c.revenue_mention)}”</p>` : ""}
-      ${c.funding_mention ? `<p class="fund" title="${esc(t("fundingNote"))}">${t("fundingLabel")} “${esc(c.funding_mention)}”</p>` : ""}
+      ${tblock}
+      ${tblock ? "" : (c.revenue_mention ? `<p class="rev" title="${esc(t("pitchNote"))}">${t("fromPitch")} “${esc(c.revenue_mention)}”</p>` : "")}
+      ${tblock ? "" : (c.funding_mention ? `<p class="fund" title="${esc(t("fundingNote"))}">${t("fundingLabel")} “${esc(c.funding_mention)}”</p>` : "")}
       ${p ? `<p class="why"><strong>${t("whyWatch")}</strong> ${esc(loc(p.why))}</p>` : ""}
       <p class="meta">${metaLine(c)}</p>
       <div class="tags">${tags}</div>
@@ -422,6 +452,7 @@
       if (state.watch && !pickBySlug[c.slug]) return false;
       if (state.revenue && !c.revenue_mention) return false;
       if (state.funding && !c.funding_mention) return false;
+      if (state.traction && !discloses(c)) return false;
       if (q) {
         const hay = [c.name, c.one_liner, (c.tags || []).join(" "), c.industry,
                      c.subindustry, c.location, c.long_description]
@@ -435,6 +466,7 @@
       name: (a, b) => a.name.localeCompare(b.name),
       team: (a, b) => (b.team_size || 0) - (a.team_size || 0),
       recent: (a, b) => String(b.first_seen).localeCompare(String(a.first_seen)) || a.name.localeCompare(b.name),
+      traction: (a, b) => (discloses(b) - discloses(a)) || a.name.localeCompare(b.name),
     };
     return list.sort(cmp[state.sort] || cmp.batch);
   };
@@ -472,12 +504,14 @@
           <option value="recent" ${state.sort === "recent" ? "selected" : ""}>${t("sortRecent")}</option>
           <option value="team" ${state.sort === "team" ? "selected" : ""}>${t("sortTeam")}</option>
           <option value="name" ${state.sort === "name" ? "selected" : ""}>${t("sortName")}</option>
+          <option value="traction" ${state.sort === "traction" ? "selected" : ""}>${t("sortTraction")}</option>
         </select>
         <label class="check"><input type="checkbox" id="f-hiring" ${state.hiring ? "checked" : ""}>${t("fHiring")}</label>
         <label class="check"><input type="checkbox" id="f-fresh" ${state.fresh ? "checked" : ""}>${t("fFresh")}</label>
         <label class="check"><input type="checkbox" id="f-watch" ${state.watch ? "checked" : ""}>${t("fWatch")}</label>
         <label class="check"><input type="checkbox" id="f-revenue" ${state.revenue ? "checked" : ""}>${t("fRevenue")}</label>
         <label class="check"><input type="checkbox" id="f-funding" ${state.funding ? "checked" : ""}>${t("fFunding")}</label>
+        <label class="check"><input type="checkbox" id="f-traction" ${state.traction ? "checked" : ""}>${t("fTraction")}</label>
       </div>
       <p class="count" id="count"></p>
       <div class="grid" id="grid"></div>`;
@@ -495,6 +529,7 @@
     on("f-watch", "change", e => { state.watch = e.target.checked; updateGrid(); });
     on("f-revenue", "change", e => { state.revenue = e.target.checked; updateGrid(); });
     on("f-funding", "change", e => { state.funding = e.target.checked; updateGrid(); });
+    on("f-traction", "change", e => { state.traction = e.target.checked; updateGrid(); });
     updateGrid();
   };
 
