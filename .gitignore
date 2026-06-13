@@ -9,3 +9,7 @@ __pycache__/
 *.pyc
 .DS_Store
 .claude/settings.local.json
+
+# local-only planning docs — SPEC.md + enrichment-plan.md are private roadmap,
+# deliberately kept out of the public repo (owner decision, 2026-06-13)
+specs/
