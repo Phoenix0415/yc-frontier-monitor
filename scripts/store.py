@@ -86,9 +86,15 @@ def apply_run(state, results, run_at):
             old = prev_by_slug.get(c["slug"])
             c["first_seen"] = old["first_seen"] if old else run_at
             c["new_in_last_update"] = old is None and not initial
-            if old and c.get("founder_count") is None:
-                c["founder_count"] = old.get("founder_count")
             if old:
+                if c.get("founder_count") is None:
+                    c["founder_count"] = old.get("founder_count")
+                # enricher-owned fields aren't part of the fetch; carry them
+                # forward so `update` never drops them — the enrichers' hash
+                # gates decide whether to refresh (traction §5, enrichment §6)
+                for k in ("traction", "enrichment"):
+                    if old.get(k) is not None:
+                        c[k] = old[k]
                 for field in WATCHED_FIELDS:
                     if _comparable(old.get(field)) != _comparable(c.get(field)):
                         changed.append({"slug": c["slug"], "name": c["name"],

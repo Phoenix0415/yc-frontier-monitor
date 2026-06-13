@@ -27,6 +27,7 @@ from datetime import datetime, timezone
 import automate
 import batches as batchmod
 import enrich
+import enrich_site
 import enrich_text
 import sitebuild
 import sources
@@ -166,9 +167,97 @@ def _dry_run_sample(companies, n):
     return chosen[:n]
 
 
+def cmd_enrich_site(args):
+    """Website enrichment (SPEC 002 §6). --dry-run fetches a sample, prints
+    quality + cost + fetch-yield, writes nothing; without it, the hash-gated
+    pass + build (not run until the dry run is reviewed)."""
+    cfg = store.load_json(store.CONFIG_PATH, {})
+    api_key = enrich_text.load_api_key()
+    if not api_key:
+        print("No ANTHROPIC_API_KEY (env or .env) — website enrichment is a no-op.")
+        return
+    model = cfg.get("enrich_site_model") or cfg.get("enrich_model", enrich_site.DEFAULT_MODEL)
+    state = store.load_state()
+    if not state["batches"]:
+        sys.exit("No data yet — run: python3 scripts/yc.py update")
+    companies = all_companies(state)
+
+    if args.dry_run:
+        sample = _dry_run_sample(companies, args.limit or 18)
+        print("DRY RUN (website) — %d companies via %s, robots-honored. Nothing written.\n"
+              % (len(sample), model))
+        in_tok = out_tok = text_ok = no_text = fetch_err = llm_err = meaningful = 0
+        for i, c in enumerate(sample, 1):
+            text, meta = enrich_site.fetch_company_text(c)
+            print("[%2d] %s  (%s)  %s" % (i, c["name"], c.get("batch", ""), c.get("website", "")))
+            if not text:
+                no_text += 1
+                if meta["error"]:
+                    fetch_err += 1
+                    print("     ! fetch failed: %s" % meta["error"])
+                elif meta["robots_blocked"]:
+                    print("     · robots disallowed / no text")
+                else:
+                    print("     · no usable text (JS-only or parked)")
+                print()
+                continue
+            text_ok += 1
+            enr, usage, err = enrich_site.extract_site(api_key, model, c, text)
+            in_tok += usage.get("input_tokens", 0)
+            out_tok += usage.get("output_tokens", 0)
+            if err:
+                llm_err += 1
+                print("     ! %s" % err)
+                print()
+                continue
+            pr = enr["pricing"]
+            print("     pages: %s" % ", ".join(meta["pages"]))
+            print("     value_prop:   %s" % (enr["value_prop"] or "–"))
+            if enr["pain_point"]:
+                print("     pain_point:   %s" % enr["pain_point"])
+            if enr["target_customer"]:
+                print("     target:       %s" % enr["target_customer"])
+            print("     launch_stage: %s" % enr["launch_stage"])
+            print("     pricing:      has=%s · model=%s · entry=%s"
+                  % (pr["has_pricing"], pr["model"], pr["entry_price"] or "–"))
+            if enr["named_customers"]:
+                print("     named:        %s" % ", ".join(enr["named_customers"]))
+            if enrich_site.is_meaningful(enr):
+                meaningful += 1
+            print()
+        cost = enrich_text.estimate_cost(model, in_tok, out_tok)
+        eligible = sum(1 for c in companies if enrich_site.needs_enrichment(c))
+        yield_rate = (text_ok / len(sample)) if sample else 0
+        print("-" * 64)
+        print("Fetched %d: %d yielded text, %d no-text/parked, %d fetch errors, %d LLM errors."
+              % (len(sample), text_ok, no_text - fetch_err, fetch_err, llm_err))
+        print("Of the %d extracted, %d had meaningful content." % (text_ok - llm_err, meaningful))
+        print("Tokens: %d in / %d out.  Estimated cost: $%.4f (%s)." % (in_tok, out_tok, cost, model))
+        if text_ok - llm_err > 0:
+            per = cost / (text_ok - llm_err)
+            est_full = per * eligible * yield_rate
+            print("Per extracted company ~$%.5f; text-yield %.0f%%  ->  full run of %d eligible ~$%.2f."
+                  % (per, 100 * yield_rate, eligible, est_full))
+        print("\nNothing written. Review the above, then run the full pass when ready.")
+        return
+
+    stats = enrich_site.enrich_sites(
+        companies, api_key, model=model,
+        max_companies=args.limit or cfg.get("max_companies_per_run", 40),
+        workers=cfg.get("enrich_workers", 6))
+    store.save_state(state)
+    sitebuild.build()
+    print("Website: %d enriched (%d meaningful), %d no-text, %d errors. Tokens %d/%d, est $%.4f."
+          % (stats["enriched"], stats["meaningful"], stats["no_text"], stats["errors"],
+             stats["in_tokens"], stats["out_tokens"], stats.get("cost", 0.0)))
+    print("Site rebuilt -> site/index.html")
+
+
 def cmd_enrich(args):
     """Traction extraction (SPEC 002 §5). --dry-run writes nothing and reports
     quality + cost on a sample; without it, runs the hash-gated pass and saves."""
+    if getattr(args, "site", False):
+        return cmd_enrich_site(args)
     cfg = store.load_json(store.CONFIG_PATH, {})
     api_key = enrich_text.load_api_key()
     if not api_key:
@@ -280,6 +369,10 @@ def cmd_status(_args):
                     if any(c["traction"].get(k) for k in enrich_text.TRACTION_KEYS))
     print("Traction: %d/%d companies extracted, %d disclose traction."
           % (len(extracted), len(comps), disclosed))
+    site_enriched = [c for c in comps if c.get("enrichment")]
+    usable = sum(1 for c in site_enriched if enrich_site.is_meaningful(c["enrichment"]))
+    print("Website: %d/%d enriched, %d with usable signal."
+          % (len(site_enriched), len(comps), usable))
     wl = store.load_json(store.ANALYSIS_PATH, None)
     if wl and wl.get("updated_at"):
         pending = pending_review(state, wl)
@@ -309,11 +402,13 @@ def main():
     p_auto.add_argument("--no-founders", action="store_true",
                         help="skip founder-count page fetches")
     p_auto.set_defaults(fn=cmd_auto)
-    p_enrich = sub.add_parser("enrich", help="LLM traction extraction (SPEC 002 Phase 1)")
+    p_enrich = sub.add_parser("enrich", help="LLM enrichment (traction / website)")
+    p_enrich.add_argument("--site", action="store_true",
+                          help="website enricher (SPEC 002 Phase 2) instead of traction")
     p_enrich.add_argument("--dry-run", action="store_true",
                           help="extract a sample, print quality + cost, write nothing")
     p_enrich.add_argument("--limit", type=int, default=None,
-                          help="cap companies (dry-run sample size; default 20)")
+                          help="cap companies (dry-run sample size; default 20 / 18 for --site)")
     p_enrich.set_defaults(fn=cmd_enrich)
     p_sched = sub.add_parser("schedule", help="manage the automatic update agent")
     p_sched.add_argument("action", choices=["install", "uninstall", "status"])

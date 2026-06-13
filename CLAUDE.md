@@ -9,6 +9,8 @@ spotting frontier-startup trends, and one-click access to each company's site.
 - `python3 scripts/yc.py update` — fetch → diff → founder + traction enrichment → site build
 - `python3 scripts/yc.py enrich [--dry-run] [--limit N]` — LLM traction extraction
   (SPEC 002 §5); `--dry-run` prints quality + cost on a sample and writes nothing
+- `python3 scripts/yc.py enrich --site [--dry-run] [--limit N]` — LLM website
+  enrichment (SPEC 002 §6): fetch each site → value prop / pricing / launch stage
 - `python3 scripts/yc.py auto` — update only if due; called daily by launchd
   (cadence: monthly baseline + ~1 week after each batch kickoff; policy in
   `scripts/automate.py`, agent `com.yc-monitor.auto`, log `data/auto.log`)
@@ -134,6 +136,52 @@ watchlist.updated_at) is a different feature and stays.
   `esc()`-escaped. `status` prints traction coverage.
 - State 2026-06-13: 534/558 extracted, 96 disclose traction (vs the regex's ~40
   mentions).
+
+## Website enrichment (SPEC 002 Phase 2 — shipped 2026-06-13)
+
+- **What**: `scripts/enrich_site.py` fetches each company's own site (homepage +
+  a linked `/pricing` and `/about`), reduces HTML to visible text with the stdlib
+  `html.parser`, and an LLM pass fills `company.enrichment`:
+  `{source:"website", source_url, value_prop, pain_point, target_customer,
+  pricing:{has_pricing, model, entry_price, currency, notes}, launch_stage,
+  named_customers[], fetched_at, content_hash}`.
+- **Two-tier strictness**: `value_prop`/`pain_point`/`target_customer` are faithful
+  paraphrases of the page; `pricing`/`launch_stage`/`named_customers` must be
+  grounded on the page (never guessed). `launch_stage` ∈ launched | early-access |
+  waitlist | building | unknown; `pricing.model` ∈ self-serve | sales-led |
+  freemium | usage | tiered | unknown (hardware/one-time price = self-serve/tiered,
+  not freemium).
+- **Untrusted input**: page text is treated as data, never instructions — the
+  prompt + a few-shot example make the extractor resist prompt injection.
+- **stdlib only**: `urllib` (fetch + Anthropic call, reusing `enrich_text`'s
+  retry/POST), `html.parser` (text), `urllib.robotparser` (robots). Polite: real
+  UA, timeout, per-host delay, **robots.txt honored** (a Disallow → skip). Each
+  page capped ~8K chars, combined ~16K, to bound tokens. JS-only/parked → low
+  yield, fields left empty (graceful, never wrong).
+- **Key-optional / hash-gated / failure-safe / off the daily tick** — same rules
+  as Phase 1 (§4a). Hash is of the fetched page text; re-fetched unchanged text →
+  zero LLM calls. Concurrent (`enrich_workers`), retry-on-429/5xx.
+- **Carry-forward fix (store.apply_run)**: `update` now carries `traction` AND
+  `enrichment` across runs (previously only `founder_count`), so a fetch never
+  drops them and the hash gates decide refresh. `needs_enrichment` currently only
+  enriches NEW companies (no periodic site re-fetch yet — that's the next lever).
+- **Config**: `enrich_site_model` (optional; defaults to `enrich_model` = Haiku —
+  dry run showed Haiku quality is sufficient), `enrich_workers`,
+  `max_companies_per_run`. The one-time backfill (`enrich --site --limit 600`)
+  cost $1.41 — 446/558 enriched (443 meaningful), 112 no-text (JS-only/parked),
+  10 fetch errors. launch_stage: 289 launched, 40 early-access, 8 waitlist,
+  2 building, 107 unknown; 228 show pricing.
+- **Site**: value prop + pain point + pricing line on cards, a launch-stage badge,
+  a launch-stage filter + "has pricing" pill (Companies tab), bilingual + escaped.
+  `status` prints enrichment coverage.
+- **Contract**: `specs/phase2-website-prompt.md` (local-only) — the exact prompt,
+  fetch policy, and field contract. Don't improvise a different one.
+- **DEFERRED (the one remaining §6 item)**: surfacing a `waitlist → launched`
+  move as a CHANGED event on the Updates tab. The UI already renders `changed`
+  records generically, so it's backend-only — but it needs a post-enrichment diff
+  (apply_run runs *before* enrichment, so it can't see the new launch_stage), and
+  it produces nothing until a periodic re-fetch exists. Do it with the re-fetch
+  cadence, not before.
 
 ## Conventions
 

@@ -80,6 +80,10 @@
       trRevenue: "Revenue", trArr: "ARR", trGrowth: "Growth",
       trCustomers: "Customers", trFunding: "Funding", trCustomersNamed: "Named",
       fTraction: "discloses traction", sortTraction: "Traction first",
+      stLaunched: "launched", stEarly: "early access", stWaitlist: "waitlist",
+      stBuilding: "building", stUnknownOpt: "unknown",
+      allStages: "All stages", fHasPricing: "has pricing",
+      enrichPain: "Problem", enrichPricing: "Pricing",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
@@ -137,6 +141,10 @@
       trRevenue: "营收", trArr: "ARR", trGrowth: "增长",
       trCustomers: "客户/用量", trFunding: "融资", trCustomersNamed: "已披露客户",
       fTraction: "披露业绩", sortTraction: "业绩优先",
+      stLaunched: "已上线", stEarly: "早期体验", stWaitlist: "候补名单",
+      stBuilding: "开发中", stUnknownOpt: "未知",
+      allStages: "全部阶段", fHasPricing: "有定价",
+      enrichPain: "解决的问题", enrichPricing: "定价",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
@@ -179,7 +187,7 @@
   const state = { tab: "report", lang: defaultLang(), q: "", batch: "all",
                   industry: "all", topic: "all", hiring: false, fresh: false,
                   watch: false, revenue: false, funding: false,
-                  traction: false, sort: "batch" };
+                  traction: false, stage: "all", haspricing: false, sort: "batch" };
 
   const t = key => I18N[state.lang][key] != null ? I18N[state.lang][key] : I18N.en[key];
   const tf = (key, vars) => Object.entries(vars).reduce(
@@ -263,6 +271,25 @@
     return `<ul class="traction" title="${esc(t("tractionNote"))}">${rows}${namedRow}</ul>`;
   };
 
+  // website enrichment (SPEC 002 Phase 2) — paraphrased value/pain + grounded pricing
+  const STAGE_LABEL = { launched: "stLaunched", "early-access": "stEarly",
+    waitlist: "stWaitlist", building: "stBuilding" };
+  const stageBadge = c => {
+    const st = c.enrichment && c.enrichment.launch_stage;
+    return STAGE_LABEL[st] ? `<span class="badge stage st-${st}">${t(STAGE_LABEL[st])}</span>` : "";
+  };
+  const enrichBlock = c => {
+    const e = c.enrichment;
+    if (!e) return "";
+    const pr = e.pricing || {};
+    const vp = e.value_prop ? `<p class="vprop">${esc(trunc(e.value_prop, 160))}</p>` : "";
+    const pain = e.pain_point
+      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPain"))}</span> ${esc(trunc(e.pain_point, 140))}</p>` : "";
+    const price = pr.has_pricing
+      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPricing"))}</span> ${esc(pr.model)}${pr.entry_price ? " · " + esc(pr.entry_price) : ""}</p>` : "";
+    return (vp || pain || price) ? `<div class="enrich">${vp}${pain}${price}</div>` : "";
+  };
+
   const companyCard = c => {
     const p = pickBySlug[c.slug];
     let badges = "";
@@ -270,11 +297,13 @@
     if (c.new_in_last_update) badges += `<span class="badge new">${t("badgeNew")}</span>`;
     if (changedNow[c.slug]) badges += `<span class="badge changed" title="${esc(changedNow[c.slug].map(r => r.field).join(" · "))}">${t("badgeChanged")}</span>`;
     if (c.is_hiring) badges += `<span class="badge hiring">${t("badgeHiring")}</span>`;
+    badges += stageBadge(c);
     const topicChips = (c.topics || []).slice(0, 3)
       .map(id => `<span class="chip tpc">${esc(topicLabel(id))}</span>`).join("");
     const tags = topicChips + (c.tags || []).slice(0, 3)
       .map(tg => `<span class="chip">${esc(tg)}</span>`).join("");
     const tblock = tractionBlock(c);  // when present, supersedes the regex mention pull-quotes
+    const eblock = enrichBlock(c);
     return `<article class="card">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
       <div class="badges">${badges}</div>
@@ -282,6 +311,7 @@
       ${tblock}
       ${tblock ? "" : (c.revenue_mention ? `<p class="rev" title="${esc(t("pitchNote"))}">${t("fromPitch")} “${esc(c.revenue_mention)}”</p>` : "")}
       ${tblock ? "" : (c.funding_mention ? `<p class="fund" title="${esc(t("fundingNote"))}">${t("fundingLabel")} “${esc(c.funding_mention)}”</p>` : "")}
+      ${eblock}
       ${p ? `<p class="why"><strong>${t("whyWatch")}</strong> ${esc(loc(p.why))}</p>` : ""}
       <p class="meta">${metaLine(c)}</p>
       <div class="tags">${tags}</div>
@@ -453,6 +483,8 @@
       if (state.revenue && !c.revenue_mention) return false;
       if (state.funding && !c.funding_mention) return false;
       if (state.traction && !discloses(c)) return false;
+      if (state.stage !== "all" && !(c.enrichment && c.enrichment.launch_stage === state.stage)) return false;
+      if (state.haspricing && !(c.enrichment && (c.enrichment.pricing || {}).has_pricing)) return false;
       if (q) {
         const hay = [c.name, c.one_liner, (c.tags || []).join(" "), c.industry,
                      c.subindustry, c.location, c.long_description]
@@ -492,6 +524,11 @@
       .concat(tally(companies, topicIdsOf).map(([id, n]) =>
         `<option value="${esc(id)}" ${state.topic === id ? "selected" : ""}>${esc(topicLabel(id))} (${n})</option>`))
       .join("");
+    const stageOpts = [["all", "allStages"], ["launched", "stLaunched"],
+      ["early-access", "stEarly"], ["waitlist", "stWaitlist"],
+      ["building", "stBuilding"], ["unknown", "stUnknownOpt"]]
+      .map(([v, k]) => `<option value="${v}" ${state.stage === v ? "selected" : ""}>${esc(t(k))}</option>`)
+      .join("");
 
     view.innerHTML = `
       <div class="toolbar">
@@ -499,6 +536,7 @@
         <select id="f-topic">${topicOpts}</select>
         <select id="f-batch">${batchOpts}</select>
         <select id="f-industry">${industryOpts}</select>
+        <select id="f-stage">${stageOpts}</select>
         <select id="f-sort">
           <option value="batch" ${state.sort === "batch" ? "selected" : ""}>${t("sortBatch")}</option>
           <option value="recent" ${state.sort === "recent" ? "selected" : ""}>${t("sortRecent")}</option>
@@ -512,6 +550,7 @@
         <label class="check"><input type="checkbox" id="f-revenue" ${state.revenue ? "checked" : ""}>${t("fRevenue")}</label>
         <label class="check"><input type="checkbox" id="f-funding" ${state.funding ? "checked" : ""}>${t("fFunding")}</label>
         <label class="check"><input type="checkbox" id="f-traction" ${state.traction ? "checked" : ""}>${t("fTraction")}</label>
+        <label class="check"><input type="checkbox" id="f-haspricing" ${state.haspricing ? "checked" : ""}>${t("fHasPricing")}</label>
       </div>
       <p class="count" id="count"></p>
       <div class="grid" id="grid"></div>`;
@@ -530,6 +569,8 @@
     on("f-revenue", "change", e => { state.revenue = e.target.checked; updateGrid(); });
     on("f-funding", "change", e => { state.funding = e.target.checked; updateGrid(); });
     on("f-traction", "change", e => { state.traction = e.target.checked; updateGrid(); });
+    on("f-stage", "change", e => { state.stage = e.target.value; updateGrid(); });
+    on("f-haspricing", "change", e => { state.haspricing = e.target.checked; updateGrid(); });
     updateGrid();
   };
 
