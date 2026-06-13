@@ -102,7 +102,6 @@ watchlist.updated_at) is a different feature and stays.
 - Python 3.9 stdlib only — no third-party packages anywhere.
 - Site is no-build vanilla HTML/CSS/JS; all data-derived text must go through
   `esc()` in app.js. Never hand-edit `site/data.js`, `dist/`, or `data/`.
-- `yc_scraper.py` is the owner's standalone xlsx exporter — leave it alone.
 - Keep watchlist picks editorial and grounded in the dataset (one_liner /
   long_description / team_size / founder_count / revenue_mention) — don't
   invent funding or traction facts.

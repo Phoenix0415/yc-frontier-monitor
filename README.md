@@ -106,7 +106,6 @@ dist/
 
 - 数据来自 YC 公开列出的公司，即已亮相的公司——年轻批次会持续增长数月。这正是监测站存在的意义。
 - 仅使用 Python 3.9+ 标准库；站点为无构建步骤的原生 HTML/CSS/JS。
-- `yc_scraper.py` + `yc_Fall2025.xlsx` 早于本监测站（对单一批次的一次性 Excel 导出），仍可使用，但监测站已将其取代。
 
 ---
 
@@ -251,5 +250,3 @@ dist/
 - Data is whatever YC lists publicly, i.e. launched companies — young batches
   keep growing for months. That's the point of the monitor.
 - Python 3.9+ standard library only; the site is no-build vanilla HTML/CSS/JS.
-- `yc_scraper.py` + `yc_Fall2025.xlsx` predate the monitor (one-off Excel
-  export of a single batch). Still works; the monitor supersedes it.
