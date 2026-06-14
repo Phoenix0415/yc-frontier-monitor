@@ -314,6 +314,41 @@ button.bar-label.aslink:hover { color: var(--accent-ink); text-decoration: under
 .badge.st-waitlist { background: var(--amber); }
 .badge.st-building { background: #fff; }
 
+/* China-fit (SPEC 002 §7) — favorability colors: green good, amber mid, red bad */
+.fav-good { background: var(--green-soft); color: var(--green-ink); }
+.fav-mid  { background: #fbeecf; color: #6f5410; }
+.fav-bad  { background: #f6d9d2; color: #8a2a18; }
+.fav-none { background: var(--bg); color: var(--muted); }
+.chinafit {
+  margin: 0; padding: 7px 11px;
+  border-left: 3px solid var(--accent); background: var(--bg);
+  display: flex; flex-direction: column; gap: 5px;
+}
+.chinafit.none { flex-direction: row; align-items: baseline; gap: 8px; }
+.cf-h { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.cf-na { font-family: var(--mono); font-size: 11px; font-style: italic; color: var(--muted); }
+.cf-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cf-transfer, .cf-chip {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+  border: 1px solid var(--ink); border-radius: 0; padding: 1px 7px; white-space: nowrap;
+}
+.cf-comps { display: flex; flex-direction: column; gap: 3px; }
+.cf-comp { display: flex; gap: 7px; align-items: baseline; flex-wrap: wrap; }
+.cf-note { font-size: 11.5px; color: var(--muted); line-height: 1.5; flex: 1; min-width: 160px; }
+.cf-line { margin: 0; font-size: 12px; color: var(--ink); line-height: 1.55; }
+.cf-est { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line-soft); padding: 0 4px; }
+
+/* board: grid table, rows = picks, cells colored by favorability */
+.cf-board .cf-table {
+  display: grid; grid-template-columns: minmax(120px, 2fr) repeat(5, minmax(46px, 1fr));
+  gap: 4px; font-family: var(--mono); font-size: 11px; overflow-x: auto;
+}
+.cf-row { display: contents; }
+.cf-row > span { padding: 5px 7px; display: flex; align-items: center; }
+.cf-rowhead > span { font-size: 9.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border-bottom: 1px solid var(--line-soft); }
+.cf-name { font-weight: 600; color: var(--ink); gap: 5px; flex-wrap: wrap; }
+.cf-cell { justify-content: center; border: 1px solid var(--line-soft); font-weight: 600; }
+
 .tags { display: flex; gap: 5px; flex-wrap: wrap; }
 .chip {
   font-family: var(--mono);

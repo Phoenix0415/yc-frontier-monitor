@@ -189,6 +189,31 @@ watchlist.updated_at) is a different feature and stays.
   it produces nothing until a periodic re-fetch exists. Do it with the re-fetch
   cadence, not before.
 
+## China-fit layer (SPEC 002 Phase 3 — render + validation shipped 2026-06-14, empty-first)
+
+- **What**: an editorial transferability read per pick in `analysis/china_fit.json`
+  (keyed by slug; the pipeline NEVER writes it — drafted-then-reviewed like the
+  watchlist). Schema = SPEC §7 + a per-component `sources` array (optional URLs):
+  `{transferability, components:{regulatory, incumbent_risk, gtm_fit,
+  localization_delta} each {score:low|med|high, note:{en,zh}, sources:[]},
+  market_size_estimate, verdict:{en,zh}, china_version:{en,zh}}`. Contract:
+  `specs/phase3-chinafit-rubric.md` (local-only).
+- **Shipped empty-first**: the file is `{}` — every pick renders "unassessed",
+  build + site never crash. Cowork fills the ~43 entries later (research → draft →
+  human-verify → commit); do NOT auto-fill or research them.
+- **Validation** (`sitebuild.validate_china_fit`, fails build loudly): enums on
+  `transferability` + each component `score`; `{en,zh}`-or-string shape on note /
+  verdict / china_version; `sources` an optional array of strings; `estimated:true`
+  required on any non-empty `market_size_estimate`. Empty/absent passes.
+- **Favorability coloring (key gotcha)**: the board colors by FAVORABILITY, not raw
+  score — `incumbent_risk` and `localization_delta` are INVERTED (low = good);
+  `regulatory`, `gtm_fit`, and `transferability` are higher = good. `cfFavor()` in
+  app.js; `.fav-good|mid|bad|none` in styles.css.
+- **Site**: per-pick China-fit block on Report-tab pick cards (transferability tag +
+  4 colored components + verdict + china_version + `est.`-flagged TAM) and a
+  China-fit board (all picks, sorted by transferability, cells colored). Bilingual,
+  `esc()`-escaped.
+
 ## Conventions
 
 - Python 3.9 stdlib only — no third-party packages anywhere.

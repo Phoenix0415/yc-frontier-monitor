@@ -14,6 +14,7 @@
   const wl = D.watchlist || {};
   const picks = wl.picks || [];
   const themes = wl.themes || [];
+  const chinaFit = D.china_fit || {}; // {slug: assessment}; empty -> picks "unassessed"
   const changelog = (D.changelog || []).slice().reverse(); // newest first
 
   const companies = [];
@@ -87,6 +88,14 @@
       pmSelfServe: "self-serve", pmSalesLed: "sales-led", pmFreemium: "freemium",
       pmUsage: "usage", pmTiered: "tiered", pmUnknown: "unknown",
       websiteBtn: "Website ↗",
+      cfBoardTitle: "China-fit board",
+      cfBoardLede: "How each watchlist pick might transfer to the Chinese market — overall transferability plus four components, colored by favorability (green = favorable; incumbent risk and localization are inverted, so low is good). Editorial opinion, not fact; unassessed picks are listed for completeness.",
+      cfTitle: "China-fit", cfTransfer: "Transferability",
+      cfRegulatory: "Regulatory", cfIncumbent: "Incumbent risk",
+      cfGtm: "GTM fit", cfLocalization: "Localization",
+      cfVerdict: "Verdict", cfChinaVersion: "China version",
+      cfUnassessed: "not yet assessed", cfPick: "Pick", cfEst: "est.",
+      scLow: "low", scMed: "med", scHigh: "high",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
@@ -151,6 +160,14 @@
       pmSelfServe: "自助式", pmSalesLed: "销售主导", pmFreemium: "免费增值",
       pmUsage: "按量计费", pmTiered: "分层定价", pmUnknown: "未知",
       websiteBtn: "网站 ↗",
+      cfBoardTitle: "中国市场适配",
+      cfBoardLede: "每个重点公司迁移到中国市场的可能性——总体可迁移性加四个维度，按有利程度着色（绿色＝有利；“本土对手”和“本地化改造”方向相反，越低越好）。属编辑判断，非事实；未评估的公司也一并列出。",
+      cfTitle: "中国适配", cfTransfer: "可迁移性",
+      cfRegulatory: "监管", cfIncumbent: "本土对手",
+      cfGtm: "进入方式", cfLocalization: "本地化改造",
+      cfVerdict: "结论", cfChinaVersion: "中国版本",
+      cfUnassessed: "尚未评估", cfPick: "公司", cfEst: "估算",
+      scLow: "低", scMed: "中", scHigh: "高",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
@@ -299,6 +316,70 @@
     return (vp || pain || price) ? `<div class="enrich">${vp}${pain}${price}</div>` : "";
   };
 
+  // China-fit (SPEC 002 §7) — editorial transferability read; empty -> "unassessed".
+  // Two components are inverted (low = good), so the board colors by FAVORABILITY.
+  const CF_COMPONENTS = [["regulatory", "cfRegulatory"], ["incumbent_risk", "cfIncumbent"],
+    ["gtm_fit", "cfGtm"], ["localization_delta", "cfLocalization"]];
+  const CF_INVERTED = { incumbent_risk: 1, localization_delta: 1 };
+  const cfFavor = (comp, score) => {
+    if (!score) return "none";
+    const good = CF_INVERTED[comp] ? "low" : "high";
+    const bad = CF_INVERTED[comp] ? "high" : "low";
+    return score === good ? "good" : score === bad ? "bad" : "mid";
+  };
+  const cfScore = s => (s ? t({ low: "scLow", med: "scMed", high: "scHigh" }[s] || "scLow") : "–");
+  const cfOf = slug => chinaFit[slug];
+
+  const cfBlock = c => {
+    const cf = cfOf(c.slug);
+    if (!cf) {
+      return `<div class="chinafit none"><span class="cf-h">${esc(t("cfTitle"))}</span> ` +
+        `<span class="cf-na">${esc(t("cfUnassessed"))}</span></div>`;
+    }
+    const comps = CF_COMPONENTS.map(([k, lk]) => {
+      const comp = (cf.components || {})[k] || {};
+      const note = comp.note ? `<span class="cf-note">${esc(loc(comp.note))}</span>` : "";
+      return `<div class="cf-comp"><span class="cf-chip fav-${cfFavor(k, comp.score)}">` +
+        `${esc(t(lk))} · ${esc(cfScore(comp.score))}</span>${note}</div>`;
+    }).join("");
+    const mse = cf.market_size_estimate || {};
+    const tam = (mse.value || "").trim()
+      ? `<p class="cf-line"><span class="tlabel">TAM</span> ${esc(mse.value)} <span class="cf-est">${esc(t("cfEst"))}</span></p>` : "";
+    const verdict = cf.verdict ? `<p class="cf-line"><span class="tlabel">${esc(t("cfVerdict"))}</span> ${esc(loc(cf.verdict))}</p>` : "";
+    const cn = cf.china_version ? `<p class="cf-line"><span class="tlabel">${esc(t("cfChinaVersion"))}</span> ${esc(loc(cf.china_version))}</p>` : "";
+    return `<div class="chinafit">
+      <div class="cf-head"><span class="cf-h">${esc(t("cfTitle"))}</span>
+        <span class="cf-transfer fav-${cfFavor("transferability", cf.transferability)}">${esc(t("cfTransfer"))} · ${esc(cfScore(cf.transferability))}</span></div>
+      <div class="cf-comps">${comps}</div>
+      ${verdict}${cn}${tam}
+    </div>`;
+  };
+
+  const chinaFitBoard = () => {
+    if (!picks.length) return "";
+    const rank = { good: 0, mid: 1, bad: 2, none: 3 };
+    const rows = picks.map(p => bySlug[p.slug]).filter(Boolean);
+    rows.sort((a, b) => {  // by transferability favorability, unassessed last
+      const fa = rank[cfFavor("transferability", (cfOf(a.slug) || {}).transferability)];
+      const fb = rank[cfFavor("transferability", (cfOf(b.slug) || {}).transferability)];
+      return fa - fb || a.name.localeCompare(b.name);
+    });
+    const cell = (comp, score) => `<span class="cf-cell fav-${cfFavor(comp, score)}">${esc(cfScore(score))}</span>`;
+    const head = `<div class="cf-row cf-rowhead"><span>${esc(t("cfPick"))}</span>` +
+      `<span>${esc(t("cfTransfer"))}</span>${CF_COMPONENTS.map(([, lk]) => `<span>${esc(t(lk))}</span>`).join("")}</div>`;
+    const body = rows.map(c => {
+      const cf = cfOf(c.slug);
+      const comps = CF_COMPONENTS.map(([k]) =>
+        cell(k, cf && (cf.components || {})[k] ? cf.components[k].score : null)).join("");
+      const na = cf ? "" : ` <em class="cf-na">${esc(t("cfUnassessed"))}</em>`;
+      return `<div class="cf-row"><span class="cf-name">${esc(c.name)}${na}</span>` +
+        `${cell("transferability", (cf || {}).transferability)}${comps}</div>`;
+    }).join("");
+    return `<section class="panel cf-board"><h2>${esc(t("cfBoardTitle"))}</h2>
+      <p class="lede">${esc(t("cfBoardLede"))}</p>
+      <div class="cf-table">${head}${body}</div></section>`;
+  };
+
   const companyCard = c => {
     const p = pickBySlug[c.slug];
     let badges = "";
@@ -342,6 +423,7 @@
       ${enrichBlock(c)}
       <div class="pickpt"><span class="ptlabel">${eyebrow("whyWatch")}</span><p>${esc(loc(p.why))}</p></div>
       <div class="pickpt learnpt"><span class="ptlabel">${eyebrow("worthLearning")}</span><p>${esc(loc(p.learn))}</p></div>
+      ${cfBlock(c)}
       ${signals ? `<div class="tags">${signals}</div>` : ""}
       <p class="meta">${metaLine(c)}</p>
       <div class="actions">${linkBtns(c)}</div>
@@ -479,6 +561,7 @@
       </section>
       ${themeBlocks ? `<section><h2>${t("watchlistTitle")}</h2>
         <p class="lede">${esc(loc(wl.methodology))}</p>${themeBlocks}</section>` : ""}
+      ${chinaFitBoard()}
     `;
   };
 

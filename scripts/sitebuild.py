@@ -13,8 +13,8 @@ from datetime import date, datetime, timezone
 
 import automate
 import batches as batchmod
-from store import (ANALYSIS_PATH, CHANGELOG_PATH, CONFIG_PATH, DIST_DIR,
-                   SITE_DIR, TOPICS_PATH, load_json, load_state)
+from store import (ANALYSIS_PATH, CHANGELOG_PATH, CHINAFIT_PATH, CONFIG_PATH,
+                   DIST_DIR, SITE_DIR, TOPICS_PATH, load_json, load_state)
 
 EMPTY_WATCHLIST = {"updated_at": None, "summary": [], "methodology": "",
                    "themes": [], "picks": []}
@@ -39,6 +39,63 @@ def validate_watchlist(wl):
             problems.append("%s: picked_at %r is not an ISO date" % (where, p["picked_at"]))
     if problems:
         raise SystemExit("analysis/watchlist.json failed validation:\n  "
+                         + "\n  ".join(problems))
+
+
+CF_SCORES = {"low", "med", "high"}
+CF_COMPONENTS = ("regulatory", "incumbent_risk", "gtm_fit", "localization_delta")
+
+
+def _bad_loc(value):
+    """An editorial field must be a string or an {en, zh} object."""
+    if isinstance(value, str):
+        return False
+    return not (isinstance(value, dict) and ("en" in value or "zh" in value))
+
+
+def validate_china_fit(cf):
+    """Fail the build loudly on schema violations (SPEC 002 §7). Empty/absent
+    is fine — every pick then renders as 'unassessed'. The pipeline never writes
+    this file; it's editorial, drafted-then-reviewed like the watchlist."""
+    if not isinstance(cf, dict):
+        raise SystemExit("analysis/china_fit.json must be a JSON object keyed by slug")
+    problems = []
+    for slug, entry in cf.items():
+        where = "china_fit %r" % slug
+        if not isinstance(entry, dict):
+            problems.append("%s: entry is not an object" % where)
+            continue
+        if entry.get("transferability") not in CF_SCORES:
+            problems.append("%s: transferability %r not in low|med|high"
+                            % (where, entry.get("transferability")))
+        comps = entry.get("components") or {}
+        for k in CF_COMPONENTS:
+            comp = comps.get(k)
+            if comp is None:
+                continue  # a missing component renders as "–", not an error
+            if not isinstance(comp, dict):
+                problems.append("%s.%s: not an object" % (where, k))
+                continue
+            if comp.get("score") not in CF_SCORES:
+                problems.append("%s.%s: score %r not in low|med|high"
+                                % (where, k, comp.get("score")))
+            if comp.get("note") is not None and _bad_loc(comp["note"]):
+                problems.append("%s.%s: note must be a string or {en,zh}" % (where, k))
+            src = comp.get("sources")
+            if src is not None and not (isinstance(src, list)
+                                        and all(isinstance(s, str) for s in src)):
+                problems.append("%s.%s: sources must be an array of strings" % (where, k))
+        for f in ("verdict", "china_version"):
+            if entry.get(f) is not None and _bad_loc(entry[f]):
+                problems.append("%s: %s must be a string or {en,zh}" % (where, f))
+        mse = entry.get("market_size_estimate")
+        if isinstance(mse, dict):
+            nonempty = (mse.get("value") or "").strip() or (mse.get("basis") or "").strip()
+            if nonempty and mse.get("estimated") is not True:
+                problems.append("%s: market_size_estimate is non-empty but "
+                                "estimated is not true" % where)
+    if problems:
+        raise SystemExit("analysis/china_fit.json failed validation:\n  "
                          + "\n  ".join(problems))
 
 
@@ -94,6 +151,7 @@ def build_payload():
     else:
         next_pull = None
     wl = load_json(ANALYSIS_PATH, EMPTY_WATCHLIST)
+    cf = load_json(CHINAFIT_PATH, {})
     rules = load_topic_rules()
     return {
         "site_title": cfg.get("site_title", "YC Monitor"),
@@ -109,12 +167,14 @@ def build_payload():
                     for slug, b in ordered],
         "changelog": load_json(CHANGELOG_PATH, []),
         "watchlist": wl,
+        "china_fit": cf,
     }
 
 
 def build():
     payload = build_payload()
     validate_watchlist(payload["watchlist"])
+    validate_china_fit(payload["china_fit"])
     known = {c["slug"] for b in payload["batches"] for c in b["companies"]}
     for pick in payload["watchlist"].get("picks", []):
         if pick["slug"] not in known:
