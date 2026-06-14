@@ -182,6 +182,17 @@ def cmd_enrich_site(args):
         sys.exit("No data yet — run: python3 scripts/yc.py update")
     companies = all_companies(state)
 
+    if args.translate:
+        tstats = enrich_site.translate_enrichment(
+            companies, api_key, model=model, max_companies=args.limit,
+            workers=cfg.get("enrich_workers", 6))
+        store.save_state(state)
+        sitebuild.build()
+        print("Translation: %d localized, %d errors. Tokens %d/%d, est $%.4f. Site rebuilt."
+              % (tstats["translated"], tstats["errors"], tstats["in_tokens"],
+                 tstats["out_tokens"], tstats.get("cost", 0.0)))
+        return
+
     if args.dry_run:
         sample = _dry_run_sample(companies, args.limit or 18)
         print("DRY RUN (website) — %d companies via %s, robots-honored. Nothing written.\n"
@@ -245,11 +256,14 @@ def cmd_enrich_site(args):
         companies, api_key, model=model,
         max_companies=args.limit or cfg.get("max_companies_per_run", 40),
         workers=cfg.get("enrich_workers", 6))
+    tstats = enrich_site.translate_enrichment(
+        companies, api_key, model=model, workers=cfg.get("enrich_workers", 6))
     store.save_state(state)
     sitebuild.build()
     print("Website: %d enriched (%d meaningful), %d no-text, %d errors. Tokens %d/%d, est $%.4f."
           % (stats["enriched"], stats["meaningful"], stats["no_text"], stats["errors"],
              stats["in_tokens"], stats["out_tokens"], stats.get("cost", 0.0)))
+    print("Localized %d enrichments to {en,zh}." % tstats["translated"])
     print("Site rebuilt -> site/index.html")
 
 
@@ -405,6 +419,8 @@ def main():
     p_enrich = sub.add_parser("enrich", help="LLM enrichment (traction / website)")
     p_enrich.add_argument("--site", action="store_true",
                           help="website enricher (SPEC 002 Phase 2) instead of traction")
+    p_enrich.add_argument("--translate", action="store_true",
+                          help="with --site: localize enrichment paraphrases to {en,zh} (no re-fetch)")
     p_enrich.add_argument("--dry-run", action="store_true",
                           help="extract a sample, print quality + cost, write nothing")
     p_enrich.add_argument("--limit", type=int, default=None,

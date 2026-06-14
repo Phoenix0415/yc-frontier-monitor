@@ -84,6 +84,9 @@
       stBuilding: "building", stUnknownOpt: "unknown",
       allStages: "All stages", fHasPricing: "has pricing",
       enrichPain: "Problem", enrichPricing: "Pricing",
+      pmSelfServe: "self-serve", pmSalesLed: "sales-led", pmFreemium: "freemium",
+      pmUsage: "usage", pmTiered: "tiered", pmUnknown: "unknown",
+      websiteBtn: "Website ↗",
       fullIntro: "Full intro",
       badgeWatchlist: "★ watchlist", badgeNew: "NEW", badgeHiring: "hiring",
       teamOf: "team of {n}", founderOne: "1 founder", founderMany: "{n} founders",
@@ -145,6 +148,9 @@
       stBuilding: "开发中", stUnknownOpt: "未知",
       allStages: "全部阶段", fHasPricing: "有定价",
       enrichPain: "解决的问题", enrichPricing: "定价",
+      pmSelfServe: "自助式", pmSalesLed: "销售主导", pmFreemium: "免费增值",
+      pmUsage: "按量计费", pmTiered: "分层定价", pmUnknown: "未知",
+      websiteBtn: "网站 ↗",
       fullIntro: "完整介绍（英文）",
       badgeWatchlist: "★ 重点", badgeNew: "新", badgeHiring: "招聘中",
       teamOf: "团队 {n} 人", founderOne: "1 位创始人", founderMany: "{n} 位创始人",
@@ -244,7 +250,7 @@
   };
 
   const linkBtns = c => (c.website
-    ? `<a class="btn" href="${esc(c.website)}" target="_blank" rel="noopener">Website ↗</a>` : "")
+    ? `<a class="btn" href="${esc(c.website)}" target="_blank" rel="noopener">${t("websiteBtn")}</a>` : "")
     + `<a class="btn ghost" href="${esc(c.yc_url)}" target="_blank" rel="noopener">YC ↗</a>`;
 
   const moreBlock = c => (c.long_description
@@ -274,6 +280,8 @@
   // website enrichment (SPEC 002 Phase 2) — paraphrased value/pain + grounded pricing
   const STAGE_LABEL = { launched: "stLaunched", "early-access": "stEarly",
     waitlist: "stWaitlist", building: "stBuilding" };
+  const PRICING_MODEL_LABEL = { "self-serve": "pmSelfServe", "sales-led": "pmSalesLed",
+    freemium: "pmFreemium", usage: "pmUsage", tiered: "pmTiered", unknown: "pmUnknown" };
   const stageBadge = c => {
     const st = c.enrichment && c.enrichment.launch_stage;
     return STAGE_LABEL[st] ? `<span class="badge stage st-${st}">${t(STAGE_LABEL[st])}</span>` : "";
@@ -282,11 +290,12 @@
     const e = c.enrichment;
     if (!e) return "";
     const pr = e.pricing || {};
-    const vp = e.value_prop ? `<p class="vprop">${esc(trunc(e.value_prop, 160))}</p>` : "";
-    const pain = e.pain_point
-      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPain"))}</span> ${esc(trunc(e.pain_point, 140))}</p>` : "";
+    const vpText = loc(e.value_prop), painText = loc(e.pain_point);
+    const vp = vpText ? `<p class="vprop">${esc(trunc(vpText, 160))}</p>` : "";
+    const pain = painText
+      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPain"))}</span> ${esc(trunc(painText, 140))}</p>` : "";
     const price = pr.has_pricing
-      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPricing"))}</span> ${esc(pr.model)}${pr.entry_price ? " · " + esc(pr.entry_price) : ""}</p>` : "";
+      ? `<p class="eline"><span class="tlabel">${esc(t("enrichPricing"))}</span> ${esc(t(PRICING_MODEL_LABEL[pr.model] || "pmUnknown"))}${pr.entry_price ? " · " + esc(pr.entry_price) : ""}</p>` : "";
     return (vp || pain || price) ? `<div class="enrich">${vp}${pain}${price}</div>` : "";
   };
 
@@ -327,7 +336,10 @@
       .map(s => `<span class="chip soft">${esc(s)}</span>`).join("");
     return `<article class="card pick">
       <div class="cardhead"><h3>${esc(c.name)}</h3><span class="batchchip">${esc(locBatch(c.batch))}</span></div>
+      ${stageBadge(c) ? `<div class="badges">${stageBadge(c)}</div>` : ""}
       <p class="oneliner">${esc(c.one_liner)}</p>
+      ${tractionBlock(c)}
+      ${enrichBlock(c)}
       <div class="pickpt"><span class="ptlabel">${eyebrow("whyWatch")}</span><p>${esc(loc(p.why))}</p></div>
       <div class="pickpt learnpt"><span class="ptlabel">${eyebrow("worthLearning")}</span><p>${esc(loc(p.learn))}</p></div>
       ${signals ? `<div class="tags">${signals}</div>` : ""}

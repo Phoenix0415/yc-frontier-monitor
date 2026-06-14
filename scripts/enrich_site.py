@@ -411,3 +411,100 @@ def enrich_sites(companies, api_key, model=DEFAULT_MODEL, max_companies=None,
                 log("  %d/%d" % (done, len(todo)))
     stats["cost"] = enrich_text.estimate_cost(model, stats["in_tokens"], stats["out_tokens"])
     return stats
+
+
+# --- bilingual paraphrases (value_prop / pain_point / target_customer) -------
+# These are LLM paraphrases, so unlike verbatim facts (traction, prices) they
+# get a Chinese rendering for the CN site, stored as {en, zh} like the watchlist.
+
+TRANSLATE_KEYS = ("value_prop", "pain_point", "target_customer")
+TRANSLATE_SYSTEM = (
+    "You translate short English startup/product descriptions into natural, "
+    "concise Simplified Chinese (简体中文). Keep product names, brand names, and "
+    "acronyms in their original Latin form. Do not add, drop, or embellish "
+    "meaning. Return ONLY a JSON object with keys value_prop, pain_point, "
+    "target_customer; use \"\" for any field whose input is empty. No prose, no "
+    "markdown."
+)
+
+
+def _en_of(v):
+    if isinstance(v, dict):
+        return v.get("en", "")
+    return v if isinstance(v, str) else ""
+
+
+def _bilingual(field, zh):
+    en = _en_of(field)
+    if not en:
+        return ""  # empty stays empty
+    return {"en": en, "zh": zh or en}  # fall back to en if translation missing
+
+
+def needs_translation(company):
+    e = company.get("enrichment")
+    if not e:
+        return False
+    return any(isinstance(e.get(k), str) and e.get(k).strip() for k in TRANSLATE_KEYS)
+
+
+def translate_paraphrases(api_key, model, enrichment):
+    """One LLM call: EN paraphrases -> zh strings. Returns (zh_dict|None, usage, err)."""
+    src = {k: _en_of(enrichment.get(k)) for k in TRANSLATE_KEYS}
+    if not any(src.values()):
+        return {k: "" for k in TRANSLATE_KEYS}, {}, None
+    body = {"model": model, "max_tokens": 700, "temperature": 0,
+            "system": TRANSLATE_SYSTEM,
+            "messages": [{"role": "user", "content": json.dumps(src, ensure_ascii=False)}]}
+    try:
+        payload = enrich_text._post_messages(api_key, body)
+    except urllib.error.HTTPError as e:
+        return None, {}, "HTTP %s" % e.code
+    except Exception as e:
+        return None, {}, str(e)
+    usage = payload.get("usage", {}) or {}
+    raw = "".join(b.get("text", "") for b in payload.get("content", [])
+                  if b.get("type") == "text")
+    obj = enrich_text._parse_json(raw)
+    if not isinstance(obj, dict):
+        return None, usage, "unparseable"
+    return {k: (obj.get(k) if isinstance(obj.get(k), str) else "") for k in TRANSLATE_KEYS}, usage, None
+
+
+def translate_enrichment(companies, api_key, model=DEFAULT_MODEL, max_companies=None,
+                         workers=6, log=print):
+    """Convert English enrichment paraphrases to bilingual {en, zh} in place.
+    Idempotent: a field already {en, zh} is skipped (needs_translation gate)."""
+    todo = [c for c in companies if needs_translation(c)]
+    if max_companies:
+        todo = todo[:max_companies]
+    stats = {"eligible": len(todo), "translated": 0, "errors": 0,
+             "in_tokens": 0, "out_tokens": 0}
+    if not todo:
+        log("Translation: nothing to localize.")
+        return stats
+    log("Translation: localizing %d enrichments via %s (%d workers)..."
+        % (len(todo), model, workers))
+    lock = threading.Lock()
+
+    def work(c):
+        zh, usage, err = translate_paraphrases(api_key, model, c["enrichment"])
+        with lock:
+            stats["in_tokens"] += usage.get("input_tokens", 0)
+            stats["out_tokens"] += usage.get("output_tokens", 0)
+            if err or zh is None:
+                stats["errors"] += 1
+                log("  ! %s: %s (kept English)" % (c.get("slug"), err))
+                return
+            e = c["enrichment"]
+            for k in TRANSLATE_KEYS:
+                e[k] = _bilingual(e.get(k), zh.get(k, ""))
+            stats["translated"] += 1
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures = [ex.submit(work, c) for c in todo]
+        for done, _ in enumerate(as_completed(futures), 1):
+            if done % 50 == 0 or done == len(todo):
+                log("  %d/%d" % (done, len(todo)))
+    stats["cost"] = enrich_text.estimate_cost(model, stats["in_tokens"], stats["out_tokens"])
+    return stats

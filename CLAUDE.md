@@ -9,8 +9,9 @@ spotting frontier-startup trends, and one-click access to each company's site.
 - `python3 scripts/yc.py update` — fetch → diff → founder + traction enrichment → site build
 - `python3 scripts/yc.py enrich [--dry-run] [--limit N]` — LLM traction extraction
   (SPEC 002 §5); `--dry-run` prints quality + cost on a sample and writes nothing
-- `python3 scripts/yc.py enrich --site [--dry-run] [--limit N]` — LLM website
-  enrichment (SPEC 002 §6): fetch each site → value prop / pricing / launch stage
+- `python3 scripts/yc.py enrich --site [--dry-run] [--translate] [--limit N]` —
+  LLM website enrichment (SPEC 002 §6): fetch each site → value prop / pricing /
+  launch stage; `--translate` localizes the paraphrases to {en,zh} (no re-fetch)
 - `python3 scripts/yc.py auto` — update only if due; called daily by launchd
   (cadence: monthly baseline + ~1 week after each batch kickoff; policy in
   `scripts/automate.py`, agent `com.yc-monitor.auto`, log `data/auto.log`)
@@ -171,8 +172,13 @@ watchlist.updated_at) is a different feature and stays.
   cost $1.41 — 446/558 enriched (443 meaningful), 112 no-text (JS-only/parked),
   10 fetch errors. launch_stage: 289 launched, 40 early-access, 8 waitlist,
   2 building, 107 unknown; 228 show pricing.
-- **Site**: value prop + pain point + pricing line on cards, a launch-stage badge,
-  a launch-stage filter + "has pricing" pill (Companies tab), bilingual + escaped.
+- **Site**: value prop + pain point + pricing line on Companies cards AND on
+  Report-tab watchlist picks, a launch-stage badge, a launch-stage filter + "has
+  pricing" pill (Companies tab), all `esc()`-escaped. `value_prop`/`pain_point`/
+  `target_customer` are stored bilingual `{en,zh}` — a `--translate` Haiku pass
+  localizes the English paraphrases (and a normal `enrich --site` auto-translates
+  freshly-extracted companies); verbatim facts (traction, prices, named_customers)
+  stay English; `pricing.model` + `launch_stage` render via translated label maps.
   `status` prints enrichment coverage.
 - **Contract**: `specs/phase2-website-prompt.md` (local-only) — the exact prompt,
   fetch policy, and field contract. Don't improvise a different one.
