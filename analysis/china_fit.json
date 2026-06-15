@@ -1,1 +1,2408 @@
-{}
+{
+ "klaimee": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Selling insurance in China requires a licensed carrier/MGA and product filing with the financial regulator (财产保险险种备案); a foreign-built liability product cannot be sold direct. The demand driver also differs — Klaimee's pitch leans on AB 316 and the EU AI Act, neither of which applies in China. Likely falls under insurance-licensing + PIPL; needs legal verification.",
+     "zh": "在中国销售保险须由持牌保险公司/MGA经营并向金融监管总局备案险种（财产保险险种备案），境外搭建的责任险产品无法直接销售；且需求驱动不同——Klaimee依赖美国AB 316与欧盟《AI法案》，二者在中国均不适用。大概率涉及保险经营牌照及《个人信息保护法》，需法律核实。"
+    },
+    "sources": [
+     "https://www.gov.cn/zhengce/2021-11/05/content_5725853.htm"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded Chinese AI-agent liability-insurance product found (searched 36氪 / insurance-regulator filings, low confidence). The category is nascent even globally — only ~5 products worldwide (Armilla, Testudo, HSB/Munich Re), all Western. Absence of evidence ≠ evidence of absence.",
+     "zh": "未找到专为AI代理责任承保的中国持牌保险产品（检索36氪及监管备案，置信度低）。该品类即便在全球也尚属早期——全球约5款产品（Armilla、Testudo、慕再/HSB），均为西方公司。缺乏证据不等于不存在。"
+    },
+    "sources": [
+     "https://medium.com/@purdyhouse/the-first-ai-liability-insurance-product-has-25-million-in-coverage-five-exist-worldwide-575a2903b17b"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "The product is an insurance/financial-guarantee instrument, not SaaS — it must ride a licensed carrier's balance sheet and enterprise procurement, a relationship- and regulator-gated motion, not Klaimee's 'self-serve from day one' web flow.",
+     "zh": "本质是保险/财务担保工具而非SaaS，必须依托持牌保险公司的资产负债表与企业采购流程，是关系驱动、受监管约束的打法，而非Klaimee官网'首日即可自助'的轻量模式。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total rebuild: re-underwrite against Chinese liability law (no AB 316 / EU AI Act analog), partner with or become a licensed carrier, and rebuild the certification/evidence package around Chinese enterprise procurement and data rules.",
+     "zh": "近乎重做：依据中国侵权责任法律重新核保（无AB 316/欧盟《AI法案》对应物），需与持牌险企合作或自建牌照，并围绕中国企业采购与数据规则重建认证与举证体系。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer; partner-only if pursued. The hard blocker is insurance licensing plus a missing legal-liability driver, not technology. Worth watching as a category bet, not a copyable product.",
+   "zh": "作为直接迁移：放弃；若推进只能走合作路线。硬约束是保险牌照加上缺失的法律责任驱动，而非技术本身。可作为品类观察，但不是可照搬的产品。"
+  },
+  "china_version": {
+   "en": "A licensed Chinese P&C carrier (or its MGA) files an 'AI-agent operational-error' liability rider tied to China's own enterprise-AI compliance requirements, with Klaimee-style risk certification as the underwriting front-end — not a direct-sold foreign policy.",
+   "zh": "由中国持牌财险公司（或其MGA）依据本土企业AI合规要求，备案一款'AI代理操作过失'责任险附加险，以Klaimee式的风险认证作为核保前端，而非境外直销保单。"
+  }
+ },
+ "sponge": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Letting agents hold and move funds across bank/card/crypto rails is money movement: in China this needs a non-bank third-party payment license (rarely issued since 2016), and aggregating others' funds risks the prohibited '二清' (second-clearing) structure; crypto rails are separately restricted. Likely falls under payment-licensing + AML; needs legal verification.",
+     "zh": "让代理跨银行/卡/加密通道持有并划转资金属于资金清结算：在中国需非银行第三方支付牌照（2016年后几近停发），且代为归集他人资金易触及被禁止的'二清'结构；加密通道另受限制。大概率涉及支付牌照与反洗钱，需法律核实。"
+    },
+    "sources": [
+     "https://www.cnblogs.com/wxdlut/p/18394246",
+     "https://m.mpaypass.com.cn/news/202101/21102738.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Ant Group's Alipay already shipped exactly this: an 'AI Wallet' + 'Token Pay' for the agentic economy and China's first Agentic Commerce Trust Protocol, reportedly >120M agent transactions/week. A dominant, funded incumbent owns the agent-payments rail.",
+     "zh": "蚂蚁集团支付宝已推出完全对应的产品：面向代理经济的'AI钱包'与'Token Pay'，以及中国首个智能体商业可信协议，据称每周代理交易超1.2亿笔。代理支付通道已被占据绝对优势的在位巨头掌控。"
+    },
+    "sources": [
+     "https://www.businesswire.com/news/home/20260526337824/en/Alipay-Launches-Next-Generation-AI-Payment-Infrastructure-Debuts-AI-Wallet-and-Token-Pay-to-Power-Agentic-Economy"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Developer self-serve onboarding collides with a market where money movement runs through licensed super-app rails (Alipay/WeChat Pay); businesses 'accept agent payments' by integrating those incumbents, not a new standalone processor.",
+     "zh": "面向开发者的自助接入与中国资金通道由持牌超级App（支付宝/微信支付）主导的市场相冲突；企业'接受代理付款'靠对接这些在位巨头，而非新的独立支付处理商。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total rebuild: replace bank/card/crypto rails with licensed domestic payment channels, integrate Alipay/WeChat Pay agent protocols, and conform to AML/KYC and fund-custody rules — little of the US stack carries over.",
+     "zh": "近乎重做：以持牌境内支付通道替换银行/卡/加密通道，对接支付宝/微信支付的代理协议，并满足反洗钱/实名及资金存管要求——美国技术栈几乎无法沿用。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore for direct transfer — two hard blockers (payment licensing and an entrenched Ant/Alipay incumbent). The agent-payments thesis is right but in China it belongs to the super-apps. Build only as a complement on top of their protocols, never as the rail.",
+   "zh": "直接迁移：放弃——两道硬约束（支付牌照与蚂蚁/支付宝的强势在位者）。代理支付的判断成立，但在中国属于超级App。只能在其协议之上做补充，绝不能自建通道。"
+  },
+  "china_version": {
+   "en": "A thin agent-side toolkit that plugs into Alipay's AI Wallet / Token Pay and the Agentic Commerce Trust Protocol — spend controls, policy, and reconciliation for agents — rather than a competing money-movement processor.",
+   "zh": "做一层对接支付宝AI钱包/Token Pay及智能体商业可信协议的代理侧工具（消费控制、策略与对账），而非与之竞争的资金清结算处理商。"
+  }
+ },
+ "rentahuman": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "A two-sided labor marketplace with user-generated task content touches UGC content-moderation (内容审核), gig-labor/payout rules, and PIPL for worker data; operable but with compliance overhead. Likely falls under UGC + labor-platform regimes; needs legal verification.",
+     "zh": "一个带用户生成任务内容的双边劳务市场涉及UGC内容审核、灵活用工/结算规则，以及涉及劳动者数据的《个人信息保护法》；可运营但合规负担较重。大概率落入UGC与用工平台监管，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "NetEase Fuxi's 有灵 (Youling) is a shipped human-AI collaboration platform where AI agents dispatch tasks to a ~1M-registered human crowd and verify the work — the same 'agents hire humans' loop, from a deep-pocketed incumbent.",
+     "zh": "网易伏羲'有灵'是已上线的人机协作平台：AI智能体向约百万注册的人类众包群体派发任务并验收，正是'代理雇佣人类'的同一闭环，且背靠资金雄厚的在位者。"
+    },
+    "sources": [
+     "https://fuxi.163.com/youling-agent-platform",
+     "https://lingdong.fuxi.163.com/database/2269"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Liquidity is the moat and incumbents already hold the supply side; a Chinese crowd is reachable but the buyer (agent developers) is thin and the payout/identity rails differ. The marketplace motion itself transfers, the cold-start does not.",
+     "zh": "流动性是护城河，而供给侧已被在位者占据；中国众包人力可触达，但买方（代理开发者）规模有限，且结算/实名通道不同。市场撮合的打法可迁移，但冷启动无法照搬。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Moderate: localize language and task taxonomy, swap to domestic identity/payout (实名 + Alipay/WeChat), add content moderation, and seed a Chinese worker base — the core matching engine survives.",
+     "zh": "中等：本地化语言与任务分类，切换境内实名与结算（实名+支付宝/微信），加入内容审核，并培育中国人力供给——核心匹配引擎可保留。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore/partner — a funded incumbent (NetEase Youling) already owns the 'agents hire humans' loop with built-in supply liquidity. The idea is validated in China, which is precisely why a foreign entrant is late. Differentiate on a vertical or skip.",
+   "zh": "放弃/合作——已有在位者（网易有灵）凭自带供给流动性占据'代理雇佣人类'闭环。该想法在中国已被验证，这恰恰意味着境外进入者已晚。除非聚焦垂直细分，否则放弃。"
+  },
+  "china_version": {
+   "en": "A vertical agent-to-human marketplace on top of an existing crowd (e.g. domestic identity verification, on-the-ground errands, or Chinese-language data labeling) where Youling's general platform is weak — not a general clone.",
+   "zh": "在既有众包人力之上做一个垂直的'代理对人'市场（如本地实名核验、线下跑腿或中文数据标注），切入有灵通用平台的薄弱处，而非做通用克隆。"
+  }
+ },
+ "polymath": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "Developer infrastructure (RL/simulation environments) sold to model labs — no special licensing regime beyond ordinary data/security compliance. PIPL applies only if environments embed personal data; otherwise a clear path.",
+     "zh": "面向模型实验室的开发者基础设施（强化学习/仿真环境），除常规数据安全合规外无特殊牌照要求。仅当环境内嵌个人数据时适用《个人信息保护法》，否则路径清晰。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "No specifically funded Chinese 'RL-environments-for-agents' vendor surfaced (searched 36氪 / arxiv, low-med confidence). The risk is structural, not a clone: Chinese frontier labs, like US ones, tend to build environments in-house.",
+     "zh": "未发现专做'代理强化学习环境'的中国融资厂商（检索36氪/arxiv，置信度中低）。风险是结构性的而非克隆：中国前沿实验室与美国类似，倾向自建环境。"
+    },
+    "sources": [
+     "https://techcrunch.com/2025/09/21/silicon-valley-bets-big-on-environments-to-train-ai-agents/"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Buyers are the handful of Chinese frontier labs (DeepSeek, Moonshot, Zhipu, Alibaba/ByteDance) — a small, relationship- and trust-gated set that often expects deep technical partnership and may build in-house; not a broad self-serve SaaS market.",
+     "zh": "买方是为数不多的中国前沿实验室（DeepSeek、月之暗面、智谱、阿里/字节）——数量少、靠关系与信任准入、常要求深度技术合作且可能自研，并非宽口径的自助SaaS市场。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Moderate: the simulation tech is model-agnostic, but environments/tasks must be tuned to Chinese-LLM behaviors and Chinese-language/real-world workflows, with likely on-prem/VPC delivery for lab IP security.",
+     "zh": "中等：仿真技术与模型无关，但环境/任务需针对中文大模型行为及中文真实工作流调优，并很可能因实验室IP安全而采用私有化/VPC交付。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build/partner candidate — clean regulatory path and no entrenched local clone, but the buyer set is tiny and prone to building in-house. Viable only as a deep partner to one or two Chinese frontier labs, not as a horizontal product.",
+   "zh": "可自建/合作——监管路径清晰、无强势本土克隆，但买方极少且倾向自研。只有作为一两家中国前沿实验室的深度合作方才可行，而非做横向产品。"
+  },
+  "china_version": {
+   "en": "Co-developed RL/eval environments for one Chinese frontier lab's agent stack — Chinese-language long-horizon tasks (e-commerce ops, super-app workflows) delivered into the lab's private cloud, not an off-the-shelf catalog.",
+   "zh": "与某家中国前沿实验室的代理技术栈共建强化学习/评估环境——以中文长程任务（电商运营、超级App工作流）交付至其私有云，而非现成目录式产品。"
+  }
+ },
+ "salus": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "A runtime action-validation layer is developer infra with no licensing barrier, but because it gates agent outputs it intersects China's content-moderation (内容审核) and algorithm-compliance expectations for production AI. Likely a light compliance overlay, not a structural barrier; needs legal verification.",
+     "zh": "运行时动作校验层属开发者基础设施，无牌照门槛，但因其拦截代理输出，会与中国对生产AI的内容审核及算法合规要求交叉。大概率是轻量合规叠加而非结构性障碍，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Adjacent guardrail products exist (Alibaba Cloud AI Guardrails, NVIDIA NeMo, open-source 象信AI), but these are content/jailbreak filters; no funded Chinese vendor found doing Salus's specific commit-time action interception before tool execution (med confidence).",
+     "zh": "存在相邻的护栏产品（阿里云AI安全护栏、英伟达NeMo、开源象信AI），但均为内容/越狱过滤；未发现专做Salus那种工具执行前'提交时动作拦截'的中国融资厂商（置信度中）。"
+    },
+    "sources": [
+     "https://help.aliyun.com/zh/document_detail/2872302.html",
+     "https://github.com/xiangxinai/xiangxin-guardrails"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Sales-led to enterprises running production agents; the motion translates, but Chinese enterprise buyers expect private deployment and bundle safety into the cloud vendor (Alibaba/Tencent) they already use, squeezing a standalone API.",
+     "zh": "面向运行生产代理的企业、以销售驱动；打法可迁移，但中国企业买方要求私有化部署，并倾向将安全能力打包进既用的云厂商（阿里/腾讯），挤压独立API的空间。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Moderate: the interception engine is largely language-agnostic, but it needs on-prem/私有化 delivery, Chinese-LLM policy tuning, and content-moderation rules to be enterprise-acceptable.",
+     "zh": "中等：拦截引擎基本与语言无关，但需私有化交付、针对中文大模型的策略调优及内容审核规则，方能为企业接受。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build/partner — real whitespace in commit-time action gating (distinct from content guardrails), clean-ish regulatory path, but the cloud incumbents will bundle and buyers want private deployment. Best as an OEM/partner layer or a vertical safety product, not a horizontal SaaS API.",
+   "zh": "可自建/合作——'提交时动作拦截'存在真实空白（区别于内容护栏），监管路径较清晰，但云厂商会打包、买方要私有化。最佳形态是OEM/合作层或垂直安全产品，而非横向SaaS API。"
+  },
+  "china_version": {
+   "en": "A privately-deployable action-firewall for agents in high-stakes verticals (finance/healthcare back-office), tuned to Chinese LLMs and content-moderation rules and integrated with — or OEM'd into — Alibaba/Tencent cloud agent stacks.",
+   "zh": "面向高风险垂直（金融/医疗后台）的可私有化部署代理'动作防火墙'，针对中文大模型与内容审核规则调优，并与阿里/腾讯云代理栈集成或被其OEM。"
+  }
+ },
+ "bentolabs-ai": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "Agent monitoring/observability is developer infra with no special licensing regime; PIPL/data-security apply to trace contents but are an ordinary compliance overlay, not a structural barrier. Clear path.",
+     "zh": "代理监控/可观测性属开发者基础设施，无特殊牌照；《个人信息保护法》/数据安全适用于追踪内容，但属常规合规叠加而非结构性障碍。路径清晰。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Generic LLMOps/observability tooling exists in China, but no specifically funded vendor found doing Bento's drift/silent-failure detection + self-learning fix-suggestion loop for long-running agents (low-med confidence). Adjacent, not a clone.",
+     "zh": "中国存在通用的LLMOps/可观测性工具，但未发现专做Bento那种'漂移/静默失败检测+自学习修复建议'长程代理闭环的融资厂商（置信度中低）。属相邻而非克隆。"
+    },
+    "sources": [
+     "https://www.53ai.com/news/qianyanjishu/549.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Sales-led to teams shipping agents at scale; the motion transfers, but China's pool of mature production-agent deployers is still small and price-sensitive, and they expect private deployment over a hosted SaaS dashboard.",
+     "zh": "面向规模化发布代理的团队、销售驱动；打法可迁移，但中国成熟的生产级代理部署方仍少且价格敏感，并倾向私有化部署而非托管SaaS仪表板。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Moderate: instrumentation is model-agnostic, but needs Chinese-LLM-aware drift heuristics, Chinese-language UI/reports, and on-prem/VPC delivery to satisfy enterprise data rules.",
+     "zh": "中等：埋点与模型无关，但需针对中文大模型的漂移启发式、中文界面/报告，以及为满足企业数据规则的私有化/VPC交付。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build candidate — clean regulatory path and no funded local clone yet, gated mainly by how fast China's production-agent market matures. Time it to the deployment wave; private-deployment-first, not hosted-SaaS-first.",
+   "zh": "可自建——监管路径清晰、暂无融资本土克隆，主要受制于中国生产级代理市场的成熟速度。应踩准部署浪潮；以私有化优先，而非托管SaaS优先。"
+  },
+  "china_version": {
+   "en": "A privately-deployable reliability layer for Chinese agent teams — drift/silent-failure detection plus fix-suggestions tuned to Chinese LLMs, delivered in-VPC and integrated with domestic LLMOps/observability stacks.",
+   "zh": "面向中国代理团队的可私有化可靠性层——针对中文大模型调优的漂移/静默失败检测加修复建议，以VPC内交付并对接境内LLMOps/可观测性栈。"
+  }
+ },
+ "hyperspell": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Connecting and centralizing a company's workspace data for agents triggers PIPL and data-security/cross-border rules; viable but with real data-handling and possibly data-residency obligations. Likely falls under PIPL + data-security; needs legal verification.",
+     "zh": "为代理连接并集中企业工作区数据会触发《个人信息保护法》及数据安全/跨境规则；可行但伴随真实的数据处理乃至数据本地化义务。大概率涉及《个人信息保护法》与数据安全，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Open-source memory layers (e.g. Mem0) and big-cloud agent-memory modules are adjacent, but no specifically funded Chinese commercial 'company-context layer for agents' vendor surfaced (low-med confidence). Risk is more platform-bundling than a clone.",
+     "zh": "开源记忆层（如Mem0）与大云厂商的代理记忆模块属相邻，但未发现专做'面向代理的企业上下文层'的中国融资商业厂商（置信度中低）。风险更多是平台打包而非克隆。"
+    },
+    "sources": [
+     "https://apframework.com/blog/essay/2025-06-22-mem0"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Sells to enterprise teams; motion transfers, but the value depends on connecting the local work stack and Chinese buyers expect private deployment over a hosted memory service, and may default to their cloud vendor's bundled memory.",
+     "zh": "面向企业团队销售；打法可迁移，但价值取决于连接本地办公栈，且中国买方更要私有化部署而非托管记忆服务，并可能默认使用云厂商打包的记忆能力。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild on the connector layer: the Western stack (Google Workspace/Slack/Notion) must be replaced with DingTalk / Enterprise WeChat / Feishu / 用友 / Kingdee connectors, plus Chinese-LLM embeddings and on-prem delivery.",
+     "zh": "连接层近乎重做：须将西方栈（Google Workspace/Slack/Notion）替换为钉钉/企业微信/飞书/用友/金蝶连接器，并配合中文大模型嵌入与私有化部署。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build/partner — the thesis travels and there's no funded local clone, but the moat (integrations) is exactly what must be rebuilt for the Chinese work stack, and cloud vendors may bundle memory. Worth it only if you own the local-connector layer.",
+   "zh": "可自建/合作——判断可迁移且无融资本土克隆，但护城河（集成）恰是必须为中国办公栈重建之处，且云厂商可能打包记忆能力。只有掌握本地连接器层才值得做。"
+  },
+  "china_version": {
+   "en": "A company-context/memory layer for agents built natively on DingTalk / Enterprise WeChat / Feishu / 用友 / Kingdee, with Chinese-LLM embeddings and on-prem deployment — the connector graph, not the storage, is the product.",
+   "zh": "原生构建于钉钉/企业微信/飞书/用友/金蝶之上的代理企业上下文/记忆层，配中文大模型嵌入与私有化部署——连接图谱而非存储本身才是产品。"
+  }
+ },
+ "general-legal": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Practising law is a licensed profession in China, and foreign law firms' representative offices are barred from providing PRC-law legal services under the MoJ's Regulations on Representative Offices of Foreign Law Firms; an 'AI law firm' delivering legal work needs a licensed PRC firm/lawyers behind it. Needs legal verification.",
+     "zh": "律师执业在中国是持牌职业，且依据司法部《外国律师事务所驻华代表机构管理条例》，外国律所代表机构不得从事中国法律事务；'AI律所'若直接交付法律工作，须由持牌的中国律所/律师承接。需法律核实。"
+    },
+    "sources": [
+     "https://www.moj.gov.cn/pub/sfbgw/zwxxgk/fdzdgknr/fdzdgknrlzyj/lzyjsfxzxgflfg/202101/t20210119_205845.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "幂律智能 (Meritwise/PowerLaw) is a funded AI contract-review player (~80M RMB Pre-B led by BlueRun, backers incl. Sequoia China / Zhipu) already serving ~100 enterprise customers — the core 'AI contract & legal work' wedge is taken.",
+     "zh": "幂律智能已是融资中的AI合同审查厂商（蓝驰领投近8000万元Pre-B，红杉中国、智谱AI等跟投），已服务近百家头部企业客户——'AI合同与法律工作'这一核心切口已被占据。"
+    },
+    "sources": [
+     "https://startup.aliyun.com/info/1070264.html",
+     "https://letschuhai.com/yiaishixianhetongzhinengshenhefaluaiqiyemiluzhinengwanchengjin6000wanyuanalunrongzi"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "General Legal's flat-fee self-serve contract model ($250–$2,000) doesn't translate: Chinese startups buy legal via in-house counsel or relationship-based local firms, and AI-legal here sells as enterprise software (审查工具), not as a billed 'firm'.",
+     "zh": "General Legal的固定费率自助合同模式（250–2000美元）难以平移：中国初创公司通过内部法务或关系驱动的本地律所获取法律服务，本地AI法律更多以企业软件（审查工具）售卖，而非按件计费的'律所'。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: Chinese contract law and templates, a Chinese-language legal LLM, and delivery through a licensed PRC firm rather than a foreign 'AI law firm' brand — the legal substance, not just the UI, changes.",
+     "zh": "近乎重做：中国合同法与范本、中文法律大模型，且须通过持牌的中国律所交付，而非外资'AI律所'品牌——改变的是法律实质，而不仅是界面。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer; at most copy the technique. A licensed-profession barrier plus a funded local incumbent (幂律智能) is a double blocker.",
+   "zh": "作为直接迁移：放弃；至多借鉴打法。持牌职业壁垒叠加已融资的本地龙头（幂律智能），构成双重阻碍。"
+  },
+  "china_version": {
+   "en": "Not a US-style 'AI law firm' — sell AI contract-review/drafting software into in-house legal teams and licensed PRC firms, competing on workflow against 幂律智能 rather than billing legal work directly.",
+   "zh": "不是美式'AI律所'——把AI合同审查/起草软件卖给企业内部法务和持牌中国律所，在工作流上与幂律智能竞争，而非直接按件交付法律工作。"
+  }
+ },
+ "cranston-ai": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Bookkeeping-as-a-service requires a 代理记账许可证 (finance-bureau permit; ≥3 certified staff, a qualified supervisor) and CPA/tax-filing work is a licensed profession, now under joint MOF–tax 联合监管; software-only is fine, but a 'full-stack accounting firm' must operate through a licensed entity. Needs legal verification.",
+     "zh": "代理记账业务须取得'代理记账许可证'（财政部门审批，需≥3名持证专职人员及具备资质的主管），且注册会计/报税属持牌职业，现已纳入财政与税务'联合监管'；纯软件可行，但'全栈会计事务所'须经持牌主体运营。需法律核实。"
+    },
+    "sources": [
+     "https://www.gov.cn/gongbao/content/2016/content_5074059.htm",
+     "https://guangdong.chinatax.gov.cn/gdsw/zjfg/2026-01/05/content_eaab6a8767ff4930a3aeda432114b0cf.shtml"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Crowded with funded/scaled players: 慧算账 (Huisuanzhang, IPO-bound, ~650k SME clients), 云帐房, and 金蝶's 'AI 智能记账' all do票据识别/自动凭证/一键报税 — the SMB AI-bookkeeping wedge is owned.",
+     "zh": "赛道拥挤且已有规模化/融资玩家：慧算账（冲刺IPO，服务约65万家中小微）、云帐房、金蝶'AI智能记账'均已做票据识别/自动凭证/一键报税——中小企业AI记账切口已被占据。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/roll/2025-03-10/doc-inepavfy1240320.shtml",
+     "https://www.kingdee.com/article/1496436542170759170.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Cranston's $30/book SaaS-for-CPA-firms motion partly maps — China has代账公司 buyers — but WTP is low and the market is served by entrenched, often integration-/distribution-led platforms (金蝶/用友 ecosystems), not light self-serve.",
+     "zh": "Cranston面向会计师事务所的30美元/账套SaaS打法部分可平移——中国存在代账公司这类买方——但付费意愿低，且市场由根基深厚、常以集成/渠道驱动的平台（金蝶/用友生态）服务，而非轻量自助。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Heavy: Chinese GAAP / 金税 e-invoicing & filing rules instead of QuickBooks+US tax, integration with 金蝶/用友 and local banks, and a Chinese-language model — the entire system of record and tax logic is different.",
+     "zh": "改动很大：以中国会计准则/金税电子发票与报税规则取代QuickBooks+美式税务，需对接金蝶/用友及本地银行，并使用中文模型——底层账务系统与税务逻辑完全不同。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as transfer — copy at most. The bookkeeping-license regime plus a maturing incumbent field (慧算账, 云帐房, 金蝶) leaves little room; the technique (AI on top of the ledger) is the only borrowable part.",
+   "zh": "作为迁移：放弃——至多借鉴。代理记账牌照制度叠加日趋成熟的本地玩家（慧算账、云帐房、金蝶）留下空间有限；可借鉴的只有'在账套之上叠AI'这一打法。"
+  },
+  "china_version": {
+   "en": "Build the AI-bookkeeping layer on China's stack — 金税/电子发票 ingestion, 金蝶/用友 integration, sold to existing 代账公司 — rather than importing a QuickBooks-native 'AI accounting firm'.",
+   "zh": "把AI记账层建在中国技术栈上——对接金税/电子发票、集成金蝶/用友，卖给现有代账公司——而非照搬基于QuickBooks的'AI会计事务所'。"
+  }
+ },
+ "panacea": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "The product IS a regulatory-affairs service tied to the US FDA; the Chinese analog is NMPA registration/filing (药品/医疗器械注册) under the 2021 医疗器械监督管理条例 — a different agency, dossiers, and pathways. The expertise (ex-FDA staff, 510(k)/IND/PMA) does not transfer. Needs verification per pathway.",
+     "zh": "该产品本身就是绑定美国FDA的法规事务服务；中国对应方是NMPA注册/备案（药品/医疗器械注册），依据2021年《医疗器械监督管理条例》——监管机构、申报材料与审批路径均不同。其核心专长（前FDA人员、510(k)/IND/PMA）无法迁移。各路径需逐一核实。"
+    },
+    "sources": [
+     "https://www.zhonglun.com/research/articles/9287.html",
+     "https://www.phirda.com/artilce_21692.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "NMPA regulatory consulting + AI-medical-device registration is a real domestic field (consultancies and CROs file 三类证 routinely), but no single funded 'AI-native NMPA filing service' was found as a direct equivalent — score med, confidence low.",
+     "zh": "NMPA法规咨询+AI医疗器械注册在国内已是真实赛道（咨询机构与CRO常规申报三类证），但未找到单一融资的'AI原生NMPA申报服务'作为直接同类——评为中，置信度低。"
+    },
+    "sources": [
+     "https://36kr.com/p/1305854683613570"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Outcome/milestone-based, sales-led delivery to biotech/medical-device firms is a motion that survives in China (relationship- and expertise-led consulting is the norm), but the buyer base and approval timelines differ.",
+     "zh": "按里程碑/结果计费、销售驱动地服务生物科技与医疗器械公司的打法在中国可存活（关系与专家驱动的咨询本就是常态），但买方群体与审批周期不同。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total rebuild of the regulated substance: NMPA pathways/classification, Chinese dossier formats and language, and ex-NMPA (not ex-FDA) expertise — only the 'AI + senior reviewers' formula carries over.",
+     "zh": "受监管的实质几乎全部重做：NMPA路径/分类、中文申报材料格式与语言、以及前NMPA（而非前FDA）专家——可沿用的仅是'AI+资深审评人'这一方法论。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — the service is the FDA. A Chinese version is effectively a different company (NMPA RA + ex-NMPA staff). Borrow only the AI-augmented-consulting model.",
+   "zh": "作为直接迁移：放弃——该服务本质就是FDA。中国版本实质上是另一家公司（NMPA法规事务+前NMPA人员）。仅可借鉴'AI增强咨询'模式。"
+  },
+  "china_version": {
+   "en": "An AI-native NMPA regulatory-affairs shop staffed by ex-NMPA reviewers, filing 药品/医疗器械注册 dossiers — not an FDA service rebadged.",
+   "zh": "一家由前NMPA审评人员组成、做药品/医疗器械注册申报的AI原生法规事务公司——而非把FDA服务改个名。"
+  }
+ },
+ "runharbor": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "An EDC system + CRO services operate under China's GCP/NMPA clinical-trial regime and 人类遗传资源 (HGR) rules, plus health-data/PIPL constraints on where trial data lives — sellable to local sponsors/sites, but data-residency and HGR approvals bind. Needs legal verification.",
+     "zh": "EDC系统+CRO服务受中国GCP/NMPA临床试验法规及'人类遗传资源'管理约束，并受健康数据/个人信息保护法对试验数据存储地的限制——可向本地申办方/研究中心售卖，但数据本地化与人遗审批是硬约束。需法律核实。"
+    },
+    "sources": [
+     "https://www.vbdata.cn/1518876201"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "太美医疗科技 (Taimei, public-listed) already ships eCollect EDC + digital-CRO data services, and giants 药明康德/康龙化成 run digital CRO lines — the 'AI-native EDC + CRO' position is occupied by funded, scaled players.",
+     "zh": "太美医疗科技（已上市）已提供eCollect EDC+数字化CRO数据服务，药明康德/康龙化成等巨头亦布局数字化CRO——'AI原生EDC+CRO'这一卡位已被融资且规模化的玩家占据。"
+    },
+    "sources": [
+     "https://cn.taimei.com/index/product/id/5",
+     "https://www.vbdata.cn/1518876201"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "CRO is a relationship- and tender-driven, services-heavy sale to pharma/device sponsors; the founder-led US wedge (own the EDC, expand into services) is exactly how Taimei already plays it locally, against entrenched relationships.",
+     "zh": "CRO是关系与招投标驱动、重服务的销售，面向药械申办方；其美国式切口（自有EDC再扩服务）正是太美在本地已采用的打法，且须面对盘根错节的既有关系。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Heavy: Chinese-hosted data (HGR/数据出境), GCP-compliant workflows, Chinese-language EDC and a CRO services org of local CRAs/biostatisticians on the ground — a services business, not a deployable app.",
+     "zh": "改动很大：数据须境内托管（人遗/数据出境）、符合GCP的流程、中文EDC，以及由本地临床监查员/生统人员组成的落地CRO服务团队——这是服务型生意，而非可部署的软件。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as transfer — a public local incumbent (太美) already runs this exact AI-native-EDC-into-CRO playbook, plus data-residency and a services-org build-out. Partner/learn at most.",
+   "zh": "作为迁移：放弃——已有上市本地龙头（太美）在执行完全相同的'AI原生EDC切入CRO'打法，外加数据本地化与服务团队搭建。至多合作/借鉴。"
+  },
+  "china_version": {
+   "en": "There isn't a clean repoint — it would be a domestic GCP-compliant EDC+CRO with onshore data and a local CRA workforce, i.e. building a 太美 competitor from scratch.",
+   "zh": "没有干净的重定向——它会是一家境内数据、符合GCP、自带本地监查员队伍的EDC+CRO公司，即从零做一个太美的竞争对手。"
+  }
+ },
+ "standard-signal": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Running a hedge fund onshore requires 私募基金管理人 registration with AMAC/CSRC, and foreign-controlled managers face the WFOE-PFM/QFII regime with heavy access limits; a solo-founder 'AI hedge fund' taking outside capital cannot just operate. Needs legal verification.",
+     "zh": "在境内运营对冲基金须在中国证券投资基金业协会/证监会登记为'私募基金管理人'，外资控股管理人须走WFOE-PFM/QFII路径且准入限制严格；单人创始的'AI对冲基金'对外募资无法直接开展。需法律核实。"
+    },
+    "sources": [
+     "https://gs.amac.org.cn/amac-infodisc/res/pof/manager/managerList.html",
+     "https://jrj.sh.gov.cn/SC212/20250208/5729d881a1a94f84aa28e8214be2c15f.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "China's AI-quant field is deep and well-capitalised: 幻方/High-Flyer (the DeepSeek parent, ~30B RMB self-funded AI push), 九坤, and 15+ billion-RMB-AUM AI quant funds already run model-driven trading — an autonomous 'AI researches every trade' fund is squarely their turf.",
+     "zh": "中国AI量化赛道深厚且资本雄厚：幻方/High-Flyer（DeepSeek母公司，自有资金投入约30亿元搞AI）、九坤，以及15家以上百亿规模的AI量化私募已在做模型驱动交易——'AI自主研究每一笔交易'的基金正处其腹地。"
+    },
+    "sources": [
+     "https://t.cj.sina.com.cn/articles/view/1667856794/6369799a0010185sk",
+     "https://www.21jingji.com/article/20250228/herald/a255048c111e6731b74e8e71305b12b2.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "$100k-minimum qualified-investor self-serve onboarding doesn't fit China — domestic 私募 require 合格投资者 (≥1M RMB) thresholds, registered channels, and trust-/relationship-led capital raising.",
+     "zh": "以10万美元门槛、自助式合格投资者入金的方式不适配中国——境内私募有合格投资者（≥100万元）门槛、需通过登记渠道，且募资以信任/关系驱动。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Different markets entirely: A-share/futures microstructure and trading limits, onshore brokerage/custody, RMB capital and an AMAC-registered manager entity — the strategy stack and legal wrapper both rebuild.",
+     "zh": "市场完全不同：A股/期货的微观结构与交易限制、境内券商/托管、人民币资金，以及在协会登记的管理人主体——策略栈与法律外壳都要重建。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer. Licensed-fund-manager regime + a dominant funded incumbent class (幻方/九坤) is a hard double blocker; this is the home turf of China's strongest AI labs.",
+   "zh": "作为迁移：放弃。持牌基金管理人制度叠加占主导地位的已融资玩家（幻方/九坤），构成强双重阻碍；这里正是中国最强AI实验室的主场。"
+  },
+  "china_version": {
+   "en": "Not foundable as a fund by an outside team — the only credible repoint is selling AI research/trading tooling to existing licensed 私募, not raising an AI fund.",
+   "zh": "外部团队无法以基金形式落地——唯一可信的重定向是把AI研究/交易工具卖给现有持牌私募，而非自募一只AI基金。"
+  }
+ },
+ "ndea-com": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Ndea is a frontier AGI research lab, not a deployed product, so there's no product-level regime today; if/when it ships generative models in China, 生成式人工智能服务管理 (算法备案/大模型审批) under the CAC would apply. Needs verification at productization.",
+     "zh": "Ndea是前沿AGI研究实验室，而非已落地的产品，目前不存在产品层面的监管；若其在中国推出生成式模型，则适用网信办《生成式人工智能服务管理》（算法备案/大模型审批）。待产品化时核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Not a market to 'own' — but China has well-funded AGI/foundation-model labs (智谱AI, 月之暗面, DeepSeek/幻方) pursuing frontier research, so a research lab has no open-field advantage to transfer. Confidence low; incumbency is conceptual here, not a cloned product.",
+     "zh": "这不是一个可被'占据'的市场——但中国有资金充裕的AGI/基础模型实验室（智谱AI、月之暗面、DeepSeek/幻方）在做前沿研究，故研究实验室并无可迁移的'空白市场'优势。置信度低；此处的'同类'是概念性的，而非被复制的产品。"
+    },
+    "sources": [
+     "https://t.cj.sina.com.cn/articles/view/1667856794/6369799a0010185sk"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "No go-to-market to translate — Ndea is pre-product (launch_stage 'building'), funded by frontier capital and talent, not a sales motion that ports to a Chinese buyer.",
+     "zh": "没有可平移的市场打法——Ndea尚处产品前阶段（launch_stage为'building'），靠前沿资本与人才驱动，而非可移植到中国买方的销售动作。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "'Localizing' an AGI lab is not a meaningful operation — you would simply be starting a separate Chinese frontier lab. There is no product to repoint.",
+     "zh": "对一个AGI实验室做'本地化'并无实际意义——那只是另起一家中国前沿实验室。没有可重定向的产品。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer object — a frontier AGI lab isn't a product to localize. Watch as a research bet (Chollet-style program-synthesis + deep-learning); China already has its own well-funded frontier labs.",
+   "zh": "作为迁移对象：放弃——前沿AGI实验室不是可本地化的产品。可作为研究方向（Chollet式程序合成+深度学习）持续关注；中国已有自有的资金充裕的前沿实验室。"
+  },
+  "china_version": {
+   "en": "There is no 'China version' of a lab — the only meaningful analog is China's existing AGI labs pursuing similar neuro-symbolic / program-synthesis research.",
+   "zh": "实验室没有'中国版本'——唯一有意义的对应是中国已有的、在做类似神经符号/程序合成研究的AGI实验室。"
+  }
+ },
+ "arc-prize-foundation": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "An open-source AI benchmark nonprofit (ARC-AGI) has no operating regime to clear — it publishes datasets and runs prize competitions; ordinary rules only (data-sharing / running a contest). Effectively unrestricted.",
+     "zh": "开源AI基准测试非营利组织（ARC-AGI）没有需要跨越的运营监管门槛——它发布数据集并举办奖金竞赛；仅适用一般规则（数据共享/赛事运营）。基本不受限。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded 'competing benchmark org' to displace — ARC-AGI is already a global standard used by OpenAI/Anthropic/Google DeepMind/xAI; Chinese labs use it as-is rather than cloning it. Confidence low (the question barely applies).",
+     "zh": "不存在需要取代的'竞争性基准机构'——ARC-AGI已是OpenAI/Anthropic/Google DeepMind/xAI都在用的全球标准；中国实验室直接使用而非克隆。置信度低（该问题几乎不适用）。"
+    },
+    "sources": [
+     "https://arcprize.org/"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "No commercial go-to-market — it's a nonprofit funded by prizes/grants; 'transfer' isn't a sales question. Its reach is already global, including Chinese research teams.",
+     "zh": "没有商业化的市场打法——它是靠奖金/资助运作的非营利；'迁移'不是一个销售问题。其影响力本已是全球性的，包括中国研究团队。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "low",
+    "note": {
+     "en": "Near drop-in: ARC-AGI is language-agnostic abstract-reasoning grids; Chinese researchers already participate without localization. Nothing material to change.",
+     "zh": "几乎可直接使用：ARC-AGI是与语言无关的抽象推理网格题；中国研究者无需本地化即可参与。无实质性需改动之处。"
+    },
+    "sources": [
+     "https://arcprize.org/"
+    ]
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Not a transfer target at all — a global open benchmark nonprofit, not a localizable business. Partner/engage with as infrastructure the whole field (incl. Chinese labs) already uses; nothing to 'copy into China'.",
+   "zh": "根本不是迁移对象——这是一个全球性的开源基准非营利，而非可本地化的生意。可作为整个领域（含中国实验室）已在使用的基础设施去合作/参与；无需'复制到中国'。"
+  },
+  "china_version": {
+   "en": "None needed — Chinese labs already use ARC-AGI directly; the only 'repoint' would be co-running a localized prize/community, not a product.",
+   "zh": "无需——中国实验室已直接使用ARC-AGI；唯一可谈的'重定向'是合作举办本地化奖金/社区活动，而非做一个产品。"
+  }
+ },
+ "sciloop": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Selling STEM reasoning datasets is ordinary commerce, but if served to Chinese labs from offshore — or US labs from China — the 2024 cross-border data-flow / data-export rules likely apply; needs legal verification. Expert-authored math/physics is low-sensitivity, so the barrier is modest.",
+     "zh": "出售STEM推理数据集属普通商业行为，但若涉及为境内实验室跨境供数、或从境内向境外实验室供数，大概率受2024年《促进和规范数据跨境流动规定》及数据出境规则约束，需法律核实；数学物理题目敏感度低，门槛有限。"
+    },
+    "sources": [
+     "https://www.nda.gov.cn/sjj/zhuanti/sjbz/0529/20250529141207753755922_pc.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "China has a deep data-annotation/RLHF industry (景联文, BasicFinder, Appen-style vendors), but no funded player found specializing in IMO/IPhO-medalist-authored frontier-breaking reasoning data; that elite-talent niche is open (med-low confidence).",
+     "zh": "中国有成熟的数据标注/RLHF产业（景联文、BasicFinder等），但未找到专做IMO/IPhO奖牌得主撰写、能突破前沿模型的高难推理数据的融资公司；这一顶尖人才细分领域仍较空白（置信度中低）。"
+    },
+    "sources": [
+     "https://news.pedaily.cn/202511/556805.shtml"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Buyers are frontier AI labs; in China that means DeepSeek/Moonshot/Alibaba/ByteDance — a short list of relationship-led, custom-dataset deals rather than self-serve. The $225/problem motion would shift to bespoke contracts.",
+     "zh": "客户为前沿AI实验室，在中国即DeepSeek、月之暗面、阿里、字节等少数几家，靠关系驱动的定制数据合同而非自助下单；其每题225美元的打法会转为定制合约。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Math/physics problems are language-light and globally portable, but the customer base is the issue: top buyers are US labs. A China version means re-pointing supply at Chinese labs plus Chinese-language problem rendering and on-shore data handling.",
+     "zh": "数学物理题目语言依赖低、可全球迁移，关键在客户：最大买家是美国实验室。中国版意味着把供给重新对准国内实验室，并提供中文题面与境内数据处理。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner/copy — the elite-reasoning-data niche is genuinely open in China, but the customer set is a handful of labs, so it's a thin, relationship-driven market rather than a scalable transfer.",
+   "zh": "合作/复制——顶尖推理数据的细分在中国确有空白，但客户仅为少数几家实验室，属关系驱动的窄市场，而非可规模化迁移。"
+  },
+  "china_version": {
+   "en": "An elite-talent (Olympiad-medalist) frontier reasoning-data supplier selling custom math/physics/science datasets directly to DeepSeek, Moonshot, Alibaba and ByteDance.",
+   "zh": "面向DeepSeek、月之暗面、阿里、字节的顶尖人才（奥赛奖牌得主）前沿推理数据供应商，直接出售定制数学/物理/科学数据集。"
+  }
+ },
+ "hillclimb": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Building RL environments and research-agent training data is ordinary B2B; cross-border supply to/from Chinese labs would invoke the 2024 data-export rules; needs legal verification. No content/license regime specific to this.",
+     "zh": "构建RL环境与研究型Agent训练数据属普通B2B；若涉及与境内实验室的跨境供数，则触发2024年数据出境规则，需法律核实；无针对性的内容或牌照监管。"
+    },
+    "sources": [
+     "https://www.nda.gov.cn/sjj/zhuanti/sjbz/0529/20250529141207753755922_pc.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Chinese embodied/LLM RL-environment builders exist (灵初智能's W0 simulator, 跨维 DexVerse), and 智元 runs huge data factories — but for the specific 'train agents to be AI research scientists' RL-data niche no direct funded clone was found (med-low confidence).",
+     "zh": "中国已有RL环境/仿真厂商（灵初智能W0模拟器、跨维DexVerse），智元也运营大型数据工厂，但针对'训练Agent成为AI研究科学家'这一具体RL数据细分，未找到直接对标的融资公司（置信度中低）。"
+    },
+    "sources": [
+     "https://www.qbitai.com/2025/06/296384.html",
+     "https://www.163.com/dy/article/KT9QHIUH05119C3G.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Same as sciloop: a handful of frontier-lab buyers, relationship-led custom contracts, no pricing/self-serve. Fits China's enterprise-AI deal structure but caps the buyer pool to a few names.",
+     "zh": "同sciloop：买家为少数几家前沿实验室，关系驱动的定制合同，无标价/自助。契合中国企业AI的交易结构，但买方仅限几家。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "The pipeline (human research data + automated RL-env generation) ports cleanly; the gap is again customer location — frontier-research-agent demand is concentrated in US labs, with only a few Chinese labs pursuing recursive self-improvement.",
+     "zh": "其流程（人类研究数据+自动生成RL环境）可平滑迁移；差距仍在客户所在地——前沿研究型Agent需求集中于美国实验室，国内仅少数实验室在做递归自我改进。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner/copy — technically portable and the precise niche is open, but it's a bet on a small set of Chinese labs actually pursuing AI-research-scientist agents at scale.",
+   "zh": "合作/复制——技术上可迁移、精确细分尚空白，但本质是押注少数中国实验室真正规模化做AI研究科学家Agent。"
+  },
+  "china_version": {
+   "en": "An RL-environment + research-data shop supplying recursive-self-improvement training data to the 2-3 Chinese labs (DeepSeek/Moonshot/Alibaba) building research agents, with on-shore data handling.",
+   "zh": "一家RL环境+研究数据公司，向正在构建研究型Agent的2-3家中国实验室（DeepSeek/月之暗面/阿里）供应递归自我改进训练数据，并实现境内数据处理。"
+  }
+ },
+ "piggy-robotics": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "A consumer home humanoid faces ordinary product-safety/CCC and consumer-electronics rules — no structural barrier; China is in fact the most permissive large market for home-robot rollout. Needs standard certification only.",
+     "zh": "家用消费级人形机器人适用普通产品安全/3C认证与消费电子规则，无结构性壁垒；中国实为家用机器人落地最友好的大市场，仅需常规认证。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "China is the densest humanoid market globally — 智元 shipped 5,100+ and 宇树 5,500+ units in 2025, with 99+ funding rounds in 2025 and explicit home-companion humanoids targeted; a low-cost home humanoid faces entrenched, well-funded local players.",
+     "zh": "中国是全球人形机器人最密集的市场——2025年智元出货超5,100台、宇树超5,500台，全年融资逾99起，且家庭陪伴型人形已被点名为先行商用场景；低价家用人形将直面根基深厚、资金充裕的本土对手。"
+    },
+    "sources": [
+     "https://www.stcn.com/article/detail/2788605.html",
+     "https://zhuanlan.zhihu.com/p/1997605413038866853"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "iPhone-price consumer hardware suits China's retail/e-commerce channels (Tmall/JD/Douyin) well — a real advantage — but it lands in a crowded, price-warring category where domestic brands have channel and supply-chain edge.",
+     "zh": "iPhone价位的消费硬件很契合中国零售/电商渠道（天猫/京东/抖音），是真实优势，但落入价格战激烈、本土品牌在渠道与供应链占优的拥挤赛道。"
+    },
+    "sources": [
+     "https://m.bjnews.com.cn/detail/1769161331129034.html"
+    ]
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total: hardware must be manufactured on China's supply chain (where it has no edge over locals), the assistant needs a Chinese LLM/voice stack, and chores/home layouts differ — competing on China's home turf against its strongest robotics cluster.",
+     "zh": "近乎重做：硬件须在中国供应链制造（相对本土无优势），助手需中文大模型/语音栈，家务与户型也不同——等于在中国最强机器人集群的主场与其正面竞争。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer-in — China owns the low-cost home-humanoid race. The artificial-muscle/single-pump cost architecture is the only thing worth watching, and even that competes against well-funded local hardware.",
+   "zh": "作为迁入：放弃——低价家用人形赛道由中国主导。唯一值得关注的是其人工肌肉/单泵的成本架构，但即便如此也要面对资金充裕的本土硬件。"
+  },
+  "china_version": {
+   "en": "Not a product to import — at most license the artificial-muscle actuation architecture to an existing Chinese humanoid maker as a cost-reduction component.",
+   "zh": "不宜作为产品引入——至多将人工肌肉驱动架构作为降本部件授权给现有中国人形机器人厂商。"
+  }
+ },
+ "twolabs": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Eldercare robots that feed/dress/dispense medication touch 养老/医疗器械 and care-facility safety rules; medication and physical-assist functions likely invoke medical-device classification — needs legal verification, plausibly a real bar for the clinical features.",
+     "zh": "承担喂食/穿衣/给药的养老机器人涉及养老及医疗器械、护理机构安全规定；给药与身体辅助功能很可能触发医疗器械分类，需法律核实，临床功能上可能构成实质门槛。"
+    },
+    "sources": [
+     "https://www.jiemian.com/article/2312776.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "China's eldercare-robot market is funded and shipping: 作为科技 raised a tens-of-millions Series A for disabled-elder care, 柚瓣家×康力优蓝 shipped 5,000 companion robots, and orders for care robots are up 4-5×; a funded local field already owns this.",
+     "zh": "中国养老机器人市场已融资并出货：作为科技获数千万A轮专注失能老人护理，柚瓣家×康力优蓝陪伴机器人出货5,000台，护理机器人订单同比增4-5倍；本土融资玩家已占据该赛道。"
+    },
+    "sources": [
+     "https://www.ckgsb.edu.cn/chuang/content/news_detail/1177",
+     "https://zhuanlan.zhihu.com/p/49304771286"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers are nursing homes / senior-living operators — a tender-driven, relationship-led, budget-constrained public-private channel, not the lighter US facility sale; expect procurement cycles and private deployment.",
+     "zh": "买方为养老院/养老社区运营方，属招投标驱动、关系导向、预算受限的公私合营渠道，而非美国较轻的机构销售；预期采购周期长、私有化部署。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: Mandarin/dialect social companionship, Chinese eldercare workflows and dietary/medication norms, local hardware supply, and integration with domestic facility systems — plus competing against incumbents already inside these homes.",
+     "zh": "近乎重做：普通话/方言情感陪伴、中国养老流程与饮食/用药习惯、本土硬件供应、对接国内机构系统——还要与已进入这些养老院的本土对手竞争。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer — China's aging crisis makes the need huge but the field is already funded and shipping locally, with a regulatory/medical-device overhang on the clinical features. Watch the social-intelligence stack only.",
+   "zh": "作为迁移：放弃——中国老龄化使需求巨大，但本土已融资且在出货，临床功能还有医疗器械监管悬顶。仅值得关注其社交智能技术栈。"
+  },
+  "china_version": {
+   "en": "Drop the clinical (feeding/medication) functions to dodge device classification and ship a Mandarin social-companion robot into senior-living communities — but that is exactly what 柚瓣家/康力优蓝 already do.",
+   "zh": "去掉临床（喂食/给药）功能以规避器械分类，向养老社区推普通话社交陪伴机器人——但这正是柚瓣家/康力优蓝已在做的事。"
+  }
+ },
+ "synphony": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "Farm picking robots + ag software face ordinary agricultural-equipment rules and benefit from 农业现代化/智慧农业 policy support; no structural barrier. The data-selling 'side hustle' to robot foundation labs would, if cross-border, touch data-export rules.",
+     "zh": "采摘机器人+农业软件适用普通农机规定，并受农业现代化/智慧农业政策扶持，无结构性壁垒。其向机器人基础模型实验室卖数据的'副业'若跨境，则涉及数据出境规则。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "China's ag-robotics field is large and funded (极飞, 中科原动力 at Series B, 丰疆智能), but these focus on field crops/drones; a funded player doing strawberry-picking manipulation specifically wasn't found, so the exact niche is med (med confidence).",
+     "zh": "中国农业机器人赛道庞大且有融资（极飞、中科原动力B轮、丰疆智能），但多聚焦大田/植保无人机；未找到专做草莓采摘机械臂的融资公司，故该具体细分为中（置信度中）。"
+    },
+    "sources": [
+     "https://www.china5e.com/news/news-1198328-1.html",
+     "https://caifuhao.eastmoney.com/news/20250927025701766515500"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "China strawberry farming is fragmented across many smallholders/greenhouse operators with low capex and cheaper labor than California — hardware capex sale is a hard, low-WTP, relationship-led motion very different from the US $3B-California framing.",
+     "zh": "中国草莓种植高度分散于大量小农户/大棚主，资本开支低、人工成本远低于加州——硬件资本性销售是低支付意愿、关系驱动的艰难打法，与其美国'加州30亿美元'的设定大不相同。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: Chinese strawberry farming is dominated by tunnel/greenhouse (大棚) not California open beds, so the picking hardware, bed analytics and economics must be re-engineered; plus local supply chain and Chinese software stack.",
+     "zh": "近乎重做：中国草莓以大棚/温室为主，而非加州露地畦栽，采摘硬件、畦级分析与经济模型都须重做；还需本土供应链与中文软件栈。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore the strawberry-robot transfer (wrong farm structure, low WTP), but the data-to-foundation-labs side hustle is the more portable asset and overlaps China's hot embodied-data market.",
+   "zh": "草莓机器人迁移放弃（农场结构不符、支付意愿低），但其向基础模型实验室卖数据的副业更可迁移，且与中国火热的具身数据市场重叠。"
+  },
+  "china_version": {
+   "en": "Re-point at China's greenhouse (大棚) strawberry/tomato operators with tunnel-adapted hardware, OR import only the outdoor-robotics data-collection play into China's embodied-data ecosystem.",
+   "zh": "改为面向中国大棚草莓/番茄种植者，提供适配温室的硬件；或仅将户外机器人数据采集业务引入中国具身数据生态。"
+  }
+ },
+ "one-robot": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "high",
+    "note": {
+     "en": "Selling world-model simulation/eval software to robotics teams is ordinary B2B software with no structural barrier; data-export rules only bite if training data crosses the border. Strong 具身智能 policy tailwind.",
+     "zh": "向机器人团队出售世界模型仿真/评估软件属普通B2B软件，无结构性壁垒；仅当训练数据跨境时才触发数据出境规则。具身智能政策顺风明显。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Direct funded equivalents exist: 灵初智能 shipped a W0 world-model simulator that evaluates/optimizes its policy model, 跨维 DexVerse runs sim→data→training, and 智元 operates massive trajectory factories — the world-model-for-robot-training niche is already owned locally.",
+     "zh": "已有直接对标的融资公司：灵初智能推出W0世界模型模拟器用于评估/优化其策略模型，跨维DexVerse打通仿真→数据→训练，智元运营大规模轨迹工厂——机器人训练世界模型这一细分已被本土占据。"
+    },
+    "sources": [
+     "https://www.163.com/dy/article/KT9QHIUH05119C3G.html",
+     "https://capital.lenovo.com/news/detail/id/1007/s/2.html",
+     "https://www.qbitai.com/2025/06/296384.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Buyers are Chinese robotics/embodied-AI teams — a fast-growing but consolidating set; software/tooling sale fits, though many leaders (智元, 跨维) build sims in-house, shrinking the third-party market.",
+     "zh": "买家为中国机器人/具身智能团队，是快速增长但正在集中的群体；软件/工具销售可行，但许多头部（智元、跨维）自建仿真，压缩了第三方市场。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "low",
+    "note": {
+     "en": "Low: world-model simulation software is task-specific but largely language-agnostic and portable; main change is on-shore data handling and integrating with Chinese robot platforms — but the in-house-build tendency is the real obstacle, not localization.",
+     "zh": "低：世界模型仿真软件虽任务专用，但基本与语言无关、可迁移；主要改动是境内数据处理与对接国内机器人平台——真正障碍是头部自建倾向，而非本地化。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Copy-but-crowded — the tech ports easily and China's embodied-AI market is hot, but funded locals (灵初, 跨维, 智元) already own world-model sim and the leaders build in-house; the hard-blocker incumbent cap holds it at med.",
+   "zh": "可复制但拥挤——技术易迁移、中国具身智能市场火热，但灵初、跨维、智元等本土公司已占据世界模型仿真且头部自建；按硬阻断的强对手上限，封顶为中。"
+  },
+  "china_version": {
+   "en": "A third-party world-model eval/sim layer specializing in hard manipulation (textiles/box-folding) sold to the second tier of Chinese embodied-AI teams that don't have 智元/跨维-scale in-house sim.",
+   "zh": "一家专攻高难操作（织物/装箱）的第三方世界模型评估/仿真层，面向没有智元/跨维级自建仿真能力的中国具身智能二线团队。"
+  }
+ },
+ "valgo": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Selling loss-estimate models to insurers touches insurance/actuarial regulation (银保监/金融监管总局) and product-filing rules for any pricing factor used in filed policies; the model-vendor layer is likely ordinary B2B, but downstream use needs legal verification.",
+     "zh": "向保险公司出售损失估计模型涉及保险/精算监管（金融监管总局）及任何进入备案产品定价因子的产品备案规则；模型供应商这一层大概率属普通B2B，但下游使用需法律核实。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/jjxw/2024-10-17/doc-incsvmwf6523314.shtml"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Chinese insurers/reinsurers are already building autonomy risk models (太平再保险 since 2019, 瑞士再保险×百度, 平安/人保 issuing embodied-robot policies), but these are incumbents' in-house/partner efforts; no independent funded startup selling an autonomy-risk-quant platform was found (med confidence).",
+     "zh": "中国保险/再保险方已在自建自动驾驶风险模型（太平再保险2019年起、瑞士再保险×百度、平安/人保签发具身机器人保单），但多为险企自建/合作；未找到独立的、专卖自动驾驶风险量化平台的融资创业公司（置信度中）。"
+    },
+    "sources": [
+     "https://www.swissre.com/china/news-insights/press-release/nr-20211119-swiss-re-chinese-tech-giant-baidu-partnership.html",
+     "https://finance.sina.com.cn/tech/roll/2026-04-21/doc-inhvfyta6196773.shtml"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Buyers are large insurers/reinsurers and OEMs — a concentrated, relationship- and trust-led market favoring incumbents; the same simulated-loss data gap exists, so a credible independent vendor could fit, but selling actuarial models to risk-averse insurers is slow.",
+     "zh": "买家为大型险企/再保险公司及主机厂，是集中、靠关系与信任驱动、利好在位者的市场；中国同样存在模拟损失数据缺口，可信的独立供应商有机会，但向风险厌恶的险企卖精算模型周期长。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Methodology (bottom-up probabilistic route/task/environment models) ports, but inputs must be re-localized: Chinese roads/regulatory geofences, domestic AV operators (百度/小马/文远), local claims and 银保监 filing conventions.",
+     "zh": "方法论（自下而上的路线/任务/环境概率模型）可迁移，但输入须重新本地化：中国道路/监管地理围栏、本土自动驾驶运营方（百度/小马/文远），以及本地理赔与备案惯例。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner — the autonomy-insurance data gap is real and acknowledged in China, but incumbents (太平再/瑞再/平安/人保) are filling it through partnerships; an independent quant layer is best sold INTO them, not around them.",
+   "zh": "合作——自动驾驶保险的数据缺口在中国真实且被公认，但太平再/瑞再/平安/人保等在位者正通过合作填补；独立的量化层最好卖给它们，而非绕开它们。"
+  },
+  "china_version": {
+   "en": "A simulated-loss-estimate engine for autonomy, localized to Chinese AV operators and 金融监管总局 filing rules, sold to or co-developed with 平安/人保/太平再保险 rather than direct to a fragmented insurer base.",
+   "zh": "一套面向自动驾驶的模拟损失估计引擎，按中国自动驾驶运营方与金融监管总局备案规则本地化，与平安/人保/太平再保险联合开发或向其销售，而非直接面向分散的险企。"
+  }
+ },
+ "icarus": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "A US defense ISR aircraft sold to militaries is foreclosed on both sides: US export-control (ITAR/EAR) blocks transfer to China, and China's HALE/'pseudo-satellite' procurement is closed state/PLA channel, not open to a foreign vendor. Structural barrier, not an ordinary license question.",
+     "zh": "面向军方的美国国防ISR飞机两头受阻：美方出口管制（ITAR/EAR）禁止向中国转让，中方高空长航时'伪卫星'采购又是封闭的国家/军方渠道，对外国供应商不开放。这是结构性壁垒，而非普通牌照问题。"
+    },
+    "sources": [
+     "https://www.qbitai.com/2022/09/37541.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "China already runs solar stratospheric 'pseudo-satellite' programs (e.g. the 2022 all-solar UAV reaching ~20km), driven by state/academic and aerospace institutes rather than a single funded startup; the field is occupied but not by a directly comparable VC-backed company.",
+     "zh": "中国已有太阳能平流层'伪卫星'项目（如2022年升空约2万米的纯太阳能无人机），主导方是国家/院所及航天系统而非某家创业公司；赛道有人占据，但并非一家可直接对标的风投支持企业。"
+    },
+    "sources": [
+     "https://www.qbitai.com/2022/09/37541.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "The only buyer is the PLA / state defense procurement, which a US-founded company cannot access; the relationship-and-clearance defense motion does not translate for a foreign vendor at all.",
+     "zh": "唯一买方是解放军/国家国防采购，美国创办的公司无法进入；以关系和资质审查为核心的国防打法对外国供应商完全不可迁移。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Not a localization problem but a sovereignty one—a foreign defense platform would require a wholly domestic team, supply chain, and security clearance, i.e. a different company, not an adapted product.",
+     "zh": "这不是本地化问题而是主权问题——外国国防平台需要完全本土的团队、供应链和安全资质，等于另起炉灶，而非改造产品。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer—US defense ISR into China is structurally foreclosed both by US export control and China's closed military procurement. Worth tracking only as a US/allied frontier-defense signal.",
+   "zh": "作为迁移：放弃——美国国防ISR进入中国被美方出口管制与中方封闭军购双重封死。仅作为美国及盟友前沿国防的风向标值得关注。"
+  },
+  "china_version": {
+   "en": "There is no foreign-built version; China's analog is a wholly domestic HALE/pseudo-satellite program already run by state aerospace institutes—nothing for this company to port.",
+   "zh": "不存在外国建造的版本；中国的对应物是已由国家航天院所运营的纯本土高空长航时/伪卫星项目，本公司无可移植之处。"
+  }
+ },
+ "tenet-industries": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Mass-produced strike/kamikaze drones are weapons: US export-control (ITAR/military end-use) blocks transfer, and China's munitions procurement is a closed state/PLA channel barred to foreign suppliers. Hard structural barrier.",
+     "zh": "量产攻击/自杀式无人机属于武器：美方出口管制（ITAR/军事用途）禁止转让，中方弹药采购又是对外国供应商封闭的国家/军方渠道。属硬性结构壁垒。"
+    },
+    "sources": [
+     "https://www.sohu.com/a/991650075_100129163"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "China has a deep loitering-munition base (e.g. the 飞龙-10/飞龙-60 series) and an enormous commercial-drone supply chain feeding FPV munitions, mostly state/SOE-led rather than one funded startup—occupied field, no single VC clone to name.",
+     "zh": "中国巡飞弹基础雄厚（如飞龙-10/飞龙-60系列），庞大的民用无人机供应链为FPV弹药供货，主导方多为国家/国企而非某家创业公司——赛道已被占据，但无单一可点名的风投克隆。"
+    },
+    "sources": [
+     "https://www.sohu.com/a/991650075_100129163"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyer is the PLA / defense ministry through closed tenders requiring domestic clearance; a foreign-founded drone-maker has no path into that motion.",
+     "zh": "买方为解放军/国防部门，经需本土资质的封闭招标采购；外国创办的无人机公司无从进入该打法。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Sovereignty, not localization: a domestic weapons program would need a fully Chinese entity, supply chain, and clearance—an entirely different company.",
+     "zh": "是主权而非本地化：本土武器项目需要完全中国化的主体、供应链与资质——等于另一家公司。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer—a US strike-drone maker cannot sell into China and China already has a vast domestic loitering-munition base. Relevant only as a US/allied defense-manufacturing signal.",
+   "zh": "作为迁移：放弃——美国攻击无人机厂商无法销往中国，且中国已有庞大本土巡飞弹基础。仅作为美国及盟友国防制造的风向标。"
+  },
+  "china_version": {
+   "en": "No foreign version is possible; China's equivalent is its existing domestic loitering-munition lines (飞龙 series) plus the commercial drone supply chain—not something this company can localize.",
+   "zh": "外国版本不可能存在；中国的对应物是其现有本土巡飞弹生产线（飞龙系列）加民用无人机供应链，并非本公司可本地化之物。"
+  }
+ },
+ "hop-aero": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Hypersonic point-to-point rocket cargo into contested zones is explicitly a US/allied military deterrence product; US export-control (ITAR, missile-tech MTCR) blocks transfer and China's launch/military logistics is a closed state channel. Hard barrier.",
+     "zh": "向争议区域点对点投送的高超音速火箭货运明确定位为美国及盟友的军事威慑产品；美方出口管制（ITAR、导弹技术MTCR）禁止转让，中方发射/军事后勤又是封闭的国家渠道。属硬壁垒。"
+    },
+    "sources": [
+     "https://zhuanlan.zhihu.com/p/1956081845520269527"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "No direct funded equivalent for military rocket-cargo, but China's heavily-funded reusable-rocket startups (蓝箭航天, 星河动力—2.4B-yuan Series D, state-backed) own the underlying launch tech that any such capability would build on.",
+     "zh": "军用火箭货运无直接融资对标，但中国资金雄厚的可复用火箭创业公司（蓝箭航天、星河动力——24亿元D轮、国资支持）掌握着此类能力所依赖的底层发射技术。"
+    },
+    "sources": [
+     "https://zhuanlan.zhihu.com/p/1956081845520269527",
+     "https://m.thepaper.cn/newsDetail_forward_31845593"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyer is the US DoD / allied militaries; in China the analog buyer would be the PLA via closed procurement, inaccessible to a foreign founder.",
+     "zh": "买方为美国国防部/盟军；在中国对应买方将是解放军，经封闭采购，外国创办者无从触及。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Sovereignty problem: a Chinese version would be a wholly domestic launch program—different entity, supply chain, and clearance—not a port of this product.",
+     "zh": "属主权问题：中国版本将是完全本土的发射项目——主体、供应链、资质均不同——而非本产品的移植。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a transfer—military rocket-cargo is export-controlled and procured only through closed state channels China bars to foreigners. China's funded launch startups are the relevant local capability, but in a separate (commercial) lane.",
+   "zh": "作为迁移：放弃——军用火箭货运受出口管制，仅经中国对外封闭的国家渠道采购。中国融资充足的火箭创业公司才是相关本土能力，但处于另一条（商业）赛道。"
+  },
+  "china_version": {
+   "en": "Point the reusable-launch tech at China's actually-fundable lane—commercial point-to-point and constellation launch, as 蓝箭/星河动力 already do—rather than US-style contested-zone military cargo.",
+   "zh": "把可复用发射技术指向中国真正可融资的赛道——商业点对点与星座发射（蓝箭/星河动力已在做），而非美式争议区军事投送。"
+  }
+ },
+ "axionorbital-space": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "SAR/EO imagery and 24/7 surveillance touch China's 测绘/遥感 data-security and military-sensitivity regimes; foreign-controlled satellite imaging of/over China faces sovereignty and data-residency barriers and a defense end-use that is procurement-closed. Needs legal verification but the structural barrier is real.",
+     "zh": "SAR/光学影像与全天候监视触及中国的测绘/遥感数据安全和军事敏感监管；外资控制的对华卫星成像面临主权与数据本地化壁垒，且其国防用途采购封闭。需法律核实，但结构性壁垒真实存在。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/roll/2025-07-18/doc-inffwpwp9212425.shtml"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Funded local players already own this: 智星空间 is China's earliest commercial-SAR satellite team (智星一号 launched 2020) and 长光卫星 runs the 吉林一号 sub-meter EO constellation—the exact persistent-imagery niche this foundation model serves.",
+     "zh": "已有融资本土玩家占据：智星空间是中国最早的商业SAR卫星团队（智星一号2020年发射），长光卫星运营吉林一号亚米级光学星座——正是此基础模型所服务的持续成像细分领域。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/roll/2025-07-18/doc-inffwpwp9212425.shtml",
+     "https://www.taibo.cn/p/90343"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Top buyers (defense, commodities, disaster response) in China route through state and SOE channels; a foreign EO-model vendor cannot serve the defense slice and the commercial slice is held by domestic constellation operators bundling their own data.",
+     "zh": "在中国，主要买方（国防、大宗商品、灾害响应）经国家与国企渠道；外国地球观测模型供应商无法服务国防部分，商业部分则被自带数据的本土星座运营商把持。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "A China play would need a domestic SAR data source (foreign downlink of Chinese territory is restricted), local constellation partnership, and compliance with 测绘 rules—effectively rebuilding around domestic data.",
+     "zh": "在华落地需本土SAR数据源（外方对华领土下行受限）、与本地星座合作并合规测绘规定——实质上要围绕本土数据重建。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer—a funded local SAR/EO field (智星空间, 长光卫星) plus surveying/data-sovereignty rules and a defense end-use foreclose the foreign-vendor path. The SAR→optical model technique is the only borrowable part.",
+   "zh": "作为直接迁移：放弃——已有融资本土SAR/光学赛道（智星空间、长光卫星），加上测绘/数据主权规定与国防用途，封死外国供应商路径。仅SAR转光学的模型技术可借鉴。"
+  },
+  "china_version": {
+   "en": "License or co-develop the SAR-to-optical translation model with a domestic constellation operator (智星空间 / 长光卫星) running on their data—software-only, not a foreign satellite-and-data play.",
+   "zh": "将SAR转光学的翻译模型授权给本土星座运营商（智星空间/长光卫星）或与其联合开发、跑在其数据上——纯软件，而非外方卫星加数据的打法。"
+  }
+ },
+ "dome": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Dome is infra over Polymarket/Kalshi, which themselves have no legal home in China: Chinese lawyers flag real-money event contracts as unapproved OTC derivatives under futures-management rules (非法经营) plus 赌博罪 exposure—and that exposure explicitly extends to operators, promoters, and payment providers, i.e. an infra vendor. Needs legal verification but the regime clearly forecloses the underlying market.",
+     "zh": "Dome是架在Polymarket/Kalshi之上的基础设施，而后者在中国并无合法落脚点：中国律师指出真金事件合约属未经批准的场外衍生品，按期货管理办法可被认定非法经营，并涉赌博罪——且该风险明确延伸至运营、推广、支付提供方，即基础设施供应商。需法律核实，但监管显然封死了底层市场。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/blockchain/roll/2025-11-01/doc-infvwwim7624628.shtml",
+     "https://www.zhihu.com/question/9483157548"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded local equivalent found because the underlying real-money prediction-market venues are themselves absent/illegal in China—there is no domestic Polymarket/Kalshi for a unified API to sit on (searched IT桔子/36氪 context, low confidence).",
+     "zh": "未发现融资本土对标，因为底层真金预测市场场所在中国本身缺位/非法——不存在可供统一API依附的本土Polymarket/Kalshi（IT桔子/36氪语境检索，置信度低）。"
+    },
+    "sources": [
+     "https://www.zhihu.com/question/9483157548"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers would be developers and trading desks building on prediction markets—a customer base that legally cannot exist onshore in China.",
+     "zh": "买方应为在预测市场上构建的开发者与交易部门——这一客户群在中国境内合法层面无法存在。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "There is nothing to localize: the whole substrate (real-money event-contract venues) is missing, so the product has no onshore market to adapt to.",
+     "zh": "无可本地化：整个底座（真金事件合约场所）缺失，产品在境内没有可适配的市场。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore for mainland China—the underlying prediction-market venues have no legal home, so infra over them has no onshore market. Only viable as offshore/global infra serving non-China users.",
+   "zh": "中国大陆：放弃——底层预测市场场所无合法落脚点，架于其上的基础设施在境内无市场。仅作为面向非中国用户的离岸/全球基础设施可行。"
+  },
+  "china_version": {
+   "en": "No onshore version; the closest legal repoint is a unified market-data API over China's licensed futures/commodity exchanges, an entirely different (regulated) product.",
+   "zh": "无境内版本；最接近的合法转向是架在中国持牌期货/商品交易所之上的统一行情数据API，属完全不同的（受监管）产品。"
+  }
+ },
+ "river-markets": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Prime brokerage that aggregates real-money event-contract venues runs straight into China's regime: event contracts are unapproved OTC derivatives under futures-management rules (非法经营 risk) with 赌博罪 exposure for operators; new trading venues need CSRC approval and only five licensed futures exchanges exist. Needs legal verification but the model is foreclosed onshore.",
+     "zh": "聚合真金事件合约场所的主经纪商直撞中国监管：事件合约属未经批准的场外衍生品，按期货管理办法有非法经营风险，运营方涉赌博罪；新交易场所需证监会批准，且仅五家持牌期货交易所。需法律核实，但该模式在境内被封死。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/blockchain/roll/2025-11-01/doc-infvwwim7624628.shtml",
+     "https://finance.sina.com.cn/wm/2026-05-18/doc-inhyivua0504501.shtml"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded local equivalent, because the event-contract venues it would aggregate do not legally exist in China; absence here reflects the missing substrate, not an open opportunity (low confidence).",
+     "zh": "无融资本土对标，因为其拟聚合的事件合约场所在中国合法层面不存在；此处的空白反映底座缺失，而非开放机会（置信度低）。"
+    },
+    "sources": [
+     "https://www.zhihu.com/question/9483157548"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Target is professional event-contract desks—a buyer class that cannot legally operate onshore; the sales-led prime-brokerage motion has no Chinese counterparty.",
+     "zh": "目标为专业事件合约交易部门——一类在境内无法合法运营的买方；其销售驱动的主经纪商打法在中国没有对手方。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Nothing to adapt—the venues being aggregated are absent, so there is no onshore execution surface to build best-execution and OMS over.",
+     "zh": "无可适配——被聚合的场所缺位，境内没有可在其上构建最优执行与订单管理系统的执行面。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore for mainland China—prime brokerage requires venues to aggregate, and real-money event-contract venues have no legal home onshore. Viable only as offshore infra for global desks.",
+   "zh": "中国大陆：放弃——主经纪商需有可聚合的场所，而真金事件合约场所在境内无合法落脚点。仅作为面向全球交易部门的离岸基础设施可行。"
+  },
+  "china_version": {
+   "en": "No onshore version; the nearest legal analog is a multi-venue execution/OMS layer across China's five licensed futures exchanges—a regulated brokerage product, not event contracts.",
+   "zh": "无境内版本；最接近的合法对应是架在中国五家持牌期货交易所之上的多场所执行/OMS层——属受监管的经纪产品，而非事件合约。"
+  }
+ },
+ "forum": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "An exchange to go long/short on 'attention' indices is a novel derivative on a non-financial underlying; in China new exchanges and derivative contracts require CSRC approval (only five licensed futures exchanges), and unapproved contracts risk 非法经营/赌博 characterization. Needs legal verification, but a foreign-launched speculative exchange is structurally foreclosed.",
+     "zh": "对'注意力'指数做多做空的交易所，是建立在非金融标的上的新型衍生品；在中国新设交易所与衍生合约需证监会批准（仅五家持牌期货交易所），未经批准的合约有被定性非法经营/博彩之虞。需法律核实，但外国发起的投机性交易所在结构上被封死。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/wm/2026-05-18/doc-inhyivua0504501.shtml"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded local 'attention exchange' found; China has sentiment/热度 indices and large social-data players, but none packaged as a tradable speculative asset class (low confidence—the category barely exists anywhere).",
+     "zh": "未发现融资本土'注意力交易所'；中国有舆情/热度指数和大型社交数据玩家，但无人将其打包为可交易的投机资产类别（置信度低——该品类在全球都几乎不存在）。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/wm/2026-05-18/doc-inhyivua0504501.shtml"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers would be speculative traders on a novel asset class; in China retail speculation outside licensed venues is exactly what regulators suppress, leaving no compliant onshore audience.",
+     "zh": "买方应为押注新型资产类别的投机交易者；而境内非持牌场所的散户投机正是监管重点压制对象，没有合规的境内受众。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Substituting Chinese search/social/streaming signals (Baidu/Douyin/Weibo) is feasible, but the tradable-exchange wrapper—the actual product—cannot be legally rebuilt onshore, so it is a near-total rebuild into a non-tradable form.",
+     "zh": "替换中国搜索/社交/流媒体信号（百度/抖音/微博）可行，但可交易的交易所外壳——真正的产品——无法在境内合法重建，故近乎重做为不可交易的形态。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a tradable exchange in China—new speculative derivative venues are gated by CSRC licensing and unapproved ones risk illegal-operation/gambling characterization. The data layer (cultural-attention indices) is the only transferable piece.",
+   "zh": "作为可交易交易所在中国：放弃——新设投机衍生场所受证监会牌照管制，未经批准者有非法经营/博彩定性风险。仅数据层（文化热度指数）可迁移。"
+  },
+  "china_version": {
+   "en": "Drop the exchange and sell the attention indices as a 热度/舆情 analytics data product to brands and funds—an information service, not a tradable contract venue.",
+   "zh": "去掉交易所，把注意力指数作为热度/舆情分析数据产品卖给品牌与基金——做信息服务，而非可交易合约场所。"
+  }
+ },
+ "gojiberry-ai": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Outbound calling/messaging collides with China's anti-spam regime: the draft 《通信短信息和语音呼叫服务管理规定》 and the 综合整治骚扰电话 program require prior user consent and whitelists before commercial outbound — a structural barrier to cold outreach. Needs legal verification.",
+     "zh": "外呼/外发触线中国反骚扰监管：《通信短信息和语音呼叫服务管理规定》征求意见稿及工信部综合整治骚扰电话专项行动要求商业外呼须事先取得用户同意并建白名单，对冷启动外联构成结构性障碍，需法律核实。"
+    },
+    "sources": [
+     "http://m.cnr.cn/news/20200901/t20200901_525235967.html",
+     "https://www.secrss.com/articles/4222"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Funded local equivalents already exist: 百炼智能 (B2B marketing-automation/lead SaaS, raised ~RMB100M Series A, positioned as 'China's ZoomInfo') and 纷享销客 ShareAI add AI SDR/lead-nurture; performance-based AI-Agent outbound vendors (e.g. Workus) also ship this motion.",
+     "zh": "已有融资的本土同类：百炼智能（B2B营销自动化/线索SaaS，A轮约1亿元，对标ZoomInfo），纷享销客ShareAI已上线AI SDR与线索培育，且有按效果付费的AI Agent获客厂商（如Workus）在做同样的打法。"
+    },
+    "sources": [
+     "https://ifenxi.com/trend/5737",
+     "https://news.qq.com/rain/a/20260114A01L3Y00"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Self-serve PLG outbound can work for SMBs, but Chinese B2B WTP is low and buyers expect 企业微信/钉钉 integration and relationship-led sales; the lighter US motion partly survives only at the long tail.",
+     "zh": "面向中小企业的自助式PLG外呼可行，但中国B2B付费意愿低、买方期待企业微信/钉钉打通与关系型销售；美式较轻的打法仅在长尾部分成立。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Material rework: swap to Chinese LLM/copywriting, rebuild the intent/enrichment data layer on Chinese sources (天眼查/脉脉 rather than US data), and route outreach through compliant 企业微信/SMS channels with consent capture.",
+     "zh": "需较大改造：替换为中文大模型与文案，基于中国数据源（天眼查/脉脉而非美国数据）重建意向/补全数据层，并通过合规的企业微信/短信渠道并带同意采集进行触达。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — funded incumbents own the lane and cold outbound fights the anti-骚扰 regime. The technique (AI SDR closing the loop) is worth watching, not copying.",
+   "zh": "作为直接迁移：放弃——本土融资厂商已占位，冷启动外呼受反骚扰监管挤压。其打法（AI SDR闭环）值得关注而非照搬。"
+  },
+  "china_version": {
+   "en": "Pivot from cold outbound to consent-based, inbound/CRM-revival AI SDR living inside 企业微信, monetized per qualified meeting.",
+   "zh": "从冷外呼转向基于同意的、入站/CRM唤醒型AI SDR，内嵌企业微信，按有效商机付费。"
+  }
+ },
+ "lunabill": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Handles patient/health and call data — likely under PIPL plus health-medical-data rules, and outbound calling also touches the anti-骚扰 regime; needs legal verification. The deeper issue is structural (see localization).",
+     "zh": "处理患者/健康及通话数据，大概率受《个人信息保护法》及健康医疗数据规定约束，外呼还触及反骚扰监管，需法律核实；更核心的是结构性差异（见本地化）。"
+    },
+    "sources": [
+     "http://m.cnr.cn/news/20200901/t20200901_525235967.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "No funded local equivalent found doing AI-voice insurance-claim follow-up for hospital billing teams (IT桔子/36氪, low-med confidence). General 智能外呼 vendors exist but not this workflow.",
+     "zh": "未找到专做医院账单团队保险理赔催办语音Agent的本土融资同类（IT桔子/36氪检索，置信度中低）；存在通用智能外呼厂商，但不覆盖此工作流。"
+    },
+    "sources": [
+     "https://ifenxi.com/trend/5737"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers would be hospitals / third-party billing — tender-driven, relationship-led, on-prem (私有化) sales with HIS integration, not LunaBill's lighter pilot-to-paid US motion.",
+     "zh": "买方为医院或第三方账单机构：招投标、关系驱动、私有化部署并对接HIS，与LunaBill在美国较轻的试点转付费打法不匹配。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: the US payer/clearinghouse claims-follow-up workflow barely exists the same way under China's 医保 + hospital settlement system; plus Chinese ASR, private deployment, and HIS integration.",
+     "zh": "近乎重做：美国保险/清算所理赔跟进流程在中国医保+医院结算体系下几乎无对应形态；还需中文ASR、私有化部署与对接HIS。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — billing-system structural mismatch. Worth noting only for the technique: a voice agent on a high-volume back-office workflow.",
+   "zh": "作为直接迁移：放弃——账单体系结构性不匹配。仅值得借鉴其打法：高频后台流程上的语音Agent。"
+  },
+  "china_version": {
+   "en": "Point the same voice-agent technique at a Chinese high-volume workflow that does exist at scale — e.g. hospital AR collections or 医保 reimbursement reconciliation — not US claims follow-up.",
+   "zh": "把同样的语音Agent能力指向中国真实高频的流程，如医院应收账款催收或医保报销对账，而非美式理赔跟进。"
+  }
+ },
+ "trellistech": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Ordinary SaaS for 民宿/short-term-rental ops; no structural barrier on the software itself, though guest-identity reporting (公安实名/住宿登记) and PIPL on guest data apply. Needs legal verification.",
+     "zh": "面向民宿/短租运营的普通SaaS，软件本身无结构性障碍，但涉及住宿实名/公安登记与个人信息保护法下的房客数据，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Funded local 民宿 PMS/automation players already own this: 智小窝 (tens-of-millions RMB Pre-A, 30~10000-unit landlords), 百居易 (RMB4M Pre-A), plus 订单来了/别样红/路客云 PMS at scale.",
+     "zh": "本土民宿PMS/自动化已有融资玩家占位：智小窝（数千万Pre-A，服务30~10000套房东）、百居易（400万Pre-A），及订单来了/别样红/路客云等规模化PMS。"
+    },
+    "sources": [
+     "https://36kr.com/p/1694350707320451",
+     "https://www.tripvivid.com/20450.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Target buyer (multi-unit property managers) exists, but they already run incumbent PMS; the Chinese sale is integration-heavy and price-sensitive, so an agent layer must plug into existing PMS rather than replace the stack.",
+     "zh": "目标买方（多房源管家）确实存在，但已在用本土PMS；中国销售重集成且价格敏感，Agent层须嵌入既有PMS而非替换整套系统。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Heavy: integrate Chinese OTAs (携程/美团/途家/小猪) not Airbnb/VRBO, Chinese-LLM guest messaging over 微信, WeChat/Alipay payments, cleaner/vendor dispatch on local labor apps, and 住宿登记 compliance.",
+     "zh": "改造量大：对接携程/美团/途家/小猪等本土OTA而非Airbnb/VRBO，用中文大模型经微信沟通房客，接微信/支付宝支付，保洁/供应商派单走本地用工平台，并满足住宿登记合规。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner/ignore as a direct copy — China's 民宿 SaaS lane is real but already funded and consolidating; the agent-ops angle is differentiated but must ride on incumbents.",
+   "zh": "作为直接照搬：合作/放弃——中国民宿SaaS市场真实但已融资并在整合；Agent化运营有差异但须依附既有玩家。"
+  },
+  "china_version": {
+   "en": "An agentic ops layer that sits on top of existing Chinese 民宿 PMS (订单来了/别样红), automating 微信 guest chat, OTA reviews, and cleaner dispatch rather than replacing the PMS.",
+   "zh": "做一层架在既有民宿PMS（订单来了/别样红）之上的Agent运营层，自动处理微信房客沟通、OTA评价与保洁派单，而非替换PMS。"
+  }
+ },
+ "manicule": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Ordinary content/marketing services — no structural barrier, though publishing technical content to Chinese platforms touches 内容审核 and an ICP for any hosted docs. Needs legal verification.",
+     "zh": "普通内容/营销服务，无结构性障碍；但向中国平台发布技术内容涉及内容审核，自托管文档需ICP备案，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "low",
+    "note": {
+     "en": "No funded local equivalent found for AI-native DevRel-as-a-service; in China DevRel is overwhelmingly in-house (企业自建团队) or generic dev-marketing agencies, not a productized outsourced offering (low confidence).",
+     "zh": "未找到AI原生'开发者关系外包'同类融资公司；中国的DevRel以企业自建团队或泛开发者营销代理为主，尚无产品化外包形态（置信度低）。"
+    },
+    "sources": [
+     "https://zhuanlan.zhihu.com/p/184850516"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Sales-led; the buyer is US/global dev-tool startups. China's dev-tool startup density is thinner and tends to build DevRel in-house, so the outsourced motion has a small native buyer pool.",
+     "zh": "销售驱动，买方是美国/全球开发者工具创业公司。中国开发者工具创业密度较低且倾向自建DevRel，外包打法的本土买方池小。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Distribution rather than product changes: publish on 掘金/CSDN/知乎/微信公众号/B站 instead of X/YouTube, Chinese-LLM technical writing, and GEO tuned for Chinese AI agents — the core service transfers.",
+     "zh": "主要是分发而非产品改造：在掘金/CSDN/知乎/公众号/B站而非X/YouTube发布，用中文大模型写技术内容，并针对中文AI代理做GEO——核心服务可迁移。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build for the global buyer, not China — the service is exportable but China's native buyer pool (outsourced DevRel) is thin; better to serve Chinese dev-tool firms going global than the domestic market.",
+   "zh": "面向全球买方而非中国——服务可外销，但中国本土买方池（外包DevRel）薄；更适合服务出海的中国开发者工具公司，而非内需市场。"
+  },
+  "china_version": {
+   "en": "An AI-native DevRel agency for Chinese dev-tool startups going global, owning docs + content distribution across both Chinese (掘金/CSDN) and Western channels.",
+   "zh": "为出海的中国开发者工具创业公司做AI原生DevRel代理，统一管理文档与内容分发，覆盖掘金/CSDN等中文渠道与西方渠道。"
+  }
+ },
+ "thomas": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "A virtual-human 'AI founder' that publicly runs companies would hit China's 深度合成/生成式AI labeling rules (AIGC must be marked) and real-name business-registration requirements — a legal-entity/agent can't be the registered operator. Needs legal verification.",
+     "zh": "公开经营公司的虚拟人'AI创始人'将触及中国深度合成/生成式AI标识规定（AIGC须标注）及企业实名登记要求——AI/代理不能作为登记经营主体，需法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "It's a one-off performance-art/holding-co concept, not a product category; 数字人 (virtual-human) studios are abundant and funded in China, but no direct 'autonomous AI founder' equivalent (low confidence).",
+     "zh": "这是一次性的行为艺术/控股公司概念，而非产品品类；中国数字人工作室众多且有融资，但无直接'自主AI创始人'同类（置信度低）。"
+    },
+    "sources": []
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "No defined buyer or motion — there's nothing to take to market; transferability of a GTM is moot.",
+     "zh": "无明确买方或打法——无可推向市场之物；GTM迁移性无从谈起。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Not a product to localize; any Chinese version would be a fresh 数字人 persona under domestic AIGC-labeling and platform rules, with little reused.",
+     "zh": "并非可本地化的产品；任何中国版本都是受国内AIGC标识与平台规则约束的全新数字人形象，几乎无可复用。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore — a novelty/brand experiment, not a transferable product; assessment is structurally N/A.",
+   "zh": "放弃——一个新奇/品牌实验而非可迁移产品；本质上不适用评估。"
+  },
+  "china_version": {
+   "en": "No meaningful repoint; the nearest Chinese analog is an AIGC-labeled 数字人 IP, which is a different (content) business entirely.",
+   "zh": "无实质性可迁移方向；最接近的中国类比是带AIGC标识的数字人IP，属于完全不同的（内容）生意。"
+  }
+ },
+ "tornyol": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "At 40g the drones are 微型 (<0.25kg) under the 无人驾驶航空器飞行管理暂行条例 — exempt from most airspace approval but still require real-name registration; indoor/private-property use is lighter. Pesticide/insecticide payloads add 农药/卫生杀虫 rules. Needs legal verification.",
+     "zh": "40克属《无人驾驶航空器飞行管理暂行条例》下的微型机（<0.25kg），多数空域审批豁免但仍须实名登记；室内/私域使用更宽松。若载药则叠加农药/卫生杀虫监管，需法律核实。"
+    },
+    "sources": [
+     "https://zhuanlan.zhihu.com/p/2001694853612987828",
+     "http://www.caac.gov.cn/XXGK/XXGK/ZCFBJD/202604/t20260421_230620.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Funded local players target the same job (low-cost urban mosquito killing): 常州光之矩 (laser mosquito-killing, raised several million RMB + ~US$2.5M crowdfund), and municipalities (广州白云/江门) already deploy spraying drones for 灭蚊 at scale — different mechanism, same buyer and value prop.",
+     "zh": "本土融资玩家瞄准同一需求（低成本城市灭蚊）：常州光之矩（激光灭蚊，已融数百万元+约250万美元众筹），广州白云/江门等市政已规模化部署喷洒无人机灭蚊——机制不同，但买方与价值主张相同。"
+    },
+    "sources": [
+     "https://www.chinanews.com.cn/sh/2026/05-30/10631458.shtml",
+     "https://news.dayoo.com/guangdong/202507/24/139996_54851880.htm"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "China's mosquito-control buyer is largely government 病媒生物防治/CDC and property managers — tender-driven public procurement; survives but means a B2G motion, not a consumer drop-in.",
+     "zh": "中国灭蚊的买方主要是政府病媒生物防治/疾控与物业——以招投标的政府采购为主；可成立，但意味着B2G打法而非消费级直供。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "med",
+    "note": {
+     "en": "Hardware is portable, but China-fit means manufacturing locally (cost advantage), real-name-registration integration, B2G/物业 packaging, and competing on a 病媒生物 procurement basis rather than consumer retail.",
+     "zh": "硬件本身可迁移，但中国化意味着本地制造（成本优势）、对接实名登记、面向B2G/物业打包，并以病媒生物采购口径而非消费零售去竞争。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner/ignore as a direct transfer — the mosquito-killing job is real and large in China but already has funded local hardware (光之矩) and municipal drone programs; entry would be a B2G hardware fight on the incumbents' home turf.",
+   "zh": "作为直接迁移：合作/放弃——灭蚊需求在中国真实且大，但已有本土融资硬件（光之矩）与市政无人机项目；进入将是在对手主场打B2G硬件战。"
+  },
+  "china_version": {
+   "en": "A locally-manufactured micro-drone sold into city 病媒生物防治 / CDC procurement and large property managers, integrated with real-name registration — not a consumer gadget.",
+   "zh": "做本地制造的微型无人机，卖给城市病媒生物防治/疾控采购与大型物业，并对接实名登记——而非消费级小玩意。"
+  }
+ },
+ "doomersion": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Short-video + education content faces a layered license/审核 regime: an app distributing curated educational video likely needs ICP and may trigger 网络出版/网络文化/信息网络传播视听节目 licensing, plus 内容审核 on every clip. Needs legal verification.",
+     "zh": "短视频+教育内容面临多重牌照/审核体系：分发精选教育视频的App通常需ICP，并可能触发网络出版/网络文化/信息网络传播视听节目许可，且每条视频须内容审核，需法律核实。"
+    },
+    "sources": [
+     "https://zhuanlan.zhihu.com/p/462709190",
+     "https://www.zhonglun.com/research/articles/8885.html"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "A near-identical funded local product exists: BlaBla — short-video English learning with 18 difficulty levels, level-matched video feed, speed/subtitle controls, and AI-chat with creators — i.e. doomersion's exact mechanic already shipped in China.",
+     "zh": "存在近乎相同的本土产品：BlaBla——短视频学英语，18级难度、按水平推送的视频流、倍速/字幕控制、与Up主AI聊天——即doomersion的核心机制已在中国落地。"
+    },
+    "sources": [
+     "https://www.jiemodui.com/N/119002.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "Consumer app-store/social distribution exists, but China's standalone short-video-learning apps fight 抖音/快手/B站 for the same scroll time and a local clone (BlaBla) already owns the wedge; organic acquisition is hard.",
+     "zh": "消费级应用商店/社交分发可行，但中国独立的短视频学习App要与抖音/快手/B站争夺同一刷屏时间，且本土同类（BlaBla）已占住切口，自然获客困难。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Heavy: source compliant short-video content (can't ingest TikTok in China), build a reviewed content library, Chinese-LLM level-matching/ASR, Android-superapp distribution (微信/抖音 mini-programs), and a content-licensing posture.",
+     "zh": "改造量大：需获取合规短视频内容（中国无法接入TikTok）、搭建经审核的内容库、用中文大模型做水平匹配/ASR、走安卓超级App分发（微信/抖音小程序），并建立内容版权合规架构。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — a funded local clone (BlaBla) already owns the exact mechanic and the content-license regime is heavy; the idea validated in China, just not by this company.",
+   "zh": "作为直接迁移：放弃——本土已有融资同类（BlaBla）占住完全相同的机制，且内容牌照体系沉重；这个点子在中国已被验证，只是不属于这家公司。"
+  },
+  "china_version": {
+   "en": "If anything, a 双语/小语种 (e.g. Chinese-learners or Japanese/Korean) level-matched short-video feed delivered as a 抖音/微信 mini-program with a licensed, reviewed content library.",
+   "zh": "若要做，应是面向学中文者或小语种（日/韩）的按水平匹配短视频流，以抖音/微信小程序形态交付，并配持牌、经审核的内容库。"
+  }
+ },
+ "hypercubic": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "No direct legal bar to mainframe-modernization tooling, but core banking sits under 信创 (secure/localized IT) procurement and data-sensitivity rules; a US vendor touching a Chinese bank's core code needs legal/security verification.",
+     "zh": "对主机现代化工具本身无直接法律禁令，但银行核心系统受信创（自主可控）采购与数据敏感性规则约束；美国厂商接触中资银行核心代码需法律与安全核实。"
+    },
+    "sources": [
+     "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "CLPS Incorporation already ships AI-driven COBOL-to-Java core-banking migration, and EltegraAI works the same space; not yet an agentic 'understand-and-rebuild' equivalent, but a funded local-adjacent player exists (med confidence).",
+     "zh": "CLPS（华钦科技）已推出AI驱动的COBOL转Java核心银行迁移方案，EltegraAI亦在同一领域；尚无与其代理式『理解并重建』完全对等者，但已有相邻的融资玩家（中等置信度）。"
+    },
+    "sources": [
+     "https://www.prnewswire.com/news-releases/clps-incorporation-announces-ai-driven-cobol-to-java-migration-solution-to-accelerate-core-banking-modernization-302712319.html"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers are banks/insurers/SOEs procuring via tender with relationship-led sales, 私有化 deployment, and a 信创 domestic-vendor preference — the lighter US sales motion does not survive, and a foreign vendor faces a trust ceiling on core systems.",
+     "zh": "买方为银行、保险、国企，走招投标、关系驱动、私有化部署且偏好信创国产厂商——美式较轻的打法难以为继，外资厂商在核心系统上面临信任天花板。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild for the China context: on-prem/私有化, 信创-compliant stack, a domestic delivery entity, and Chinese-language operational knowledge — the engine transfers, the go-to-market and compliance shell do not.",
+     "zh": "面向中国场景近乎重做：私有化部署、信创合规技术栈、本土交付主体、中文运维知识——技术内核可迁移，落地与合规外壳不可。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Partner/ignore as a direct transfer — the COBOL-mainframe pain is real in Chinese banks, but 信创 procurement plus a domestic incumbent (CLPS) mean a foreign vendor can at best partner/license the engine to a local SI, not sell directly.",
+   "zh": "作为直接迁移：合作或放弃——中资银行的COBOL主机痛点真实存在，但信创采购加本土玩家（CLPS）意味着外资厂商至多把内核授权给本地集成商合作，而非直接销售。"
+  },
+  "china_version": {
+   "en": "License the COBOL-understanding engine to a 信创-qualified domestic SI (e.g. a CLPS-type or a bank's own subsidiary) that delivers on-prem to SOE banks, rather than selling the SaaS directly.",
+   "zh": "把COBOL理解引擎授权给具备信创资质的本土集成商（如CLPS型企业或银行系子公司），由其向国企银行做私有化交付，而非直接售卖SaaS。"
+  }
+ },
+ "brickanta": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "No specific legal bar, but public-resource bidding (公共资源交易) for SOE/government construction is a regulated, platform-mediated process; an AI tender/procurement tool plugs into that regime and needs verification, not a license per se.",
+     "zh": "无特定法律禁令，但国企与政府工程的公共资源交易是受监管、平台中介化的流程；AI招投标/采购工具需接入该体系并核实合规，而非取得某项牌照。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Glodon (广联达) already owns this: its AecGPT + AI清标/AI document-drafting cover bidding, procurement, document review and risk early-warning, deployed across provincial public-resource trading — a funded, dominant local incumbent.",
+     "zh": "广联达已占据此位：其AecGPT与AI清标、AI标书生成覆盖招投标、采购、清标与风险预警，并已在多省公共资源交易落地——是融资充足且主导的本土在位者。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/stock/relnews/cn/2025-07-30/doc-infifrav3838949.shtml"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers are contractors/SOEs/government bound to designated public-resource trading platforms and tender-led, relationship-heavy procurement — a self-serve $0–enterprise SaaS motion mismatches the market structure.",
+     "zh": "买方为承包商、国企、政府，受指定公共资源交易平台与招投标、关系驱动采购约束——自助式从免费到企业版的SaaS打法与市场结构不匹配。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: Chinese tender templates/标书 formats and 清单计价 norms, integration with provincial 公共资源交易 platforms and 广联达-style cost stacks, Chinese LLM, and on-prem for SOE data.",
+     "zh": "近乎重做：中式标书模板与清单计价规范、对接各省公共资源交易平台与广联达式造价工具、中文大模型，以及面向国企数据的私有化部署。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — Glodon already owns construction AI for bidding/procurement with provincial deployments and platform lock-in; the field is taken.",
+   "zh": "作为直接迁移：放弃——广联达已占据建筑业招投标/采购AI，并具备多省落地与平台锁定，赛道已被占。"
+  },
+  "china_version": {
+   "en": "Not a standalone play; the only realistic repoint is a niche layer (e.g. multilingual risk-analysis for Chinese contractors' overseas/BRI projects) sitting beside, not against, the Glodon ecosystem.",
+   "zh": "难以独立成立；唯一现实的转向是做细分层（如为中资承包商海外/一带一路项目提供多语种风险分析），依附而非对抗广联达生态。"
+  }
+ },
+ "bolna-ai": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Outbound voice automation falls under 实名制 (real-name), anti-harassment-call rules and PIPL for call data; operable but needs compliance with telemarketing-call and personal-information rules — legal verification required, not an outright bar.",
+     "zh": "外呼自动化受实名制、骚扰电话治理规则及《个人信息保护法》对通话数据的约束；可运营但需符合电销外呼与个人信息规则——需法律核实，并非完全禁止。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Dense funded local field for 智能外呼: 思必驰/AISpeech, 容联, 百应, plus 讯飞/百度 — Chinese-language voice agents for sales/support/collections are already owned by multiple capitalized players.",
+     "zh": "智能外呼本土赛道融资密集：思必驰、容联、百应，加上讯飞/百度——面向销售/客服/催收的中文语音Agent已被多家有资本支持的厂商占据。"
+    },
+    "sources": [
+     "https://blog.csdn.net/wyysqy/article/details/150382995",
+     "https://www.aispeech.com/"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "The enterprise call-automation buyer and usage-based motion translate, but Bolna is purpose-built for Indian enterprises; in China it meets entrenched local vendors with existing channel and pricing.",
+     "zh": "企业呼叫自动化买方与按量计费打法可迁移，但Bolna专为印度企业打造；进入中国即面对根基深厚、已有渠道与定价的本土厂商。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total swap: its core asset is Indian-language/accent ASR-TTS; China requires Mandarin + dialect models, Chinese LLM, real-name/anti-spam compliance, and integration with local telco and CRM — little of the India build carries over.",
+     "zh": "近乎全部替换：其核心资产是印度语言/口音的ASR-TTS；中国需普通话与方言模型、中文大模型、实名与防骚扰合规，以及对接本地运营商与CRM——印度版几乎无可复用。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — China's 智能外呼 market is crowded with funded local incumbents and Bolna's India-language moat does not carry; only the orchestration technique is borrowable.",
+   "zh": "作为直接迁移：放弃——中国智能外呼市场已被本土融资玩家挤满，Bolna的印度语言护城河无法迁移；唯有其编排打法可借鉴。"
+  },
+  "china_version": {
+   "en": "There is no clean repoint; the Bolna pattern in China is simply one of the existing Mandarin voice-orchestration vendors (思必驰/容联/百应), so build only if you bring a distinct vertical (e.g. cross-border outbound for Chinese exporters).",
+   "zh": "没有干净的转向；Bolna模式在中国即是现有的普通话语音编排厂商（思必驰/容联/百应），仅当带来独特垂直场景（如中国出口商的跨境外呼）时才值得做。"
+  }
+ },
+ "uplane": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Operable under 广告法 (Advertising Law) plus each platform's ad-policy and the rules on auto-generated creative; compliance burden but no structural bar — needs legal verification on claims/creative review.",
+     "zh": "可在《广告法》及各平台广告政策、AI生成创意规则下运营；有合规负担但无结构性障碍——需就广告用语与创意审核做法律核实。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "The autonomous-ad-spend layer is already owned: 巨量引擎's UBMax ('ByteDance's PMax') and 腾讯广告3.0 fully automate budget/creative, and funded third parties like 引力引擎 serve mid-tier advertisers.",
+     "zh": "自动化广告投放层已被占据：巨量引擎UBMax（『字节版PMax』）与腾讯广告3.0已全自动化预算与创意，引力引擎等融资第三方服务中腰部广告主。"
+    },
+    "sources": [
+     "https://news.qq.com/rain/a/20250402A03Z6R00"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "SMB self-serve marketing and enterprise ROAS buyers exist in China, but the platforms' own AI投放 tools are free/native, compressing the willingness to pay a third-party agency-replacement layer.",
+     "zh": "中国存在中小企业自助营销与企业ROAS买方，但平台自带的AI投放工具免费且原生，压缩了为第三方『替代代理商』层付费的意愿。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: swap Meta/Google/LinkedIn for 巨量/腾讯广告/小红书, CRM/ERP integrations to 用友/金蝶/有赞, Chinese LLM for copy/landing pages, and conform to each platform's closed ad API.",
+     "zh": "近乎重做：把Meta/Google/LinkedIn换成巨量/腾讯广告/小红书，CRM/ERP对接用友/金蝶/有赞，用中文大模型生成文案与落地页，并适配各平台封闭的广告API。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — the ad platforms themselves (UBMax, 腾讯广告3.0) already deliver autonomous cross-channel spend, and the channel stack is a total swap; only a multi-platform orchestration niche above closed APIs is open.",
+   "zh": "作为直接迁移：放弃——广告平台自身（UBMax、腾讯广告3.0）已提供自动化跨渠道投放，且渠道栈需整体替换；仅在封闭API之上的多平台编排细分尚有空间。"
+  },
+  "china_version": {
+   "en": "Reposition as a cross-platform orchestration + creative layer that unifies 巨量/腾讯广告/小红书 spend for mid-market brands, since each platform's PMax-equivalent only optimizes within its own walled garden.",
+   "zh": "转向做跨平台编排与创意层，为中腰部品牌统一巨量/腾讯广告/小红书的投放，因为各平台的PMax式工具只在自家围墙花园内优化。"
+  }
+ },
+ "didit": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "low",
+    "note": {
+     "en": "Genuine hard barrier: KYC/KYB/AML/biometrics in China runs under PIPL + the 数据出境 four-path regime + state-linked real-name/反洗钱 systems; a foreign API ingesting Chinese identity data faces data-residency and cross-border restrictions — needs legal verification but the structural barrier is real.",
+     "zh": "真实的硬性障碍：中国的KYC/KYB/AML/生物识别受《个人信息保护法》、数据出境四条路径及国家关联的实名/反洗钱体系约束；外资API采集中国身份数据面临数据本地化与跨境限制——需法律核实，但结构性障碍真实存在。"
+    },
+    "sources": [
+     "https://didit.me/zh/blog/identity-verification-kyc-and-aml-compliance-in-china/",
+     "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "Domestic risk/identity infra is owned by funded local players — 同盾科技 (Tongdun) and 数美 (Shumei) on fraud/风控, plus 阿里/腾讯 real-name and 公安/三要素核验 channels — a foreign one-API entrant has no opening.",
+     "zh": "本土风控/身份基础设施由融资本土玩家把持——同盾科技与数美在反欺诈/风控，加上阿里/腾讯实名与公安三要素核验通道——外资单一API入局者毫无空间。"
+    },
+    "sources": [
+     "https://didit.me/zh/blog/identity-verification-kyc-and-aml-compliance-in-china/"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Buyers (banks, fintech, crypto) are heavily licensed and must use compliant domestic data sources; crypto KYC in particular is moot given China's crypto-trading ban — the self-serve pay-as-you-go developer motion does not fit.",
+     "zh": "买方（银行、金融科技、加密）受严格牌照管理，须使用合规的境内数据源；加密KYC尤因中国对加密交易的禁令而无意义——自助按量付费的开发者打法不适用。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-total rebuild: data must originate and stay onshore from 公安/银联/运营商 sources, Chinese-document/NFC and 三/四要素 verification, audit-image retention rules — Didit's 1,000-source global graph does not transfer.",
+     "zh": "近乎全部重做：数据须源自公安/银联/运营商并境内留存，支持中文证件/NFC与三/四要素核验、留存比对图像的审计规则——Didit的千源全球数据图谱无法迁移。"
+    },
+    "sources": [
+     "https://didit.me/zh/blog/identity-verification-kyc-and-aml-compliance-in-china/"
+    ]
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore for the domestic China market — data-residency + AML/real-name licensing + funded incumbents (同盾/数美) make a foreign KYC API a non-starter; only outbound use (verifying foreigners for Chinese platforms going global) is conceivable.",
+   "zh": "面向中国境内市场：放弃——数据本地化加反洗钱/实名牌照加本土玩家（同盾/数美）使外资KYC API无从切入；唯有出海场景（为中国平台核验海外用户）尚可设想。"
+  },
+  "china_version": {
+   "en": "The only viable repoint is the inverse: sell Didit's global identity coverage to Chinese platforms going overseas to verify their non-Chinese users, never to verify Chinese nationals onshore.",
+   "zh": "唯一可行的转向是反向：把Didit的全球身份覆盖卖给出海的中国平台，用于核验其海外非中国籍用户，而绝不在境内核验中国公民。"
+  }
+ },
+ "sellraze": {
+  "assessed_at": "2026-06-14",
+  "transferability": "low",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "No structural bar; standard e-commerce/secondhand rules (real-name seller verification, 电子商务法, recycling/电子产品 rules for 3C) apply — compliance burden, not a license barrier.",
+     "zh": "无结构性障碍；适用一般电商/二手规则（卖家实名、《电子商务法》、3C电子产品回收规则）——属合规负担，而非牌照障碍。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "high",
+    "note": {
+     "en": "The camera-to-listing function is already shipped by the platforms: 闲鱼's AI相机 + AI估价/智能发布 auto-generates descriptions and prices, and 转转 owns AI验货/估价 on 3C — Alibaba/转转 own both the tool and the demand.",
+     "zh": "拍照成单的功能平台已上线：闲鱼AI相机+AI估价/智能发布可自动生成描述与定价，转转在3C占据AI验货/估价——阿里/转转同时掌握工具与需求。"
+    },
+    "sources": [
+     "https://finance.sina.com.cn/wm/2026-03-08/doc-inhqhpym0695600.shtml"
+    ]
+   },
+   "gtm_fit": {
+    "score": "low",
+    "note": {
+     "en": "Cross-listing has little value in a market where 闲鱼 and 转转 hold near-duopoly liquidity; sellers go where buyers are, and an independent listing tool cannot supply the demand side.",
+     "zh": "在闲鱼与转转近乎双寡头流动性的市场中，跨平台上架价值有限；卖家随买家而动，独立上架工具无法提供需求端。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild: marketplaces swap to 闲鱼/转转/爱回收, Chinese visual-recognition/pricing models, WeChat/Alipay flows and logistics — and the core liquidity it would resell into is gated inside the incumbents' apps.",
+     "zh": "近乎重做：市场切换为闲鱼/转转/爱回收，需中文视觉识别/定价模型、微信/支付宝支付与物流——且其赖以转售的核心流动性封闭在在位者App内。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Ignore as a direct transfer — 闲鱼/转转 already ship the exact camera-to-listing AI and own the liquidity; a standalone cross-lister has no demand-side to plug into.",
+   "zh": "作为直接迁移：放弃——闲鱼/转转已上线完全相同的拍照成单AI并掌握流动性；独立的跨平台上架工具没有可接入的需求端。"
+  },
+  "china_version": {
+   "en": "The closest viable shape is a managed-reselling/寄卖 service for high-value 3C that handles inspection + listing on top of 转转/闲鱼, competing on trust and fulfillment, not on the AI listing feature itself.",
+   "zh": "最接近的可行形态是面向高价值3C的代卖/寄卖服务，在转转/闲鱼之上承担验货与上架，以信任与履约竞争，而非以AI上架功能本身竞争。"
+  }
+ },
+ "corvera": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "Mostly ordinary data-platform operation domestically; the watch-point is 数据出境 if it routes brand data through US LLMs/clouds, and 数据安全法 on commercial data — needs verification but no structural bar to a CPG data layer.",
+     "zh": "境内基本属普通数据平台运营；需关注的是若经美国大模型/云路由品牌数据则涉数据出境，以及《数据安全法》对商业数据的约束——需核实，但对CPG数据层无结构性障碍。"
+    },
+    "sources": [
+     "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+    ]
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "Pieces are owned — 阿里 品牌数据银行 and 数据中台 vendors (e.g. 数澜科技) hold brand-data unification — but an MCP-style 'make unified data legible to any AI tool' layer is genuinely newer; platform could extend, no direct funded equivalent found (med confidence).",
+     "zh": "部分能力已被占据——阿里品牌数据银行与数据中台厂商（如数澜科技）掌握品牌数据统一——但MCP式『让统一数据对任意AI工具可读』的层确属较新；平台可延伸，未找到直接对等的融资公司（中等置信度）。"
+    },
+    "sources": [
+     "https://transcosmos-cn.com/article.php?id=180",
+     "https://www.dtwave.com/"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "$100M+ omnichannel CPG brands buying a data middle-platform is a real Chinese motion (品牌数据中台 is an established budget line), but it skews toward SI-led integration and 私有化 rather than pure plug-and-play self-serve.",
+     "zh": "亿元级全渠道CPG品牌采购数据中台是真实的中国打法（品牌数据中台是成熟预算项），但更偏向集成商主导与私有化，而非纯即插即用的自助。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Heavy: connectors swap to Tmall/抖音电商/京东/小红书 and 用友/旺旺/有赞 instead of US retail stacks, a domestic-hosted MCP/AI tool path (Claude/ChatGPT are restricted), and Chinese-LLM substitution.",
+     "zh": "改动大：连接器换成天猫/抖音电商/京东/小红书与用友/旺店通/有赞，而非美式零售栈；需境内托管的MCP/AI工具路径（Claude/ChatGPT受限）并替换为中文大模型。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Copy/build with caution — the 'unified CPG data legible to AI' wedge is genuinely open in China and the buyer exists, but Alibaba's data-bank gravity and a near-total connector rebuild make it an SI-flavored, locally-founded play, not a transfer.",
+   "zh": "谨慎复制/自建——『让CPG统一数据对AI可读』的切口在中国确有空间且买方存在，但阿里数据银行的引力与近乎全套的连接器重建，使其成为偏集成、本土创立的打法，而非直接迁移。"
+  },
+  "china_version": {
+   "en": "A China-hosted CPG context/data layer that unifies Tmall/抖音电商/京东/小红书 + 用友/有赞 data and exposes it to domestic AI tools (通义/Kimi/DeepSeek) via MCP, sold to $100M+ omnichannel brands.",
+   "zh": "一个境内托管的CPG上下文/数据层，统一天猫/抖音电商/京东/小红书与用友/有赞数据，并通过MCP暴露给国内AI工具（通义/Kimi/DeepSeek），面向亿元级全渠道品牌销售。"
+  }
+ },
+ "light-anchor": {
+  "assessed_at": "2026-06-14",
+  "transferability": "med",
+  "components": {
+   "regulatory": {
+    "score": "med",
+    "note": {
+     "en": "As a brand operator (not SaaS), ordinary e-commerce/advertising/product-compliance rules apply (电子商务法, 广告法, category licensing for cosmetics/food); AI-generated marketing content has labeling rules — burden, not a structural bar.",
+     "zh": "作为品牌运营方（非SaaS），适用一般电商/广告/产品合规规则（《电子商务法》《广告法》、化妆品/食品等品类许可）；AI生成营销内容有标注要求——属负担而非结构性障碍。"
+    },
+    "sources": []
+   },
+   "incumbent_risk": {
+    "score": "med",
+    "note": {
+     "en": "No funded 'fully AI-run brand portfolio' operator found in China (low-med confidence); many DTC/出海 service providers and MCN-style brand incubators exist, but not this compute-capped, agent-run model specifically.",
+     "zh": "在中国未找到融资的『全AI运营品牌矩阵』运营方（中低置信度）；存在大量DTC/出海服务商与MCN式品牌孵化器，但没有专做这种以算力为上限、Agent运营的模式者。"
+    },
+    "sources": [
+     "https://www.brandstar.com.cn/news/4348"
+    ]
+   },
+   "gtm_fit": {
+    "score": "med",
+    "note": {
+     "en": "It sells products to consumers, so the 'enterprise SaaS WTP' problem doesn't apply; China's 抖音电商/直播 brand-building is fast and AI-assisted, which fits — but consumer attention is platform-gated and content-heavy.",
+     "zh": "它向消费者卖产品，故『企业SaaS付费意愿低』问题不适用；中国抖音电商/直播的品牌打造快且已AI辅助，较契合——但消费者注意力受平台把控且内容密集。"
+    },
+    "sources": []
+   },
+   "localization_delta": {
+    "score": "high",
+    "note": {
+     "en": "Near-rebuild of the operating stack: storefronts on 抖音电商/天猫/微信小程序 not Shopify, Chinese content/直播 generation, 微信/支付宝 payments, domestic logistics and supply chain, and Chinese-LLM agents.",
+     "zh": "运营栈近乎重做：店铺落在抖音电商/天猫/微信小程序而非Shopify，中文内容/直播生成，微信/支付宝支付，本土物流与供应链，以及中文大模型Agent。"
+    },
+    "sources": []
+   }
+  },
+  "market_size_estimate": {
+   "value": "",
+   "basis": "",
+   "confidence": "low",
+   "estimated": true
+  },
+  "verdict": {
+   "en": "Build/copy — the AI-run-brand-portfolio model has no funded Chinese owner yet and the consumer-sale GTM dodges the SaaS-WTP trap, but it is a from-scratch local build (中文 content engine + 抖音电商 + domestic supply chain), not a transfer of the US entity.",
+   "zh": "自建/复制——全AI运营品牌矩阵模式在中国尚无融资占位者，且面向消费者的卖货打法避开了SaaS付费意愿陷阱，但它是一次本土从零搭建（中文内容引擎+抖音电商+本土供应链），而非美国主体的迁移。"
+  },
+  "china_version": {
+   "en": "An agent-run portfolio of 抖音电商/天猫 native brands where AI handles 选品/content/直播话术/客服/补货 on a domestic supply chain, capped by compute not headcount — a fresh local company, not Light Anchor expanded.",
+   "zh": "一个以Agent运营的抖音电商/天猫原生品牌矩阵，由AI在本土供应链上处理选品、内容、直播话术、客服与补货，以算力而非人头为上限——一家全新的本土公司，而非Light Anchor的扩张。"
+  }
+ }
+}
