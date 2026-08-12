@@ -2689,5 +2689,2243 @@
     "changed": []
    }
   }
+ },
+ {
+  "run_at": "2026-08-12T11:11:49+00:00",
+  "initial": false,
+  "batches": {
+   "fall-2025": {
+    "display": "Fall 2025",
+    "source": "algolia",
+    "total": 146,
+    "added": [
+     {
+      "slug": "axial",
+      "name": "Axial",
+      "one_liner": "Accelerated Physics Kernels for Computational Engineering"
+     },
+     {
+      "slug": "clerked",
+      "name": "Clerked",
+      "one_liner": "AI clerks that automate your payables"
+     },
+     {
+      "slug": "clicks-health",
+      "name": "Clicks Health",
+      "one_liner": "AI agents for your healthcare back-office operations."
+     },
+     {
+      "slug": "layers",
+      "name": "Layers",
+      "one_liner": "A 30 min appointment to measure everything in your body"
+     }
+    ],
+    "removed": [
+     {
+      "slug": "clicks",
+      "name": "Clicks"
+     },
+     {
+      "slug": "mod-ai",
+      "name": "Mod AI"
+     },
+     {
+      "slug": "nerviom",
+      "name": "Nerviom"
+     },
+     {
+      "slug": "sunflower",
+      "name": "Sunflower"
+     },
+     {
+      "slug": "telemetron-ai",
+      "name": "Telemetron"
+     },
+     {
+      "slug": "tensr",
+      "name": "Tensr"
+     }
+    ],
+    "changed": [
+     {
+      "slug": "absurd",
+      "name": "Absurd",
+      "field": "long_description",
+      "old": "Absurd makes AI brand and performance ads at scale. Our last video for Kalshi (\"Election Day\") did 1M+ views, and our videos average 400K+ organic views.\r\n\r\nCompanies like Hims, Kalshi, Replit, and Brex use Absurd to create production-quality videos in 72 hours.\r\n\r\nTry it at absurd.com",
+      "new": "Absurd makes AI brand and performance ads at scale. Our last video for Kalshi (\"Election Day\") did 1M+ views, and our videos average 400K+ organic views.\r\n\r\nTry it at absurd.com"
+     },
+     {
+      "slug": "allus-ai",
+      "name": "Allus AI",
+      "field": "team_size",
+      "old": 3,
+      "new": 6
+     },
+     {
+      "slug": "amera",
+      "name": "Amera",
+      "field": "team_size",
+      "old": 8,
+      "new": 12
+     },
+     {
+      "slug": "aside",
+      "name": "Aside",
+      "field": "long_description",
+      "old": "Aside is an AI browser that completes real work across the websites you already use. It can sign in through your browser, work inside email, dashboards, internal tools, docs, and spreadsheets, and keep going when a task takes minutes or hours.\r\n\r\nUnlike agents that depend on integrations, Aside uses the web the way you do. Browsing history becomes local memory, so it knows which tools and context matter. Its password manager lets agents autofill credentials without exposing secrets to the AI. Sensitive actions like payments, posts, and messages wait for your approval.\r\n\r\nAside is built as a fast daily browser plus a state-of-the-art browser agent. It ranks #1 on Online-Mind2Web, BU-Bench-V1, and Odysseys, and runs local-first with device-protected memory and data.",
+      "new": "Aside is an AI browser that completes real work across the websites you already use. It can sign in through your browser, work inside email, dashboards, internal tools, docs, and spreadsheets, and keep going when a task takes minutes or hours.\r\n\r\nUnlike agents that depend on integrations, Aside uses the web the way you do. Browsing history becomes local memory, so it knows which tools and context matter. Its password manager lets agents autofill credentials without exposing secrets to the AI. Sensitive actions like payments, posts, and messages wait for your approval.\r\n\r\nWe achieved state-of-the-art on agentic browsing benchmarks, surpassing OpenAI and Anthropic's result- Aside ranked #1 across Mind2Web, Odyssey, bu-bench-v1."
+     },
+     {
+      "slug": "aside",
+      "name": "Aside",
+      "field": "team_size",
+      "old": 3,
+      "new": 5
+     },
+     {
+      "slug": "aspect-inc",
+      "name": "Aspect",
+      "field": "long_description",
+      "old": "Aspect helps creative teams consolidate 5 media tools into one platform. We provide everything a media team needs: file ingest, local file streaming, review and approval, sharing, and archiving. \r\n\r\nAspect workspaces come with an agent that has complete understanding of your asset library including comments and revisions. Ask the agent to complete any task in the background: searching for files, setting up folder structures, labeling and organizing footage, and much more.\r\n\r\nCheck out aspect.inc/use-cases to see how different media teams use Aspect to deliver content faster.",
+      "new": "Aspect helps creative teams consolidate 5 media tools into one platform. We provide everything a media team needs: file ingest, local file streaming, review and approval, sharing, and archiving. \r\n\r\nAspect workspaces come with an agent that has complete understanding of your asset library including comments and revisions. Ask the agent to complete any task in the background: searching for files, setting up folder structures, labeling and organizing footage, and much more.\r\n\r\nCheck out https://aspect.inc/use-cases to see how different media teams use Aspect to deliver content faster."
+     },
+     {
+      "slug": "bron",
+      "name": "Bron",
+      "field": "one_liner",
+      "old": "ChatGPT for Sports Betting",
+      "new": "TikTok for Sports Trading"
+     },
+     {
+      "slug": "bron",
+      "name": "Bron",
+      "field": "long_description",
+      "old": "Bron is the ChatGPT for sports betting. Find +EV bets across 150+ sportsbooks and prediction markets, build parlays automatically, and surface the best bets of the day — in seconds.\r\n\r\nDownload Bron on the App Store here: https://apps.apple.com/us/app/bron-ai-sports-analysis/id6761323087",
+      "new": "Bron is the Tiktok for sports betting. Scroll through recommended bets across 150+ sportsbooks and prediction markets and place them automatically.\r\n\r\nDownload Bron on the App Store here: https://apps.apple.com/us/app/bron-ai-sports-analysis/id6761323087"
+     },
+     {
+      "slug": "daridev",
+      "name": "dari.dev",
+      "field": "one_liner",
+      "old": "The Production Layer for AI Agents",
+      "new": "The Routing Layer for AI Agents"
+     },
+     {
+      "slug": "daridev",
+      "name": "dari.dev",
+      "field": "long_description",
+      "old": "We let developers deploy AI agents as API endpoints with built-in tools, sandboxes, and durable execution.\r\n\r\nAgents maintain state, run long-lived workflows, and handle retries automatically.",
+      "new": "We let developers run more agents while keeping your token bill low. We train custom models to determine how we can maintain performance while reducing your token bill. \r\n\r\nIntegrate into your own apps, or use our router with Claude Code, Codex, or any agent of your choice. "
+     },
+     {
+      "slug": "fernstone",
+      "name": "Fernstone",
+      "field": "long_description",
+      "old": "Fernstone is an AI-native insurance brokerage: we combine AI with licensed brokers to obtain complex insurance faster, and at better terms. Today, we manage risk for 100+ businesses in construction, security, and the trades. ",
+      "new": "Fernstone is an AI-native insurance brokerage: we combine AI with licensed brokers to obtain complex insurance faster, and at better terms. Today, we manage risk for 300+ businesses in construction, security, and the trades. "
+     },
+     {
+      "slug": "helonic",
+      "name": "Helonic",
+      "field": "long_description",
+      "old": "We help construction teams eliminate rework, delays, and drawing confusion before construction starts. We analyze PDF plans, detect clashes and inconsistencies across disciplines, and create draft RFIs so teams can resolve issues early.\r\n\r\nThis saves construction companies hundreds of hours and millions of dollars.\r\n\r\nWhat we do:\r\n- Automatically detect clashes, missing information, and drawing mismatches\r\n- Align architectural, structural, and MEP plans so everything matches across sheets\r\n- Generate draft RFIs from issues we find\r\n- Replace long page-turn meetings with instant drawing analysis\r\n- Reduce rework and prevent schedule delays before boots hit the ground\r\n\r\nWe integrate with: Procore, Autodesk, email, and the tools teams already use\r\n\r\nTeams use us to:\r\n- Save hundreds of thousands to millions of dollars per project\r\n- Catch design and coordination issues early\r\n- Reduce RFIs and prevent field fixes\r\n- Keep projects on schedule with fewer surprises\r\n\r\nContact us at founders@usearticulate.com",
+      "new": "We help construction teams eliminate rework, delays, and drawing confusion before construction starts. We analyze PDF plans, detect clashes and inconsistencies across disciplines, and create draft RFIs so teams can resolve issues early.\r\n\r\nThis saves construction companies hundreds of hours and millions of dollars.\r\n\r\nWhat we do:\r\n- Automatically detect clashes, missing information, and drawing mismatches\r\n- Align architectural, structural, and MEP plans so everything matches across sheets\r\n- Generate draft RFIs from issues we find\r\n- Replace long page-turn meetings with instant drawing analysis\r\n- Reduce rework and prevent schedule delays before boots hit the ground\r\n\r\nWe integrate with: Procore, Autodesk, email, and the tools teams already use\r\n\r\nTeams use us to:\r\n- Save hundreds of thousands to millions of dollars per project\r\n- Catch design and coordination issues early\r\n- Reduce RFIs and prevent field fixes\r\n- Keep projects on schedule with fewer surprises\r\n\r\nContact us at founders@helonic.com"
+     },
+     {
+      "slug": "lapis",
+      "name": "Lapis",
+      "field": "long_description",
+      "old": "Lapis gives businesses the ability to run end-end ads on AI platforms, starting with ChatGPT Ads. With Lapis, businesses can rapidly iterate on ad copies and A/B test at scale without being bottlenecked by design and creative capacity.\r\n\r\nLapis can also be used on traditional ad platforms like Google and Meta, where marketers can use Lapis to generate ad creatives, headlines, and get feedback on what ads actually work.\r\n\r\nLapis is used by 1,000+ marketing teams, from big businesses like Hyundai and Tata to small businesses around the world, and supports 15+ languages including English, Spanish, and Italian.",
+      "new": "Lapis builds, launches, and scales paid ad campaigns for DTC and SaaS businesses.\r\n\r\nLapis agents handle every step of the paid ads journey: writing ad copy (headlines and descriptions), generating the static images used in ads, deploying campaigns across paid channels, creating a custom landing page for each ad, and feeding real user interaction data back into a self-improving ads engine that gets better every day.\r\n\r\nWith Lapis, businesses can rapidly iterate on ads and A/B test at scale, free from the human design and creative bottlenecks that slow teams down. Using Lapis, companies can quantitatively improve their paid ads performance by up to 20x.\r\n\r\nLapis is used by 1,500+ marketing teams and 30+ enterprises, from Fortune 500 businesses to fast growing DTC businesses, and supports 10 languages including English, Spanish, and Italian."
+     },
+     {
+      "slug": "leadbay",
+      "name": "Leadbay",
+      "field": "one_liner",
+      "old": "Qualify millions of Data-Signal-Scarce leads that couldn't be found…",
+      "new": "Qualified leads for agentic workflows."
+     },
+     {
+      "slug": "leadbay",
+      "name": "Leadbay",
+      "field": "long_description",
+      "old": "Leadbay qualifies millions of Data-Signal-Scarce leads that couldn't be found before.\r\n\r\nTeams at L'Oréal, Saint-Gobain, Gerflor USA, Corgi, and Nespresso B2B have 3x'd their addressable market and 10x'd what they defined as \"qualified leads\". Talking to our customers, we used to hear, \"10 minutes on Leadbay beats 6 months with Clay and a GTM agency.\"\r\n\r\nCo-founders are Milan Stankovic (CTO) - PhD to make AI work with limited data, and Ludovic Granger (CEO). \r\n\r\nCreate an account.\r\nA new market is yours.\r\nleadbay.ai.",
+      "new": "Leadbay qualifies leads for agentic workflows.\r\n\r\nTeams at L'Oréal, Saint-Gobain, Gerflor USA, Corgi, and Nespresso B2B have 3x'd their addressable market and 10x'd what they defined as \"qualified leads\". Talking to our customers, we used to hear, \"10 minutes on Leadbay beats 6 months with Clay and a GTM agency.\"\r\n\r\nCo-founders are Milan Stankovic (CTO) - PhD to make AI work with limited data, and Ludovic Granger (CEO). \r\n\r\nCreate an account.\r\nA new market is yours.\r\nleadbay.ai."
+     },
+     {
+      "slug": "lightberry",
+      "name": "Lightberry",
+      "field": "one_liner",
+      "old": "The social brain for robots.",
+      "new": "Robots with soul"
+     },
+     {
+      "slug": "usenarrative",
+      "name": "Narrative",
+      "field": "one_liner",
+      "old": "AI-Powered Sports Highlights",
+      "new": "Video Intelligence for Sports"
+     },
+     {
+      "slug": "usenarrative",
+      "name": "Narrative",
+      "field": "long_description",
+      "old": "Narrative automates the creation and distribution of high-quality sports highlight videos for broadcasters, teams, and leagues.",
+      "new": "Transform live and archive sports video into structured events, player data, and polished media content."
+     },
+     {
+      "slug": "nessie",
+      "name": "Nessie",
+      "field": "team_size",
+      "old": 2,
+      "new": 3
+     },
+     {
+      "slug": "sciloop",
+      "name": "Sciloop",
+      "field": "team_size",
+      "old": 2,
+      "new": 6
+     },
+     {
+      "slug": "semble-ai",
+      "name": "Semble AI",
+      "field": "one_liner",
+      "old": "AI Agents for contractors, manufacturers, and logistics",
+      "new": "Operating system for your construction business."
+     },
+     {
+      "slug": "semble-ai",
+      "name": "Semble AI",
+      "field": "long_description",
+      "old": "Semble builds custom AI agents trained on how your business actually runs and plugged into the tools your team already lives in.\r\n\r\nJonathan and Ethan met studying computer science at Stanford. Jonathan worked at Convergint, one of the world's largest building system integrators.",
+      "new": "Semble is the operating system for your construction business. It's a live platform that keeps the office and the field in sync on every project and provides AI agents to run the workflows your business depends on.\r\n\r\nJonathan and Ethan met studying computer science at Stanford. Jonathan worked at Convergint, one of the world's largest building system integrators."
+     },
+     {
+      "slug": "sorce",
+      "name": "Sorce",
+      "field": "team_size",
+      "old": 5,
+      "new": 6
+     },
+     {
+      "slug": "soren",
+      "name": "Soren",
+      "field": "one_liner",
+      "old": "AI Transformation for Regulated Institutions",
+      "new": "Specialized AI for Real-World Deployment"
+     },
+     {
+      "slug": "soren",
+      "name": "Soren",
+      "field": "long_description",
+      "old": "Soren is the AI transformation partner for regulated institutions. We help companies identify, deploy, and operate AI safely across high-impact workflows.\r\n\r\nAs an AI-native company, we deliver outcomes in a fraction of the time and cost of traditional consulting firms while providing a more efficient, streamlined client experience.\r\n\r\nWe partner with organizations at every stage, from early exploration to full-scale AI transformations.",
+      "new": "Soren helps organizations turn frontier AI into specialized systems built for real-world deployment. We train, deploy, and continuously improve models around the data, workflows, and decisions that matter most.\r\n\r\nLearn more at https://www.usesoren.com"
+     },
+     {
+      "slug": "structured-ai",
+      "name": "Structured AI",
+      "field": "one_liner",
+      "old": "AI workforce for Construction Engineering",
+      "new": "The AI drawing review platform for architects and engineers."
+     },
+     {
+      "slug": "structured-ai",
+      "name": "Structured AI",
+      "field": "long_description",
+      "old": "Structured AI is building the AI workforce for construction design engineering, starting with AI agents that perform quality control on technical documents and drawings. Our agents learn your standards, apply the right building codes, and automatically review your drawings, so you see fewer clashes, fewer inconsistencies, and fewer costly RFIs and change orders.\r\n\r\n⚙️ Automates QA/QC across mechanical, electrical, structural and more\r\n🧩 Used by multi-disciplinary design firms to deliver projects faster with less risk\r\n🚀 Mission: Free engineers to focus on creative design, not repetitive admin",
+      "new": "Structured AI is the most advanced AI-powered QA/QC platform for drawing packages, working across both PDF drawings and native Revit models. Architects and engineers use our platform to make every drawing set leave the office with certainty. \r\n\r\nOur AI agents learn your firm's standards, apply the relevant codes, and read every page of a set, then return a clear list of what's wrong, where it sits, and how to fix it. Run compliance reviews across thousands of pages in minutes, chat with your drawings for sourced answers, build custom checks in plain English, compare versions, overlay disciplines, and close out comments - all within a single platform, with a full audit trail on every finding.\r\n\r\nFor decades, the last line of defense on a drawing set has been a red pen at the end of a deadline week. But buildings have outgrown the red pen. A modern set runs thousands of drawings, and the errors hiding between them threaten quality and safety, not just cost. What manual review misses resurfaces as RFIs, change orders, and field rework, paid for in time, margin, and reputation.\r\n\r\nStructured AI catches those errors before they leave the office, capturing the judgment of your best reviewer once and applying it everywhere.\r\n\r\nBetter drawings build a better world. #GetStructured"
+     },
+     {
+      "slug": "the-context-company",
+      "name": "The Context Company",
+      "field": "website",
+      "old": "https://thecontextcompany.com",
+      "new": "https://www.thecontextcompany.com"
+     },
+     {
+      "slug": "thesis",
+      "name": "Thesis",
+      "field": "long_description",
+      "old": "We are an AI research lab automating AI research. Our aim is to build a hill-climbing machine capable of solving humanity's greatest challenges in science and engineering, uncovering the next AlphaFold or Transformer faster, more systematically, and at scale. We treat discovery not as a matter of luck, but as a combinatorial search problem. Thesis will be the machine behind the defining breakthroughs of the next decade.",
+      "new": "Thesis is an AI research lab automating AI R&D itself.\r\n\r\nWe are building Darwin, a hill-climbing machine capable of searching vast combinatorial spaces of experiments. By using the outcome of every experiment to optimize the next, Darwin turns machine learning research into a compounding system rather than a sequence of manual attempts.\r\n\r\nWe are directing this machine toward the grand challenges of biology and materials science. Our mission is to build the machine that discovers the next Transformer, the next AlphaFold, and the breakthroughs that push science and engineering to the absolute frontier."
+     },
+     {
+      "slug": "uplane",
+      "name": "Uplane",
+      "field": "team_size",
+      "old": 19,
+      "new": 22
+     },
+     {
+      "slug": "velvet",
+      "name": "Velvet",
+      "field": "one_liner",
+      "old": "The multimodal data lab.",
+      "new": "Infra and data for interactive AI."
+     },
+     {
+      "slug": "velvet",
+      "name": "Velvet",
+      "field": "long_description",
+      "old": "The multimodal data lab.",
+      "new": "Infra and data for interactive AI."
+     },
+     {
+      "slug": "wardstone",
+      "name": "Wardstone",
+      "field": "one_liner",
+      "old": "Satellites for Missile Defense",
+      "new": "The Modular Interceptor Platform"
+     },
+     {
+      "slug": "wardstone",
+      "name": "Wardstone",
+      "field": "long_description",
+      "old": "Wardstone is a space defense-tech company developing next-generation capabilities to protect the United States and its allies from missiles and other space-based threats. We design, build, and deploy satellites equipped with space-based interceptors to kinetically counter hypersonic and ballistic missiles.",
+      "new": "Wardstone builds a low-cost, modular interceptor platform for air and missile defense. Our platform enables the warfighter to right sizes their interceptors against the threat. This allows us to defeat air-breathing and ballistic missile threats at a fraction of the cost of exquisite interceptors, adding affordable magazine depth to existing air defense systems."
+     },
+     {
+      "slug": "wardstone",
+      "name": "Wardstone",
+      "field": "team_size",
+      "old": 7,
+      "new": 8
+     },
+     {
+      "slug": "wardstone",
+      "name": "Wardstone",
+      "field": "website",
+      "old": "https://www.wardstone.space",
+      "new": "https://www.wardstone.us"
+     }
+    ]
+   },
+   "winter-2026": {
+    "display": "Winter 2026",
+    "source": "algolia",
+    "total": 198,
+    "added": [
+     {
+      "slug": "devfast",
+      "name": "/dev/fast",
+      "one_liner": "/dev/fast is the AI-native code forge"
+     },
+     {
+      "slug": "anchorhead",
+      "name": "Anchorhead",
+      "one_liner": "Fractional buyer for hardware companies in critical industries"
+     },
+     {
+      "slug": "brumby",
+      "name": "Brumby (Formerly GrazeMate)",
+      "one_liner": "Robot Cowboys that Herd Cattle with AI Drones"
+     },
+     {
+      "slug": "khotan",
+      "name": "Khotan (formerly Pollinate)",
+      "one_liner": "AI Agents for the supply chain."
+     },
+     {
+      "slug": "mirabelle",
+      "name": "Mirabelle",
+      "one_liner": "Your robot chef"
+     },
+     {
+      "slug": "parameter-fka-hex-security",
+      "name": "Parameter (fka Hex Security)",
+      "one_liner": "Agentic Offensive Security at Scale"
+     }
+    ],
+    "removed": [
+     {
+      "slug": "carson",
+      "name": "Carson"
+     },
+     {
+      "slug": "glue",
+      "name": "Glue"
+     },
+     {
+      "slug": "grazemate",
+      "name": "GrazeMate"
+     },
+     {
+      "slug": "hex-security",
+      "name": "Hex Security"
+     },
+     {
+      "slug": "pollinate",
+      "name": "Pollinate"
+     },
+     {
+      "slug": "sonarly",
+      "name": "Sonarly"
+     }
+    ],
+    "changed": [
+     {
+      "slug": "10x-science",
+      "name": "10x Science",
+      "field": "team_size",
+      "old": 3,
+      "new": 4
+     },
+     {
+      "slug": "21st",
+      "name": "21st",
+      "field": "one_liner",
+      "old": "Infrastructure and UI building blocks for the agentic internet",
+      "new": "UI building blocks for the agentic internet"
+     },
+     {
+      "slug": "21st",
+      "name": "21st",
+      "field": "long_description",
+      "old": "21st.dev is the largest React component registry for AI applications, used by 2M developers (370K MAU).\r\nWe provide the building blocks to create AI agents and agent-powered apps: UI components, agent templates, and an SDK with built-in UI, tools, memory, observability, and managed infrastructure.",
+      "new": "21st.dev is the largest React component registry for AI applications, used by 2M developers \r\nWe provide the building blocks to create agent-powered apps: UI components, agent templates."
+     },
+     {
+      "slug": "captain",
+      "name": "Captain",
+      "field": "one_liner",
+      "old": "Give AI agents accurate knowledge search that scales",
+      "new": "Accurate, high-performance retrieval for AI agents"
+     },
+     {
+      "slug": "captain",
+      "name": "Captain",
+      "field": "website",
+      "old": "https://runcaptain.com",
+      "new": "https://captain.dev"
+     },
+     {
+      "slug": "cardboard",
+      "name": "Cardboard",
+      "field": "team_size",
+      "old": 4,
+      "new": 5
+     },
+     {
+      "slug": "trycardinal-ai",
+      "name": "Cardinal",
+      "field": "one_liner",
+      "old": "AI Platform for Precision Outbound",
+      "new": "Revenue Agents for GTM teams"
+     },
+     {
+      "slug": "trycardinal-ai",
+      "name": "Cardinal",
+      "field": "long_description",
+      "old": "Hey YC! We're Devi and Jianna - the founders of Cardinal.\r\n\r\nTL;DR: Cardinal is the AI platform for precision outbound. We run outbound for 40+ YC companies, like Mintlify, Greptile, and Luminai.\r\n\r\nThe Problem\r\n\r\n“Spray and Pray” outbound is dead. The best teams at outbound do it with extreme precision. Finding things in common with your customers, staying in touch with them through their content, mapping inbound from signups and ads, tracking website visitors, monitoring various signals, etc. This sounds great in theory, but in reality involves stringing together 10+ tools and hiring a GTM engineer.\r\n\r\nThat’s where Cardinal comes in.\r\n\r\nCardinal is an AI platform for precision outbound. Our agents can create workflows that normally require the work of fulltime GTM engineers.\r\n\r\nIf you're a founder or sales leader looking to bring AI into your sales org, would love to chat!",
+      "new": "Hey YC! We're Devi and Jianna - the founders of Cardinal.\r\n\r\nHey guys! We’re launching Cardinal publicly today - co’s like Mintlify, Deepgram, Giga, etc. use us to build revenue agents & design how they sell. \r\n\r\nThe Problem\r\n\r\n“Spray and Pray” outbound is dead. The best teams at outbound do it with extreme precision. Finding things in common with your customers, staying in touch with them through their content, mapping inbound from signups and ads, tracking website visitors, monitoring various signals, etc. This sounds great in theory, but in reality involves stringing together 10+ tools and hiring a GTM engineer.\r\n\r\nThat’s where Cardinal comes in.\r\n\r\nCardinal is an AI platform for precision outbound. Our agents can create workflows that normally require the work of fulltime GTM engineers.\r\n\r\nIf you're a founder or sales leader looking to bring AI into your sales org, would love to chat!"
+     },
+     {
+      "slug": "trycardinal-ai",
+      "name": "Cardinal",
+      "field": "website",
+      "old": "https://trycardinal.ai/",
+      "new": "https://trycardinal.com"
+     },
+     {
+      "slug": "cofia",
+      "name": "Cofia",
+      "field": "team_size",
+      "old": 2,
+      "new": 3
+     },
+     {
+      "slug": "corelayer",
+      "name": "Corelayer",
+      "field": "one_liner",
+      "old": "AI on-call engineer for data-heavy, regulated industries",
+      "new": "AI production engineer for regulated industries"
+     },
+     {
+      "slug": "corelayer",
+      "name": "Corelayer",
+      "field": "long_description",
+      "old": "Corelayer is the AI-native platform for production software support, built for data-heavy, regulated industries like finance and healthcare. It continuously monitors alerts, logs, infrastructure, and underlying data for issues and uses agents to debug and suggest fixes.\r\n\r\nWe're helping teams at companies ranging from growth-stage fintechs to S&P 500 financial institutions spend less time on support and more on high-leverage work.",
+      "new": "Corelayer is the AI-native platform for production software support, built for regulated industries like finance and healthcare. It continuously monitors alerts, logs, infrastructure, and underlying data for issues and uses agents to debug and suggest fixes.\r\n\r\nWe're helping SRE, production services, and on-call engineers at companies ranging from growth-stage fintechs to Fortune 500 financial institutions spend less time on support and more on high-leverage work."
+     },
+     {
+      "slug": "crow",
+      "name": "Crow",
+      "field": "one_liner",
+      "old": "AI for Commercial Real Estate",
+      "new": ""
+     },
+     {
+      "slug": "emdash",
+      "name": "Emdash",
+      "field": "website",
+      "old": "https://emdash.ai",
+      "new": "https://emdash.com"
+     },
+     {
+      "slug": "fern-bot",
+      "name": "Fern",
+      "field": "one_liner",
+      "old": "Enabling physical AI at scale.",
+      "new": "RL environments for robotics companies"
+     },
+     {
+      "slug": "fern-bot",
+      "name": "Fern",
+      "field": "long_description",
+      "old": "Enabling physical AI at scale.",
+      "new": "Fern provides RL environments for robotics companies powered by a foundational world model. Companies can plug and play their robot policies completely in software with varying starting scenes of their production environment, and we'll produce RL heads on top of your existing policies to improve speed and success rate. Our customers get a continual learning flywheel where their production robots improve every week."
+     },
+     {
+      "slug": "fort",
+      "name": "Fort",
+      "field": "team_size",
+      "old": 3,
+      "new": 4
+     },
+     {
+      "slug": "human-archive",
+      "name": "Human Archive",
+      "field": "one_liner",
+      "old": "Multimodal data provider for robotics and world modeling",
+      "new": "Physical AI data lab"
+     },
+     {
+      "slug": "human-archive",
+      "name": "Human Archive",
+      "field": "long_description",
+      "old": "We’re archiving the physical world for embodied intelligence by collecting and labeling aligned multimodal data. To build dexterous and perceptive robots that generalize robustly, we need massive amounts of real-world data across multiple modalities and environments.\r\n\r\nWe have thought deeply about the fine line between biomimicry and its application to humanoid systems. Based on this research, we design and deploy custom hardware across residential and manufacturing settings. We then post-process the resulting data through internal QA, anonymization, and annotation pipelines to deliver diverse, high-fidelity datasets at scale to frontier labs developing robotics foundation models and general-purpose robotics companies. \r\n\r\nWe believe we are at a historic inflection point, with a unique opportunity to leave a dent on humanity and reshape physical labor markets forever. That's why our team dropped out of Stanford and Berkeley and moved to Asia to collect the world’s largest annotated multimodal dataset. ",
+      "new": "Human Archive (YC W26) is building the data infrastructure for physical AI.\r\n\r\nWe design hardware, deploy cameras and sensors globally, and train models that help AI better understand how humans interact with the physical world.\r\n\r\nLeading frontier AI labs trust us for their video, sensor, robot deployment, image, and audio datasets.\r\n\r\nWe have offices in SF, China, and India and are researchers from NYU GRAIL, UPenn GRASP, UC Berkeley, Stanford, Johns Hopkins Robotics, and national robotics champions.\r\n\r\nTo get data, please reach out to raj@humanarchive.ai"
+     },
+     {
+      "slug": "human-archive",
+      "name": "Human Archive",
+      "field": "team_size",
+      "old": 4,
+      "new": 10
+     },
+     {
+      "slug": "kita",
+      "name": "Kita",
+      "field": "website",
+      "old": "https://www.usekita.com/",
+      "new": "https://www.kita.ai/"
+     },
+     {
+      "slug": "kyten-technologies",
+      "name": "Kyten Technologies",
+      "field": "status",
+      "old": "Active",
+      "new": "Inactive"
+     },
+     {
+      "slug": "moda",
+      "name": "Moda",
+      "field": "one_liner",
+      "old": "The monitoring layer your AI agents need.",
+      "new": "The continual learning layer for AI agents."
+     },
+     {
+      "slug": "moda",
+      "name": "Moda",
+      "field": "long_description",
+      "old": "Moda is the reliability & monitoring layer for agents. It surfaces patterns across agent hallucinations, laziness, forgetfulness, and tool call failures. While also providing analytics on user frustration, net promoter score, retention, and churn rates.\r\n\r\nIn the next 10 years, with more AI agents spawning and trying to get PMF, developing an agent that actually works for users is critical. Everyone has access to the same models, thus the ones that win on a product level will be the ones who learn fastest from real usage. Moda is that learning layer.",
+      "new": "Moda is the continual learning layer for AI agents. It turns production agent traces into validated improvements for your agent harness. It surfaces patterns across agent hallucinations, laziness, context loss, and tool call failures, then attributes each issue to a specific layer of the agent harness: prompts, tools, workflows, retrieval, memory, and evals. It also discovers what users are actually trying to do and turns those findings into concrete counterfactuals the team can ship.\r\n\r\nIn the next 10 years, with more AI agents spawning and trying to get PMF, developing an agent that actually works for users is critical. Everyone has access to the same models, thus the ones that win on a product level will be the ones who learn fastest from real usage. Moda is that learning layer."
+     },
+     {
+      "slug": "moda",
+      "name": "Moda",
+      "field": "team_size",
+      "old": 5,
+      "new": 6
+     },
+     {
+      "slug": "moritz",
+      "name": "Moritz",
+      "field": "long_description",
+      "old": "Moritz is a global AI-native law firm that will handle your legal work the same day, at a fraction of the market price.\r\n\r\nOur AI does 80% of the work, so you pay our elite lawyers for the final 20%.\r\n\r\nOur lawyers have closed $2bn in deals with an average turnaround of 4-hours. No other law firm offers this kind of speed for complex deals.",
+      "new": "Moritz is a global AI-native law firm that will handles legal work with same day turnaround.\r\n\r\nOur lawyers have closed $ 3bn in deals with an average turnaround of 4-hours. No other law firm offers this kind of speed for complex deals.\r\n\r\nWe're backed by YC, 20VC and the founders of Dropbox, Gusto, Instacart, Reddit, Superhuman, Producthunt, HuggingFace and 15 other unicorn founders."
+     },
+     {
+      "slug": "mousecat",
+      "name": "MouseCat",
+      "field": "team_size",
+      "old": 2,
+      "new": 6
+     },
+     {
+      "slug": "oximy",
+      "name": "Oximy",
+      "field": "one_liner",
+      "old": "See and control all AI activity across your enterprise",
+      "new": "Take command of the AI your company already runs on."
+     },
+     {
+      "slug": "oximy",
+      "name": "Oximy",
+      "field": "long_description",
+      "old": "Oximy helps enterprises understand and manage AI usage across their workforce.\r\n\r\nUsed by security, finance, and transformation teams to track adoption, control spend, and manage governance as AI scales.",
+      "new": "Oximy is one platform to see every AI tool and dollar across your company, run your team’s work in an app you own, and route every request to the right model."
+     },
+     {
+      "slug": "oximy",
+      "name": "Oximy",
+      "field": "team_size",
+      "old": 4,
+      "new": 8
+     },
+     {
+      "slug": "polymath",
+      "name": "Polymath",
+      "field": "long_description",
+      "old": "We’re heading towards a future where AI agents will be able to perform useful work over long horizons, with little or no human supervision. To increase the reliability, performance, and safety of autonomous agents, they must be trained in simulation environments that reflect the real world. Polymath builds simulated worlds for agents to practice and learn through experience.\r\n\r\nWe're a team of researchers and engineers from UC Berkeley, Hume AI, Plaid, and Amazon. We have years of experience post-training frontier models in industry, and building large scale data systems. Polymath is backed by Y Combinator.",
+      "new": "Polymath is a data lab focused on improving long-horizon agent capabilities and alignment\r\n"
+     },
+     {
+      "slug": "polymath",
+      "name": "Polymath",
+      "field": "team_size",
+      "old": 2,
+      "new": 6
+     },
+     {
+      "slug": "polymorph",
+      "name": "Polymorph",
+      "field": "one_liner",
+      "old": "Building the future of the consumer internet",
+      "new": "Building secure polymorphic apps"
+     },
+     {
+      "slug": "polymorph",
+      "name": "Polymorph",
+      "field": "long_description",
+      "old": "Polymorph is building the future of the consumer internet: one that adapts to each user and optimizes for delightful experiences by building agents that constantly run thousands of experiments that scale our customers' product ideas and brand.\r\n\r\nTeam has extensive startup, AI, and math backgrounds: \r\n- founding engineer at a unicorn\r\n- ML infrastructure @ Scale AI (inference), AWS Bedrock (fine-tuning)\r\n- ads engineering @ Meta & Twitch\r\n- IMO & IOI medalists",
+      "new": "Team has extensive startup, AI, and math backgrounds: \r\n- founding engineer at a unicorn\r\n- ML infrastructure @ Scale AI (inference), AWS Bedrock (fine-tuning)\r\n- ads engineering @ Meta & Twitch\r\n- IMO & IOI medalists"
+     },
+     {
+      "slug": "runanywhere",
+      "name": "RunAnywhere",
+      "field": "team_size",
+      "old": 2,
+      "new": 5
+     },
+     {
+      "slug": "salus",
+      "name": "Salus",
+      "field": "long_description",
+      "old": "Your agent processed a refund without looking up the order ID, costing you thousands. You only found out three hours later from a support ticket. Evals, output scoring, and observability can reduce the likelihood of mistakes like these occurring - but there's no solution that inspects and prevents an action as it’s about to execute. Salus does that.\r\n\r\nWe’ve built an API that wraps around your agent and checks its actions at run time, blocking incorrect ones and providing immediate feedback to guide retries. Kevin and Vedant were roommates at Stanford, where they both studied computer science. ",
+      "new": "Your agent processed a refund without looking up the order ID, costing you thousands. You only found out three hours later from a support ticket. Evals, output scoring, and observability can reduce the likelihood of mistakes like these occurring - but there's no solution that inspects and prevents an action as it’s about to execute. Salus does that.\r\n\r\nWe’ve built an API that wraps around your agent and checks its actions at run time, blocking incorrect ones and providing immediate feedback to guide retries. "
+     },
+     {
+      "slug": "servo7",
+      "name": "Servo7",
+      "field": "one_liner",
+      "old": "Robots that unload containers in warehouses",
+      "new": "Container unloading robots for warehouses"
+     },
+     {
+      "slug": "sila",
+      "name": "Sila",
+      "field": "long_description",
+      "old": "Sila is an agentic work messaging & collaboration platform where teams and AI work as one. Our mission is to define the standard for how companies will work.",
+      "new": "Sila is the agent-native messaging platform. We're defining the standard for how companies work in the AI era by creating new types of communication layers: team-agent, agent-agent, agent-customer interaction layers and more. The conversations that define the future will happen on Sila."
+     },
+     {
+      "slug": "skillsync",
+      "name": "Skillsync",
+      "field": "one_liner",
+      "old": "Discord for building with agents",
+      "new": "Github for agent sessions"
+     },
+     {
+      "slug": "skillsync",
+      "name": "Skillsync",
+      "field": "long_description",
+      "old": "Skillsync is a real-time multiplayer coding agent with shared memory. Teams build with coding agents together, live, in the terminal or a Discord-like app, then every session becomes searchable memory the whole team and its agents can reuse.\r\n\r\nToday, all the thinking behind your code lives inside individual agent sessions and evaporates the moment they close. The reasoning, what was tried, what was rejected, the taste that sets your best engineers apart, just becomes tribal knowledge stuck in a few heads. Skillsync captures it. We're formalizing engineering culture, so how your team uniquely builds becomes explicit, shared, and reusable.",
+      "new": "Skillsync lets you push your agents' sessions the way you push code. Everything lands in one searchable place. The best sessions become skills any agent can load. Works across your team!\r\n\r\nToday, all that thinking, what worked, what didn't, and why, is scattered across Claude Code, Codex, Hermes, whatever each engineer prefers. It vanishes when the session closes. Skillsync captures it, so every agent builds like your best engineer. The more your team ships, the smarter your agents get. Engineering culture stops being tribal knowledge. It becomes explicit, shared, and reusable."
+     },
+     {
+      "slug": "tepali",
+      "name": "Tepali",
+      "field": "one_liner",
+      "old": "AI-native operating system for aesthetics & wellness",
+      "new": "AI operating system for modern medspas"
+     },
+     {
+      "slug": "terminal-use",
+      "name": "Terminal Use",
+      "field": "one_liner",
+      "old": "Vercel for background agents",
+      "new": "Digital twins for data center construction"
+     },
+     {
+      "slug": "terminal-use",
+      "name": "Terminal Use",
+      "field": "long_description",
+      "old": "Terminal Use is an orchestration platform for background agents. Purpose-built for agents that use filesystems. Our platform is CLI-first, making it easy for your coding agents to experiment and continuously improve your deployed agents.",
+      "new": "Create a living digital twin for your data center construction to deliver on time"
+     },
+     {
+      "slug": "vela",
+      "name": "Vela",
+      "field": "one_liner",
+      "old": "AI Agents For Complex Scheduling Coordination",
+      "new": "AI Recruiting Coordinator for Executive Search"
+     },
+     {
+      "slug": "vela",
+      "name": "Vela",
+      "field": "long_description",
+      "old": "We are building Vela, the AI scheduling assistant for the most complex interactions. Everyone assumes scheduling is a calendaring problem. It's not. It's a human nuance problem: knowing who to prioritize, how hard to push, and which dynamics to navigate. Vela understands these nuances, and every interaction deepens that understanding.\r\n\r\nInstead of manually calling, texting, and emailing hundreds of candidates across spreadsheets, today teams connect their system of record to Vela and it handles outreach, scheduling, and confirmation automatically with the nuances of industries and teams built in.\r\n\r\nGobhanu and Saatvik are brothers who scaled a microfinance bank to 77 countries as kids. We previously built at AWS ML + SuperCompute and BCG AI.",
+      "new": "Scheduling one interview panel takes a dozen emails. Then someone moves a call and you start over. \r\n\r\nVela is an AI Scheduling Coordinator that handles it end to end. Just CC Vela on the thread like you would a person. It reaches out, finds times that work for everyone, chases the people who don't reply, reschedules when things change, and confirms. Over email, SMS, and WhatsApp, at any hour your candidate happens to respond.\r\n\r\nNo dashboard. No new workflow. Your team works the way it already works, without the scheduling."
+     }
+    ]
+   },
+   "spring-2026": {
+    "display": "Spring 2026",
+    "source": "algolia",
+    "total": 196,
+    "added": [
+     {
+      "slug": "afterfive",
+      "name": "afterfive",
+      "one_liner": "Life starts after five."
+     },
+     {
+      "slug": "dreach",
+      "name": "Dreach",
+      "one_liner": "Never miss a lead"
+     },
+     {
+      "slug": "ed1th",
+      "name": "ED1TH",
+      "one_liner": "Jarvis IRL"
+     }
+    ],
+    "removed": [
+     {
+      "slug": "datost",
+      "name": "Datost"
+     },
+     {
+      "slug": "drippay",
+      "name": "Drip"
+     },
+     {
+      "slug": "korso",
+      "name": "Korso"
+     },
+     {
+      "slug": "textsidekick",
+      "name": "Sidekick"
+     }
+    ],
+    "changed": [
+     {
+      "slug": "alchemize",
+      "name": "Alchemize",
+      "field": "one_liner",
+      "old": "AI-Native Customs Brokerage",
+      "new": "Code Review Platform that Simplifies PRs to Ship Faster"
+     },
+     {
+      "slug": "alchemize",
+      "name": "Alchemize",
+      "field": "long_description",
+      "old": "Alchemize is building an AI-native customs brokerage. Importers are currently hindered by legacy brokers relying on manual workflows, where hand-keyed entries and slow tariff research result in preventable shipping delays, lack of visibility, and unnecessary costs. Alchemize automates these workflows, delivering expert-level compliance at software speed.",
+      "new": "Alchemize is a code review platform that helps teams understand PRs and ship faster.\r\n\r\nAgentic coding has 10x’d code output. Teams are opening larger PRs more frequently, but the current tools don’t support this new coding paradigm. \r\n\r\nAlchemize automatically breaks down PRs into guided, understandable reviews. It breaks each PR into manageable, smaller PRs that reveals the original author’s (human or agent) intent. We show where changes begin, how data flows, and which decisions require human judgment."
+     },
+     {
+      "slug": "ardent",
+      "name": "Ardent",
+      "field": "team_size",
+      "old": 2,
+      "new": 3
+     },
+     {
+      "slug": "armature",
+      "name": "Armature",
+      "field": "one_liner",
+      "old": "Armature builds, monitors and optimizes products' Agent Experience.",
+      "new": "Improve how users experience your product through AI Agents"
+     },
+     {
+      "slug": "armature",
+      "name": "Armature",
+      "field": "long_description",
+      "old": "Armature helps companies monitor, analyze, and optimize how AI agents experience their products.\r\n\r\nWhat we do today:\r\n- Automated testing: We run complex sessions against your MCPs/CLIs across all major harnesses and models to catch broken workflows before your users do.\r\n- AX analytics & benchmarking: No more black boxes. We trace agent sessions to show you exactly what the model \"thought\", what context it missed, and why it failed. We measure your AX against competitors to ensure you remain the preferred platform for agents to use.\r\n- Auto-remediation: Our MCP lets your internal coding agents plug into Armature to autonomously fix your product's AX based on our run data.\r\n\r\nOur vision for tomorrow:\r\nReaching full understanding of how agents use your product and how you can improve it is only step one. \r\nThe next step is to provide the foundational infrastructure for the Agent Experience, powering agent-native revenue, lifecycle marketing, and customer support for the next generation of software.",
+      "new": "Armature helps companies monitor, analyze, and optimize how AI agents experience their products.\r\n\r\nWe start with Product Analytics: user sessions on your Claude Connector, ChatGPT App or MCP live inside their AI client, not your UI. Armature captures and shows you what users ask, what agents think and how they use your product.\r\n\r\nThen, we provide automated evals infrastructure: run complex sessions against your MCPs/CLIs across all major harnesses and models to catch broken workflows before your users do.\r\n\r\nFinally, our MCP lets your internal coding agents plug into Armature to autonomously fix your product's AX based on our run data.\r\n\r\nThe next step is to provide the foundational infrastructure for the Agent Experience, powering agent-native revenue, lifecycle marketing, and customer support for the next generation of software."
+     },
+     {
+      "slug": "arzana",
+      "name": "Arzana",
+      "field": "long_description",
+      "old": "Arzana trains custom models on a factory's historical data and use them to deploy agents that automate their quoting, order entry, invoicing, and other repetitive office work. We've saved our customers over $1M in avoided staff costs.\r\n\r\nIn the future, we'll expand into shop-floor automation, sending instructions to machinery and robots to produce the orders that our office agents processed. By 2035, we aim to fully automate 10,000 American factories.",
+      "new": "Arzana trains custom models on manufacturers' operational data to automate their quoting, order entry, invoicing, and other repetitive office work. We've saved our customers over $1.5M in avoided staff costs.\r\n\r\nIn the future, we'll expand into shop-floor automation, sending instructions to machinery and robots to produce the orders that our office agents processed. By 2035, we aim to fully automate 10,000 American factories."
+     },
+     {
+      "slug": "arzana",
+      "name": "Arzana",
+      "field": "team_size",
+      "old": 5,
+      "new": 6
+     },
+     {
+      "slug": "atrisa",
+      "name": "Atrisa",
+      "field": "website",
+      "old": "https://refortif.ai",
+      "new": "https://atrisa.ai"
+     },
+     {
+      "slug": "biostack-platforms",
+      "name": "BioStack Platforms",
+      "field": "team_size",
+      "old": 0,
+      "new": 4
+     },
+     {
+      "slug": "centralcoms",
+      "name": "CentralComs",
+      "field": "one_liner",
+      "old": "AI Agents for Property Management",
+      "new": "AI agent platform for home services companies."
+     },
+     {
+      "slug": "centralcoms",
+      "name": "CentralComs",
+      "field": "long_description",
+      "old": "CentralComs is building AI Agents for property managers that tracks every maintenance call, chases every open ticket, and keep owners/tenants/vendors updated, so nothing falls through the cracks and operations never stall.\r\n\r\nThese agent work directly inside AppFolio, Buildium, Yardi and your existing stack, making real-time decisions and resolving multi-step workflows without handoffs.",
+      "new": "Home services companies lose money on missed calls and idle techs. When the phone rings during a job and nobody picks up, that lead goes to a competitor and the trucks already on the road sit half-booked because dispatch can't keep the schedule tight.\r\n\r\nCentralComs fixes this with AI agents that answer every call, route each job to the right technician, and keep the calendar full. They handle intake, dispatch, and customer updates end to end working inside ServiceTitan, Housecall Pro, and Jobber so no lead slips through and no truck runs empty.\r\n\r\nCapture every call. Book every tech. Never miss a job."
+     },
+     {
+      "slug": "deep-interactions",
+      "name": "Deep Interactions",
+      "field": "long_description",
+      "old": "Deep Interactions is a humans-in-the-loop AI builder. We don't leave you with a spaghetti mess of a code. We bring product intelligence and power the context layer that enables your team to build in sync - saving companies tokens, time, and nerves. You give us a problem and we ship a working AI product in the same afternoon.\r\n",
+      "new": "Deep Interactions is a collaborative AI builder. We don't leave you with a spaghetti mess of a code. We bring product intelligence and power the context layer that enables your team to build in sync - saving companies tokens, time, and nerves. You give us a problem and we ship a working AI product in the same afternoon.\r\n"
+     },
+     {
+      "slug": "discovered-materials",
+      "name": "Discovered Materials",
+      "field": "long_description",
+      "old": "We build AI scientists that discover new materials for the semiconductor industry - specifically datacenters and fabs. Finding novel materials today takes 10+ years of lab work. We aim to compress that timeline to months, using a swarm of AI agents.\r\n\r\nAkash completed his PhD at Stanford on material discovery for semiconductors. The materials he discovered for nanoscale interconnects have been adopted into the roadmaps of Intel and TSMC. Advaith was the founding applied scientist at Persona AI (acquired by Luma Labs), where he built long horizon autonomous agents for major telecom and crypto companies.\r\n\r\nPower consumption and heat release from AI chips is doubling every year. The semiconductor industry needs new materials to keep this exponential going - Matforge will help find them. ",
+      "new": "We use AI to discover new materials for the semiconductor industry - specifically datacenters and fabs. Finding novel materials today takes 10+ years of lab work. We aim to compress that timeline to months, using a swarm of AI agents.\r\n\r\nAkash completed his PhD at Stanford on material discovery for semiconductors. The materials he discovered for nanoscale interconnects have been adopted into the roadmaps of Intel and TSMC. Advaith was the founding applied scientist at Persona AI (acquired by Luma Labs), where he built long horizon autonomous agents for major telecom and crypto companies.\r\n\r\nPower consumption and heat release from AI chips is doubling every year. The semiconductor industry needs new materials to keep this exponential going -  Discovered Materials will help find them. "
+     },
+     {
+      "slug": "general-instinct",
+      "name": "General Instinct",
+      "field": "one_liner",
+      "old": "Deployable Physical AI on Any Edge Device.",
+      "new": "Inference Infrastructure for Physical AI"
+     },
+     {
+      "slug": "hedge",
+      "name": "Hedge",
+      "field": "one_liner",
+      "old": "AI-Native wholesale insurance company",
+      "new": "AI-Native insurance company"
+     },
+     {
+      "slug": "heyclicky",
+      "name": "HeyClicky",
+      "field": "one_liner",
+      "old": "The simplest AI interface in the world for consumers to spawn agents.",
+      "new": "The simplest interface in the world to talk AI models + spawn agents"
+     },
+     {
+      "slug": "hub",
+      "name": "Hub",
+      "field": "long_description",
+      "old": "Hub is a distributed real-world data infrastructure company that captures the lived richness of human experience, including voice, nuance, and perspective to train the next generation of AI models. \r\n\r\nThrough HubApp, our global network spanning 150+ countries sources high-fidelity, original data that cannot be found on the public web or generated synthetically. \r\n\r\nWe provide a completely automated pipeline coupled with human-in-the-loop validation to deliver production-ready multimodal data to frontier AI labs and Fortune 500 companies.",
+      "new": "Hub is a multimodal lab providing real world data to frontier labs and robotic companies."
+     },
+     {
+      "slug": "imperfect",
+      "name": "Imperfect",
+      "field": "one_liner",
+      "old": "AI coach for athletes with real lives and epic goals",
+      "new": "Adaptive training coach for runners, cyclists, and triathletes "
+     },
+     {
+      "slug": "imperfect",
+      "name": "Imperfect",
+      "field": "long_description",
+      "old": "The Imperfect app pulls your data to create a personalized AI coach for your next race. It adapts your training, recovery, and nutrition to how your body is actually responding.",
+      "new": "An adaptive training coach to help runners, cyclists, and triathletes set and achieve goals. It adapts your training, recovery, and nutrition to how your body is actually responding."
+     },
+     {
+      "slug": "imperfect",
+      "name": "Imperfect",
+      "field": "team_size",
+      "old": 5,
+      "new": 4
+     },
+     {
+      "slug": "instaagent",
+      "name": "InstaAgent",
+      "field": "long_description",
+      "old": "InstaAgent helps consumer brands scale a single campaign across hundreds of specific audiences on Meta and TikTok, each with its own content, voice, and targeting. Traction: $1M Ann. Run Rate in 10 months, and doubled to $2M in 4 months during YC.\r\n\r\nFrom one brief, we create personalized creatives, distribute them through paid channels and niche social accounts, and use performance data to learn what works, scale winners, and improve every campaign.",
+      "new": "InstaAgent helps B2C companies scale a single campaign across hundreds of specific audiences on Meta and TikTok, each with its own content, voice, and targeting. Traction: $1M Ann. Run Rate in 10 months.\r\n\r\nFrom one brief, we create personalized creatives, distribute them through paid channels and niche social accounts, and use performance data to learn what works, scale winners, and improve every campaign."
+     },
+     {
+      "slug": "instaagent",
+      "name": "InstaAgent",
+      "field": "team_size",
+      "old": 9,
+      "new": 10
+     },
+     {
+      "slug": "jo",
+      "name": "jo",
+      "field": "one_liner",
+      "old": "The private AI that runs your life before you ask.",
+      "new": "The personal AI agent that keeps up with your work and life."
+     },
+     {
+      "slug": "jo",
+      "name": "jo",
+      "field": "long_description",
+      "old": "jo is a personal AI that runs on your Mac and a private cloud machine we host for you. It knows your life, improves itself autonomously, chats via Telegram and WhatsApp, and never shares your data. Less \"chatbot\" and more \"a second brain that does things proactively\".",
+      "new": "jo is a personal AI agent that keeps up with your work and life, surfaces what matters, and helps you follow through. It remembers relevant context, works proactively, and supports recurring workflows through autopilot while keeping you in control."
+     },
+     {
+      "slug": "keyframe-labs",
+      "name": "Keyframe Labs",
+      "field": "one_liner",
+      "old": "Turn agents into lifelike video calls with the word's best AI avatars",
+      "new": "Bring AI to life with the world's best interactive avatars"
+     },
+     {
+      "slug": "keyframe-labs",
+      "name": "Keyframe Labs",
+      "field": "long_description",
+      "old": "Our real-time foundation models turn AI into lifelike video calls. Add the world's best AI avatars to your agents and applications in minutes with a few lines of embed code. Photorealism, emotion, and scale for as low as $0.06 per minute.",
+      "new": "We build human foundation models. Our first family of models powers lifelike avatars that interact with users in real time, enabling AI agents and applications to go beyond text and voice with just a few lines of code. State-of-the-art realism with ultra-low latency at scale."
+     },
+     {
+      "slug": "kinect",
+      "name": "Kinect",
+      "field": "one_liner",
+      "old": "The AI-Native Commerce Stack",
+      "new": "The AI revenue platform for D2C brands"
+     },
+     {
+      "slug": "nine-fives",
+      "name": "Nine Fives",
+      "field": "long_description",
+      "old": "",
+      "new": "Nine Fives produces modern radio frequency test equipment and solutions to disrupt the $130B test equipment industry. By combining modern electronics, AI ready test automation, and strategic supply chains, we’re equipping our customers to cut their time to market in half."
+     },
+     {
+      "slug": "openprose",
+      "name": "OpenProse",
+      "field": "long_description",
+      "old": "OpenProse is building open-source infrastructure for long-running AI work: a declarative language plus the Reactor harness/runtime for reliable agent workflows.\r\n\r\nOur organic open-source traction (7k+ installs) has already translated into a customer at a medical research lab, starting with a $10k pilot set to roll into a $10k/month contract.\r\n\r\nYC recruited us into the current batch and we've since hired two senior founding team members (ex-Google, Forbes 30u30 harness engineer). All three founding team members are two time founders.\r\n\r\nWe've raised $1.25M in the last two weeks from Jonathan Abrams 8-Bit Capital, Otis Chandler, and other angels.",
+      "new": "OpenProse is building open-source infrastructure for long-running AI work: a declarative language plus a reactive harness/runtime for reliable agent workflows."
+     },
+     {
+      "slug": "projectx",
+      "name": "ProjectX",
+      "field": "team_size",
+      "old": 6,
+      "new": 8
+     },
+     {
+      "slug": "shotwellai",
+      "name": "shotwell.ai",
+      "field": "one_liner",
+      "old": "The Observability Layer for Robotics",
+      "new": "Annotations for robotics data"
+     },
+     {
+      "slug": "shotwellai",
+      "name": "shotwell.ai",
+      "field": "long_description",
+      "old": "Robotics companies send Shotwell their video data and we detect failures. We do this for both their training data and for their deployments. We've developed models that can automatically produce these annotations with near-instant turnaround time.",
+      "new": "Shotwell AI is building the data QA layer for dexterous robotics. We work with teams collecting teleoperation and egocentric data to provide dense semantic annotation and validate task adherence. This lets teams compress feedback loops from weeks to hours and iterate on models much faster."
+     },
+     {
+      "slug": "silmaril",
+      "name": "Silmaril",
+      "field": "one_liner",
+      "old": "Runtime security for AI that self-improves",
+      "new": "Security for agents that self-improves"
+     },
+     {
+      "slug": "silmaril",
+      "name": "Silmaril",
+      "field": "long_description",
+      "old": "Silmaril is the first runtime security for AI that self-improves. It understands application context to block 2x as many threats as current SOTA defenses with 10x lower latency. Customers plug us into agentic frameworks like LangGraph with 5 lines of code. Silmaril has stopped $28M of damages for customers.",
+      "new": "Silmaril is the first security for agents that self-improves. It understands application context to block 2x as many threats as current SOTA defenses with 10x lower latency. Customers plug us into agentic frameworks like LangGraph with 5 lines of code. Silmaril has stopped $28M of damages for customers."
+     },
+     {
+      "slug": "stablebrowse",
+      "name": "StableBrowse",
+      "field": "one_liner",
+      "old": "Browser Layer for AI agents",
+      "new": "Help frontier labs build better models."
+     },
+     {
+      "slug": "stablebrowse",
+      "name": "StableBrowse",
+      "field": "long_description",
+      "old": "We are making the browser layer for your AI agents. Agents don’t need to see UIs like us humans do. We give agents a semantic understanding of the web instead of brittle visual interfaces. Your agents can perform deep research, large-scale scraping, and complex automation—more efficiently with our knowledge graphs that turns the web into a native protocol for LLMs.",
+      "new": ""
+     },
+     {
+      "slug": "stablebrowse",
+      "name": "StableBrowse",
+      "field": "team_size",
+      "old": 4,
+      "new": 3
+     },
+     {
+      "slug": "standout",
+      "name": "Standout",
+      "field": "team_size",
+      "old": 3,
+      "new": 5
+     },
+     {
+      "slug": "tdaycom",
+      "name": "tday.com",
+      "field": "team_size",
+      "old": 3,
+      "new": 2
+     },
+     {
+      "slug": "uno-wallet",
+      "name": "Uno Wallet",
+      "field": "long_description",
+      "old": "Uno is the first third-party wallet granted access by Apple to become the default contactless wallet on iPhone. Uno is building a new payment rail, starting with a smarter wallet experience.\r\n\r\nThe wedge is credit card points optimization. \r\n\r\nFounded by Saket Joshi (www.linkedin.com/in/saket-dattatray-joshi/) and \r\nMordi Shadpour (www.linkedin.com/in/mordi-shadpour/)",
+      "new": "We are changing the way that people pay...\r\n\r\nFounded by:\r\nSaket Joshi: www.linkedin.com/in/saket-dattatray-joshi/\r\nMordi Shadpour: www.linkedin.com/in/mordi-shadpour/"
+     }
+    ]
+   },
+   "summer-2026": {
+    "display": "Summer 2026",
+    "source": "algolia",
+    "total": 203,
+    "added": [
+     {
+      "slug": "agency-tool-company",
+      "name": "Agency Tool Company",
+      "one_liner": "Reliable infrastructure to build, deploy and manage real-world robots."
+     },
+     {
+      "slug": "agent-fm",
+      "name": "Agent FM",
+      "one_liner": "One group chat to hear and steer your coding agents."
+     },
+     {
+      "slug": "aktoria-robotics",
+      "name": "Aktoria Robotics",
+      "one_liner": "Human as API for robots"
+     },
+     {
+      "slug": "almanac",
+      "name": "Almanac",
+      "one_liner": "The AI that knows your company"
+     },
+     {
+      "slug": "amorphic-labs",
+      "name": "Amorphic Labs",
+      "one_liner": "Agentic, Personalized Product Demo Videos for Sales"
+     },
+     {
+      "slug": "applied-electrodynamics-inc",
+      "name": "Applied Electrodynamics, Inc.",
+      "one_liner": "A new kind of camera that can see through walls."
+     },
+     {
+      "slug": "arbital",
+      "name": "Arbital",
+      "one_liner": "The trading terminal for perps, memes, and stocks."
+     },
+     {
+      "slug": "assemble",
+      "name": "Assemble",
+      "one_liner": "Agents for Enterprise IT"
+     },
+     {
+      "slug": "atlia",
+      "name": "Atlia",
+      "one_liner": "We are the AI-native property management company"
+     },
+     {
+      "slug": "atomarine",
+      "name": "Atomarine",
+      "one_liner": "Off shore nuclear powered data centers at sea."
+     },
+     {
+      "slug": "audun",
+      "name": "Audun",
+      "one_liner": "AI-native debt collection"
+     },
+     {
+      "slug": "avoca-systems",
+      "name": "Avoca Systems",
+      "one_liner": "The AI-powered operating system for radiology networks"
+     },
+     {
+      "slug": "axelrod",
+      "name": "Axelrod",
+      "one_liner": "Boutique Hotels that run themselves"
+     },
+     {
+      "slug": "belvedir",
+      "name": "Belvedir",
+      "one_liner": "The easiest way to make private AI models."
+     },
+     {
+      "slug": "billow-ai-labs",
+      "name": "Billow AI Labs",
+      "one_liner": "AI-native Accounting Firm to Replace the Big-4"
+     },
+     {
+      "slug": "bizmark",
+      "name": "Bizmark",
+      "one_liner": "The OS for companies that make, move, or sell physical goods"
+     },
+     {
+      "slug": "buildbox",
+      "name": "Buildbox",
+      "one_liner": "Understand how users experience your AI agents"
+     },
+     {
+      "slug": "carsignal",
+      "name": "CarSignal",
+      "one_liner": "The Smart Operating System for Auto Shops."
+     },
+     {
+      "slug": "caution",
+      "name": "Caution",
+      "one_liner": "Hosting platform for software you don't want to get hacked"
+     },
+     {
+      "slug": "chromie",
+      "name": "Chromie",
+      "one_liner": "find, qualify, & win contracts with AI"
+     },
+     {
+      "slug": "click",
+      "name": "Click",
+      "one_liner": "Research services for ChatGPT and Claude"
+     },
+     {
+      "slug": "ai-coach",
+      "name": "COACH",
+      "one_liner": "The AI Coach for in person sales reps."
+     },
+     {
+      "slug": "computable",
+      "name": "Computable",
+      "one_liner": "Buy, sell, and redeem GPU hours for any week with instant liquidity"
+     },
+     {
+      "slug": "daqstra",
+      "name": "Daqstra",
+      "one_liner": "AI-native orchestration for physical R&D testing"
+     },
+     {
+      "slug": "datoric",
+      "name": "Datoric",
+      "one_liner": "Security-first training data"
+     },
+     {
+      "slug": "dawn-industries",
+      "name": "Dawn Industries",
+      "one_liner": "Automatic Diagnosis & Fix for Industrial Automation Cells"
+     },
+     {
+      "slug": "decawork",
+      "name": "Decawork",
+      "one_liner": "The Agent Control Plane for IT teams"
+     },
+     {
+      "slug": "derya",
+      "name": "Derya",
+      "one_liner": "AI-Native Logistics Office"
+     },
+     {
+      "slug": "dock",
+      "name": "Dock",
+      "one_liner": "Multiplayer agent workspace to run your company "
+     },
+     {
+      "slug": "donkey",
+      "name": "Donkey",
+      "one_liner": "The AI-native trading company: China factory-direct for US importers"
+     },
+     {
+      "slug": "edotenv",
+      "name": "EdotEnv",
+      "one_liner": "A Quant Neolab building toward RSI via quant trading"
+     },
+     {
+      "slug": "egoist-machines",
+      "name": "Egoist Machines",
+      "one_liner": "User-owned memory and preferences that work across every AI app"
+     },
+     {
+      "slug": "ekho-labs",
+      "name": "Ekho Labs",
+      "one_liner": "Decisions for disrupted freight"
+     },
+     {
+      "slug": "enact",
+      "name": "Enact",
+      "one_liner": "The post-training layer for robotics."
+     },
+     {
+      "slug": "erinys",
+      "name": "Erinys",
+      "one_liner": "Building the first network of AI-native law firms"
+     },
+     {
+      "slug": "executor",
+      "name": "Executor",
+      "one_liner": "The open source integration management layer for AI."
+     },
+     {
+      "slug": "exosat",
+      "name": "Exosat",
+      "one_liner": "Building a sovereign Starlink"
+     },
+     {
+      "slug": "fabraix",
+      "name": "Fabraix",
+      "one_liner": "The world's frontier hacker for AI agents."
+     },
+     {
+      "slug": "financial-datasets",
+      "name": "Financial Datasets",
+      "one_liner": "Connect your agent to the stock market "
+     },
+     {
+      "slug": "gamgee",
+      "name": "Gamgee",
+      "one_liner": "Scalable Personalised Cancer Treatment"
+     },
+     {
+      "slug": "gitcafe",
+      "name": "GitCafe",
+      "one_liner": "GitCafe is a modern replacement for GitHub."
+     },
+     {
+      "slug": "graphify-labs",
+      "name": "Graphify Labs",
+      "one_liner": "On-device knowledge graph engine for enterprises"
+     },
+     {
+      "slug": "grip",
+      "name": "Grip",
+      "one_liner": "Physical AI for waste management"
+     },
+     {
+      "slug": "gutgutgoose",
+      "name": "Gutgutgoose",
+      "one_liner": "Personalized probiotics, guaranteed to colonize."
+     },
+     {
+      "slug": "hardware-intelligence",
+      "name": "hardware intelligence",
+      "one_liner": "AI tools for the chips your AI runs on"
+     },
+     {
+      "slug": "hebbian-robotics",
+      "name": "Hebbian Robotics",
+      "one_liner": "APIs for searching and analyzing Physical AI data at scale"
+     },
+     {
+      "slug": "manufacturingintelligence",
+      "name": "HERA",
+      "one_liner": "Hera catches thousand dollar errors before they hit the shop floor."
+     },
+     {
+      "slug": "hiloop",
+      "name": "hiloop",
+      "one_liner": "Infrastructure for recursive self-improvement"
+     },
+     {
+      "slug": "hubble-ai",
+      "name": "Hubble",
+      "one_liner": "The intelligence layer for patient information"
+     },
+     {
+      "slug": "illume-labs",
+      "name": "Illume Labs",
+      "one_liner": "24/7 Personal Health & Longevity Companion"
+     },
+     {
+      "slug": "impact-drones",
+      "name": "IMPACT Drones",
+      "one_liner": "Air Defense as a Service for Civilian Infrastructure."
+     },
+     {
+      "slug": "induction-labs",
+      "name": "Induction Labs",
+      "one_liner": "Building intellectually curious AI"
+     },
+     {
+      "slug": "instaplay",
+      "name": "Instaplay",
+      "one_liner": "AI-Native Social Platform, Starting with Games"
+     },
+     {
+      "slug": "jcode",
+      "name": "Jcode",
+      "one_liner": "20x more coding agents, 20x more productivity"
+     },
+     {
+      "slug": "kara",
+      "name": "Kara",
+      "one_liner": "Making diamond an engineering material"
+     },
+     {
+      "slug": "kebra",
+      "name": "Kebra",
+      "one_liner": "Make your field service company AI-native"
+     },
+     {
+      "slug": "lamb-labs",
+      "name": "Lamb Labs",
+      "one_liner": "World's fastest AI models"
+     },
+     {
+      "slug": "last-accounting-company",
+      "name": "Last Accounting Company",
+      "one_liner": "Agent-native accounting firm."
+     },
+     {
+      "slug": "locke",
+      "name": "Locke",
+      "one_liner": "Builders of the first AI-native government affairs firm."
+     },
+     {
+      "slug": "luca-iq",
+      "name": "Luca IQ",
+      "one_liner": "API First Tax Calculator for CPAs"
+     },
+     {
+      "slug": "lumeria",
+      "name": "Lumeria",
+      "one_liner": "Oura Ring for Skin."
+     },
+     {
+      "slug": "maingen",
+      "name": "Maingen",
+      "one_liner": "RL environments for industrial operations"
+     },
+     {
+      "slug": "manifold-2",
+      "name": "Manifold",
+      "one_liner": "Low-cost, deployment-ready robotic labor for warehouses"
+     },
+     {
+      "slug": "joinmarble",
+      "name": "Marble",
+      "one_liner": "The autonomous back-of-house for restaurants."
+     },
+     {
+      "slug": "marengo",
+      "name": "Marengo",
+      "one_liner": "Automating engineering design, starting with data centers."
+     },
+     {
+      "slug": "mosaic-inc",
+      "name": "Mosaic",
+      "one_liner": "Defining the frontier of multiplayer AI."
+     },
+     {
+      "slug": "moving-atoms",
+      "name": "Moving Atoms",
+      "one_liner": "Virtual Reality for Evaluating Robots (World Models)"
+     },
+     {
+      "slug": "neuromorphic",
+      "name": "Neuromorphic",
+      "one_liner": "Building embodiment agnostic robot brains."
+     },
+     {
+      "slug": "neuron-industries",
+      "name": "Neuron Industries",
+      "one_liner": "Industrial Controllers built for AI"
+     },
+     {
+      "slug": "nex",
+      "name": "Nex",
+      "one_liner": "Claude Cowork for GTM Automations"
+     },
+     {
+      "slug": "olam-labs",
+      "name": "Olam Labs",
+      "one_liner": "Building multi-agent simulations for model evals and training."
+     },
+     {
+      "slug": "omanta",
+      "name": "Omanta",
+      "one_liner": "A research lab for one"
+     },
+     {
+      "slug": "onecli",
+      "name": "OneCLI",
+      "one_liner": "The Identity Gateway for AI Agents"
+     },
+     {
+      "slug": "ooak-data",
+      "name": "Ooak Data",
+      "one_liner": "We build the world's largest library of real-world business workflow…"
+     },
+     {
+      "slug": "openvector",
+      "name": "OpenVector",
+      "one_liner": "AI that turns any camera to an autonomous worker with real-time vision"
+     },
+     {
+      "slug": "orvixo",
+      "name": "Orvixo",
+      "one_liner": "AI advanced planning and optimisation for manufacturers."
+     },
+     {
+      "slug": "pacific",
+      "name": "Pacific",
+      "one_liner": "Mass-producing and deploying micro data centers for Earth and Space"
+     },
+     {
+      "slug": "palisade-2",
+      "name": "Palisade",
+      "one_liner": "AI that finds and fixes OS-level vulnerabilities across device fleets"
+     },
+     {
+      "slug": "peer",
+      "name": "Peer",
+      "one_liner": "AI-native freight brokerage"
+     },
+     {
+      "slug": "pokerclubhub",
+      "name": "PokerClubHub",
+      "one_liner": "Host a Poker Club and Make Money"
+     },
+     {
+      "slug": "prodigy-research",
+      "name": "Prodigy Research",
+      "one_liner": "Training the world's best foundation model for quantitative finance."
+     },
+     {
+      "slug": "proprio-robotics",
+      "name": "Proprio Robotics",
+      "one_liner": "Building autonomous data centers"
+     },
+     {
+      "slug": "qlo",
+      "name": "Qlo",
+      "one_liner": "AI that automates underwriting for commercial insurance carriers"
+     },
+     {
+      "slug": "radley",
+      "name": "Radley",
+      "one_liner": "AI-native, full-stack radiology practice"
+     },
+     {
+      "slug": "rapidfolio",
+      "name": "Rapidfolio",
+      "one_liner": "AI for fintechs & banks"
+     },
+     {
+      "slug": "rasyn",
+      "name": "Rasyn",
+      "one_liner": "Towards a General Intelligence for Chemistry"
+     },
+     {
+      "slug": "rational",
+      "name": "Rational",
+      "one_liner": "AI Employees for Accounting"
+     },
+     {
+      "slug": "rekursivai",
+      "name": "rekursiv.ai",
+      "one_liner": "Scale AI scientists whose own breakthroughs accelerate the next."
+     },
+     {
+      "slug": "riften",
+      "name": "Riften",
+      "one_liner": "Earned Intelligence for every company. "
+     },
+     {
+      "slug": "ronanrx-inc",
+      "name": "RonanRx Inc.",
+      "one_liner": "We use AI to personalize peptides to your biology"
+     },
+     {
+      "slug": "shielded",
+      "name": "Shielded",
+      "one_liner": "We automate supply chain and financial risk management "
+     },
+     {
+      "slug": "shiraz-ai",
+      "name": "Shiraz AI",
+      "one_liner": "Robots that learn on the job"
+     },
+     {
+      "slug": "textsidekick",
+      "name": "Sidekick",
+      "one_liner": "AI agent that handles frontline operations over text"
+     },
+     {
+      "slug": "spaceflow-technologies-inc",
+      "name": "SpaceFlow Technologies, Inc.",
+      "one_liner": "The managed runtime for enterprise AI agents"
+     },
+     {
+      "slug": "standard-machines",
+      "name": "Standard Machines",
+      "one_liner": "RL Environments For Chip Design"
+     },
+     {
+      "slug": "stoa",
+      "name": "Stoa",
+      "one_liner": "The market behind AI hardware."
+     },
+     {
+      "slug": "stratum-industries",
+      "name": "Stratum Industries",
+      "one_liner": "AI agents that clear the U.S. government backlog."
+     },
+     {
+      "slug": "subvysion",
+      "name": "SubVysion",
+      "one_liner": "We help contractors dig safer with 3D maps of underground…"
+     },
+     {
+      "slug": "sunflower",
+      "name": "Sunflower",
+      "one_liner": "Building the Sobriety Platform for the future of Superintelligence. 🌻"
+     },
+     {
+      "slug": "synapse-semiconductor",
+      "name": "Synapse Semiconductor",
+      "one_liner": "Collapsing the edge AI vision hardware stack into one wafer"
+     },
+     {
+      "slug": "tarebio",
+      "name": "TareBio",
+      "one_liner": "Vaccines for any cancer or infection in weeks."
+     },
+     {
+      "slug": "tash",
+      "name": "tash",
+      "one_liner": "The investment platform for sports & trading cards"
+     },
+     {
+      "slug": "tenor",
+      "name": "Tenor",
+      "one_liner": "AI workers that attribute the outcome back to the token spend"
+     },
+     {
+      "slug": "tensr",
+      "name": "Tensr",
+      "one_liner": "Fully autonomous robotic factories"
+     },
+     {
+      "slug": "traceforce",
+      "name": "Traceforce",
+      "one_liner": "Securing AI native apps directly on devices"
+     },
+     {
+      "slug": "tracer",
+      "name": "Tracer",
+      "one_liner": "Combining open-source AI models for better answers at lower cost"
+     },
+     {
+      "slug": "trident",
+      "name": "Trident",
+      "one_liner": "Agents that find real exploitable vulnerabilities in your company "
+     },
+     {
+      "slug": "trynearby",
+      "name": "TryNearby",
+      "one_liner": "Local creators for local businesses"
+     },
+     {
+      "slug": "ultrasonium",
+      "name": "Ultrasonium",
+      "one_liner": "Manufacturing the metal parts the world runs on faster, cheaper, safer"
+     },
+     {
+      "slug": "vendo",
+      "name": "Vendo",
+      "one_liner": "Let your users build their own features on top of your product"
+     },
+     {
+      "slug": "verdict-machine",
+      "name": "Verdict Machine",
+      "one_liner": "AI cybersecurity for financial institutions' digital assets"
+     },
+     {
+      "slug": "waddle-labs",
+      "name": "Waddle Labs",
+      "one_liner": "Agents for robotics control. "
+     },
+     {
+      "slug": "wondering",
+      "name": "Wondering",
+      "one_liner": "Duolingo for learning anything, but 10x better"
+     },
+     {
+      "slug": "zaplar",
+      "name": "Zaplar",
+      "one_liner": "Agentic Hotel Operating System"
+     }
+    ],
+    "removed": [
+     {
+      "slug": "justinian",
+      "name": "Justinian"
+     },
+     {
+      "slug": "shepherd-3",
+      "name": "Shepherd"
+     },
+     {
+      "slug": "truffle",
+      "name": "Truffle"
+     }
+    ],
+    "changed": [
+     {
+      "slug": "agnost-ai",
+      "name": "Agnost AI",
+      "field": "one_liner",
+      "old": "Product analytics for teams building conversational agents",
+      "new": "Product analytics for AI Agents"
+     },
+     {
+      "slug": "alkera-ai",
+      "name": "Alkera AI",
+      "field": "one_liner",
+      "old": "Data engineering and data science agents that are reliable and safe",
+      "new": "Reliable and safe data engineering and data science agents"
+     },
+     {
+      "slug": "alkera-ai",
+      "name": "Alkera AI",
+      "field": "long_description",
+      "old": "Alkera is a data engineering and data science agent that works in your IDE or CLI. If you’re tired of agents taking forever just to produce false, or even dangerous, reports about your data, then Alkera is for you. Our agent is equipped with your data’s history and lineage, your team’s knowledge, and tailored plugins for data apps such as Snowflake and dbt. Simply install and connect your services to begin doing trusted agentic data work. We also offer VPC & on-prem deployment options for when data can't leave your boundary.",
+      "new": "Alkera is a data engineering/analysis/science agent that works in your IDE or CLI. If you’re tired of agents that produce false, or even dangerous, reports about your data, then Alkera is for you. Our agent is equipped with your data’s history and lineage, your team’s knowledge, and tailored plugins for data apps such as Snowflake and dbt. Simply install and connect your services to begin doing trusted agentic data work. We also offer VPC & on-prem deployment options for when data can't leave your boundary."
+     },
+     {
+      "slug": "alkera-ai",
+      "name": "Alkera AI",
+      "field": "team_size",
+      "old": 4,
+      "new": 3
+     },
+     {
+      "slug": "amulet",
+      "name": "Amulet",
+      "field": "one_liner",
+      "old": "Agents that drive customer success",
+      "new": "High performance file system for agents"
+     },
+     {
+      "slug": "amulet",
+      "name": "Amulet",
+      "field": "long_description",
+      "old": "Amulet helps post-sales teams monitor every account and automate the work that drives retention and expansion.\r\n\r\nOur agents connect to customer data (CRM, support, product usage, and communication data) to flag churn risks, surface upsell opportunities, track adoption, and draft the right messages for each customer.",
+      "new": "Amulet is a high-performance filesystem that gives agent workloads fast access to petabytes of data stored in the cloud. \r\n\r\nWe provide isolated, writable workspaces that mount in under 100 ms and fork without copying data. Work persists across disposable compute, and every workspace can be snapshotted, reproduced, merged, or rolled back. We’re working with agentic automated-research labs, cloud agent providers, and other to bring this infrastructure to data-intensive AI teams."
+     },
+     {
+      "slug": "withasync",
+      "name": "Async",
+      "field": "one_liner",
+      "old": "AI Agents for Service Businesses",
+      "new": "Transforming small businesses with AI agents"
+     },
+     {
+      "slug": "withasync",
+      "name": "Async",
+      "field": "long_description",
+      "old": "Async partners with service businesses across law, healthcare and real estate to build and deploy custom agents. We audit existing processes, rework them to become agent-first, deploy custom agents to automate the process and up-skill employees on AI. ",
+      "new": "Async builds agents that change how businesses can run. Law firms, healthcare clinics and real estate companies hire our AI agents to automate complex work that's never been economical to staff with humans, letting us capture labor spend that didn't previously exist."
+     },
+     {
+      "slug": "atlas-discovery",
+      "name": "Atlas Discovery",
+      "field": "one_liner",
+      "old": "Discovering the atlas of disease biology using virtual cells.",
+      "new": "Predicting human response to drugs in clinical trials"
+     },
+     {
+      "slug": "contextdev",
+      "name": "Context.dev",
+      "field": "long_description",
+      "old": "Context.dev gives AI agents structured data from any website through a single API.\r\n\r\nWe help developers build smarter agents & products that depend on accurate, fresh web data.\r\n\r\nIf you need structured data from the internet, you need Context.dev\r\n\r\nProud to power agentic products at Mintlify, Super, Vizzy, Klarna, and 280 other companies. ",
+      "new": "Context.dev gives AI agents structured data from any website through a single API.\r\n\r\nWe help developers build smarter agents & products that depend on accurate, fresh web data.\r\n\r\nIf you need structured data from the internet, you need Context.dev\r\n\r\nProud to power agentic products at Mintlify, Super, Vizzy, Klarna, and 400+ other companies. "
+     },
+     {
+      "slug": "control-seat",
+      "name": "Control Seat",
+      "field": "long_description",
+      "old": "",
+      "new": "Control Seat builds the hardware and software that helps industrial teams see, understand, and run their operations.\r\n\r\nOur platform creates one clear source of truth across the plant. It connects the systems teams already use, brings control, monitoring, history, and machine health together, and adds an intelligence layer that continuously watches for meaningful changes. Teams can understand what happened, catch problems earlier, and act before they become downtime.\r\n\r\nThe result is fewer surprises, faster decisions, and less time spent piecing together information across disconnected tools.\r\n\r\nWe work with manufacturers, utilities, energy companies, and other industrial operators modernizing existing facilities or building new ones."
+     },
+     {
+      "slug": "cova",
+      "name": "Cova",
+      "field": "team_size",
+      "old": 5,
+      "new": 2
+     },
+     {
+      "slug": "definite",
+      "name": "Definite",
+      "field": "one_liner",
+      "old": "The most accurate financial agents",
+      "new": "Build everyday back-office agents on one live model of your books"
+     },
+     {
+      "slug": "definite",
+      "name": "Definite",
+      "field": "long_description",
+      "old": "Definite builds AI agents for the financial back office. Before any output touches your systems, our verification engine checks it against the source documents. Numbers get recomputed from contracts, rate tables, and ledger records, and wrong outputs go back to the agent with the reason, like compiler errors. They don't ship.\r\n\r\nWe met our first year studying computer science at the University of Waterloo, and interned at Meta, Optiver, and BitGo, places where one unverified number moving through a system has real consequences. Talking to teams deploying agents, we kept seeing the same failure: back-office pilots that demo well but never graduate, because nobody trusts the outputs enough to stop re-checking them.\r\n\r\nToday teams check agent work with deterministic rules, an LLM judge, and human sampling. The middle is the gap. Judge models miss what the agent missed, rules only cover what someone wrote down, so a human reviews everything and the economics never improve.\r\n\r\nThis is hard because verification has to be independent of the model doing the work. Recomputing the output has to be done from source documents instead of asking a model to grade its own answer. \r\n\r\nEvery back office is getting agents. Whoever makes agent output trustworthy enough to run without a human behind it owns the layer everything else depends on. The same way finance built approval controls before money moves, verified execution becomes mandatory infrastructure. We build it, and the agents that run on it.",
+      "new": "Definite is where finance teams build everyday back-office agents on one live model of their books. We plug into your ERP, ledger, payroll, and payments read-only and compile everything into one clean model that stays current as money moves. Your back-office team then builds agents on top in plain English. We never write back and we never move money. The agents are yours, the plumbing is ours.\r\n\r\nWe met in first year computer science at Waterloo and interned at Meta, Optiver, and BitGo. At Optiver they ran an n8n hackathon and the interns automated basically nothing. It couldn't talk to the systems that mattered. When we pitched banks and fintechs on agents, they kept telling us the same thing. The agent isn't the hard part, getting clean data out of their systems is.\r\n\r\nRight now, automating anything in a back office means engineers hand-stitching data from a dozen sources in different formats on different schedules. Tools like n8n and Workato assume your data is already clean and joined. In finance it never is. So the teams with the most repetitive work and smallest budgets get nothing.\r\n\r\nThe hard part is the compiler. Every source gets cleaned, matched, and joined into one live model of transactions, invoices, vendors, and payments, and it has to stay right as money lands every day. \r\n\r\nEveryone throws engineers at this. We're doing it once so nobody has to again. Every back office is getting agents eventually. Whoever owns the data they read from owns the thing all of them depend on, and eventually the books themselves. That's what we're building.\r\n"
+     },
+     {
+      "slug": "experiential-labs",
+      "name": "Experiential Labs",
+      "field": "one_liner",
+      "old": "World models for agents",
+      "new": "Turn your AI spend into a cheaper + better model you own"
+     },
+     {
+      "slug": "experiential-labs",
+      "name": "Experiential Labs",
+      "field": "long_description",
+      "old": "An applied AI research lab building world models for agents. We simulate reality faster and more accurately based on the technology self-driving uses to get 99.7% reconstruction fidelity.",
+      "new": "We build model endpoints for your agent that will always be frontier quality and 50%+ cheaper than any frontier model. This is done by continuously improving smaller models on simulations built from production agent traces. "
+     },
+     {
+      "slug": "florin",
+      "name": "Florin",
+      "field": "one_liner",
+      "old": "The financial operating system for the companies building the future.",
+      "new": "Florin is the insurance carrier with zero underwriters"
+     },
+     {
+      "slug": "florin",
+      "name": "Florin",
+      "field": "long_description",
+      "old": "Florin brings banking, payments, cards, and treasury into one account built for startups - so founders can hold, move, and grow their capital without stitching together half a dozen tools. Unlike platforms that resell another bank's rails, we're building the infrastructure ourselves, end to end, so money moves in real time on a single ledger we own. We start with an invite-only membership for venture-backed companies and expand from there. Named after the florin, the coin that anchored global trade for three centuries, with infrastructure built for how money moves now.",
+      "new": "Florin is a full-stack insurance carrier where a model does the underwriting. When a submission comes in, Florin reads the ACORD forms, then investigates the risk on its own: satellite imagery, permits, public records, even the insured's Instagram, and catches exposures that never make it onto the application. It then simulates tens of thousands of ways the policy year could go, prices the risk, and returns a bindable quote in under a minute instead of weeks. The team is ex-Google, Tesla, Amazon, and Terra Firma, and the bet is that a carrier built this way wins on loss ratio, speed, and cost at the same time."
+     },
+     {
+      "slug": "flowmanual",
+      "name": "FlowManual",
+      "field": "long_description",
+      "old": "FlowManual is the all-in-one AI bidding and purchasing platform for both general and specialty construction contractors.\r\n\r\nBuilt by two engineers and Harvard dropouts, FlowManual automates the buying process during pre-construction. With FlowManual, specialty contractors win more work while general contractors deliver at higher standards.",
+      "new": "FlowManual is the all-in-one AI bidding and purchasing platform for both general and MEP construction contractors.\r\n\r\nBuilt by two engineers and Harvard dropouts, FlowManual automates the buying process during pre-construction. With FlowManual, specialty contractors win more work while general contractors deliver at higher standards."
+     },
+     {
+      "slug": "greypoint-industries",
+      "name": "Greypoint Industries",
+      "field": "long_description",
+      "old": "Greypoint Industries builds mass-produced autonomous interceptors that defeat drone saturation for a fraction of the cost of the targets. We are developing a soldier-deployable, fire-and-forget interceptor built to give Western and allied forces the ammunition to counter mass drone swarm attacks.",
+      "new": "Greypoint Industries built LEGION, a drone swarm that identifies, geolocates, and tracks every emitter on the battlefield using the enemy’s own radio signals. LEGION enables our warfighters to precisely track previously obscured targets like jammers, command posts, and drone operators so they can proactively respond to threats instead of reacting to them."
+     },
+     {
+      "slug": "greypoint-industries",
+      "name": "Greypoint Industries",
+      "field": "website",
+      "old": "https://greypointindustries.ca/",
+      "new": "https://greypointindustries.com/"
+     },
+     {
+      "slug": "guild",
+      "name": "GUILD",
+      "field": "one_liner",
+      "old": "AI-Native Defense Contractor Reshaping the Defense Supply Chain",
+      "new": "Making aerospace parts faster and cheaper for defense"
+     },
+     {
+      "slug": "guild",
+      "name": "GUILD",
+      "field": "long_description",
+      "old": "GUILD is an AI-native defense contractor that automates the Defense Supply chain for the DoW. We predict government demand, then manufacture in-house cheaper and faster than the incumbents.\r\n\r\nWe've created an AI-native business model for contracting operations, manufacturing, and finance to deliver on defense contracts end-to-end.",
+      "new": "GUILD is making aerospace parts faster and cheaper than today’s defense supply chain. We win defense contracts, automate manufacturing, and deliver to the government's door.\r\n\r\nWe’ve built an AI-native operating model for defense contracting: a company brain that connects requirements, pricing, supplier capability, compliance, manufacturing, finance, and delivery so each contract makes the next one faster and cheaper."
+     },
+     {
+      "slug": "hop-aero",
+      "name": "Hop Aero",
+      "field": "website",
+      "old": "https://hop-aero.com",
+      "new": "https://hopaero.com"
+     },
+     {
+      "slug": "inkbox",
+      "name": "Inkbox",
+      "field": "one_liner",
+      "old": "Give your AI agents email, phone, iMessage and an internet address",
+      "new": "Let your agents communicate via email, phone, iMessage, & Agent2Agent"
+     },
+     {
+      "slug": "inkbox",
+      "name": "Inkbox",
+      "field": "long_description",
+      "old": "We are building the identity and communication layer for AI agents: giving agents their own email, phone, iMessage, and internet address. Every interaction flows through Inkbox, so agents are enhanced with multi-channel context.",
+      "new": "For your AI agents to behave like teammates, we give them persistent identities with their own email, phone, and iMessage. We also provide them an agent-to-agent channel, so they can communicate for task delegation."
+     },
+     {
+      "slug": "instance",
+      "name": "Instance",
+      "field": "one_liner",
+      "old": "Success detection for robot learning",
+      "new": "Automated evals for robot policies"
+     },
+     {
+      "slug": "instance",
+      "name": "Instance",
+      "field": "long_description",
+      "old": "Instance is ground truth for robot learning. Labs generate thousands of robot episodes a week — far more than anyone can watch — and the mislabels nobody catches poison training data, evals, and RL rewards. \r\n\r\nGive us a task description and video rollouts, and we return a success verdict with evidence. Teams use Instance to clean training data, run evals they can trust, and get reward signals for reinforcement learning without hand-labeling. We benchmark our verifier against human-labeled episodes across 8 benchmarks and 7 robot platforms, where it outperforms frontier VLMs in accuracy and latency.\r\n\r\nWe're MIT computer scientists & friends since middle school, with backgrounds at NASA JPL, SpaceX, and AWS.",
+      "new": "We’re automating robot evaluation– the loop where you wait for your robot to roll out, judge its success, and then reset the scene. We're starting with step one: a success detector that automatically tells you whether your robot actually completed its task along with detailed subtask breakdown. \r\n\r\nWe're MIT computer scientists & friends since middle school, with backgrounds at NASA JPL, SpaceX, and AWS.\r\n\r\nBook a demo with founders@instancelabs.ai."
+     },
+     {
+      "slug": "isengard-industries-inc",
+      "name": "Isengard Industries Inc",
+      "field": "team_size",
+      "old": 20,
+      "new": 30
+     },
+     {
+      "slug": "levocred-ai",
+      "name": "Levocred AI",
+      "field": "one_liner",
+      "old": "AI for every workflow inside a credit team",
+      "new": "AI for credit funds, fintechs and banks"
+     },
+     {
+      "slug": "levocred-ai",
+      "name": "Levocred AI",
+      "field": "long_description",
+      "old": "Levocred AI is the Company Brain for credit teams — an AI employee that plugs into the fund's loan tape, credit agreements, servicer reports, and bank feeds, and runs the workflows analysts would otherwise grind on.",
+      "new": "Levocred AI is an AI-native platform for credit funds, fintechs and banks to automate workflows like back-office tasks, portfolio monitoring, compliance and underwriting. Live across multiple credit teams, running ~$1Bn in receivables through the platform."
+     },
+     {
+      "slug": "libra-robotics",
+      "name": "Libra Robotics",
+      "field": "one_liner",
+      "old": "Autonomous robots for solar farm construction",
+      "new": "Multi-robot collaboration for harsh environments on Earth."
+     },
+     {
+      "slug": "libra-robotics",
+      "name": "Libra Robotics",
+      "field": "long_description",
+      "old": "",
+      "new": "We build collaborative robot squads for solar farm construction.\r\n\r\nHigh labor costs, labor shortages, and unpredictable productivity make infrastructure difficult to build in places that are remote, harsh, or empty. We are building robots to unlock places once considered too difficult to develop. Solar is our first proving ground, spanning utility-scale, commercial and industrial, community solar, agrivoltaic, and other projects.\r\n\r\nUnlike solutions that automate only one task, or even part of one, we cover the workflow after PV module pallets arrive on-site: transportation, installation, alignment, and fastening. Each robot has a specific role, and fleets can be configured based on each project’s cost and schedule requirements.\r\n\r\nOur robots operate autonomously with remote supervision. One person can supervise 4+ robots through a screen and an e-stop button, without being physically present or teleoperating them. Our robotic fleet has also been tested at night, paving the way for 24/7 operation.\r\n\r\nWe work directly with EPCs through a Robotics-as-a-Service model, requiring no robot purchase or large upfront capital investment. We also work with racking and PV module manufacturers to certify compatibility and give customers confidence in deployment.\r\n\r\nPurpose-built hardware, multimodal sensing, and physical AI software help our robots handle real-world construction uncertainty."
+     },
+     {
+      "slug": "libra-robotics",
+      "name": "Libra Robotics",
+      "field": "team_size",
+      "old": 0,
+      "new": 2
+     },
+     {
+      "slug": "litmus-hiring",
+      "name": "Litmus",
+      "field": "team_size",
+      "old": 2,
+      "new": 3
+     },
+     {
+      "slug": "machine0",
+      "name": "machine0",
+      "field": "one_liner",
+      "old": "Persistent & powerful cloud VMs from your CLI",
+      "new": "Cloud computers for AI agents"
+     },
+     {
+      "slug": "machine0",
+      "name": "machine0",
+      "field": "long_description",
+      "old": "machine0 is a CLI that lets you create, provision, and snapshot cloud VMs. `machine0 new my-vm` spins up a VM with dedicated CPU, RAM, and optional GPUs, plus a static IP and HTTPS endpoint. The tools agents need (e.g. Node, Python, Docker) and the agents themselves (e.g. Claude Code, Codex, OpenClaw, Hermes) come pre-installed. 99.99% VM uptime SLA across four regions.\r\n\r\nAgent workloads are moving from ephemeral to always-on. A coding agent debugging a complex issue runs 4-8 hours. OpenClaw runs 24/7. machine0 is the environment in which these agents run.",
+      "new": "machine0 is a CLI for agent compute: `machine0 new mybox` gives your agent a full cloud VM, billed by the minute, from small up to 60 vCPU / 240 GB and 8×H100s. Agents drive it themselves via CLI or MCP.\r\n\r\nAgent workloads are moving from ephemeral to always-on. A coding agent working on a hard feature runs 6-8 hours. Auto-research agents run for days. machine0 is the environment in which these agents run."
+     },
+     {
+      "slug": "mireye",
+      "name": "Mireye",
+      "field": "long_description",
+      "old": "AI agents are starting to act in the real world, but they can't reliably understand it. \r\n\r\nGeospatial data is complex, fragmented, and unstructured. Ask a model a specific question about a specific place and it guesses. Our API and MCP give agents cited answers about any location.\r\n\r\nOur mission is to index every inch of the earth, and make it as queryable as the web.",
+      "new": "AI agents are starting to act in the real world, but they can't reliably understand it. \r\n\r\nEvery fact about a place has its own silo: land in GIS maps, power in utility portals, people in census tables, policy in county PDFs. All built for humans, none for agents. Underneath, the data is fragmented across thousands of sources, unstructured and complex.\r\n\r\nMireye is building the infrastructure that powers agents to make decisions and act in the real world. One API and MCP to connect agents to the physical world with accurate data enrichment, signals and tools.\r\n\r\nOur mission is to index every inch of the earth, and make it as queryable as the web."
+     },
+     {
+      "slug": "molagri",
+      "name": "Molagri",
+      "field": "one_liner",
+      "old": "Biopesticides that are safe for humans and bees.",
+      "new": "Resistance free pesticides."
+     },
+     {
+      "slug": "nebula-security",
+      "name": "Nebula Security",
+      "field": "one_liner",
+      "old": "Our AI agent finds vulnerabilities that Mythos can't",
+      "new": "Building Mythos for everyone"
+     },
+     {
+      "slug": "noril1",
+      "name": "Nori",
+      "field": "one_liner",
+      "old": "Sub-1500$ robot anyone can program",
+      "new": "Affordable robot you can teach to do anything"
+     },
+     {
+      "slug": "noril1",
+      "name": "Nori",
+      "field": "long_description",
+      "old": "We manufacture humanoid robots in San Francisco. ",
+      "new": "Nori builds home robots that cost less than $2,000 and that anyone can teach. Out of the box, the NORI L3 does household chores: loading the dishwasher, folding laundry, tidying up. But because anyone can train it, it also learns your specific tasks, like washing paintbrushes if you're an artist or flipping sheet music while you play guitar. It's a general-purpose robot, not an appliance.\r\n\r\nWe launched pre-orders 6 weeks ago and have already booked $100K in revenue.\r\n\r\nHumanoid robots exist, but they cost $20,000 or more and are demoed, not shipped. We got to $1,688 without sacrificing capability. Instead of expensive actuators, we use low-cost servos and get more out of them through smarter control and design. A wheeled base with a lift gives full floor-to-counter reach without the cost and fragility of legs, and we streamlined manufacturing from day one, assembling in the US.\r\n\r\nThe teachability is the moat. Every skill a user trains can be shared, so each customer makes every robot more capable. Hardware is the entry point; the skill ecosystem is the recurring revenue.\r\n\r\nWe're robotics researchers from Columbia labs like RoboPIL (robot learning) and CGUI. Working with $100K research robots that struggled with everyday tasks convinced us the problem isn't capability, it's cost. Good robots don't need to be expensive.\r\n\r\nHouseholds already spend $2,000+ on single-task machines: a dishwasher, a washing machine, a vacuum. We sell one robot at $1,688 that does the work of all of them and learns more. At 5% of US households and $25 a month for skills, that's $2B a year in recurring revenue, on top of hardware."
+     },
+     {
+      "slug": "noril1",
+      "name": "Nori",
+      "field": "team_size",
+      "old": 4,
+      "new": 5
+     },
+     {
+      "slug": "opentrade",
+      "name": "OpenTrade",
+      "field": "one_liner",
+      "old": "Investing for the rest of us",
+      "new": "The new interface for investing."
+     },
+     {
+      "slug": "opentrade",
+      "name": "OpenTrade",
+      "field": "long_description",
+      "old": "OpenTrade helps everyday investors trade at a hedge-fund level. We're experimenting with a new UX on investing: every morning, you swipe on 10 theses brought to you by proactive agents",
+      "new": "OpenTrade is rebuilding the trading experience for a generation raised on games, social products, and AI."
+     },
+     {
+      "slug": "osmaura",
+      "name": "Osmaura",
+      "field": "one_liner",
+      "old": "We find new matter opportunities for corporate law firms.",
+      "new": "AI growth engine for law firms."
+     },
+     {
+      "slug": "osmaura",
+      "name": "Osmaura",
+      "field": "long_description",
+      "old": "As soon as a lawyer is made partner, they’re expected to bring in new business.\r\n\r\nHowever, it’s often not clear when a company is going to need legal counsel. So partners are encouraged to do business development with every person in their network in hopes that at least one of them generates new work.\r\n\r\nOsmaura gives partners a deeper understanding of prospective clients and legal support they might need at the right time.\r\n\r\nOur agents do this by monitoring the web, news, socials, and internal firm context to surface targeted matter opportunities for each partner.",
+      "new": "Our agents scan the web to deliver new client & cross-selling opportunities for law firm partners.\r\n\r\nEvery day, our customers log onto our platform to see who to contact, why now, and what to say.\r\n\r\nPartners are trained to practice law - not to prospect, sell, and manage pipelines. We're here to help them grow while they focus on what they do best."
+     },
+     {
+      "slug": "osseus",
+      "name": "Osseus",
+      "field": "one_liner",
+      "old": "The secure research brain for accelerating R&D",
+      "new": "The intelligent development platform for robotics"
+     },
+     {
+      "slug": "osseus",
+      "name": "Osseus",
+      "field": "long_description",
+      "old": "Osseus is the secure research brain for R&D teams. Today, research knowledge is fragmented across specialist tools, decisions, conversations, and people's heads. Osseus crafts this into a permissioned memory that grows with every experiment, decision, failure, and lesson learned. Rather than only retrieving the current state of connected tools, Osseus preserves how work evolved: what was tried, what failed, why decisions were made, and who holds the relevant context.\r\n\r\nEach person gets a personal AI agent that uses this growing history to proactively surface relevant evidence, help prevent duplicated work and repeated mistakes, and identify the exact expert who can unblock the next decision. By preserving both technical history and the organizational know-how behind team processes and decision making, Osseus helps R&D teams move faster before time and money are wasted.",
+      "new": "Osseus is the intelligent development platform for robotics. It plugs into the tools a team already uses - CAD, ECAD, GitHub, Jira, docs, messaging, and test runs - creating a live dependency graph of their entire robot stack. It automatically builds and maintains the relationships between every part, board, requirement, test, and decision.\r\n\r\nWhen a hardware change is made, the map traces the downstream impact across mechanical, electrical, and software. Osseus's agents find which requirements may be compromised, run the attached tests and sims, create fixes for the affected hardware/software on branches, and re-run the tests to confirm the new design doesn’t break downstream.\r\n\r\nOsseus includes a robotics component marketplace. Teams can list spare parts and hardware for others to buy/rent during prototyping, and designs can be evaluated against real component availability. If a part has a long lead time or is unavailable, engineers can quickly find compatible alternatives in their area instead of waiting weeks or asking around their network.\r\n\r\nDesign review also happens in Osseus. Engineers see why a design might not work, what's been tried before, and why something was built the way it was, pulled from prior conversations between engineers and with suppliers. Suppliers comment directly on a part through a secure link instead of back and forth over email, and what they say is remembered. If a supplier flags that a design isn't machinable, or that changing a feature would cut cost, that insight automatically appears the next time someone designs something similar, saving time and money.\r\n\r\nWe ultimately will use the platform's deep engineering understanding to develop physical-AI models that reason jointly over the robot's geometry, electronics, kinematics, components, software, and real-world performance so people can optimize and iterate on robots much faster. Get in touch to learn more!"
+     },
+     {
+      "slug": "palette-2",
+      "name": "Palette",
+      "field": "one_liner",
+      "old": "An interactive AI video generation and editing platform",
+      "new": "An AI-Native Media Platform"
+     },
+     {
+      "slug": "palette-2",
+      "name": "Palette",
+      "field": "long_description",
+      "old": "Palette is an interactive multimodal generation platform that helps people create, personalize, and maintain multimedia content at scale. Instead of relying on fragmented creative tools or manual production workflows, Palette enables them to generate, edit, and transform text, images, and video using natural language. Whether creating customer experiences, product content, educational materials, or internal communications, Palette makes professional-quality media generation accessible through a single interface.",
+      "new": "Palette is an AI-native media platform built by MIT computer scientists and multimodal researchers that unifies the creative workflow into a single generation engine. We eliminate tool and context fragmentation for creative teams in enterprises and allow content creators to transform static assets into controllable, repeatable workflows in one conversation."
+     },
+     {
+      "slug": "palette-2",
+      "name": "Palette",
+      "field": "website",
+      "old": "https://palettetechnology.com/",
+      "new": "https://palettelabs.com/"
+     },
+     {
+      "slug": "perceptron-ml",
+      "name": "Perceptron ML",
+      "field": "one_liner",
+      "old": "Live alerts for anything happening in the world.",
+      "new": "We make law firms AI-native."
+     },
+     {
+      "slug": "perceptron-ml",
+      "name": "Perceptron ML",
+      "field": "long_description",
+      "old": "Perceptron ML tracks anything you want, anywhere it happens. Tell us in plain English what matters, new lawsuits, layoffs, price drops, listings, RFPs, breaking news, and we watch the news, filings, databases, and the open web for it. You get notified instantly, hourly, daily, or weekly, by email, on a live dashboard, or directly into your agents and workflows through our API and MCP.",
+      "new": "We build AI systems for law firms, trained on each firm's own matters and deployed privately in their environment: timekeeping, intake and matter monitoring, research, discovery, and drafting. Our grounding engine verifies every fact against a primary source before a model can cite it, which is why firms trust us with work that off-the-shelf legal AI keeps getting wrong."
+     },
+     {
+      "slug": "petrarch",
+      "name": "Petrarch",
+      "field": "one_liner",
+      "old": "Market maker for specialized data assets",
+      "new": "Unlocking enterprise data for tomorrow's economy"
+     },
+     {
+      "slug": "talentpluto",
+      "name": "Pluto",
+      "field": "long_description",
+      "old": "Resumes made careers readable. LinkedIn made them searchable. Pluto makes them understood.\r\n\r\nProfessionals talk to Pluto for 10 minutes about what they’ve done, what they’re great at, and what they want next. Pluto makes that context discoverable to the right people and AI agents, helping them understand the professional more fully.\r\n\r\nFor hiring, companies tell Pluto who they want to meet. Pluto searches its network and the broader market, evaluates fit on both sides, privately confirms interest, and makes warm introductions when both sides want to connect.\r\n\r\n17K+ professionals have shared their career context with Pluto. 100+ companies, from fast-growing startups to decacorns, use Talentpluto to meet people with deeper context and confirmed interest.",
+      "new": "Resumes made careers readable. LinkedIn made them searchable. Pluto makes them understood.\r\n\r\nProfessionals talk to Pluto for 10 minutes about what they’ve done, what they’re great at, and what they want next. Pluto makes that context discoverable to the right people and AI agents, helping them understand the professional more fully.\r\n\r\nFor hiring, companies tell Pluto who they want to meet. Pluto searches its network and the broader market, evaluates fit on both sides, privately confirms interest, and makes warm introductions when both sides want to connect.\r\n\r\n18K+ professionals have shared their career context with Pluto. 100+ companies, from fast-growing startups to decacorns, use Pluto to meet people with deeper context and confirmed interest."
+     },
+     {
+      "slug": "prescience-inc",
+      "name": "Prescience, Inc.",
+      "field": "long_description",
+      "old": "Prescience is the preeminent health benefits platform for the world's most ambitious companies. We save employers 20-50% on healthcare while offering best-in-industry health benefits: www.getprescience.com\r\n\r\nAbout us:\r\nPrescience is building a new healthcare system for America. We train AI systems to: create, operate, insure, and deliver healthcare for employer health plans. Prescience Time Machine – an AlphaGo-like system – steers patients towards “Move 37 health trajectories” that deliver dramatic cost savings for employers. Rishab Jain and Aditya Jain, M.D. are serial entrepreneurs and brothers from Harvard & Harvard Medical School with backgrounds in machine learning and medicine. We believe abundant intelligence will bring an opportunity to fundamentally rebuild the $4.5T healthcare industry around proactive (prescient) health and wellness.",
+      "new": "Prescience is the preeminent health benefits platform for the world's most ambitious companies. We save employers 20-50% on health insurance while offering best-in-industry health benefits: www.getprescience.com\r\n\r\nAbout us:\r\nPrescience is building a new healthcare system for America. We train AI systems to: create, operate, insure, and deliver healthcare for employer health plans. Prescience Time Machine – an AlphaGo-like system – steers patients towards “Move 37 health trajectories” that deliver dramatic cost savings for employers. Rishab Jain and Aditya Jain, M.D. are serial entrepreneurs and brothers from Harvard & Harvard Medical School with backgrounds in machine learning and medicine. We believe abundant intelligence will bring an opportunity to fundamentally rebuild the $4.5T healthcare industry around proactive (prescient) health and wellness."
+     },
+     {
+      "slug": "prized",
+      "name": "Prized",
+      "field": "one_liner",
+      "old": "Internal tools, built by the people who use them.",
+      "new": "Lovable for internal tools"
+     },
+     {
+      "slug": "rindler",
+      "name": "Rindler",
+      "field": "long_description",
+      "old": "Rindler turns any website, including sites without APIs, into a deterministic API that AI agents can reliably use. It handles logins, 2FA, and bot detection, giving agents clean structured data and dependable actions instead of raw HTML, with robust maintenance when sites change.\r\n\r\nRindler is agent-agnostic and built on the open MCP standard, so it works with any agent.\r\n\r\nFor operators: get your team out of portals and back to the work that matters.\r\n\r\nFor agent builders: let your agents act on the real web quickly, cheaply, and reliably on every run.",
+      "new": "Rindler turns any website into deterministic abstractions that AI agents can operate on with speed, efficiency, and reliability.\r\n\r\nRindler drives a real browser to execute tasks on websites. It signs in, handles one-time verification codes, navigates to the right screen, retrieves records or completes forms, and returns structured output in a caller-defined schema.\r\n\r\nMost browser agents re-process and re-compute the same website every time they visit it. Rindler remembers. Our infrastructure gets faster and cheaper the more it is used, and when a site changes underneath it, Rindler detects the break and heals itself.\r\n\r\nFor operations leaders, Rindler takes on the repetitive website work your team does by hand, giving them their time back for the work that matters.\r\n\r\nFor agent builders, Rindler is a single endpoint that carries out tasks on the web, so you do not have to build or run browser infrastructure of your own."
+     },
+     {
+      "slug": "risklytics",
+      "name": "Risklytics",
+      "field": "one_liner",
+      "old": "Property-level natural disaster risk scoring for insurers",
+      "new": "Insurance for the Frontier"
+     },
+     {
+      "slug": "risklytics",
+      "name": "Risklytics",
+      "field": "long_description",
+      "old": "Risklytics builds AI risk models that score natural disaster risk property by property, so insurers can write the good risks hiding inside 'high-risk' zones instead of declining entire ZIP codes. One API call returns the risk score, the drivers behind it, and the cheapest retrofit path to insurability.",
+      "new": "Risklytics is a commercial insurance brokerage for frontier tech: robotics, autonomy, data centers, and energy infrastructure. Insurers are writing AI exclusions into standard liability forms, so companies whose products act in the physical world end up holding risk they thought they had transferred. We specialize in that gap, and we know which carriers in the admitted and surplus lines markets will still underwrite it. If you're building anything that moves, lifts, drives, or powers something, we'd like to talk."
+     },
+     {
+      "slug": "robocurve",
+      "name": "Robocurve",
+      "field": "one_liner",
+      "old": "We measure how well robots can do real-world jobs.",
+      "new": "Evaluating robots in the real world."
+     },
+     {
+      "slug": "salem-robotics-inc",
+      "name": "Salem Robotics Inc",
+      "field": "one_liner",
+      "old": "We deploy robots for inspections in hazardous spaces, like nuclear.",
+      "new": "Deploying robots for inspections in hazardous spaces, like nuclear."
+     },
+     {
+      "slug": "salem-robotics-inc",
+      "name": "Salem Robotics Inc",
+      "field": "long_description",
+      "old": "Our software turns any robot we deploy into an everyday independent worker at your facility. They are able to walk sites, handle instruments, overcome obstacles, collect measurements, and generate auditable compliance records, replacing hours of manual surveys and inspections. Built by Los Alamos robotics veterans and deterministic-manipulation researchers, we're starting in nuclear and expanding to other hazardous industries.",
+      "new": "Our software turns any robot we deploy into an everyday independent worker at your facility. They are able to walk sites, handle instruments, overcome obstacles, collect measurements, and generate auditable compliance records, replacing hours of mandatory manual surveys and inspections. Built by Los Alamos robotics veterans and deterministic-manipulation researchers, we're starting in nuclear and expanding to other hazardous industries."
+     },
+     {
+      "slug": "screenpipe",
+      "name": "screenpipe",
+      "field": "one_liner",
+      "old": "Capture how you work and turn that into agents",
+      "new": "AI powered by everything you've seen, said or heard"
+     },
+     {
+      "slug": "screenpipe",
+      "name": "screenpipe",
+      "field": "long_description",
+      "old": "screenpipe record and learns how you work and turns it into a searchable memory, SOPs, and AI agents. Open source, local.",
+      "new": "screenpipe record and learns how you work and turns it into a searchable memory, documents, and AI agents. Data is stored on your device or where your team choose, open source."
+     },
+     {
+      "slug": "screenpipe",
+      "name": "screenpipe",
+      "field": "team_size",
+      "old": 6,
+      "new": 2
+     },
+     {
+      "slug": "skymerse",
+      "name": "Skymerse",
+      "field": "team_size",
+      "old": 1,
+      "new": null
+     },
+     {
+      "slug": "touchmark",
+      "name": "Touchmark",
+      "field": "one_liner",
+      "old": "Solving AI pricing",
+      "new": "Market for future inference capacity"
+     },
+     {
+      "slug": "touchmark",
+      "name": "Touchmark",
+      "field": "long_description",
+      "old": "",
+      "new": "Buy tokens over a time window from the provider of your choice at a price fixed today - 10-30% off the on-demand price. If your plans change - resell your reserved capacity to another buyer."
+     },
+     {
+      "slug": "trope",
+      "name": "Trope",
+      "field": "one_liner",
+      "old": "Modernize ERP Implementations with AI",
+      "new": "The AI-native ERP system integrator"
+     },
+     {
+      "slug": "trope",
+      "name": "Trope",
+      "field": "long_description",
+      "old": "Trope is the AI-native ERP implementation platform that helps partners deliver successful projects faster.\r\n\r\nTrope understands the entire project lifecycle from pre-sales to go-live and beyond. Agents take action across documents, configurations, and code.\r\n\r\nFor implementation partners, it’s like having a project manager, consultant, and developer working 24/7.",
+      "new": "Trope is the AI-native ERP system integrator.\r\n\r\nWe accelerate months of hourly implementation work with agent-driven, fixed-fee delivery. Instead of leaving customers with a static system, we deploy AI agents that continue running and improving core business operations after go-live.\r\n\r\nTrope combines AI trained on ERP systems with principal consultants who have delivered 200+ implementations over 20 years. Together, they turn consulting services into software, shifting systems integration from one-time implementations to continuous AI-driven operations."
+     },
+     {
+      "slug": "trustai",
+      "name": "TrustAI",
+      "field": "one_liner",
+      "old": "Suggested cross-tool automations that run in one-click in background",
+      "new": "Continuous compliance and governance for agents on sensitive systems"
+     },
+     {
+      "slug": "trustai",
+      "name": "TrustAI",
+      "field": "long_description",
+      "old": "TrustAI understands your context across the browser (CRMs, internal tools, Slack, GitHub) and suggests personalized automations you can run in one click. Accept, tweak, or ignore, then keep working while we handle the busywork in the background. ",
+      "new": "TrustAI provides governance for agents that interact with critical systems. We run evals across six domains: Data Privacy, Hallucinations, Permission Compliance, Robustness at Scale, Accountability, and Security. Through comprehensive pentests, we identify key vulnerabilities, suggest solutions, and analyze cost vs time efficiency. "
+     },
+     {
+      "slug": "trustai",
+      "name": "TrustAI",
+      "field": "website",
+      "old": "https://auto.trytrust.ai/",
+      "new": "https://trytrust.ai"
+     },
+     {
+      "slug": "understudy-labs",
+      "name": "Understudy Labs",
+      "field": "long_description",
+      "old": "An open-source toolkit to capture traces, evaluate cheaper models against benchmarks, and ship specialist routes you own.\r\n\r\nCapture traces from LLM production workflows with a single install that deploys within coding agents you already use. Hosted infrastructure is optional.\r\n\r\nEvaluate the captured traces and set a benchmark for success. Every future model switch meets or exceeds it in A/B testing.\r\n\r\nTrain and fine-tune a new model on prompts and weights you always own. Start locally and scale into cloud-hosted processes as you see success.\r\n\r\nDeploy a new model only when the held-out eval is beaten. Serve it wherever you want. Production data feeds back into training and compounds performance over time.\r\n\r\nTest. Learn. Deploy. Repeat.",
+      "new": "Understudy is an inference cloud. We capture your AI work traces, train smaller models, and automatically deploy them (only when they outperform the expensive model you are currently paying for).\r\n\r\nInstead of renting the same frontier model forever, your AI infrastructure gets faster, smarter, and cheaper every time it runs.\r\n\r\nSuppose your product uses Claude for a repetitive legal workflow.\r\n\r\nUnderstudy observes successful production runs, learns the specific tools and judgment required for that workflow, and trains a specialized open-weight model.\r\n\r\nOnce that model matches or beats Claude on a held-out evaluation, Understudy starts routing production traffic to it.\r\n\r\nAs more work is completed, the model keeps improving.\r\n\r\nWe started Understudy because we believe every company using AI should be accumulating intelligence, not accumulating API bills."
+     },
+     {
+      "slug": "vestris",
+      "name": "Vestris",
+      "field": "one_liner",
+      "old": "Replaces title searchers and closes property deals",
+      "new": "AI native platform for real estate closings"
+     },
+     {
+      "slug": "vestris",
+      "name": "Vestris",
+      "field": "team_size",
+      "old": 0,
+      "new": 2
+     }
+    ]
+   },
+   "fall-2026": {
+    "display": "Fall 2026",
+    "source": "algolia",
+    "total": 13,
+    "added": [
+     {
+      "slug": "collar",
+      "name": "Collar",
+      "one_liner": "The platform for AI-native private market investors."
+     },
+     {
+      "slug": "useforward",
+      "name": "Forward",
+      "one_liner": "Unifying Global Private Credit"
+     },
+     {
+      "slug": "hemlock",
+      "name": "Hemlock",
+      "one_liner": "Force-sensing wristband for training robotic AI"
+     },
+     {
+      "slug": "herdr",
+      "name": "herdr",
+      "one_liner": "building the open agent runtime"
+     },
+     {
+      "slug": "lambda-robotics",
+      "name": "Lambda Robotics",
+      "one_liner": "Robotics for AI Infrastructure"
+     },
+     {
+      "slug": "qokedas",
+      "name": "Qokedas",
+      "one_liner": "Teaching models to decode the physical world"
+     },
+     {
+      "slug": "simulithic",
+      "name": "Simulithic",
+      "one_liner": "Simulate how any product change will perform before shipping."
+     },
+     {
+      "slug": "twentyfour26",
+      "name": "twentyfour26",
+      "one_liner": "On Demand CNC Prototyping "
+     },
+     {
+      "slug": "vorelios",
+      "name": "Vorelios",
+      "one_liner": "AI that simulates physics 1000x faster"
+     }
+    ],
+    "removed": [],
+    "changed": [
+     {
+      "slug": "godhands",
+      "name": "GodHands",
+      "field": "one_liner",
+      "old": "Deterministic Computer Use Infra for AI Agents",
+      "new": "The company knowledge base that updates itself"
+     },
+     {
+      "slug": "godhands",
+      "name": "GodHands",
+      "field": "long_description",
+      "old": "GodHands is a deterministic computer use layer that enables AI agents to reliably operate across browser and desktop apps. \r\n\r\nWe make real-world workflows even on legacy or non-API systems more deterministic and predictable, without completely relying on fragile vision-based approaches. By leveraging our infrastructure, your agent can seamlessly operate across new or internal enterprise applications without requiring custom integrations or per-app handling.",
+      "new": "GodHands is building a living knowledge base for engineering teams, turning the code, docs, and decisions across your stack into a single source of truth that stays accurate as you grow."
+     },
+     {
+      "slug": "simantic",
+      "name": "Simantic",
+      "field": "team_size",
+      "old": 3,
+      "new": 4
+     }
+    ]
+   },
+   "winter-2027": {
+    "display": "Winter 2027",
+    "source": "algolia",
+    "total": 1,
+    "added": [],
+    "removed": [],
+    "changed": []
+   }
+  }
  }
 ]
