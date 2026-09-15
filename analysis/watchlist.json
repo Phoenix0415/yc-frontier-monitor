@@ -1,34 +1,34 @@
 {
-  "updated_at": "2026-09-15T04:30:00+00:00",
+  "updated_at": "2026-09-15T05:10:00+00:00",
   "summary": [
     {
-      "en": "This report covers the 830 companies YC has publicly listed from Fall 2025 through today: Fall 2025 (146), Winter 2026 (199), Spring 2026 (193), Summer 2026 (234), Fall 2026 (57) and a first Winter 2027 listing. Since the June review the cohort grew by 312 companies — essentially the whole Summer 2026 batch plus the first Fall 2026 wave — and a handful of older ones were renamed or delisted. 79% of the cohort is explicitly AI/ML and 41% mention agents; the ratios are flat, which is itself the news: 'AI' stopped being a differentiator a year ago, and the interesting variance is now in which layer a company occupies.",
-      "zh": "本报告覆盖 YC 自 2025 年秋季批次以来公开收录的全部 830 家公司：2025 秋季（146）、2026 冬季（199）、2026 春季（193）、2026 夏季（234）、2026 秋季（57），以及首家 2027 冬季公司。自 6 月复盘以来新增 312 家——基本等于整个 2026 夏季批次加上 2026 秋季的第一波——另有少数老公司改名或下架。79% 明确属于 AI/ML，41% 提到智能体；比例持平本身就是新闻：“AI”一年前就不再是差异化因素，真正的差异在于公司位于哪一层。"
+      "en": "This report covers the 830 companies YC has publicly listed from Fall 2025 through today: Fall 2025 (146), Winter 2026 (199), Spring 2026 (193), Summer 2026 (234), Fall 2026 (57) and a first Winter 2027 listing. Since the June review the cohort grew by 312 companies, essentially the whole Summer 2026 batch plus the first Fall 2026 wave, and a handful of older ones were renamed or delisted. 79% of the cohort is explicitly AI/ML and 41% mention agents. Both ratios are flat since June. 'AI' stopped being a differentiator a year ago; the variance worth reading is which layer of the AI economy a company sits in.",
+      "zh": "本报告覆盖 YC 自 2025 年秋季批次以来公开收录的全部 830 家公司：2025 秋季（146）、2026 冬季（199）、2026 春季（193）、2026 夏季（234）、2026 秋季（57），以及首家 2027 冬季公司。自 6 月复盘以来新增 312 家，基本等于整个 2026 夏季批次加上 2026 秋季的第一波，另有少数老公司改名或下架。79% 明确属于 AI/ML，41% 提到智能体，两个比例与 6 月持平。“AI”一年前就不再是差异化因素；值得读的差异在于公司位于 AI 经济的哪一层。"
     },
     {
-      "en": "The 'AI becomes the firm' thesis from June has broadened from law into medicine, insurance and collections — and grown a meta-layer. Summer 2026 lists an AI-native radiology practice that is buying an existing $4.6M-revenue practice rather than starting one (Radley), a 600-provider mental-health medical group (Allia), an AI-native addiction clinic with 15 staff (Sunflower), a full-stack personalized-peptide pharma company, three zero-human accounting firms, an autonomous insurance carrier (Florin), an AI-native freight brokerage and an AI-native import trading company. Insurance alone accounts for 13 Summer/Fall 2026 companies. And now there are firm factories: Erinys and Tenor sell the infrastructure for other people to launch AI-native firms.",
-      "zh": "6 月提出的“AI 变成公司本身”论断，已从法律扩展到医疗、保险和催收，并长出一个“元层”。2026 夏季批次里有一家 AI 原生放射科诊所，选择收购一家年收入 460 万美元的现有诊所而非从零起步（Radley）；一家 600 位医护的心理健康医疗集团（Allia）；一家 15 人的 AI 原生成瘾治疗诊所（Sunflower）；一家全栈个性化多肽药企；三家“零人类”会计事务所；一家自主运营的保险公司（Florin）；一家 AI 原生货运经纪和一家 AI 原生进口贸易公司。仅保险一项，2026 夏/秋就有 13 家。而且出现了“公司工厂”：Erinys 和 Tenor 卖的是让别人开 AI 原生公司的基础设施。"
+      "en": "The 'AI becomes the firm' thesis from June has spread from law into medicine, insurance and collections, and grown a layer above itself. Summer 2026 lists an AI-native radiology practice that is buying an existing $4.6M-revenue practice rather than starting one (Radley), a 600-provider mental-health medical group (Allia), an AI-native addiction clinic with 15 staff (Sunflower), a full-stack personalized-peptide pharma company, three zero-human accounting firms, an autonomous insurance carrier (Florin), an AI-native freight brokerage and an AI-native import trading company. Insurance alone accounts for 13 Summer/Fall 2026 companies. Above them sit the firm factories: Erinys and Tenor sell the infrastructure for other people to launch AI-native firms.",
+      "zh": "6 月提出的“AI 变成公司本身”论断，已从法律扩展到医疗、保险和催收，并在自身之上长出一层。2026 夏季批次里有一家 AI 原生放射科诊所，选择收购一家年收入 460 万美元的现有诊所而非从零起步（Radley）；一家 600 位医护的心理健康医疗集团（Allia）；一家 15 人的 AI 原生成瘾治疗诊所（Sunflower）；一家全栈个性化多肽药企；三家“零人类”会计事务所；一家自主运营的保险公司（Florin）；一家 AI 原生货运经纪和一家 AI 原生进口贸易公司。仅保险一项，2026 夏/秋就有 13 家。再往上是“公司工厂”：Erinys 和 Tenor 卖的是让别人开 AI 原生公司的基础设施。"
     },
     {
-      "en": "The biggest new cluster is the compute buildout's own supply chain. Summer 2026 alone lists a forward market for inference capacity (Touchmark), a derivatives exchange for compute, a GPU RFQ marketplace (Stoa), an insurer underwriting GPU residual value and outage risk (PRINCEPS), an AI-native engineering firm for data centers with $4M in design partnerships (Marengo), three companies building robots to construct and maintain data centers, modular data centers for stalled construction sites, floating nuclear-powered data centers, and silicon smelted on the Moon. This is the financialization sequence we saw in prediction markets — data, brokerage, derivatives, insurance — replayed on GPUs, in one batch.",
-      "zh": "最大的新集群，是算力大建设自己的供应链。仅 2026 夏季批次就有：推理算力的远期市场（Touchmark）、算力衍生品交易所、GPU 询价交易市场（Stoa）、承保 GPU 残值和宕机风险的保险公司（PRINCEPS）、握有 400 万美元设计合作的 AI 原生数据中心工程公司（Marengo）、三家造“建设和维护数据中心的机器人”的公司、部署在停工工地上的模块化数据中心、海上核动力数据中心，以及在月球上冶炼硅。这就是我们在预测市场看到的金融化序列——数据、经纪、衍生品、保险——在 GPU 上、在一个批次内重演。"
+      "en": "The biggest new cluster is the compute buildout's own supply chain. Summer 2026 alone lists a forward market for inference capacity (Touchmark), a derivatives exchange for compute, a GPU RFQ marketplace (Stoa), an insurer underwriting GPU residual value and outage risk (PRINCEPS), an AI-native engineering firm for data centers with $4M in design partnerships (Marengo), three companies building robots to construct and maintain data centers, modular data centers for stalled construction sites, floating nuclear-powered data centers, and silicon smelted on the Moon. It is the same data, brokerage, derivatives, insurance sequence we saw in prediction markets, replayed on GPUs within one batch.",
+      "zh": "最大的新集群，是算力大建设自己的供应链。仅 2026 夏季批次就有：推理算力的远期市场（Touchmark）、算力衍生品交易所、GPU 询价交易市场（Stoa）、承保 GPU 残值和宕机风险的保险公司（PRINCEPS）、握有 400 万美元设计合作的 AI 原生数据中心工程公司（Marengo）、三家造“建设和维护数据中心的机器人”的公司、部署在停工工地上的模块化数据中心、海上核动力数据中心，以及在月球上冶炼硅。这与我们在预测市场看到的“数据、经纪、衍生品、保险”序列相同，只是换成 GPU、在一个批次内重演。"
     },
     {
-      "en": "Physical AI matured from 'builders vs. data' into a supply chain of its own. Nori ships a $1,688 American-made bimanual robot ($440k in sales six weeks after launch) and treats every unit as a data-collection node; Cosmic Robotics has eight people, robots on the largest US solar farms and a NASA lunar-construction contract; DeepReach franchises data collection — 475 wearable capture devices with 100+ local partners across 7 countries, volume doubling monthly. Defense kept compounding: a 30-person, two-founder company describing itself only as 'Weapons of Mass Production' (Isengard), military exoskeletons claiming $100M+ in Ukrainian LOIs, drone-swarm and radar startups. And two companies in one batch are growing biological neurons as a compute substrate.",
-      "zh": "物理 AI 从“造机器人 vs 卖数据”成熟为一条完整供应链。Nori 出货 1,688 美元的美国制造双臂机器人（上线六周销售额 44 万美元），并把每台机器视为数据采集节点；Cosmic Robotics 八人团队，机器人已在美国最大的光伏电站作业，并拿到 NASA 月面建设合同；DeepReach 把数据采集做成加盟——475 台可穿戴采集设备、100 多个本地合作方、覆盖 7 国，采集量逐月翻倍。国防继续加码：一家 30 人、两位创始人的公司只自称“大规模生产的武器”（Isengard）；军用外骨骼自述拿到超 1 亿美元乌克兰意向书；还有无人机蜂群与雷达公司。同一批次里还有两家公司在培养生物神经元当算力底座。"
+      "en": "Physical AI now has a supply chain of its own. Nori ships a $1,688 American-made bimanual robot ($440k in sales six weeks after launch) and treats every unit as a data-collection node; Cosmic Robotics has eight people, robots on the largest US solar farms and a NASA lunar-construction contract; DeepReach franchises data collection through 475 wearable capture devices with 100+ local partners across 7 countries, volume doubling monthly. Defense kept compounding: a 30-person, two-founder company describing itself only as 'Weapons of Mass Production' (Isengard), military exoskeletons claiming $100M+ in Ukrainian LOIs, drone-swarm and radar startups. Two companies in one batch are growing biological neurons as a compute substrate.",
+      "zh": "物理 AI 已有一条自己的供应链。Nori 出货 1,688 美元的美国制造双臂机器人（上线六周销售额 44 万美元），并把每台机器视为数据采集节点；Cosmic Robotics 八人团队，机器人已在美国最大的光伏电站作业，并拿到 NASA 月面建设合同；DeepReach 通过 475 台可穿戴采集设备、100 多个本地合作方、覆盖 7 国，把数据采集做成加盟，采集量逐月翻倍。国防继续加码：一家 30 人、两位创始人的公司只自称“大规模生产的武器”（Isengard）；军用外骨骼自述拿到超 1 亿美元乌克兰意向书；还有无人机蜂群与雷达公司。同一批次里有两家公司在培养生物神经元当算力底座。"
     },
     {
-      "en": "The agent stack keeps filling in the layers June predicted: identity (Inkbox gives agents their own email, phone and iMessage), labor markets (Pluto, a 'LinkedIn for agents' with 27K profiles and Mercor as a customer), and reliability — red-teaming agents that have found holes in dozens of Fortune 500 deployments (Fabraix) and CI regression testing that replays production traces (Mirrors). Prediction markets, by contrast, went quiet: no new entrant in Summer or Fall 2026, and Dome, June's data-API pick, is now marked inactive by YC.",
-      "zh": "智能体技术栈继续按 6 月的预测补齐各层：身份（Inkbox 给 agent 配自己的邮箱、电话和 iMessage）、劳动力市场（Pluto，“agent 版 LinkedIn”，2.7 万份档案，Mercor 是客户）以及可靠性——在数十家财富 500 强部署中找到漏洞的红队 agent（Fabraix）、回放生产轨迹做 CI 回归测试的 Mirrors。相比之下预测市场沉寂了：2026 夏/秋没有新进入者，6 月选中的数据 API 公司 Dome 已被 YC 标记为停止运营。"
+      "en": "The agent stack keeps filling in the layers June predicted: identity (Inkbox gives agents their own email, phone and iMessage), labor markets (Pluto, a 'LinkedIn for agents' with 27K profiles and Mercor as a customer), and reliability, where red-teaming agents have found holes in dozens of Fortune 500 deployments (Fabraix) and CI regression testing replays production traces (Mirrors). Prediction markets went quiet: no new entrant in Summer or Fall 2026, and Dome, June's data-API pick, is now marked inactive by YC.",
+      "zh": "智能体技术栈继续按 6 月的预测补齐各层：身份（Inkbox 给 agent 配自己的邮箱、电话和 iMessage）、劳动力市场（Pluto，“agent 版 LinkedIn”，2.7 万份档案，Mercor 是客户）以及可靠性：红队 agent 已在数十家财富 500 强部署中找到漏洞（Fabraix），回放生产轨迹做 CI 回归测试的 Mirrors。预测市场沉寂了：2026 夏/秋没有新进入者，6 月选中的数据 API 公司 Dome 已被 YC 标记为停止运营。"
     },
     {
-      "en": "The texture of the companies held: median team size at listing is 3 (2 in the two youngest batches), about one in five is a solo founder, and only ~4% have 10+ people. SF concentration rose again — 78% of Summer 2026 is in the Bay Area. The new traction signal is open source as proof: a solo founder claiming 116K GitHub stars and Shopify/Datadog/JP Morgan users (Graphify Labs), a solo founder in Ankara whose agent runtime reached 25k stars and 340k downloads in four months (herdr), and a Mac app that reached 2,000 users in 48 hours from one Reddit post (Sentient OS). Online education stayed thin — four companies in 312 new listings, none clearing the bar.",
-      "zh": "公司的质地没变：上市时团队规模中位数 3 人（最年轻的两个批次为 2 人），约五分之一是单人创始，只有约 4% 团队达到 10 人以上。旧金山集中度再度上升——2026 夏季批次 78% 在湾区。新的 traction 信号是“开源即证明”：一位独立创始人自述 11.6 万 GitHub star、Shopify/Datadog/摩根大通在用（Graphify Labs）；一位安卡拉的独立创始人，其 agent 运行时四个月拿到 2.5 万 star、34 万下载（herdr）；一款 Mac 应用靠一条 Reddit 帖子 48 小时获 2,000 用户（Sentient OS）。在线教育依然稀薄——312 家新公司中只有四家，无一达标。"
+      "en": "The shape of the companies held: median team size at listing is 3 (2 in the two youngest batches), about one in five is a solo founder, and only ~4% have 10+ people. SF concentration rose again; 78% of Summer 2026 is in the Bay Area. Open source has become a traction statement in its own right: a solo founder claiming 116K GitHub stars and Shopify/Datadog/JP Morgan users (Graphify Labs), a solo founder in Ankara whose agent runtime reached 25k stars and 340k downloads in four months (herdr), and a Mac app that reached 2,000 users in 48 hours from one Reddit post (Sentient OS). Online education stayed thin: four companies in 312 new listings, none clearing the bar.",
+      "zh": "公司的质地没变：上市时团队规模中位数 3 人（最年轻的两个批次为 2 人），约五分之一是单人创始，只有约 4% 团队达到 10 人以上。旧金山集中度再度上升，2026 夏季批次 78% 在湾区。开源本身已成为一种 traction 陈述：一位独立创始人自述 11.6 万 GitHub star、Shopify/Datadog/摩根大通在用（Graphify Labs）；一位安卡拉的独立创始人，其 agent 运行时四个月拿到 2.5 万 star、34 万下载（herdr）；一款 Mac 应用靠一条 Reddit 帖子 48 小时获 2,000 用户（Sentient OS）。在线教育依然稀薄：312 家新公司中只有四家，无一达标。"
     }
   ],
   "methodology": {
-    "en": "Picks are editorial, not algorithmic: I read all 830 listed companies (one-liners, full descriptions, team size, founder count, stated traction and website signals) and chose the ones that best illuminate where frontier startups are heading — for technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Two screens are run mechanically on every refresh: every company whose headcount far exceeds its founder count (payroll is the costliest signal a startup sends), and every company whose own description names a raise or an investor. Revenue and funding figures are quoted only when the company claims them for itself — several descriptions cite a founder's previous company's numbers, and those are flagged, not credited. Picks are dated (picked_at) and are not removed when a company later renames, pivots or goes inactive; the text is annotated instead, so the list records what looked frontier at the time.",
-    "zh": "所选公司是编辑判断而非算法结果：我通读了全部 830 家公司（一句话简介、完整描述、团队规模、创始人数、自述 traction 及官网信号），挑出最能说明前沿创业走向的那些——技术野心、新颖切口、难以造假的 traction，或能定义品类的“怪”。每次刷新都机械执行两道筛查：所有团队规模远超创始人数的公司（工资单是初创公司发出的最昂贵信号），以及所有在自述中提到融资或投资人的公司。收入与融资数字只在公司为自身声明时才引用——不少描述引用的是创始人上一家公司的数字，这些会被标注而非记入。每条入选都有日期（picked_at），公司之后改名、转型或停止运营也不会被移除，而是在文字中加注，让名单记录“当时看起来在前沿的是什么”。"
+    "en": "Picks are editorial, not algorithmic. I read all 830 listed companies (one-liners, full descriptions, team size, founder count, stated traction and website signals) and chose the ones that best show where frontier startups are heading, whether through technical ambition, a novel wedge, hard-to-fake traction, or category-defining weirdness. Two screens run mechanically on every refresh: every company whose headcount far exceeds its founder count (payroll is the costliest signal a startup sends), and every company whose own description names a raise or an investor. Revenue and funding figures are quoted only when the company claims them for itself. Several descriptions cite a founder's previous company's numbers; those are flagged, not credited. Picks are dated (picked_at) and stay on the list when a company later renames, pivots or goes inactive; the text is annotated instead, so the list records what looked frontier at the time.",
+    "zh": "所选公司是编辑判断而非算法结果。我通读了全部 830 家公司（一句话简介、完整描述、团队规模、创始人数、自述 traction 及官网信号），挑出最能说明前沿创业走向的那些，无论是技术野心、新颖切口、难以造假的 traction，还是能定义品类的“怪”。每次刷新都机械执行两道筛查：所有团队规模远超创始人数的公司（工资单是初创公司发出的最昂贵信号），以及所有在自述中提到融资或投资人的公司。收入与融资数字只在公司为自身声明时才引用。不少描述引用的是创始人上一家公司的数字，这些会被标注而非记入。每条入选都有日期（picked_at），公司之后改名、转型或停止运营也会留在名单上，只在文字中加注，让名单记录“当时看起来在前沿的是什么”。"
   },
   "themes": [
     {
@@ -38,8 +38,8 @@
         "zh": "智能体经济的基础轨道"
       },
       "narrative": {
-        "en": "If agents are going to transact, someone has to build their bank accounts, their ID badges, and their insurance policies. This cohort is building all three — and now their contact details and their job board. Spring 2026 gave us money rails (Sponge, Agentcard, Allowance, Maven), identity and permissions (Agentic Fabriq, Didit, MultiFactor), and two companies (Klaimee, Mount) independently picking 'liability insurance for deployed agents' as the wedge. Summer 2026 added Inkbox, which gives each agent a persistent email, phone number and iMessage plus an agent-to-agent channel, Pluto, a voice-interview 'LinkedIn for agents' already used by Mercor, Decawork (company-specific models that approve or block agent actions), Magma (sell your agents' traces) and Amorphic (an OpenRouter for agent tools). The economy is being assembled one municipal service at a time.",
-        "zh": "如果 agent 要交易，就得有人给它们开银行账户、发工牌、上保险。本期公司三样都在做——现在还加上了联系方式和招聘板。2026 春季给了我们资金轨道（Sponge、Agentcard、Allowance、Maven）、身份与权限（Agentic Fabriq、Didit、MultiFactor），以及两家不约而同选择“已部署 agent 责任险”作为切口的公司（Klaimee、Mount）。2026 夏季新增了 Inkbox——给每个 agent 一个持久的邮箱、电话号码和 iMessage，外加 agent 间通信通道；Pluto——语音面试式的“agent 版 LinkedIn”，Mercor 已在使用；Decawork（训练公司专属模型来批准或拦截 agent 动作）；Magma（把 agent 的轨迹卖钱）和 Amorphic（agent 工具的 OpenRouter）。这个经济体正被一项项“市政服务”拼装起来。"
+        "en": "If agents are going to transact, someone has to build their bank accounts, their ID badges, and their insurance policies. This cohort is building all three, and now their contact details and their job board too. Spring 2026 gave us money rails (Sponge, Agentcard, Allowance, Maven), identity and permissions (Agentic Fabriq, Didit, MultiFactor), and two companies (Klaimee, Mount) independently picking 'liability insurance for deployed agents' as the wedge. Summer 2026 added Inkbox, which gives each agent a persistent email, phone number and iMessage plus an agent-to-agent channel; Pluto, a voice-interview 'LinkedIn for agents' already used by Mercor; Decawork (company-specific models that approve or block agent actions); Magma (sell your agents' traces); and Amorphic (an OpenRouter for agent tools).",
+        "zh": "如果 agent 要交易，就得有人给它们开银行账户、发工牌、上保险。本期公司三样都在做，现在还加上了联系方式和招聘板。2026 春季给了我们资金轨道（Sponge、Agentcard、Allowance、Maven）、身份与权限（Agentic Fabriq、Didit、MultiFactor），以及两家不约而同选择“已部署 agent 责任险”作为切口的公司（Klaimee、Mount）。2026 夏季新增了 Inkbox，给每个 agent 一个持久的邮箱、电话号码和 iMessage，外加 agent 间通信通道；Pluto，语音面试式的“agent 版 LinkedIn”，Mercor 已在使用；Decawork（训练公司专属模型来批准或拦截 agent 动作）；Magma（把 agent 的轨迹卖钱）；以及 Amorphic（agent 工具的 OpenRouter）。"
       }
     },
     {
@@ -49,19 +49,19 @@
         "zh": "让智能体可靠到能托付正事"
       },
       "narrative": {
-        "en": "The gap between demo and production is where this whole category lives: runtime guardrails (Salus), drift detection for long-running agents (BentoLabs), memory layers (Hyperspell), simulation worlds to train long-horizon agents (Polymath), fake-but-stateful API clones so agents can be tested without touching real systems. Summer and Fall 2026 moved the category from monitoring to adversarial testing and CI: Fabraix's red-teaming agent has found vulnerabilities in agents at dozens of Fortune 500 companies and claims to beat GPT-5.6 on the AgentHarm benchmark; Mirrors rebuilds an agent's tools from production traces and replays real sessions on every pull request; HyperProbe (8 people, 2 founders) drops probes into running services so agents can debug what they wrote; Papaya, Agnost and Buildbox sell continuous evaluation. The unit of software testing is becoming the agent trace.",
-        "zh": "演示与生产之间的鸿沟，就是这个品类的全部栖息地：运行时护栏（Salus）、长时 agent 的漂移检测（BentoLabs）、记忆层（Hyperspell）、训练长程 agent 的模拟世界（Polymath）、带状态的假 API 副本让 agent 无需触碰真实系统即可测试。2026 夏/秋把品类从“监控”推进到“对抗测试与 CI”：Fabraix 的红队 agent 已在数十家财富 500 强的 agent 中发现漏洞，并声称在 AgentHarm 基准上击败 GPT-5.6；Mirrors 从生产轨迹重建 agent 的工具，在每个 PR 上回放真实会话；HyperProbe（8 人、2 位创始人）往运行中的服务里插探针，让 agent 能调试自己写的代码；Papaya、Agnost、Buildbox 卖持续评估。软件测试的基本单元正在变成 agent 轨迹。"
+        "en": "The gap between demo and production is where this whole category lives: runtime guardrails (Salus), drift detection for long-running agents (BentoLabs), memory layers (Hyperspell), simulation worlds to train long-horizon agents (Polymath), fake-but-stateful API clones so agents can be tested without touching real systems. Summer and Fall 2026 moved the category from monitoring to adversarial testing and CI. Fabraix's red-teaming agent has found vulnerabilities in agents at dozens of Fortune 500 companies and claims to beat GPT-5.6 on the AgentHarm benchmark; Mirrors rebuilds an agent's tools from production traces and replays real sessions on every pull request; HyperProbe (8 people, 2 founders) drops probes into running services so agents can debug what they wrote; Papaya, Agnost and Buildbox sell continuous evaluation. The agent trace is becoming the unit that gets tested.",
+        "zh": "演示与生产之间的鸿沟，就是这个品类的全部栖息地：运行时护栏（Salus）、长时 agent 的漂移检测（BentoLabs）、记忆层（Hyperspell）、训练长程 agent 的模拟世界（Polymath）、带状态的假 API 副本让 agent 无需触碰真实系统即可测试。2026 夏/秋把品类从“监控”推进到“对抗测试与 CI”。Fabraix 的红队 agent 已在数十家财富 500 强的 agent 中发现漏洞，并声称在 AgentHarm 基准上击败 GPT-5.6；Mirrors 从生产轨迹重建 agent 的工具，在每个 PR 上回放真实会话；HyperProbe（8 人、2 位创始人）往运行中的服务里插探针，让 agent 能调试自己写的代码；Papaya、Agnost、Buildbox 卖持续评估。agent 轨迹正在成为被测试的基本单元。"
       }
     },
     {
       "id": "ai-firms",
       "title": {
-        "en": "AI doesn't sell the software — it becomes the firm",
-        "zh": "AI 不卖软件——它直接成为那家事务所"
+        "en": "AI becomes the firm",
+        "zh": "AI 变成公司本身"
       },
       "narrative": {
-        "en": "The most consequential business-model shift in the cohort, and the one that broadened most since June. Winter 2026 listed four AI-native law firms (General Legal, Moritz, LegalOS, Vector Legal); around them: AI accounting firms, AI insurance brokerages and a carrier, an AI CRO, an AI FDA consultancy. Summer 2026 took the model into medicine — Radley is buying a $4.6M-revenue radiology practice to rebuild it on agents, Allia runs a 600-provider mental-health group on one system of record, Sunflower (15 staff, one founder) is turning a $1.5M-run-rate sobriety app into a telemedicine clinic, RonanRx manufactures personalized peptides and was licensed in 33 states within ten weeks — and into every other white-collar service: three zero-human accounting firms (Rational, Billow, Last Accounting Company), an autonomous carrier (Florin), an AI-native TPA, an AI debt collector, an AI collections agency, an AI freight brokerage (Peer), an AI-native import trading company (Donkey). Thirteen insurance companies listed in Summer/Fall 2026 alone. The meta-layer is the new signal: Erinys lets lawyers launch AI-native firms they own, Tenor sells the data layer and harnesses for 'millions of AI-native service businesses', Perceptron ML converts existing law firms. When the firm is the product, the next product is a firm factory.",
-        "zh": "本期最具后果的商业模式转变，也是 6 月以来扩张最快的一条。2026 冬季有四家 AI 原生律所（General Legal、Moritz、LegalOS、Vector Legal）；周边还有 AI 会计事务所、AI 保险经纪与承保公司、AI CRO、AI FDA 咨询。2026 夏季把这套模式带进了医疗——Radley 收购一家年收入 460 万美元的放射科诊所，用 agent 重建；Allia 用一套系统运营 600 位医护的心理健康集团；Sunflower（15 人、一位创始人）把年化 150 万美元订阅收入的戒瘾 App 变成远程医疗诊所；RonanRx 自产个性化多肽，十周内拿到 33 个州的牌照——也带进了每一种白领服务：三家“零人类”会计事务所（Rational、Billow、Last Accounting Company）、自主承保的保险公司（Florin）、AI 原生 TPA、AI 催收公司、AI 催收代理、AI 货运经纪（Peer）、AI 原生进口贸易公司（Donkey）。仅 2026 夏/秋就有 13 家保险公司。新信号是“元层”：Erinys 让律师开办自己拥有的 AI 原生律所，Tenor 卖给“数百万家 AI 原生服务企业”数据层和 harness，Perceptron ML 改造既有律所。当公司本身成为产品，下一个产品就是公司工厂。"
+        "en": "The most consequential business-model shift in the cohort, and the one that spread furthest since June. Winter 2026 listed four AI-native law firms (General Legal, Moritz, LegalOS, Vector Legal); around them, AI accounting firms, AI insurance brokerages and a carrier, an AI CRO, an AI FDA consultancy. Summer 2026 took the model into medicine. Radley is buying a $4.6M-revenue radiology practice to rebuild it on agents, Allia runs a 600-provider mental-health group on one system of record, Sunflower (15 staff, one founder) is turning a $1.5M-run-rate sobriety app into a telemedicine clinic, and RonanRx manufactures personalized peptides and was licensed in 33 states within ten weeks. It also reached every other white-collar service: three zero-human accounting firms (Rational, Billow, Last Accounting Company), an autonomous carrier (Florin), an AI-native TPA, an AI debt collector, an AI collections agency, an AI freight brokerage (Peer), an AI-native import trading company (Donkey). Thirteen insurance companies listed in Summer/Fall 2026 alone. The layer above the firms is new: Erinys lets lawyers launch AI-native firms they own, Tenor sells the data layer and harnesses for 'millions of AI-native service businesses', and Perceptron ML converts existing law firms.",
+        "zh": "本期最具后果的商业模式转变，也是 6 月以来扩散最远的一条。2026 冬季有四家 AI 原生律所（General Legal、Moritz、LegalOS、Vector Legal）；周边还有 AI 会计事务所、AI 保险经纪与承保公司、AI CRO、AI FDA 咨询。2026 夏季把这套模式带进了医疗。Radley 收购一家年收入 460 万美元的放射科诊所，用 agent 重建；Allia 用一套系统运营 600 位医护的心理健康集团；Sunflower（15 人、一位创始人）把年化 150 万美元订阅收入的戒瘾 App 变成远程医疗诊所；RonanRx 自产个性化多肽，十周内拿到 33 个州的牌照。它也到达了每一种白领服务：三家“零人类”会计事务所（Rational、Billow、Last Accounting Company）、自主承保的保险公司（Florin）、AI 原生 TPA、AI 催收公司、AI 催收代理、AI 货运经纪（Peer）、AI 原生进口贸易公司（Donkey）。仅 2026 夏/秋就有 13 家保险公司。公司之上的那一层是新的：Erinys 让律师开办自己拥有的 AI 原生律所，Tenor 卖给“数百万家 AI 原生服务企业”数据层和 harness，Perceptron ML 改造既有律所。"
       }
     },
     {
@@ -71,8 +71,8 @@
         "zh": "前沿实验室的供应链"
       },
       "narrative": {
-        "en": "Frontier labs' hunger for data, environments, and evaluation has spawned its own startup category. The high end is striking: olympiad-medalist-authored reasoning problems that frontier models score 0-5% on (Sciloop), training data aimed at making models into AI research scientists (hillclimb), rights-cleared multimodal data, and the ARC Prize Foundation itself. Summer 2026 added volume and specialization: Markov has sold 33k+ hours of expert computer-use data and its open datasets have 200k+ Hugging Face downloads; Hub (10 people, 2 founders) and Petrarch sell real-world and internal-industrial data; CoArena crowdsources computer-use benchmarks; Olam Labs and Instaplay turn games into RL environments; Anchorhead, Robocurve and Litmus build evals for research agents, robots and humans respectively. The most original entrant is Kimpton, whose EarningsBench has models forecast quarterly earnings and lets the reported numbers do the grading — an evaluation arena where reality is the judge. (Its description's '$10M from a family office' is the founders' previous hedge fund, not Kimpton: the traction-attribution trap in the wild.)",
-        "zh": "前沿实验室对数据、环境和评估的渴求，催生了一个独立的创业品类。高端部分令人瞩目：奥赛奖牌得主出题、前沿模型只能拿 0-5% 的推理题库（Sciloop），旨在把模型训练成 AI 研究科学家的数据（hillclimb），版权清晰的多模态数据，以及 ARC Prize 基金会本身。2026 夏季加上了规模与专业化：Markov 已售出 3.3 万小时以上专家电脑操作数据，开源数据集在 Hugging Face 下载超 20 万次；Hub（10 人、2 位创始人）和 Petrarch 卖真实世界与工业内部数据；CoArena 众包电脑操作基准；Olam Labs 和 Instaplay 把游戏变成 RL 环境；Anchorhead、Robocurve、Litmus 分别为研究 agent、机器人和人类做评估。最有原创性的是 Kimpton：其 EarningsBench 让模型预测季度财报，由真实公布的数字打分——一个以现实为裁判的评估竞技场。（其描述里“家族办公室 1,000 万美元”指的是创始人上一家对冲基金，不是 Kimpton：traction 归属陷阱的活样本。）"
+        "en": "Frontier labs' hunger for data, environments, and evaluation has spawned its own startup category. The high end is striking: olympiad-medalist-authored reasoning problems that frontier models score 0-5% on (Sciloop), training data aimed at making models into AI research scientists (hillclimb), rights-cleared multimodal data, and the ARC Prize Foundation itself. Summer 2026 added volume and specialization. Markov has sold 33k+ hours of expert computer-use data and its open datasets have 200k+ Hugging Face downloads; Hub (10 people, 2 founders) and Petrarch sell real-world and internal-industrial data; CoArena crowdsources computer-use benchmarks; Olam Labs and Instaplay turn games into RL environments; Anchorhead, Robocurve and Litmus build evals for research agents, robots and humans respectively. The most original entrant is Kimpton, whose EarningsBench has models forecast quarterly earnings and lets the reported numbers do the grading, so reality is the judge. (The '$10M from a family office' in its description is the founders' previous hedge fund, not Kimpton.)",
+        "zh": "前沿实验室对数据、环境和评估的渴求，催生了一个独立的创业品类。高端部分令人瞩目：奥赛奖牌得主出题、前沿模型只能拿 0-5% 的推理题库（Sciloop），旨在把模型训练成 AI 研究科学家的数据（hillclimb），版权清晰的多模态数据，以及 ARC Prize 基金会本身。2026 夏季加上了规模与专业化。Markov 已售出 3.3 万小时以上专家电脑操作数据，开源数据集在 Hugging Face 下载超 20 万次；Hub（10 人、2 位创始人）和 Petrarch 卖真实世界与工业内部数据；CoArena 众包电脑操作基准；Olam Labs 和 Instaplay 把游戏变成 RL 环境；Anchorhead、Robocurve、Litmus 分别为研究 agent、机器人和人类做评估。最有原创性的是 Kimpton：其 EarningsBench 让模型预测季度财报，由真实公布的数字打分，裁判是现实本身。（其描述里“家族办公室 1,000 万美元”指的是创始人上一家对冲基金，不是 Kimpton。）"
       }
     },
     {
@@ -82,8 +82,8 @@
         "zh": "具身智能：机器人，和喂它们的数据"
       },
       "narrative": {
-        "en": "Robotics here splits cleanly in two. Builders: artificial-muscle humanoids targeting iPhone-level price points (Piggy), elder-care semi-humanoids (Twolabs), strawberry-picking farm robots (Synphony), autonomous robotic factories (Tensr), warehouse robots, even drone cowboys herding cattle (Brumby). Data: One Robot's human-demonstration pipeline and Valgo's robot-fleet data. Summer 2026 delivered the price point Piggy promised — Nori ships a $1,688 American-made bimanual mobile manipulator, $440k in sales six weeks after launch, every unit a data node — and OS3 trained a video-action model on 150,000 hours of human video instead of robot data. Cosmic Robotics (8 people) has heavy-lift robots on the largest US solar farms and a NASA lunar-construction contract. The data side became a supply chain: DeepReach franchises capture (475 wearable devices with 100+ local partners across 7 countries, doubling monthly), Praxis embeds in conglomerates to reach 60k workers, Datoric and Hebbian sell data-quality tooling, Enact sells RL environments for robots. And a new customer emerged for all of it: robots that build and maintain data centers (see the compute buildout theme).",
-        "zh": "这里的机器人清晰地分成两派。造机器人的：瞄准 iPhone 价位的人工肌肉人形（Piggy）、养老半人形（Twolabs）、摘草莓的农业机器人（Synphony）、自主机器人工厂（Tensr）、仓库机器人，甚至用无人机放牛的“机器牛仔”（Brumby）。做数据的：One Robot 的人类示范流水线和 Valgo 的机器人车队数据。2026 夏季兑现了 Piggy 承诺的价位——Nori 出货 1,688 美元的美国制造双臂移动操作机器人，上线六周销售 44 万美元，每台都是数据节点；OS3 用 15 万小时人类视频而非机器人数据训练视频-动作模型。Cosmic Robotics（8 人）的重载机器人已在美国最大光伏电站作业，并拿到 NASA 月面建设合同。数据端变成了供应链：DeepReach 把采集做成加盟（475 台可穿戴设备、100 多个本地合作方、覆盖 7 国、逐月翻倍），Praxis 嵌入大型集团触达 6 万名工人，Datoric 和 Hebbian 卖数据质量工具，Enact 卖机器人 RL 环境。所有这些还迎来一个新客户：建设和维护数据中心的机器人（见“算力大建设”主题）。"
+        "en": "Robotics here splits cleanly in two. Builders: artificial-muscle humanoids targeting iPhone-level price points (Piggy), elder-care semi-humanoids (Twolabs), strawberry-picking farm robots (Synphony), autonomous robotic factories (Tensr), warehouse robots, even drone cowboys herding cattle (Brumby). Data: One Robot's human-demonstration pipeline and Valgo's robot-fleet data. Summer 2026 delivered the price point Piggy promised. Nori ships a $1,688 American-made bimanual mobile manipulator, $440k in sales six weeks after launch, every unit a data node, and OS3 trained a video-action model on 150,000 hours of human video instead of robot data. Cosmic Robotics (8 people) has heavy-lift robots on the largest US solar farms and a NASA lunar-construction contract. The data side became a supply chain: DeepReach franchises capture (475 wearable devices with 100+ local partners across 7 countries, doubling monthly), Praxis embeds in conglomerates to reach 60k workers, Datoric and Hebbian sell data-quality tooling, Enact sells RL environments for robots. A new customer emerged for all of it: robots that build and maintain data centers (see the compute buildout theme).",
+        "zh": "这里的机器人清晰地分成两派。造机器人的：瞄准 iPhone 价位的人工肌肉人形（Piggy）、养老半人形（Twolabs）、摘草莓的农业机器人（Synphony）、自主机器人工厂（Tensr）、仓库机器人，甚至用无人机放牛的“机器牛仔”（Brumby）。做数据的：One Robot 的人类示范流水线和 Valgo 的机器人车队数据。2026 夏季兑现了 Piggy 承诺的价位。Nori 出货 1,688 美元的美国制造双臂移动操作机器人，上线六周销售 44 万美元，每台都是数据节点；OS3 用 15 万小时人类视频而非机器人数据训练视频-动作模型。Cosmic Robotics（8 人）的重载机器人已在美国最大光伏电站作业，并拿到 NASA 月面建设合同。数据端变成了供应链：DeepReach 把采集做成加盟（475 台可穿戴设备、100 多个本地合作方、覆盖 7 国、逐月翻倍），Praxis 嵌入大型集团触达 6 万名工人，Datoric 和 Hebbian 卖数据质量工具，Enact 卖机器人 RL 环境。所有这些还迎来一个新客户：建设和维护数据中心的机器人（见“算力大建设”主题）。"
       }
     },
     {
@@ -93,8 +93,8 @@
         "zh": "国防、太空、能源：硬科技再武装"
       },
       "narrative": {
-        "en": "Defense grew from a couple of Fall 2025 outliers into a visible Spring 2026 cluster — mass-produced strike drones (Tenet), submarine drones (AICE), counter-drone systems (Surtr), passive drone-tracking sensor meshes (Arlo), AI mission systems — and kept compounding through Summer 2026: Isengard Industries has 30 people on two founders and describes itself only as 'Weapons of Mass Production' for allied nations; Edgerun builds powered legs for soldiers and claims $100M+ in Ukrainian letters of intent; Earendil (7 people) sells small-unit drone-swarm defence plus a Drone Warfare Academy; Greypoint, IMPACT and Vernius add hunting swarms, air-defense-as-a-service and mass-deployable radars; Applied Electrodynamics builds a camera that sees through walls. Space and energy widened too — Orca's onboard AI spacecraft operators, Exosat's sovereign Starlink alternative, Aviern's dock-launched pipeline-patrol aircraft, Meteoric's cloud-clearing drones. The energy-and-compute end of hard tech got so crowded it has its own theme now.",
-        "zh": "国防从 2025 秋季的几个异类，长成 2026 春季一个可见的集群——量产打击无人机（Tenet）、潜航无人机（AICE）、反无人机系统（Surtr）、被动式无人机追踪传感网（Arlo）、AI 任务系统——并在 2026 夏季继续加码：Isengard Industries 两位创始人、30 人团队，只自称为盟国提供“大规模生产的武器”；Edgerun 给士兵造动力腿，自述拿到超 1 亿美元乌克兰意向书；Earendil（7 人）卖小队级无人机蜂群防御外加“无人机作战学院”；Greypoint、IMPACT、Vernius 分别做猎杀蜂群、防空即服务和可大规模部署的雷达；Applied Electrodynamics 造能穿墙看的相机。太空与能源也在拓宽——Orca 的舰载 AI 航天器操作员、Exosat 的主权版 Starlink 替代、Aviern 从无人机坞起飞的管线巡检飞机、Meteoric 的驱云无人机。硬科技里“能源与算力”这一端已拥挤到需要单独一个主题。"
+        "en": "Defense grew from a couple of Fall 2025 outliers into a visible Spring 2026 cluster (mass-produced strike drones from Tenet, submarine drones from AICE, counter-drone systems from Surtr, passive drone-tracking sensor meshes from Arlo, AI mission systems) and kept compounding through Summer 2026. Isengard Industries has 30 people on two founders and describes itself only as 'Weapons of Mass Production' for allied nations; Edgerun builds powered legs for soldiers and claims $100M+ in Ukrainian letters of intent; Earendil (7 people) sells small-unit drone-swarm defence plus a Drone Warfare Academy; Greypoint, IMPACT and Vernius add hunting swarms, air-defense-as-a-service and mass-deployable radars; Applied Electrodynamics builds a camera that sees through walls. Space and energy widened too: Orca's onboard AI spacecraft operators, Exosat's sovereign Starlink alternative, Aviern's dock-launched pipeline-patrol aircraft, Meteoric's cloud-clearing drones. The energy-and-compute end of hard tech got crowded enough to have its own theme now.",
+        "zh": "国防从 2025 秋季的几个异类，长成 2026 春季一个可见的集群（Tenet 的量产打击无人机、AICE 的潜航无人机、Surtr 的反无人机系统、Arlo 的被动式无人机追踪传感网、AI 任务系统），并在 2026 夏季继续加码。Isengard Industries 两位创始人、30 人团队，只自称为盟国提供“大规模生产的武器”；Edgerun 给士兵造动力腿，自述拿到超 1 亿美元乌克兰意向书；Earendil（7 人）卖小队级无人机蜂群防御外加“无人机作战学院”；Greypoint、IMPACT、Vernius 分别做猎杀蜂群、防空即服务和可大规模部署的雷达；Applied Electrodynamics 造能穿墙看的相机。太空与能源也在拓宽：Orca 的舰载 AI 航天器操作员、Exosat 的主权版 Starlink 替代、Aviern 从无人机坞起飞的管线巡检飞机、Meteoric 的驱云无人机。硬科技里“能源与算力”这一端已拥挤到需要单独一个主题。"
       }
     },
     {
@@ -104,8 +104,8 @@
         "zh": "预测市场长成一个资产类别"
       },
       "narrative": {
-        "en": "Eight companies across Fall 2025–Spring 2026 industrialized event markets: unified data APIs (Dome), prime brokerage (River), institutional analytics (Oddpool), cross-venue execution (Sequence), derivatives (Totalis), belief-to-market search (ValCtrl), retail platforms (Valence) — and Forum, an exchange for trading attention itself. This is the classic financialization sequence (data → brokerage → derivatives) compressed into three batches, betting that Kalshi/Polymarket volume becomes a permanent market structure. The update since June is a caution: no new prediction-market company listed in Summer or Fall 2026, and Dome — the data-API pick — is now marked inactive by YC. The same sequence is now being replayed on a different underlying: compute (see the compute buildout theme). Keep the picks; the thesis is intact, the timing was early.",
-        "zh": "2025 秋季至 2026 春季有八家公司在把事件市场工业化：统一数据 API（Dome）、主经纪商（River）、机构分析（Oddpool）、跨场所执行（Sequence）、衍生品（Totalis）、信念到市场的搜索（ValCtrl）、零售平台（Valence）——还有 Forum，一家直接交易“注意力”的交易所。这是经典的金融化序列（数据 → 经纪 → 衍生品）被压缩进三个批次，赌的是 Kalshi/Polymarket 的交易量会成为永久的市场结构。6 月以来的更新是一个警示：2026 夏/秋没有新的预测市场公司，而数据 API 入选者 Dome 已被 YC 标记为停止运营。同样的序列正在另一种标的上重演：算力（见“算力大建设”主题）。名单保留；论断成立，只是时机太早。"
+        "en": "Eight companies across Fall 2025 to Spring 2026 industrialized event markets: unified data APIs (Dome), prime brokerage (River), institutional analytics (Oddpool), cross-venue execution (Sequence), derivatives (Totalis), belief-to-market search (ValCtrl), retail platforms (Valence), and Forum, an exchange for trading attention itself. That is the classic financialization sequence (data, then brokerage, then derivatives) compressed into three batches, betting that Kalshi/Polymarket volume becomes a permanent market structure. The update since June is a caution: no new prediction-market company listed in Summer or Fall 2026, and Dome, the data-API pick, is now marked inactive by YC. The same sequence is now being replayed on compute (see the compute buildout theme). The picks stay; the thesis holds, the timing was early.",
+        "zh": "2025 秋季至 2026 春季有八家公司在把事件市场工业化：统一数据 API（Dome）、主经纪商（River）、机构分析（Oddpool）、跨场所执行（Sequence）、衍生品（Totalis）、信念到市场的搜索（ValCtrl）、零售平台（Valence），以及 Forum，一家直接交易“注意力”的交易所。这是经典的金融化序列（数据，然后经纪，然后衍生品）被压缩进三个批次，赌的是 Kalshi/Polymarket 的交易量会成为永久的市场结构。6 月以来的更新是一个警示：2026 夏/秋没有新的预测市场公司，而数据 API 入选者 Dome 已被 YC 标记为停止运营。同样的序列正在算力上重演（见“算力大建设”主题）。名单保留；论断成立，只是时机太早。"
       }
     },
     {
@@ -115,8 +115,8 @@
         "zh": "极小团队、真实收入：新的增长打法"
       },
       "narrative": {
-        "en": "The loudest cultural change between Fall 2025 and Spring 2026 listings: companies now arrive with revenue in the first paragraph. Five or fewer people, an agent doing the labor, weekly growth quoted like a heartbeat — Gojiberry ($2.5M ARR in 10 months, profitable), Trellis ($500K ARR two months after launch), Lunabill, Manicule. Summer and Fall 2026 added a second proof currency: open source. Graphify Labs is one person claiming 116K GitHub stars, 6.5M downloads and engineers at Shopify, Datadog and JP Morgan; herdr is one person in Ankara whose agent runtime hit 25k stars and 340k downloads four months after launch; Jcode is one person whose harness claims $1M/month of inference flowing through it. Revenue-first still shows up — Hubble signed ten customers and 7-figure year-one revenue four weeks in, Bizmark quotes $108k ARR, Arbital has run $1.35B of trading volume from Singapore — and consumer launches are measured in hours (Sentient OS: 2,000 users in 48 hours from one Reddit post). The bar is now 'show me the number' in whatever unit the category respects.",
-        "zh": "2025 秋季到 2026 春季最响亮的文化变化：公司现在第一段就报收入。五人以下、agent 干活、周增长像心跳一样被引用——Gojiberry（10 个月 250 万美元 ARR、已盈利）、Trellis（上线两个月 50 万美元 ARR）、Lunabill、Manicule。2026 夏/秋加上了第二种证明货币：开源。Graphify Labs 一个人，自述 11.6 万 GitHub star、650 万下载、Shopify/Datadog/摩根大通的工程师在用；herdr 是安卡拉的一个人，agent 运行时上线四个月 2.5 万 star、34 万下载；Jcode 一个人，自述其 harness 每月流过 100 万美元推理开销。收入优先依然在——Hubble 四周内签下十家客户、首年七位数收入，Bizmark 报 10.8 万美元 ARR，Arbital 在新加坡跑出 13.5 亿美元交易量——消费级产品的上线则以小时计（Sentient OS：一条 Reddit 帖子 48 小时 2,000 用户）。门槛现在是“给我看数字”，单位随品类而定。"
+        "en": "The loudest cultural change between Fall 2025 and Spring 2026 listings: companies now arrive with revenue in the first paragraph. Five or fewer people, an agent doing the labor, weekly growth quoted like a heartbeat. Gojiberry ($2.5M ARR in 10 months, profitable), Trellis ($500K ARR two months after launch), Lunabill, Manicule. Summer and Fall 2026 added a second proof currency, open source. Graphify Labs is one person claiming 116K GitHub stars, 6.5M downloads and engineers at Shopify, Datadog and JP Morgan; herdr is one person in Ankara whose agent runtime hit 25k stars and 340k downloads four months after launch; Jcode is one person whose harness claims $1M/month of inference flowing through it. Revenue-first still shows up: Hubble signed ten customers and 7-figure year-one revenue four weeks in, Bizmark quotes $108k ARR, Arbital has run $1.35B of trading volume from Singapore. Consumer launches are measured in hours (Sentient OS: 2,000 users in 48 hours from one Reddit post).",
+        "zh": "2025 秋季到 2026 春季最响亮的文化变化：公司现在第一段就报收入。五人以下、agent 干活、周增长像心跳一样被引用。Gojiberry（10 个月 250 万美元 ARR、已盈利）、Trellis（上线两个月 50 万美元 ARR）、Lunabill、Manicule。2026 夏/秋加上了第二种证明货币：开源。Graphify Labs 一个人，自述 11.6 万 GitHub star、650 万下载、Shopify/Datadog/摩根大通的工程师在用；herdr 是安卡拉的一个人，agent 运行时上线四个月 2.5 万 star、34 万下载；Jcode 一个人，自述其 harness 每月流过 100 万美元推理开销。收入优先依然在：Hubble 四周内签下十家客户、首年七位数收入，Bizmark 报 10.8 万美元 ARR，Arbital 在新加坡跑出 13.5 亿美元交易量。消费级产品的上线则以小时计（Sentient OS：一条 Reddit 帖子 48 小时 2,000 用户）。"
       }
     },
     {
@@ -126,8 +126,8 @@
         "zh": "低调扩张者：工资单即证据"
       },
       "narrative": {
-        "en": "When team size runs far ahead of founder count, someone is funding that payroll — revenue or investors — whatever the pitch says. In June the rule surfaced companies whose one-liners undersell them: Brickanta (2 founders, 11 people, $8M raised), Bolna (21), Uplane (19), Didit (12). This refresh screened 23 newcomers at ≥8 people or ≥4× founders. The standouts: Isengard Industries — 30 people, 2 founders, and a description that says almost nothing on purpose; Sunflower — 15 people on one founder, a $1.5M-run-rate sobriety app turning into an addiction clinic; Semble — 14 people selling all-in-one software to building-systems integrators, a pitch nobody would call frontier; Parameter (14, continuous AI pentesting), Tolmo (12, agent-driven cloud security), Hub (10, real-world data for labs), Bernard (9, AI employees for appliance repair), Marengo (5 on 2, with Exor and a $2B family office named as backers). Vertical, unglamorous, and staffed — the rule keeps earning its place.",
-        "zh": "当团队规模远远跑在创始人数前面，就有人在为这份工资单买单——收入或投资人——不管简介怎么写。6 月这条规则揪出了一批简介低估自身的公司：Brickanta（2 位创始人、11 人、融资 800 万美元）、Bolna（21）、Uplane（19）、Didit（12）。本次刷新筛出 23 家团队 ≥8 人或 ≥4 倍创始人数的新公司。突出的有：Isengard Industries——30 人、2 位创始人、一段刻意几乎什么都不说的描述；Sunflower——一位创始人带 15 人，年化 150 万美元的戒瘾 App 正变成成瘾治疗诊所；Semble——14 人，给楼宇系统集成商卖一体化软件，没人会称之为“前沿”的切口；Parameter（14 人，持续 AI 渗透测试）、Tolmo（12 人，agent 驱动的云安全）、Hub（10 人，给实验室的真实世界数据）、Bernard（9 人，家电维修行业的 AI 员工）、Marengo（2 位创始人带 5 人，点名 Exor 和一家 20 亿美元家族办公室为投资方）。垂直、不性感、有人手——这条规则继续证明自己的价值。"
+        "en": "When team size runs far ahead of founder count, someone is funding that payroll, revenue or investors, whatever the pitch says. In June the rule surfaced companies whose one-liners undersell them: Brickanta (2 founders, 11 people, $8M raised), Bolna (21), Uplane (19), Didit (12). This refresh screened 23 newcomers at 8+ people or 4x founders. The standouts: Isengard Industries, 30 people on 2 founders and a description that says almost nothing on purpose; Sunflower, 15 people on one founder and a $1.5M-run-rate sobriety app turning into an addiction clinic; Semble, 14 people selling all-in-one software to building-systems integrators, a pitch nobody would call frontier. Behind them Parameter (14, continuous AI pentesting), Tolmo (12, agent-driven cloud security), Hub (10, real-world data for labs), Bernard (9, AI employees for appliance repair) and Marengo (5 on 2, with Exor and a $2B family office named as backers). Vertical, unglamorous, and staffed.",
+        "zh": "当团队规模远远跑在创始人数前面，就有人在为这份工资单买单，收入或投资人，不管简介怎么写。6 月这条规则揪出了一批简介低估自身的公司：Brickanta（2 位创始人、11 人、融资 800 万美元）、Bolna（21）、Uplane（19）、Didit（12）。本次刷新筛出 23 家团队 8 人以上或 4 倍创始人数的新公司。突出的有：Isengard Industries，30 人、2 位创始人、一段刻意几乎什么都不说的描述；Sunflower，一位创始人带 15 人，年化 150 万美元的戒瘾 App 正变成成瘾治疗诊所；Semble，14 人，给楼宇系统集成商卖一体化软件，没人会称之为“前沿”的切口。其后是 Parameter（14 人，持续 AI 渗透测试）、Tolmo（12 人，agent 驱动的云安全）、Hub（10 人，给实验室的真实世界数据）、Bernard（9 人，家电维修行业的 AI 员工）和 Marengo（2 位创始人带 5 人，点名 Exor 和一家 20 亿美元家族办公室为投资方）。垂直、不性感、有人手。"
       }
     },
     {
@@ -137,8 +137,8 @@
         "zh": "当智能体开始做生意"
       },
       "narrative": {
-        "en": "E-commerce in this cohort isn't storefront SaaS — it's agents taking over the selling itself. SellRaze turns a camera frame into priced, cross-marketplace listings; Corvera makes a CPG brand's data legible to any AI tool over MCP; Light Anchor skips the customer entirely and runs its own AI-operated stores. Summer 2026 moved upstream to procurement and trade: Donkey is an AI-native trading company — upload a buying list, get one locked delivered price with tariffs included, with a team split between San Francisco and Wuhan and 'shared containers' letting small buyers pool a box; Derya brokers industrial trade; Whitespace and Asakana automate wholesale distributors' order desks; Pango builds agents for e-commerce logistics; Palisade spins up a personal sales agent per marketplace visitor; ORO builds the evals for agentic checkout. The agent is moving from the storefront to the container.",
-        "zh": "本期的电商不是店铺 SaaS——而是 agent 接管卖货本身。SellRaze 把一帧照片变成定价好的跨平台商品；Corvera 让快消品牌的数据通过 MCP 被任何 AI 工具读懂；Light Anchor 干脆跳过客户，自己开 AI 运营的店。2026 夏季往上游走到采购与贸易：Donkey 是 AI 原生贸易公司——上传采购清单，拿到一个含关税的锁定到岸价，团队分布在旧金山和武汉，“拼柜”让小买家合装一个集装箱；Derya 做工业品贸易经纪；Whitespace 和 Asakana 自动化批发商的订单台；Pango 给电商物流做 agent；Palisade 给每位访客配一个专属销售 agent；ORO 做 agent 结账的评估。agent 正从店面走向集装箱。"
+        "en": "E-commerce in this cohort means agents taking over the selling itself, rather than storefront SaaS. SellRaze turns a camera frame into priced, cross-marketplace listings; Corvera makes a CPG brand's data legible to any AI tool over MCP; Light Anchor skips the customer entirely and runs its own AI-operated stores. Summer 2026 moved upstream to procurement and trade. Donkey is an AI-native trading company: upload a buying list, get one locked delivered price with tariffs included, with a team split between San Francisco and Wuhan and 'shared containers' letting small buyers pool a box. Derya brokers industrial trade; Whitespace and Asakana automate wholesale distributors' order desks; Pango builds agents for e-commerce logistics; Palisade spins up a personal sales agent per marketplace visitor; ORO builds the evals for agentic checkout.",
+        "zh": "本期的电商指的是 agent 接管卖货本身，而非店铺 SaaS。SellRaze 把一帧照片变成定价好的跨平台商品；Corvera 让快消品牌的数据通过 MCP 被任何 AI 工具读懂；Light Anchor 干脆跳过客户，自己开 AI 运营的店。2026 夏季往上游走到采购与贸易。Donkey 是 AI 原生贸易公司：上传采购清单，拿到一个含关税的锁定到岸价，团队分布在旧金山和武汉，“拼柜”让小买家合装一个集装箱。Derya 做工业品贸易经纪；Whitespace 和 Asakana 自动化批发商的订单台；Pango 给电商物流做 agent；Palisade 给每位访客配一个专属销售 agent；ORO 做 agent 结账的评估。"
       }
     },
     {
@@ -148,8 +148,8 @@
         "zh": "野路子"
       },
       "narrative": {
-        "en": "Every batch has companies that don't fit the grid but mark where the edges are: the first YC-backed 'AI founder' running its own companies (Thomas), mosquito-killing micro-drones aimed at malaria (Tornyol), AI for the world's COBOL mainframes (Hypercubic) — the counter-trade to frontier hype — and Doomersion. Summer 2026's edge is wetware: two companies in one batch, Frontier Computing (London, one person, has trained a biological brain to play Frogger and claims a pathway from academia's ~1M neurons to 100M+) and Parasma ('replacing GPUs with human brain cells'), are growing neurons as a training substrate. Elsewhere on the edge: drones that clear clouds over solar farms and aim to weaken hurricanes (Meteoric), a visa agent for people with weak passports (Veeza), an SEC-qualified fund for trading cards (tash), a poker-club host platform, and cancer vaccines starting with dogs (Gamgee).",
-        "zh": "每个批次都有不合网格但标出边界的公司：第一家 YC 支持的、自己经营公司的“AI 创始人”（Thomas）、瞄准疟疾的灭蚊微型无人机（Tornyol）、给全球 COBOL 主机做的 AI（Hypercubic）——对前沿热潮的反向交易——还有 Doomersion。2026 夏季的边界是“湿件”：同一批次两家公司——Frontier Computing（伦敦、一个人，已训练生物大脑玩 Frogger，自称有从学术界约 100 万神经元扩到 1 亿以上的路径）和 Parasma（“用人脑细胞替代 GPU”）——在培养神经元当训练底座。边界上还有：给光伏电站驱云、意在削弱飓风的无人机（Meteoric）、面向弱护照人群的签证 agent（Veeza）、在申请 SEC 资质的球星卡基金（tash）、扑克俱乐部平台，以及从狗开始的癌症疫苗（Gamgee）。"
+        "en": "Every batch has companies that don't fit the grid but mark where the edges are: the first YC-backed 'AI founder' running its own companies (Thomas), mosquito-killing micro-drones aimed at malaria (Tornyol), AI for the world's COBOL mainframes (Hypercubic, the counter-trade to frontier hype), and Doomersion. Summer 2026's edge is wetware. Two companies in one batch, Frontier Computing (London, one person, has trained a biological brain to play Frogger and claims a pathway from academia's ~1M neurons to 100M+) and Parasma ('replacing GPUs with human brain cells'), are growing neurons as a training substrate. Elsewhere on the edge: drones that clear clouds over solar farms and aim to weaken hurricanes (Meteoric), a visa agent for people with weak passports (Veeza), an SEC-qualified fund for trading cards (tash), a poker-club host platform, and cancer vaccines starting with dogs (Gamgee).",
+        "zh": "每个批次都有不合网格但标出边界的公司：第一家 YC 支持的、自己经营公司的“AI 创始人”（Thomas）、瞄准疟疾的灭蚊微型无人机（Tornyol）、给全球 COBOL 主机做的 AI（Hypercubic，对前沿热潮的反向交易），还有 Doomersion。2026 夏季的边界是“湿件”。同一批次两家公司，Frontier Computing（伦敦、一个人，已训练生物大脑玩 Frogger，自称有从学术界约 100 万神经元扩到 1 亿以上的路径）和 Parasma（“用人脑细胞替代 GPU”），在培养神经元当训练底座。边界上还有：给光伏电站驱云、意在削弱飓风的无人机（Meteoric）、面向弱护照人群的签证 agent（Veeza）、在申请 SEC 资质的球星卡基金（tash）、扑克俱乐部平台，以及从狗开始的癌症疫苗（Gamgee）。"
       }
     },
     {
@@ -159,8 +159,8 @@
         "zh": "算力大建设长出自己的供应链"
       },
       "narrative": {
-        "en": "Summer 2026 is the batch where the AI infrastructure buildout stopped being a customer and became a market. Financial layer: Touchmark sells forward contracts on inference capacity (fixed price, 10–30% below on-demand, resellable), Computable is a derivatives exchange for compute, Stoa runs an RFQ marketplace for GPUs, PRINCEPS underwrites SLA, GPU residual value and outage risk so data centers can finance cheaper. Physical layer: Marengo is an AI-native engineering firm designing data centers with $4M in design partnerships and Exor among its backers; Proprio, Shepherd and Lambda Robotics all build robots to construct and maintain data centers (Proprio cites 400,000 unstaffed technician positions); Pacific mass-produces modular data centers for stalled construction sites; Atomarine puts nuclear-powered data centers on ships; Ethos smelts silicon on the Moon. Plus routing and cost tooling (Riften, Conifer, Orchestra, Quotient) and Baud, Lamb, Dipole and Synapse on chips. Read alongside prediction markets: it is the same data → brokerage → derivatives → insurance sequence, this time with a trillion-dollar underlying.",
-        "zh": "2026 夏季是 AI 基础设施建设从“客户”变成“市场”的批次。金融层：Touchmark 卖推理算力的远期合约（固定价、低于按需价 10–30%、可转售），Computable 是算力衍生品交易所，Stoa 运营 GPU 询价交易市场，PRINCEPS 承保 SLA、GPU 残值和宕机风险，让数据中心融资更便宜。物理层：Marengo 是 AI 原生的数据中心工程公司，握有 400 万美元设计合作、Exor 为投资方；Proprio、Shepherd、Lambda Robotics 都在造建设和维护数据中心的机器人（Proprio 引用美国 40 万个数据中心技术员空缺）；Pacific 量产部署在停工工地上的模块化数据中心；Atomarine 把核动力数据中心放上船；Ethos 在月球上冶炼硅。再加上路由与成本工具（Riften、Conifer、Orchestra、Quotient）和芯片端的 Baud、Lamb、Dipole、Synapse。对照预测市场来读：同样是数据 → 经纪 → 衍生品 → 保险的序列，这次的标的是万亿美元级的。"
+        "en": "Summer 2026 is the batch where the AI infrastructure buildout stopped being a customer and became a market. Financial layer: Touchmark sells forward contracts on inference capacity (fixed price, 10-30% below on-demand, resellable), Computable is a derivatives exchange for compute, Stoa runs an RFQ marketplace for GPUs, PRINCEPS underwrites SLA, GPU residual value and outage risk so data centers can finance cheaper. Physical layer: Marengo is an AI-native engineering firm designing data centers with $4M in design partnerships and Exor among its backers; Proprio, Shepherd and Lambda Robotics all build robots to construct and maintain data centers (Proprio cites 400,000 unstaffed technician positions); Pacific mass-produces modular data centers for stalled construction sites; Atomarine puts nuclear-powered data centers on ships; Ethos smelts silicon on the Moon. Around them, routing and cost tooling (Riften, Conifer, Orchestra, Quotient) and Baud, Lamb, Dipole and Synapse on chips. It is the prediction-markets sequence again (data, brokerage, derivatives, insurance), this time with a trillion-dollar underlying.",
+        "zh": "2026 夏季是 AI 基础设施建设从“客户”变成“市场”的批次。金融层：Touchmark 卖推理算力的远期合约（固定价、低于按需价 10-30%、可转售），Computable 是算力衍生品交易所，Stoa 运营 GPU 询价交易市场，PRINCEPS 承保 SLA、GPU 残值和宕机风险，让数据中心融资更便宜。物理层：Marengo 是 AI 原生的数据中心工程公司，握有 400 万美元设计合作、Exor 为投资方；Proprio、Shepherd、Lambda Robotics 都在造建设和维护数据中心的机器人（Proprio 引用美国 40 万个数据中心技术员空缺）；Pacific 量产部署在停工工地上的模块化数据中心；Atomarine 把核动力数据中心放上船；Ethos 在月球上冶炼硅。周边还有路由与成本工具（Riften、Conifer、Orchestra、Quotient）和芯片端的 Baud、Lamb、Dipole、Synapse。这又是预测市场的那个序列（数据、经纪、衍生品、保险），这次的标的是万亿美元级的。"
       }
     }
   ],
@@ -169,11 +169,11 @@
       "slug": "klaimee",
       "theme": "agent-economy",
       "why": {
-        "en": "Liability insurance for deployed AI agents — covering exactly what E&O and cyber policies now carve out. Regulation is forcing the issue (they cite California AB 316 liability and EU AI Act enforcement from August 2026), and enterprises already ask 'who pays if your agent breaks something?'. Claims $5M→$60M revenue experience from launching insurance products previously.",
+        "en": "Liability insurance for deployed AI agents, covering exactly what E&O and cyber policies now carve out. Regulation is forcing the issue (they cite California AB 316 liability and EU AI Act enforcement from August 2026), and enterprises already ask 'who pays if your agent breaks something?'. Claims $5M to $60M revenue experience from launching insurance products previously.",
         "zh": "为已部署的 AI agent 提供责任保险——恰好覆盖 E&O 和网络险如今明确除外的部分。监管在逼问题落地（他们引用加州 AB 316 的责任认定和 2026 年 8 月开始执行的欧盟 AI 法案），企业法务已经在问“agent 闯祸谁赔”。创始人自述有把保险产品从 500 万美元做到 6000 万美元收入的操盘经历。"
       },
       "learn": {
-        "en": "How a brand-new risk category gets underwritten before loss data exists — and note the validation-by-collision: Mount (same batch) is building 'the AI insurance carrier' on the same wedge.",
+        "en": "How a brand-new risk category gets underwritten before loss data exists. Note the validation by collision: Mount (same batch) is building 'the AI insurance carrier' on the same wedge.",
         "zh": "看一个全新风险品类如何在没有损失数据的情况下完成承保——还要注意“撞车即验证”：同批次的 Mount 在同一切入点上造 AI 保险承保公司。"
       },
       "signals": {
@@ -194,12 +194,12 @@
       "slug": "sponge",
       "theme": "agent-economy",
       "why": {
-        "en": "A bank for agents: agents hold funds and transact autonomously (accounts, cards, crypto), and businesses can accept agent customers with no code changes. It's the most complete 'agents as economic actors' thesis in the cohort — not a feature, but the financial substrate.",
-        "zh": "给 agent 开的银行：agent 可自主持有资金并交易（账户、卡、加密），商家无需改代码即可接待 agent 客户。这是本期对“agent 作为经济主体”最完整的论述——不是功能，而是金融底座。"
+        "en": "A bank for agents: agents hold funds and transact autonomously (accounts, cards, crypto), and businesses can accept agent customers with no code changes. The most complete 'agents as economic actors' thesis in the cohort, built as the financial substrate rather than a feature.",
+        "zh": "给 agent 开的银行：agent 可自主持有资金并交易（账户、卡、加密），商家无需改代码即可接待 agent 客户。这是本期对“agent 作为经济主体”最完整的论述，做成了金融底座而不是一个功能。"
       },
       "learn": {
-        "en": "Two-sided framing for agent commerce: don't just equip agents to pay — make it trivial for merchants to *sell to agents*. Whoever owns that interface owns agent GTM.",
-        "zh": "agent 商业的双边框架：别只让 agent 会付款——要让商家*向 agent 卖东西*变得轻而易举。谁握住那个界面，谁就握住 agent 时代的获客入口。"
+        "en": "Two-sided framing for agent commerce: equip agents to pay, and make it trivial for merchants to sell to agents. Whoever owns that interface owns agent GTM.",
+        "zh": "agent 商业的双边框架：让 agent 会付款，也让商家向 agent 卖东西变得轻而易举。谁握住那个界面，谁就握住 agent 时代的获客入口。"
       },
       "signals": {
         "en": [
@@ -217,7 +217,7 @@
       "slug": "rentahuman",
       "theme": "agent-economy",
       "why": {
-        "en": "A marketplace where AI agents hire humans — the cleanest inversion of the labor relationship in the entire cohort, listed while still at concept stage (no public description yet). If agents become economic actors, human-in-the-loop labor becomes an API they call.",
+        "en": "A marketplace where AI agents hire humans, the cleanest inversion of the labor relationship in the entire cohort, listed while still at concept stage (no public description yet). If agents become economic actors, human-in-the-loop labor becomes an API they call.",
         "zh": "一个让 AI agent 反过来雇人类的市场——整期里把劳动关系倒置得最干净的设定，且在还没有公开介绍的概念阶段就被收录。如果 agent 成为经济主体，“人类兜底”就会变成它们调用的一个 API。"
       },
       "learn": {
@@ -242,11 +242,11 @@
       "slug": "polymath",
       "theme": "agent-reliability",
       "why": {
-        "en": "Simulated worlds for training and evaluating long-horizon agents — the RL-environments thesis applied to real work. Team out of Berkeley, Hume, Plaid and Amazon with frontier post-training experience; environments are arguably the scarcest input for the next capability jump.",
+        "en": "Simulated worlds for training and evaluating long-horizon agents: the RL-environments thesis applied to real work. Team out of Berkeley, Hume, Plaid and Amazon with frontier post-training experience; environments may be the scarcest input for the next capability jump.",
         "zh": "训练与评测长程 agent 的模拟世界——把 RL 环境的论题用到真实工作上。团队来自 Berkeley、Hume、Plaid 和 Amazon，有前沿模型后训练经验；预训练见顶之后，环境可能是下一次能力跃迁里最稀缺的原料。"
       },
       "learn": {
-        "en": "Where agent capability actually comes from after pretraining plateaus: environment design as the new dataset. Relevant to anyone evaluating agents beyond static benchmarks.",
+        "en": "Where agent capability comes from after pretraining plateaus: environment design as the new dataset. Relevant to anyone evaluating agents beyond static benchmarks.",
         "zh": "agent 能力的真正来源：环境设计是新的数据集。任何想在静态基准之外评估 agent 的人都该关注。"
       },
       "signals": {
@@ -265,7 +265,7 @@
       "slug": "salus",
       "theme": "agent-reliability",
       "why": {
-        "en": "Runtime guardrails that inspect and block an agent's action *before it executes* — refunds without an order lookup, deletes without checks. Evals and observability are after-the-fact; the pre-execution checkpoint is the missing primitive for giving agents real authority.",
+        "en": "Runtime guardrails that inspect and block an agent's action before it executes: refunds without an order lookup, deletes without checks. Evals and observability are after-the-fact; the pre-execution checkpoint is the missing primitive for giving agents real authority.",
         "zh": "运行时护栏：在 agent 动作*执行前*拦截检查——没查订单就退款、没确认就删除。评测和可观测性都是事后诸葛，行动前的检查点才是给 agent 真正授权时缺失的原语。"
       },
       "learn": {
@@ -288,12 +288,12 @@
       "slug": "bentolabs-ai",
       "theme": "agent-reliability",
       "why": {
-        "en": "Drift and silent-failure detection for long-running agents — when an agent slowly diverges from the user's goal or tool contracts, BentoLabs spots it, shows root cause, and proposes the prompt/harness fix. Founders hit this problem operating Emergent (YC S24) at scale.",
+        "en": "Drift and silent-failure detection for long-running agents. When an agent slowly diverges from the user's goal or tool contracts, BentoLabs spots it, shows root cause, and proposes the prompt/harness fix. Founders hit this problem operating Emergent (YC S24) at scale.",
         "zh": "长程 agent 的漂移与静默失败检测——当 agent 慢慢偏离用户目标或工具契约时，BentoLabs 发现它、定位根因并给出 prompt/harness 修复建议。创始人在运营 Emergent（YC S24）时切身踩过这个坑。"
       },
       "learn": {
-        "en": "Long-running agents fail differently: not crashes but goal drift. 'Monitoring + auto-suggested fixes' is the shape of ops tooling when the artifact being operated is a prompt-and-harness, not a binary.",
-        "zh": "长程 agent 的失败方式不一样：不是崩溃，而是目标漂移。当被运维的对象是 prompt 加 harness 而非二进制时，运维工具就长成“监控 + 自动修复建议”这个形状。"
+        "en": "Long-running agents fail by goal drift rather than crashes. 'Monitoring plus auto-suggested fixes' is the shape of ops tooling when the artifact being operated is a prompt-and-harness rather than a binary.",
+        "zh": "长时运行的 agent 失败方式是目标漂移，而不是崩溃。当被运维的对象是提示词和 harness 而非二进制程序时，“监控 + 自动建议修复”就是运维工具的形态。"
       },
       "signals": {
         "en": [
@@ -311,11 +311,11 @@
       "slug": "hyperspell",
       "theme": "agent-reliability",
       "why": {
-        "en": "Memory and context layer for agents — 'clueless geniuses' that ace benchmarks but lack the hundreds of scattered context points a human accumulates at a real job. Connects workspace data into a personalized, growing memory. Memory is the most-cited missing piece in production agents.",
+        "en": "Memory and context layer for agents: 'clueless geniuses' that ace benchmarks but lack the hundreds of scattered context points a human accumulates at a real job. Connects workspace data into a personalized, growing memory. Memory is the most-cited missing piece in production agents.",
         "zh": "agent 的记忆与上下文层——“不通世事的天才”考试碾压人类，却撑不过真实工作的一天，缺的就是人类从数百个零散接触点攒出来的语境。接入工作区数据，构建持续生长的个性化记忆。记忆是生产环境 agent 最常被点名的缺件。"
       },
       "learn": {
-        "en": "Context engineering as a product category: if memory becomes a pluggable layer, agent applications commoditize faster — and whoever holds the memory holds the switching costs.",
+        "en": "Context engineering as a product category: if memory becomes a pluggable layer, agent applications commoditize faster, and whoever holds the memory holds the switching costs.",
         "zh": "上下文工程作为产品品类：如果记忆变成可插拔层，agent 应用会更快同质化——而握着记忆的人握着切换成本。"
       },
       "signals": {
@@ -334,11 +334,11 @@
       "slug": "general-legal",
       "theme": "ai-firms",
       "why": {
-        "en": "An elite AI-native law firm for high-growth companies — already 15 people, the largest of *four* AI law firms in Winter 2026 alone. Law is the cleanest test of the AI-firm thesis: high hourly rates, text-native work, and clients who care about speed and price, not process.",
+        "en": "An elite AI-native law firm for high-growth companies, already 15 people, the largest of four AI law firms in Winter 2026 alone. Law is the cleanest test of the AI-firm thesis: high hourly rates, text-native work, and clients who care about speed and price more than process.",
         "zh": "面向高成长公司的精英 AI 原生律所——已有 15 人，是 2026 冬季*四家* AI 律所中最大的一家。法律是 AI 事务所论题最干净的试验场：高时薪、文本原生的工作、客户在意速度与价格而非过程。"
       },
       "learn": {
-        "en": "How 'AI firm' beats 'legal SaaS': sell the work product, not the tool. Watch their leverage ratio (lawyers vs. agents) — it's the unit economics of this whole category.",
+        "en": "How 'AI firm' beats 'legal SaaS': sell the work product, not the tool. Watch their ratio of lawyers to agents; it is the unit economics of this whole category.",
         "zh": "“AI 事务所”如何胜过“法律 SaaS”：卖工作成果，而不是工具。盯他们的杠杆率（律师数比 agent 数）——那是整个品类的单位经济学。"
       },
       "signals": {
@@ -359,11 +359,11 @@
       "slug": "cranston-ai",
       "theme": "ai-firms",
       "why": {
-        "en": "A full-stack AI accounting firm explicitly sized against the $900B accounting-labor market: reconciliation, tax compliance, analysis, pulling context from a company's whole app stack. Founders spent five years each building an ERP and an accounting firm — rare domain depth.",
+        "en": "A full-stack AI accounting firm explicitly sized against the $900B accounting-labor market: reconciliation, tax compliance, analysis, pulling context from a company's whole app stack. Founders spent five years each building an ERP and an accounting firm, which is rare domain depth.",
         "zh": "全栈 AI 会计事务所，对标 9000 亿美元的会计人力市场：对账、税务合规、财务分析，从公司全部应用与数据里拉取上下文。两位创始人分别花了五年造 ERP、五年开会计事务所——少见的领域深度。"
       },
       "learn": {
-        "en": "The wedge logic of AI firms: own the system-of-record context (every app, not just the ledger) and the labor follows. Also a case study in founders productizing their own former service business.",
+        "en": "The wedge logic of AI firms: own the system-of-record context (every app, not just the ledger) and the labor follows. Also a case of founders productizing their own former service business.",
         "zh": "AI 事务所的楔子逻辑：握住系统级上下文（所有应用，而不只是总账），人力活就跟着来了。也是创始人把自己旧服务生意产品化的样本。"
       },
       "signals": {
@@ -384,11 +384,11 @@
       "slug": "panacea",
       "theme": "ai-firms",
       "why": {
-        "en": "AI-native FDA regulatory services: ex-FDA consultants with decades of filings, paired with an AI platform, sold at fixed outcome-based prices (pay on milestone) instead of hourly billing — across every pathway from IND to PMA. Regulatory consulting is slow, scarce, and brutally priced; this attacks all three.",
+        "en": "AI-native FDA regulatory services: ex-FDA consultants with decades of filings, paired with an AI platform, sold at fixed outcome-based prices (pay on milestone) instead of hourly billing, across every pathway from IND to PMA. Regulatory consulting is slow, scarce, and expensive; this attacks all three.",
         "zh": "AI 原生的 FDA 法规服务：前 FDA、有数百份申报经验的顾问搭配 AI 平台，以固定的按里程碑付费取代按小时计费——覆盖从 IND 到 PMA 的全部通道。法规咨询又慢又稀缺又贵，这是三连击。"
       },
       "learn": {
-        "en": "Outcome-based pricing as the natural pricing model for AI firms — when AI does the hours, billing hours becomes absurd. Watch how they make 'milestone complete' contractually crisp.",
+        "en": "Outcome-based pricing as the natural pricing model for AI firms: when AI does the hours, billing hours makes no sense. Watch how they make 'milestone complete' contractually crisp.",
         "zh": "按结果定价是 AI 事务所的自然定价模型——当 AI 干掉工时，按小时计费就荒谬了。看他们如何把“里程碑完成”写得在合同上无可争议。"
       },
       "signals": {
@@ -409,11 +409,11 @@
       "slug": "runharbor",
       "theme": "ai-firms",
       "why": {
-        "en": "An AI-native CRO: started as clinical-trial software (seven trials, $187K contracted), then jumped the fence into full-service trial execution with a first $1.93M three-year CRO contract. Clinical trials eat 45% of drug-development spend, mostly in services — exactly the budget AI firms hunt.",
+        "en": "An AI-native CRO: started as clinical-trial software (seven trials, $187K contracted), then jumped the fence into full-service trial execution with a first $1.93M three-year CRO contract. Clinical trials eat 45% of drug-development spend, mostly in services, which is the budget AI firms hunt.",
         "zh": "AI 原生 CRO：先做临床试验软件（七个试验、18.7 万美元合同额），随后翻墙进入全流程试验执行，签下第一份三年 193 万美元的 CRO 合同。临床试验吃掉新药研发 45% 的开销，大头都在服务——正是 AI 事务所猎杀的预算。"
       },
       "learn": {
-        "en": "The software-first, services-second ladder: prove the system of record, then take over the workflow it records. The $187K→$1.93M contract jump is the whole thesis in two numbers.",
+        "en": "The software-first, services-second ladder: prove the system of record, then take over the workflow it records. The $187K to $1.93M contract jump is the whole thesis in two numbers.",
         "zh": "“先软件后服务”的阶梯：先证明系统记录的价值，再接管它所记录的工作流。18.7 万到 193 万美元的合同跳变，就是整个论题的两行注脚。"
       },
       "signals": {
@@ -434,11 +434,11 @@
       "slug": "standard-signal",
       "theme": "ai-firms",
       "why": {
-        "en": "A hedge fund where AI does all research and execution — one person, New York, no software customers at all. The terminal form of the AI-firm thesis: don't sell the tool to funds, *be* the fund and keep the carry.",
-        "zh": "一家研究和交易全由 AI 完成的对冲基金——一个人、纽约、完全不卖软件。AI 事务所论题的终极形态：别把工具卖给基金，自己*成为*基金，把 carry 留给自己。"
+        "en": "A hedge fund where AI does all research and execution: one person, New York, no software customers at all. The terminal form of the AI-firm thesis, which is to be the fund and keep the carry instead of selling the tool to funds.",
+        "zh": "一家由 AI 做全部研究和执行的对冲基金：一个人、纽约、没有任何软件客户。这是 AI 公司论断的终极形态：自己做基金、留下业绩提成，而不是把工具卖给基金。"
       },
       "learn": {
-        "en": "When AI capability is the edge, selling it as SaaS may be leaving money on the table. The build-vs-sell decision for AI advantage, in its purest form.",
+        "en": "When AI capability is the edge, selling it as SaaS may leave money on the table. The build-versus-sell decision for AI advantage, in its purest form.",
         "zh": "当 AI 能力本身就是超额收益，把它做成 SaaS 也许是把钱留在桌上。这是“自用还是出售 AI 优势”决策的最纯粹版本。"
       },
       "signals": {
@@ -457,11 +457,11 @@
       "slug": "ndea-com",
       "theme": "lab-supply-chain",
       "why": {
-        "en": "François Chollet's AGI lab — program synthesis plus deep learning ('intuitive pattern recognition and formal reasoning in a unified architecture') aimed at AI that can genuinely innovate, with science as the goal. A 15-person frontier lab choosing to route through a YC batch is a story in itself.",
+        "en": "François Chollet's AGI lab: program synthesis plus deep learning ('intuitive pattern recognition and formal reasoning in a unified architecture') aimed at AI that can innovate, with science as the goal. A 15-person frontier lab choosing to route through a YC batch is a story in itself.",
         "zh": "François Chollet 的 AGI 实验室——把直觉式模式识别与形式推理融为一体的架构（程序合成 + 深度学习），目标是真正能创新的 AI，并以科学为目的地。一家 15 人的前沿实验室选择走 YC 批次，本身就是个故事。"
       },
       "learn": {
-        "en": "The strongest articulated alternative to pure scale: if scaling stalls, this architecture bet is the hedge everyone will study. Also: even celebrity labs now use YC for distribution and recruiting gravity.",
+        "en": "The strongest articulated alternative to pure scale: if scaling stalls, this architecture bet is the hedge everyone will study. Even celebrity labs now use YC for distribution and recruiting gravity.",
         "zh": "对纯堆算力路线最有章法的替代方案：如果 scaling 失速，这个架构赌注就是所有人要研究的对冲。另外：连明星实验室也开始用 YC 获取分发与招聘引力。"
       },
       "signals": {
@@ -482,7 +482,7 @@
       "slug": "arc-prize-foundation",
       "theme": "lab-supply-chain",
       "why": {
-        "en": "The ARC-AGI benchmark institution itself — used by OpenAI, Anthropic, DeepMind, and xAI — now a YC nonprofit. Benchmarks steer the entire field's research agenda; ARC is the canonical 'measure fluid intelligence, not memorization' counterweight to leaderboard saturation.",
+        "en": "The ARC-AGI benchmark institution itself, used by OpenAI, Anthropic, DeepMind, and xAI, now a YC nonprofit. Benchmarks steer the entire field's research agenda; ARC is the canonical 'measure fluid intelligence, not memorization' counterweight to leaderboard saturation.",
         "zh": "ARC-AGI 基准背后的机构——OpenAI、Anthropic、DeepMind、xAI 都在用——如今是 YC 里的非营利组织。基准引导整个领域的研究议程；ARC 是“测流体智能而非记忆”的标杆，对冲排行榜饱和。"
       },
       "learn": {
@@ -507,7 +507,7 @@
       "slug": "sciloop",
       "theme": "lab-supply-chain",
       "why": {
-        "en": "IPhO/IMO medalists writing math and physics problems frontier models score 0–5% on, sold to labs as training and eval data. As public data exhausts, the binding constraint on reasoning progress is exactly this: fresh problems beyond the frontier.",
+        "en": "IPhO/IMO medalists writing math and physics problems frontier models score 0-5% on, sold to labs as training and eval data. As public data exhausts, the binding constraint on reasoning progress is fresh problems beyond the frontier.",
         "zh": "IPhO/IMO 奖牌得主出题，前沿模型在他们最难的题集上只能拿 0–5 分——把这些数据卖给实验室做训练与评测。当公开数据耗尽，推理能力进步的硬约束正是：源源不断的、超出前沿的新题。"
       },
       "learn": {
@@ -532,11 +532,11 @@
       "slug": "hillclimb",
       "theme": "lab-supply-chain",
       "why": {
-        "en": "Training data aimed at the most leveraged task there is: turning frontier agents into AI research scientists. 'Training data for recursive self-improvement' is the most audacious one-liner in the cohort, and labs are visibly paying for exactly this capability.",
+        "en": "Training data aimed at the highest-leverage task there is: turning frontier agents into AI research scientists. 'Training data for recursive self-improvement' is the most audacious one-liner in the cohort, and labs are visibly paying for this capability.",
         "zh": "瞄准杠杆最大的任务的训练数据：把前沿 agent 训练成 AI 研究科学家。“递归自我改进的训练数据”是整期最大胆的一句话简介，而实验室确实在为这种能力掏钱。"
       },
       "learn": {
-        "en": "Where the automation-of-AI-research trend creates a vendor layer — and what 'data for self-improvement' even looks like operationally. If this works, timelines compress.",
+        "en": "Where the automation-of-AI-research trend creates a vendor layer, and what 'data for self-improvement' looks like operationally. If this works, timelines compress.",
         "zh": "AI 研究自动化趋势如何催生供应商层——以及“自我改进数据”在操作层面到底长什么样。如果成了，时间线会被压缩。"
       },
       "signals": {
@@ -557,11 +557,11 @@
       "slug": "piggy-robotics",
       "theme": "physical-ai",
       "why": {
-        "en": "Humanoids built around artificial muscles — a tube wrapped in braided fibre, one pump for the whole robot — to escape the motor cost-and-assembly bottleneck and mass-produce at iPhone prices. 15 people already; the bet is that home-scale fleets generate the data moat, like cars did for self-driving.",
+        "en": "Humanoids built around artificial muscles (a tube wrapped in braided fibre, one pump for the whole robot) to escape the motor cost-and-assembly bottleneck and mass-produce at iPhone prices. 15 people already; the bet is that home-scale fleets generate the data moat, like cars did for self-driving.",
         "zh": "围绕人工肌肉造的人形机器人——一根编织纤维包裹的管子，整机靠一个泵驱动——绕开电机的成本与装配瓶颈，目标 iPhone 价位的量产。已有 15 人；赌注是家用规模的机群产生数据护城河，就像汽车之于自动驾驶。"
       },
       "learn": {
-        "en": "A first-principles cost attack on the actuator (the part everyone else treats as fixed), and the data-flywheel argument for why *cheap* beats *capable* in early humanoids.",
+        "en": "A first-principles cost attack on the actuator, the part everyone else treats as fixed, and the data-flywheel argument for why cheap beats capable in early humanoids.",
         "zh": "对执行器（所有人都当作既定成本的部件）的第一性原理成本攻击，以及为什么在早期人形机器人里*便宜*比*能干*更重要的数据飞轮论证。"
       },
       "signals": {
@@ -582,11 +582,11 @@
       "slug": "twolabs",
       "theme": "physical-ai",
       "why": {
-        "en": "Semi-humanoid robots for elder care — feeding, dressing, medication, retrieval, plus deliberate social companionship — full stack, hardware and AI in-house. While the field optimizes box-moving, they picked the demographically inevitable market with chronic staffing shortages.",
+        "en": "Semi-humanoid robots for elder care (feeding, dressing, medication, retrieval, plus deliberate social companionship), full stack, hardware and AI in-house. While the field optimizes box-moving, they picked the demographically inevitable market with chronic staffing shortages.",
         "zh": "养老护理的半人形机器人——喂饭、穿衣、用药、取物，外加刻意设计的社交陪伴——硬件与 AI 全栈自研。当全行业在优化搬箱子时，他们挑了人口结构上注定爆发、长期人手短缺的市场。"
       },
       "learn": {
-        "en": "Market selection in robotics: care work is where labor scarcity, willingness to pay, and emotional value all stack. Also a test of 'social capability' as a robotics differentiator, not a gimmick.",
+        "en": "Market selection in robotics: care work is where labor scarcity, willingness to pay, and emotional value all stack. Also a test of social capability as a robotics differentiator rather than a gimmick.",
         "zh": "机器人赛道的选市场功课：照护工作同时叠加了劳动力稀缺、付费意愿与情感价值。也是“社交能力是不是机器人的真实差异化”的试金石。"
       },
       "signals": {
@@ -605,7 +605,7 @@
       "slug": "synphony",
       "theme": "physical-ai",
       "why": {
-        "en": "Strawberry-picking robots ($3B in California alone, 60% labor cost) with a stated side business selling data, evals, and demos to robot foundation labs while scaling deployments. The dual revenue model — operations now, data forever — is the most commercially literate robotics plan in the batch.",
+        "en": "Strawberry-picking robots ($3B in California alone, 60% labor cost) with a stated side business selling data, evals, and demos to robot foundation labs while scaling deployments. The dual revenue model, operations now and data forever, is the most commercially literate robotics plan in the batch.",
         "zh": "草莓采摘机器人（仅加州就是 30 亿美元市场、60% 是人力成本），同时明牌做副业：向机器人基础模型实验室卖数据、评测和演示。“现在赚运营的钱、永远赚数据的钱”的双收入模型，是本批商业上最清醒的机器人计划。"
       },
       "learn": {
@@ -630,11 +630,11 @@
       "slug": "one-robot",
       "theme": "physical-ai",
       "why": {
-        "en": "World-model-based simulation environments realistic enough to train and evaluate robot policies without burning scarce robot time — built per-task for hard manipulation (textiles, box folding). Robot-hours are the bottleneck on every VLA team's iteration loop; this attacks it directly.",
+        "en": "World-model-based simulation environments realistic enough to train and evaluate robot policies without burning scarce robot time, built per-task for hard manipulation (textiles, box folding). Robot-hours are the bottleneck on every VLA team's iteration loop; this attacks it directly.",
         "zh": "基于世界模型的仿真环境，逼真到能直接训练和评测机器人策略，不再被机器人实机时间卡脖子——按任务定制，专攻难的操作类任务（纺织品、折叠箱体）。实机小时数是每个 VLA 团队迭代环的瓶颈；这是正面强攻。"
       },
       "learn": {
-        "en": "The eval/training-environment layer is repeating in robotics exactly as it did for agents (compare Polymath) — same picks-and-shovels logic, one modality over.",
+        "en": "The eval/training-environment layer is repeating in robotics as it did for agents (compare Polymath): same picks-and-shovels logic, one modality over.",
         "zh": "评测/训练环境层正在机器人领域重演 agent 领域的剧本（对照 Polymath）——同样的卖铲子逻辑，换了一个模态。"
       },
       "signals": {
@@ -657,7 +657,7 @@
         "zh": "具身智能的风险定价：车险背后是 300 多亿条理赔记录，自动驾驶卡车和机器人几乎为零。Valgo 自下而上为路线、任务与环境建概率模型，输出保险公司定价所需的模拟损失估计。没有保险，就没有规模化部署。"
       },
       "learn": {
-        "en": "The unglamorous gate on the robotics rollout — underwriting. Stanford-PhD risk modeling plus insurance-industry experience is the kind of pairing that defines a category before anyone notices it exists.",
+        "en": "The unglamorous gate on the robotics rollout is underwriting. Stanford-PhD risk modeling plus insurance-industry experience is the kind of pairing that defines a category before anyone notices it exists.",
         "zh": "机器人铺开路上最不性感的闸门——承保。斯坦福博士的风险建模加保险业老兵，是那种在所有人注意到之前就定义了品类的组合。"
       },
       "signals": {
@@ -676,7 +676,7 @@
       "slug": "icarus",
       "theme": "hard-frontier",
       "why": {
-        "en": "Solar-powered autonomous aircraft loitering at 60,000 ft for weeks — 'a modern U-2 at $100K, built by the thousands'. At 29 people it's the largest team in the entire tracked cohort, an extreme outlier for a company this young and a strong hint about funding and demand pull.",
+        "en": "Solar-powered autonomous aircraft loitering at 60,000 ft for weeks, 'a modern U-2 at $100K, built by the thousands'. At 29 people it was the largest team in the tracked cohort at the June review, an extreme outlier for a company this young and a strong hint about funding and demand pull.",
         "zh": "太阳能自主飞行器在 6 万英尺巡航数周——“现代 U-2，单价 10 万美元，按千架造”。29 人团队是整个追踪期的最大团队，对这个阶段的公司是极端异常值，强烈暗示资金与需求拉动。"
       },
       "learn": {
@@ -685,12 +685,12 @@
       },
       "signals": {
         "en": [
-          "29-person team — cohort maximum",
+          "29-person team, June cohort maximum",
           "LA defense corridor",
           "Hiring"
         ],
         "zh": [
-          "29 人团队——整期最大",
+          "29 人团队，6 月复盘时的全期最大",
           "洛杉矶国防走廊",
           "招聘中"
         ]
@@ -701,11 +701,11 @@
       "slug": "tenet-industries",
       "theme": "hard-frontier",
       "why": {
-        "en": "Strike drones designed first for manufacturability — their own hardware and software platform optimized for automated production across FPV, fixed-wing, Shahed-type, and missile categories, starting with a kamikaze quadcopter. Ukraine-era lesson industrialized: magazine depth wins.",
+        "en": "Strike drones designed first for manufacturability: their own hardware and software platform optimized for automated production across FPV, fixed-wing, Shahed-type, and missile categories, starting with a kamikaze quadcopter. The Ukraine-era lesson, industrialized: magazine depth wins.",
         "zh": "为可制造性而生的攻击无人机——自研软硬件平台，为自动化生产优化，覆盖 FPV、固定翼、Shahed 型、导弹等品类，首款产品是自杀式四旋翼。乌克兰时代的教训工业化：弹药纵深定胜负。"
       },
       "learn": {
-        "en": "Design-for-manufacturing as *the* defense moat — the contest has moved from capability to cost-per-unit and production rate. Compare AICE (submarine drones) and Surtr (counter-UAS) in the same batch.",
+        "en": "Design-for-manufacturing as the defense moat: the contest has moved from capability to cost-per-unit and production rate. Compare AICE (submarine drones) and Surtr (counter-UAS) in the same batch.",
         "zh": "面向制造的设计（DFM）就是这轮国防的护城河——竞争已从能力转向单位成本与产能。对照同批次的 AICE（水下无人机）与 Surtr（反无人机）。"
       },
       "signals": {
@@ -724,7 +724,7 @@
       "slug": "hop-aero",
       "theme": "hard-frontier",
       "why": {
-        "en": "Rocket cargo: point-to-point hypersonic delivery of supplies into contested environments hundreds of miles away in minutes — one of only 15 Summer 2026 companies listed so far, signaling the defense wave is still building, not cresting.",
+        "en": "Rocket cargo: point-to-point hypersonic delivery of supplies into contested environments hundreds of miles away in minutes. One of only 15 Summer 2026 companies listed at the June review, an early sign the defense wave was still building.",
         "zh": "火箭货运：点对点高超音速，把补给在几分钟内送进数百英里外的对抗环境——目前 2026 夏季仅 15 家公司之一，说明国防浪潮仍在涨而非见顶。"
       },
       "learn": {
@@ -749,11 +749,11 @@
       "slug": "axionorbital-space",
       "theme": "hard-frontier",
       "why": {
-        "en": "Foundation models that translate satellite radar (SAR) into photorealistic optical imagery in real time — defeating the 70% of the time optical satellites are blinded by clouds and night. One model wedge, three markets: defense, commodities trading, disaster response.",
+        "en": "Foundation models that translate satellite radar (SAR) into photorealistic optical imagery in real time, defeating the 70% of the time optical satellites are blinded by clouds and night. One model wedge, three markets: defense, commodities trading, disaster response.",
         "zh": "把卫星雷达（SAR）实时翻译成照片级光学影像的基础模型——攻克光学卫星 70% 时间被云层与黑夜致盲的问题。一个模型楔子，三个市场：国防、大宗商品交易、灾害响应。"
       },
       "learn": {
-        "en": "The 'foundation model for one sensor modality' pattern — pick a physics-limited data type humans can't read, make it legible, and you own the interpretation layer for an entire industry.",
+        "en": "The 'foundation model for one sensor modality' pattern: pick a physics-limited data type humans can't read, make it legible, and you own the interpretation layer for an entire industry.",
         "zh": "“单一传感器模态的基础模型”模式——挑一种受物理限制、人类读不懂的数据，把它变得可读，你就拥有了整个行业的解释层。"
       },
       "signals": {
@@ -772,12 +772,12 @@
       "slug": "dome",
       "theme": "prediction-markets",
       "why": {
-        "en": "The developer infrastructure for prediction markets: one API over Polymarket, Kalshi and others for data, trading, and strategy deployment. Picks-and-shovels positioning in a market whose venues are fragmenting as fast as they're growing — the Plaid move, run early. Update 2026-09: YC now lists Dome as inactive — kept here as the timing data point for the thesis.",
-        "zh": "预测市场的开发者基础设施：一个 API 打通 Polymarket、Kalshi 等的行情、交易与策略部署。在场所碎片化与增长同样迅猛的市场里做卖铲子生意——Plaid 的打法，提前跑。 2026 年 9 月更新：YC 已将 Dome 标记为停止运营——保留于此，作为该论断“时机”的数据点。"
+        "en": "The developer infrastructure for prediction markets: one API over Polymarket, Kalshi and others for data, trading, and strategy deployment. Picks-and-shovels positioning in a market whose venues are fragmenting as fast as they're growing. Update 2026-09: YC now lists Dome as inactive; kept here as the timing data point for the thesis.",
+        "zh": "预测市场的开发者基础设施：一个 API 覆盖 Polymarket、Kalshi 等平台的数据、交易和策略部署。在一个交易场所增长与碎片化同样快的市场里做“卖铲子”的定位。2026 年 9 月更新：YC 已将 Dome 标记为停止运营，保留于此，作为该论断“时机”的数据点。"
       },
       "learn": {
-        "en": "How a data/API layer bootstraps a new asset class (every quant tool, dashboard, and strategy builds on whoever standardizes access first). The whole financialization sequence starts here.",
-        "zh": "数据/API 层如何为一个新资产类别奠基（每个量化工具、看板、策略都会建在最先标准化接入的人身上）。整条金融化链路从这里开始。"
+        "en": "How a data/API layer bootstraps a new asset class: every quant tool, dashboard, and strategy builds on whoever standardizes access first.",
+        "zh": "数据/API 层如何为一个新资产类别打地基：每一个量化工具、看板和策略，都建立在最先把访问标准化的那家公司之上。"
       },
       "signals": {
         "en": [
@@ -797,11 +797,11 @@
       "slug": "river-markets",
       "theme": "prediction-markets",
       "why": {
-        "en": "Prime brokerage for event contracts: every major venue in one account, best execution, portfolio/order management, unified API — the institutional plumbing that turns a retail curiosity into a tradable asset class for professional desks.",
+        "en": "Prime brokerage for event contracts: every major venue in one account, best execution, portfolio/order management, unified API. The institutional plumbing that turns a retail curiosity into a tradable asset class for professional desks.",
         "zh": "事件合约的主经纪商：所有主要场所一个账户，最优执行、组合与订单管理、统一 API——把零售猎奇变成专业交易台可交易资产的机构级管道。"
       },
       "learn": {
-        "en": "Market-structure pattern recognition: data API (Dome) → prime brokerage (River) → derivatives (Totalis) is exactly how crypto institutionalized, replayed at 4x speed.",
+        "en": "Market-structure pattern recognition: data API (Dome), then prime brokerage (River), then derivatives (Totalis) is how crypto institutionalized, replayed at 4x speed.",
         "zh": "市场结构的模式识别：数据 API（Dome）→ 主经纪（River）→ 衍生品（Totalis），正是加密机构化的路径，以四倍速重播。"
       },
       "signals": {
@@ -820,7 +820,7 @@
       "slug": "forum",
       "theme": "prediction-markets",
       "why": {
-        "en": "An exchange for trading attention itself — indices built from search, social, and streaming data so users can go long or short on cultural relevance. The most conceptually radical market in the cohort: attention drives business value but has never been directly tradable.",
+        "en": "An exchange for trading attention itself: indices built from search, social, and streaming data so users can go long or short on cultural relevance. The most conceptually radical market in the cohort; attention drives business value but has never been directly tradable.",
         "zh": "交易“注意力”本身的交易所——用搜索、社交与流媒体数据编制指数，让用户做多或做空文化热度。整期概念上最激进的市场：注意力驱动商业价值，却从未被直接交易过。"
       },
       "learn": {
@@ -843,7 +843,7 @@
       "slug": "gojiberry-ai",
       "theme": "traction",
       "why": {
-        "en": "AI GTM agents that run B2B outbound end-to-end (find intent, enrich, outreach, follow-up, book meetings): $0→$2.5M ARR in 10 months, profitable, 2,000+ customers, 30% MoM — the strongest publicly claimed traction in the tracked cohort, with a cross-customer learning loop as the moat story.",
+        "en": "AI GTM agents that run B2B outbound end-to-end (find intent, enrich, outreach, follow-up, book meetings): $0 to $2.5M ARR in 10 months, profitable, 2,000+ customers, 30% MoM. The strongest publicly claimed traction in the tracked cohort, with a cross-customer learning loop as the moat story.",
         "zh": "端到端跑 B2B 外呼的 AI GTM agent（找到有意向的买家、补全信息、触达、跟进、约成会议）：10 个月 0→250 万美元 ARR、盈利、2000+ 客户、月增 30%——整个追踪期内公开声明的最强业绩，护城河故事是跨客户的学习循环。"
       },
       "learn": {
@@ -872,7 +872,7 @@
         "zh": "把医疗行政里最枯燥稠密的活——保险理赔跟进电话（占账单团队 80% 工时、每通 30 分钟）——交给语音 agent。上线数月 76.4 万美元合同 ARR、试点付费转化 100%、自动化 5 万+ 通电话，合作名单提到 UC 体系、Mayo、Experian Health。"
       },
       "learn": {
-        "en": "The vertical voice-agent playbook at its best: pick one phone-call type with brutal volume and clear ROI, automate only that, and let 10x throughput sell itself. (27 voice companies in the cohort; this is the cleanest execution.)",
+        "en": "The vertical voice-agent playbook at its best: pick one phone-call type with brutal volume and clear ROI, automate only that, and let 10x throughput sell itself. 27 voice companies are in the cohort; this is the cleanest execution.",
         "zh": "垂直语音 agent 打法的最佳示范：挑一种量大、ROI 清晰的电话，只自动化它，让 10 倍吞吐自己卖自己。（本期 27 家语音公司；这是执行最干净的。）"
       },
       "signals": {
@@ -893,11 +893,11 @@
       "slug": "trellistech",
       "theme": "traction",
       "why": {
-        "en": "Agents that run short-term-rental operations end-to-end (guest messages, cleaners, maintenance, owner updates): $500K ARR across 35 customers and 3,000 listings within *two months* of launch, ~15% week-over-week growth, one customer already running with zero human involvement.",
+        "en": "Agents that run short-term-rental operations end-to-end (guest messages, cleaners, maintenance, owner updates): $500K ARR across 35 customers and 3,000 listings within two months of launch, ~15% week-over-week growth, one customer already running with zero human involvement.",
         "zh": "agent 端到端运营短租（客人消息、保洁、维修、业主汇报）：上线*两个月* 50 万美元 ARR、35 个客户、3000 套房源、周增约 15%，已有客户完全无人运营。"
       },
       "learn": {
-        "en": "Ops-heavy SMB verticals as agent beachheads: fragmented stack, measurable labor cost, and a tolerance for delegation. The 'property runs itself' end-state is the same story every vertical agent company is telling — this one has the growth curve.",
+        "en": "Ops-heavy SMB verticals as agent beachheads: fragmented stack, measurable labor cost, and a tolerance for delegation. Every vertical agent company tells the 'property runs itself' story; this one has the growth curve.",
         "zh": "运营繁重的 SMB 垂直是 agent 的滩头阵地：技术栈碎、人力成本可量化、对授权的容忍高。“物业自己运转”的终局每家垂直 agent 公司都在讲——这家有增长曲线。"
       },
       "signals": {
@@ -918,7 +918,7 @@
       "slug": "manicule",
       "theme": "traction",
       "why": {
-        "en": "AI-native developer relations as a service — owning docs and technical content for AI companies. $53K monthly revenue growing 100% MoM, and the customer list is itself a market map: Supermemory, Greptile, Reducto, Mastra, AgentMail. The AI boom is generating service businesses optimized for AI companies.",
+        "en": "AI-native developer relations as a service, owning docs and technical content for AI companies. $53K monthly revenue growing 100% MoM, and the customer list is itself a market map: Supermemory, Greptile, Reducto, Mastra, AgentMail. The AI boom is generating service businesses optimized for AI companies.",
         "zh": "AI 原生的 DevRel 服务——替 AI 公司包办文档与技术内容。月收入 5.3 万美元、连续三个月环比翻倍，客户名单本身就是一张市场地图：Supermemory、Greptile、Reducto、Mastra、AgentMail。AI 热潮正在催生为 AI 公司优化的服务业。"
       },
       "learn": {
@@ -945,19 +945,19 @@
         "zh": "号称第一个 YC 投资的“AI 创始人”：Thomas 是一个虚拟人，自己在互联网上创办、运营、增长自己的公司，幕后有一位人类创造者。一半行为艺术，一半对“agent 能否端到端经营企业”的真实探针。"
       },
       "learn": {
-        "en": "A live experiment in the outer limit of the AI-firm thesis (no employees at all, not even one). Whatever Thomas actually ships, the legal and narrative questions it raises — who owns it, who's liable — arrive for everyone else next.",
+        "en": "A live experiment in the outer limit of the AI-firm thesis (no employees at all, not even one). Whatever Thomas ships, the legal and narrative questions it raises about ownership and liability arrive for everyone else next.",
         "zh": "AI 事务所论题外边界的现场实验（一个员工都没有，连一个都不剩）。无论 Thomas 真做出什么，它抛出的法律与叙事问题——归谁所有、谁担责——接下来会落到所有人头上。"
       },
       "signals": {
         "en": [
           "Concept-maximalist",
           "Solo (human) founder",
-          "Same batch as RentAHuman — labor inversion twins"
+          "Same batch as RentAHuman: labor-inversion twins"
         ],
         "zh": [
-          "概念最大化",
+          "概念极端主义",
           "单人（人类）创始人",
-          "与 RentAHuman 同批——劳动倒置双子星"
+          "与 RentAHuman 同批次：劳动关系反转的双生"
         ]
       },
       "picked_at": "2026-06-11"
@@ -966,11 +966,11 @@
       "slug": "tornyol",
       "theme": "wildcards",
       "why": {
-        "en": "40-gram toy drones turned into autonomous mosquito killers using phone mics and parking-sensor hardware — targeting 100x cheaper mosquito control, framed as city-scale eradication against malaria, dengue, West Nile. Paris-based, 7 people, gloriously concrete.",
+        "en": "40-gram toy drones turned into autonomous mosquito killers using phone mics and parking-sensor hardware, targeting 100x cheaper mosquito control, framed as city-scale eradication against malaria, dengue, West Nile. Paris-based, 7 people, concrete down to the part numbers.",
         "zh": "用手机麦克风、倒车雷达级传感器和信号处理，把 40 克玩具无人机改造成自主灭蚊机——目标把灭蚊成本降低 100 倍，叙事直指城市级灭蚊与疟疾、登革热。巴黎，7 人，具体得发亮。"
       },
       "learn": {
-        "en": "Frugal-engineering pattern: commodity consumer hardware + clever signal processing can attack a public-health problem usually addressed with chemicals and NGOs. Also a reminder that 'drones' isn't only a defense story.",
+        "en": "Frugal-engineering pattern: commodity consumer hardware plus clever signal processing can attack a public-health problem usually addressed with chemicals and NGOs. Also a reminder that drones are more than a defense story.",
         "zh": "省钱工程的范式：消费级硬件 + 聪明的信号处理，去打一个通常靠化学品和 NGO 解决的公共卫生问题。也提醒一句：“无人机”不只是国防故事。"
       },
       "signals": {
@@ -991,12 +991,12 @@
       "slug": "hypercubic",
       "theme": "wildcards",
       "why": {
-        "en": "AI for COBOL mainframes — the systems still running 70% of the Fortune 500's core banking, insurance, and airline operations as their original authors retire. The deliberate counter-trade to frontier hype: the oldest software stack on earth, suddenly legible to LLMs.",
+        "en": "AI for COBOL mainframes, the systems still running 70% of the Fortune 500's core banking, insurance, and airline operations as their original authors retire. The deliberate counter-trade to frontier hype: the oldest software stack on earth, suddenly legible to LLMs.",
         "zh": "面向 COBOL 主机的 AI——这些系统仍跑着财富 500 强 70% 的核心银行、保险、航司业务，而原作者正在退休。这是对前沿炒作的刻意反向交易：地球上最老的软件栈，突然能被 LLM 读懂了。"
       },
       "learn": {
-        "en": "Where LLM value might be most durable: not greenfield apps but the trillion-dollar legacy estate nobody can read anymore. Enterprise modernization budgets are enormous, recurring, and allergic to startups — watch how an AI-native vendor cracks them.",
-        "zh": "LLM 价值可能最持久的落点：不是新应用，而是没人读得懂的万亿美元遗留资产。企业现代化预算巨大、常年存在、又对创业公司过敏——看一家 AI 原生供应商怎么敲开它。"
+        "en": "LLM value may prove most durable in the trillion-dollar legacy estate nobody can read anymore, rather than in greenfield apps. Enterprise modernization budgets are enormous, recurring, and allergic to startups; watch how an AI-native vendor cracks them.",
+        "zh": "LLM 的价值也许在没人读得懂的万亿美元遗留系统里最持久，而不是在全新应用里。企业现代化预算巨大、持续、且对初创公司过敏；关注一家 AI 原生供应商如何撬开它们。"
       },
       "signals": {
         "en": [
@@ -1017,7 +1017,7 @@
       "theme": "expanders",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Construction-specific agent swarms — 'hundreds of agents' for tenders, procurement and project analysis — sold into one of the least digitized big industries. The expansion signal that put it on the list: 2 founders, 11 people, hiring, and their own description states $8M raised from investors behind OpenAI, Klarna and Spotify, plus Lovable founder Anton Osika and Northzone. Stockholm, not SF.",
+        "en": "Construction-specific agent swarms, 'hundreds of agents' for tenders, procurement and project analysis, sold into one of the least digitized big industries. The expansion signal that put it on the list: 2 founders, 11 people, hiring, and their own description states $8M raised from investors behind OpenAI, Klarna and Spotify, plus Lovable founder Anton Osika and Northzone. Based in Stockholm.",
         "zh": "面向建筑行业的智能体集群——「数百个」用于投标、采购、项目分析的建筑专用 agent，切入数字化程度最低的大行业之一。让它进入名单的正是扩张信号：2 位创始人、11 人团队、仍在招聘，且其介绍自述已从 OpenAI、Klarna、Spotify 背后的投资机构以及 Lovable 创始人 Anton Osika、Northzone 融到 800 万美元。总部在斯德哥尔摩，而非旧金山。"
       },
       "learn": {
@@ -1028,12 +1028,12 @@
         "en": [
           "2 founders → 11 staff, hiring",
           "$8M raised (their statement)",
-          "Stockholm outlier"
+          "Stockholm-based"
         ],
         "zh": [
           "2 位创始人 → 11 人团队，招聘中",
           "自述融资 800 万美元",
-          "斯德哥尔摩，非硅谷样本"
+          "总部斯德哥尔摩"
         ]
       }
     },
@@ -1042,23 +1042,23 @@
       "theme": "expanders",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Voice AI orchestration for Indian enterprises — build agents straight from call transcripts and FAQs to automate the tens of thousands of daily calls in sales, support and collections. At 21 people on 2 founders it's the second-largest team in the tracked cohort, and it never states revenue — the team is the traction statement.",
+        "en": "Voice AI orchestration for Indian enterprises: build agents straight from call transcripts and FAQs to automate the tens of thousands of daily calls in sales, support and collections. At 21 people on 2 founders it was the second-largest team in the tracked cohort at the June review, and it never states revenue; the team is the traction statement.",
         "zh": "面向印度企业的语音 AI 编排平台——直接用通话转录和 FAQ 生成语音 agent，自动化销售、客服、催收等每天数以万计的电话。2 位创始人带 21 人，是整个追踪期第二大团队，而它从不公布收入——团队本身就是业绩声明。"
       },
       "learn": {
-        "en": "The geography arbitrage: massive call volume, cost-sensitive enterprises, local-language complexity — a playbook that maps almost one-to-one onto the China market.",
+        "en": "The geography arbitrage: massive call volume, cost-sensitive enterprises, local-language complexity. A playbook that maps almost one-to-one onto the China market.",
         "zh": "地理套利的范本：巨大话务量、对成本敏感的企业客户、本地语言的复杂性——这套打法几乎可以一比一映射到中国市场。"
       },
       "signals": {
         "en": [
-          "2 founders → 21 staff — cohort #2",
+          "2 founders → 21 staff",
           "Bengaluru, India-first",
           "Voice infra for enterprise call volume"
         ],
         "zh": [
-          "2 位创始人 → 21 人，整期第二大团队",
+          "2 位创始人 → 21 人",
           "班加罗尔，印度优先",
-          "面向企业话务量的语音底座"
+          "面向企业通话量的语音基础设施"
         ]
       }
     },
@@ -1067,11 +1067,11 @@
       "theme": "expanders",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Replaces the marketing agency outright: generates hundreds of ads with matched landing pages, steers spend across Meta, Google and LinkedIn, and learns from CRM and ERP data what actually drives profit. 3 founders carrying a 19-person team — agency replacement is working well enough to staff like an agency.",
+        "en": "Replaces the marketing agency outright: generates hundreds of ads with matched landing pages, steers spend across Meta, Google and LinkedIn, and learns from CRM and ERP data what drives profit. 3 founders carrying a 19-person team; agency replacement is working well enough to staff like an agency.",
         "zh": "直接取代营销代理公司：批量生成数百条广告与配套落地页，在 Meta、Google、LinkedIn 之间调度预算，并接入 CRM 与 ERP 数据学习什么真正带来利润。3 位创始人带 19 人团队——「替代代理商」这件事做得足够好，以至于自己长成了代理商的规模。"
       },
       "learn": {
-        "en": "The AI-firm pattern applied to marketing: own the full loop (creative → spend → revenue attribution) instead of selling tools into it. Watch how 'self-improving campaigns' get priced against agency retainers.",
+        "en": "The AI-firm pattern applied to marketing: own the full loop (creative, spend, revenue attribution) instead of selling tools into it. Watch how 'self-improving campaigns' get priced against agency retainers.",
         "zh": "AI 事务所模式在营销上的应用：吃下完整闭环（创意 → 投放 → 收入归因），而不是往里卖工具。值得盯：「自我改进的投放」如何对标代理商月费定价。"
       },
       "signals": {
@@ -1092,11 +1092,11 @@
       "theme": "expanders",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "One API for KYC, KYB, AML, biometrics and fraud — 1,000+ data sources, 200+ signals, in-house models, with 500 free checks a month as the wedge. Identity is the least glamorous, most load-bearing rail of both fintech and the agent economy, and a 12-person team on 2 founders says the wedge is converting.",
+        "en": "One API for KYC, KYB, AML, biometrics and fraud: 1,000+ data sources, 200+ signals, in-house models, with 500 free checks a month as the wedge. Identity is the least glamorous, most load-bearing rail of both fintech and the agent economy, and a 12-person team on 2 founders says the wedge is converting.",
         "zh": "一个 API 打包 KYC、KYB、反洗钱、生物识别与反欺诈——1000+ 数据源、200+ 信号、自研模型，以每月 500 次免费核验作楔子。身份核验是金融科技与智能体经济中最不性感、却最承重的一条轨道；2 位创始人带 12 人团队，说明这个楔子正在转化。"
       },
       "learn": {
-        "en": "Freemium applied to compliance infrastructure (500 free checks) — an unusually consumer-style GTM for a regulated-infra product. Also the identity rail the agent-economy theme was missing.",
+        "en": "Freemium applied to compliance infrastructure (500 free checks), an unusually consumer-style GTM for a regulated-infra product. Also the identity rail the agent-economy theme was missing.",
         "zh": "把免费增值打法用在合规基础设施上（每月 500 次免费）——受监管基础设施产品里少见的消费级 GTM。这也是智能体经济主题此前缺失的「身份」一环。"
       },
       "signals": {
@@ -1117,11 +1117,11 @@
       "theme": "agentic-commerce",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Point your camera at anything — it identifies, prices and lists it across multiple marketplaces at once. Their numbers are usage, not revenue: 2,500+ items added daily, $326K of inventory value a day flowing through. Listing friction is the real moat of incumbent marketplaces; melting it changes where sellers live.",
+        "en": "Point your camera at anything and it identifies, prices and lists it across multiple marketplaces at once. Their numbers are usage, not revenue: 2,500+ items added daily, $326K of inventory value a day flowing through. Listing friction is the real moat of incumbent marketplaces; melting it changes where sellers live.",
         "zh": "把相机对准任何东西——自动识别、定价，并同时上架多个交易平台。他们晒的是使用量而非收入：每天新增 2500+ 件商品、约 32.6 万美元库存价值流过平台。上架摩擦正是现有平台的真实护城河；把它熔掉，卖家的栖息地就会改变。"
       },
       "learn": {
-        "en": "Camera-as-onboarding for commerce, and a marketplace-aggregator wedge built on the seller's first 60 seconds. Relevant anywhere secondhand and social commerce are big — very much including China.",
+        "en": "Camera-as-onboarding for commerce, and a marketplace-aggregator wedge built on the seller's first 60 seconds. Relevant anywhere secondhand and social commerce are big, China very much included.",
         "zh": "「相机即开店」的电商引导方式，以及围绕卖家头 60 秒体验做聚合的楔子。凡是二手与社交电商发达的市场都适用——尤其是中国。"
       },
       "signals": {
@@ -1142,7 +1142,7 @@
       "theme": "agentic-commerce",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "The context layer for CPG brands: unify the brand's data and expose it over MCP so any AI tool — Claude, ChatGPT, Cursor — can run category management, dashboards and workflows on it. $0→$33K MRR in 4 weeks, 12 brands, 130% week-on-week: the fastest-converting pick in the commerce cluster.",
+        "en": "The context layer for CPG brands: unify the brand's data and expose it over MCP so any AI tool (Claude, ChatGPT, Cursor) can run category management, dashboards and workflows on it. $0 to $33K MRR in 4 weeks, 12 brands, 130% week-on-week, the fastest-converting pick in the commerce cluster.",
         "zh": "CPG 品牌的上下文层：统一品牌数据并通过 MCP 暴露，让任何 AI 工具——Claude、ChatGPT、Cursor——都能直接跑品类管理、看板和工作流。4 周内 MRR 从 0 到 3.3 万美元、12 个品牌、周环比增长 130%：商业集群里转化最快的一家。"
       },
       "learn": {
@@ -1167,11 +1167,11 @@
       "theme": "agentic-commerce",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Doesn't sell AI to brands — it is the brand: AI agents run operations end-to-end on a shared platform, one flagship plus experiment stores, on the thesis that consumer businesses become 'capped by compute, not headcount.' The AI-as-the-firm pattern applied to e-commerce.",
-        "zh": "不向品牌卖 AI——它自己就是品牌：AI agent 在共享平台上端到端运营，一个旗舰品牌加多家实验店，论点是消费品生意将「受算力而非人手限制」。这是 AI 事务所模式在电商上的版本。"
+        "en": "Light Anchor is the brand: AI agents run operations end-to-end on a shared platform, one flagship plus experiment stores, on the thesis that consumer businesses become 'capped by compute, not headcount.' The AI-as-the-firm pattern applied to e-commerce.",
+        "zh": "Light Anchor 自己就是品牌：AI agent 在一个共享平台上端到端运营，一个旗舰店加多个实验店，论断是消费品公司将“受限于算力，而非人手”。这是“AI 即公司”模式在电商上的应用。"
       },
       "learn": {
-        "en": "If agent costs keep falling, a portfolio of software-run brands is the end state of DTC. Watch whether the shared platform compounds — each new launch getting cheaper is the whole bet.",
+        "en": "If agent costs keep falling, a portfolio of software-run brands is the end state of DTC. Watch whether the shared platform compounds; each new launch getting cheaper is the whole bet.",
         "zh": "如果 agent 成本持续下降，「软件运营的品牌组合」就是 DTC 的终局。盯住共享平台是否在复利——每开一家新店成本更低，整个赌注就在这里。"
       },
       "signals": {
@@ -1192,12 +1192,12 @@
       "theme": "wildcards",
       "picked_at": "2026-06-11",
       "why": {
-        "en": "Language learning smuggled into the doomscroll: TikTok-style videos in your target language, auto-matched to your level and getting incrementally harder as you scroll. ~15K downloads in the first two weeks, power users at 3+ hours a day, and a solo founder already carrying a team of 4. Education in this cohort is thin — this is its sharpest idea.",
+        "en": "Language learning smuggled into the doomscroll: TikTok-style videos in your target language, auto-matched to your level and getting incrementally harder as you scroll. ~15K downloads in the first two weeks, power users at 3+ hours a day, and a solo founder already carrying a team of 4. Education in this cohort is thin; this is its sharpest idea.",
         "zh": "把语言学习偷偷塞进「刷视频」里：目标语言的短视频流，自动匹配水平、越刷越难。上线两周约 1.5 万次下载，重度用户每天刷 3 小时以上，单人创始人已带起 4 人团队。本期教育赛道整体很薄——这是其中最锋利的一个想法。"
       },
       "learn": {
-        "en": "Don't fight the dominant behavior — ride it: difficulty-laddered immersion inside an addiction loop. The mechanic (and the Parrot/Pixley cluster around it) is directly portable to China's short-video ecosystem.",
-        "zh": "不要对抗主流行为，要骑上去：把按难度爬梯的沉浸式学习装进成瘾循环里。这套机制（以及它周围的 Parrot、Pixley 小集群）可以直接平移到中国的短视频生态。"
+        "en": "Ride the dominant behavior instead of fighting it: difficulty-laddered immersion inside an addiction loop. The mechanic (and the Parrot/Pixley cluster around it) is directly portable to China's short-video ecosystem.",
+        "zh": "顺着主流行为走，而不是对抗它：在成瘾循环里做难度阶梯式沉浸。这个机制（以及周边的 Parrot/Pixley 集群）可以直接移植到中国的短视频生态。"
       },
       "signals": {
         "en": [
@@ -1241,7 +1241,7 @@
       "slug": "princeps",
       "theme": "compute-buildout",
       "why": {
-        "en": "The first insurer purpose-built for the compute buildout: it underwrites SLA breaches, GPU residual value and outage risk, and sells the coverage as the thing that unlocks cheaper financing for data centers and neoclouds. London-based, two founders.",
+        "en": "The first insurer purpose-built for the compute buildout. It underwrites SLA breaches, GPU residual value and outage risk, and sells the coverage as the thing that unlocks cheaper financing for data centers and neoclouds. London-based, two founders.",
         "zh": "第一家专为算力大建设而生的保险公司：承保 SLA 违约、GPU 残值和宕机风险，并把保单卖成让数据中心和 neocloud 融资更便宜的工具。总部伦敦，两位创始人。"
       },
       "learn": {
@@ -1252,12 +1252,12 @@
         "en": [
           "Underwrites GPU residual value and SLA risk",
           "Coverage positioned as financing enabler",
-          "London, not SF"
+          "London-based"
         ],
         "zh": [
           "承保 GPU 残值与 SLA 风险",
           "保单定位为融资工具",
-          "伦敦，非硅谷"
+          "总部伦敦"
         ]
       },
       "picked_at": "2026-09-15"
@@ -1270,7 +1270,7 @@
         "zh": "AI 原生的数据中心工程公司，“用一半时间、一半成本”做设计，与全球最大的两家开发商有 400 万美元设计合作，管理层来自 Saipem 和 Exyte。两位创始人带 5 人；其自述点名 Exor、Future Planet Capital 和一家 20 亿美元家族办公室为投资方。"
       },
       "learn": {
-        "en": "The 'AI becomes the firm' model applied to heavy engineering — and surfaced by the funding screen. Data-center design is the bottleneck everyone else in this theme is waiting behind.",
+        "en": "The 'AI becomes the firm' model applied to heavy engineering, and surfaced by the funding screen. Data-center design is the bottleneck everyone else in this theme is waiting behind.",
         "zh": "“AI 变成公司本身”用在重型工程上——由融资筛查揪出。数据中心设计正是本主题里其他所有人都在排队等的瓶颈。"
       },
       "signals": {
@@ -1291,7 +1291,7 @@
       "slug": "proprio-robotics",
       "theme": "compute-buildout",
       "why": {
-        "en": "Robots for the whole data-center lifecycle — buildout, maintenance, decommissioning — motivated by a number: 400,000 unstaffed data-center technician positions in the US. First maintenance robots deploy Q1 2027. Shepherd Robotics and Lambda Robotics chose the same customer in the same window.",
+        "en": "Robots for the whole data-center lifecycle (buildout, maintenance, decommissioning), motivated by one number: 400,000 unstaffed data-center technician positions in the US. First maintenance robots deploy Q1 2027. Shepherd Robotics and Lambda Robotics chose the same customer in the same window.",
         "zh": "覆盖数据中心全生命周期——建设、维护、退役——的机器人，动机是一个数字：美国有 40 万个数据中心技术员空缺。首批维护机器人 2027 年一季度部署。Shepherd Robotics 和 Lambda Robotics 在同一窗口选了同一个客户。"
       },
       "learn": {
@@ -1320,7 +1320,7 @@
         "zh": "核动力供电船给海上算力驳船供电：独立运行、散热更好、没有社区反对，靠集中制造“比陆上快四倍”。两位创始人。同一批次还有部署在停工工地上的模块化数据中心（Pacific）和月球硅（Ethos），这是最远的一端。"
       },
       "learn": {
-        "en": "Power and permitting are now the binding constraint on compute, so the frontier is moving to wherever those constraints don't apply — the sea, stalled sites, the Moon. A useful map of what the buildout is actually short of.",
+        "en": "Power and permitting are now the binding constraint on compute, so the frontier is moving to wherever those constraints don't apply: the sea, stalled sites, the Moon. A useful map of what the buildout is short of.",
         "zh": "电力和审批已成为算力的硬约束，前沿于是往约束不存在的地方走——海上、停工工地、月球。这是一张“大建设到底缺什么”的有用地图。"
       },
       "signals": {
@@ -1341,7 +1341,7 @@
       "slug": "radley",
       "theme": "ai-firms",
       "why": {
-        "en": "The first AI-native radiology practice — and the first in the cohort to buy the firm rather than start one: Radley is acquiring a radiology practice that brings it to $4.6M in annualized revenue (the practice's revenue, not organic), and rebuilding it on agents end to end. Founders scaled operations at Carbon Health; $2.2M in contracts cited as demand proof.",
+        "en": "The first AI-native radiology practice, and the first in the cohort to buy the firm rather than start one. Radley is acquiring a radiology practice that brings it to $4.6M in annualized revenue (the practice's revenue, not organic) and rebuilding it on agents end to end. Founders scaled operations at Carbon Health; $2.2M in contracts cited as demand proof.",
         "zh": "第一家 AI 原生放射科诊所——也是本期第一家“买公司而非开公司”的：Radley 正在收购一家放射科诊所，使其年化收入达 460 万美元（是被收购诊所的收入，非自然增长），并用 agent 端到端重建。创始人曾在 Carbon Health 做运营扩张；引用 220 万美元合同作为需求证明。"
       },
       "learn": {
@@ -1366,8 +1366,8 @@
       "slug": "allia-health",
       "theme": "ai-firms",
       "why": {
-        "en": "A national mental-health clinical group assembled from independent practices — 600+ providers across 70 sites in 32 states plus nationwide telehealth — with every clinician on one intelligent system of record. Three people. The scale is borrowed from the practices; the leverage is the system underneath them.",
-        "zh": "把独立诊所整合成一个全国性心理健康医疗集团——600 多位医护、70 个站点、覆盖 32 个州外加全国远程医疗——所有临床医生跑在同一套智能病历系统上。团队三人。规模是从诊所借来的，杠杆在它们之下的那套系统。"
+        "en": "A national mental-health clinical group assembled from independent practices (600+ providers across 70 sites in 32 states plus nationwide telehealth), with every clinician on one intelligent system of record. Three people. The scale is borrowed from the practices; the advantage is the system underneath them.",
+        "zh": "把独立诊所整合成一个全国性心理健康医疗集团（600 多位医护、70 个站点、覆盖 32 个州外加全国远程医疗），所有临床医生跑在同一套智能病历系统上。团队三人。规模是从诊所借来的，优势在它们之下的那套系统。"
       },
       "learn": {
         "en": "The AI-firm model scales fastest when it federates existing practitioners instead of hiring them. Compare Erinys for lawyers: the firm becomes a network with a shared brain.",
@@ -1395,7 +1395,7 @@
         "zh": "公司工厂：Erinys 提供技术、获客、后台和客户获取，让律师开办并扩张自己拥有的 AI 原生律所，法律决策全由律师自己做。三位创始人。Tenor 卖的是通用版（“数百万家 AI 原生服务企业的基础设施”）；Perceptron ML 改造既有律所。"
       },
       "learn": {
-        "en": "When the firm is the product, the next product is the platform that mints firms — and it neatly sidesteps the rules on non-lawyer ownership. This is the layer to watch for whichever profession comes next.",
+        "en": "When the firm is the product, the next product is the platform that mints firms, and this one sidesteps the rules on non-lawyer ownership. This is the layer to watch for whichever profession comes next.",
         "zh": "当公司本身成为产品，下一个产品就是“铸造公司”的平台——还巧妙绕开了非律师不得持股的规则。无论下一个轮到哪个行业，都盯着这一层。"
       },
       "signals": {
@@ -1416,7 +1416,7 @@
       "slug": "isengard-industries-inc",
       "theme": "expanders",
       "why": {
-        "en": "Thirty people on two founders — the largest team among 312 newcomers — behind a description that says almost nothing on purpose: 'sovereign production' of precision-strike and counter-drone systems for allied nations, 'Weapons of Mass Production', 'you know how to reach us'. San Francisco.",
+        "en": "Thirty people on two founders, the largest team among 312 newcomers, behind a description that says almost nothing on purpose: 'sovereign production' of precision-strike and counter-drone systems for allied nations, 'Weapons of Mass Production', 'you know how to reach us'. San Francisco.",
         "zh": "两位创始人带 30 人——312 家新公司中最大的团队——却配着一段刻意几乎什么都不说的描述：为盟国做精确打击与反无人机系统的“主权产能”、“大规模生产的武器”、“你们知道怎么联系我们”。旧金山。"
       },
       "learn": {
@@ -1445,7 +1445,7 @@
         "zh": "一位创始人带 15 人。“AI 互助伙伴”App Sunflower Sober 不到六个月做到年化 150 万美元订阅收入，如今成为一家 AI 原生成瘾远程医疗诊所的品牌，瞄准 Medicaid 每年 300 亿美元的成瘾治疗支出。临床负责人来自 Mayo Clinic 和 Charlie Health；创始人此前负责 Rupa 的增长（500 万→7,500 万美元是 Rupa 的数字）。"
       },
       "learn": {
-        "en": "Consumer app as the top of the funnel for a regulated clinic — the brand and the MAU are built before the licenses. Also a reminder to check whose numbers are whose.",
+        "en": "Consumer app as the top of the funnel for a regulated clinic: the brand and the MAU are built before the licenses. Also a reminder to check whose numbers are whose.",
         "zh": "以消费级 App 做受监管诊所的漏斗顶端——品牌和月活先于牌照建立。也是“数字归谁”的又一次提醒。"
       },
       "signals": {
@@ -1466,7 +1466,7 @@
       "slug": "semble",
       "theme": "expanders",
       "why": {
-        "en": "Fourteen people on two founders selling 'the all-in-one software for integrators' — takeoffs, design, quoting, scheduling, field operations, inventory, invoicing for building-systems integrators, a niche one founder knows from Convergint. Nothing in the pitch says frontier; the headcount says funded vertical SaaS.",
+        "en": "Fourteen people on two founders selling 'the all-in-one software for integrators': takeoffs, design, quoting, scheduling, field operations, inventory, invoicing for building-systems integrators, a niche one founder knows from Convergint. Nothing in the pitch says frontier; the headcount says funded vertical SaaS.",
         "zh": "两位创始人带 14 人，卖“集成商的一体化软件”——给楼宇系统集成商做算量、设计、报价、排程、现场作业、库存和开票，一位创始人在 Convergint 干过这个行当。介绍里没有一个字说“前沿”；人数说明这是有资金的垂直 SaaS。"
       },
       "learn": {
@@ -1491,7 +1491,7 @@
       "slug": "edgerun",
       "theme": "hard-frontier",
       "why": {
-        "en": "Powered legs that double a soldier's range. Started this year, five people on one founder, and a claim of '$100M+ in Ukrainian LOIs, requested by the most combat-experienced infantry on Earth' — letters of intent, not orders, but a demand signal no other newcomer matches.",
+        "en": "Powered legs that double a soldier's range. Started this year, five people on one founder, and a claim of '$100M+ in Ukrainian LOIs, requested by the most combat-experienced infantry on Earth'. Letters of intent, not orders, but a demand signal no other newcomer matches.",
         "zh": "让士兵行军距离翻倍的动力腿。今年才成立，一位创始人带 5 人，自述“超 1 亿美元乌克兰意向书，来自地球上实战经验最丰富的步兵”——是意向书而非订单，但没有哪家新公司有可比的需求信号。"
       },
       "learn": {
@@ -1516,11 +1516,11 @@
       "slug": "noril1",
       "theme": "physical-ai",
       "why": {
-        "en": "A sub-$2,000 American-made bimanual mobile manipulator — $1,688 — that cleans rooms, restocks shelves and folds clothes out of the box and can be taught new tasks; $440k+ in sales six weeks after launch, first units deployed. Five people. Every robot sold is a data-collection node for the next policy.",
+        "en": "A sub-$2,000 American-made bimanual mobile manipulator ($1,688) that cleans rooms, restocks shelves and folds clothes out of the box and can be taught new tasks; $440k+ in sales six weeks after launch, first units deployed. Five people. Every robot sold is a data-collection node for the next policy.",
         "zh": "一台 2,000 美元以下的美国制造双臂移动操作机器人——1,688 美元——开箱即可打扫房间、补货、叠衣服，还能教它新任务；上线六周销售 44 万美元以上，首批机器已交付。五人团队。每台售出的机器人都是训练下一代策略的数据采集节点。"
       },
       "learn": {
-        "en": "Piggy promised iPhone-level pricing in June; Nori shipped it. The model — sell cheap hardware to fund the data flywheel — is the consumer-robotics version of 'the robot pays for its own training'.",
+        "en": "Piggy promised iPhone-level pricing in June; Nori shipped it. Selling cheap hardware to fund the data flywheel is the consumer-robotics version of 'the robot pays for its own training'.",
         "zh": "Piggy 在 6 月承诺 iPhone 级定价；Nori 把它交付了。“卖便宜硬件来喂数据飞轮”是消费机器人版的“机器人自己付训练费”。"
       },
       "signals": {
@@ -1545,7 +1545,7 @@
         "zh": "两位创始人带 8 人；重载自主机器人 Cosmic-1 已在美国最大的几个光伏电站作业，完成数万块面板安装，劳动生产率翻倍以上。正在扩展到数据中心，并在 NASA 合同下研发月面建设机器人。使命：在火星建一座城。"
       },
       "learn": {
-        "en": "Solar installation is the outdoor equivalent of the warehouse: repetitive, heavy, measurable — and the customer (energy) is the same one funding compute. Robots on real sites with a NASA contract clears the bar without any humanoid theatre.",
+        "en": "Solar installation is the outdoor equivalent of the warehouse: repetitive, heavy, measurable, and the customer (energy) is the same one funding compute. Robots on real sites with a NASA contract clear the bar without any humanoid theatre.",
         "zh": "光伏安装是户外版的仓库：重复、重体力、可度量——而客户（能源）正是为算力买单的那批人。真实工地上的机器人加 NASA 合同，无需任何人形表演就过了门槛。"
       },
       "signals": {
@@ -1570,7 +1570,7 @@
         "zh": "物理 AI 数据的加盟模式：DeepReach 生产可穿戴双目采集设备，交给本地合作方在仓库、厨房、农场和维修店里当自己的生意来采集。475 台设备、100 多个合作方、覆盖 7 国，三个月约 15 万段素材，采集量逐月翻倍；一位创始人带 6 人。"
       },
       "learn": {
-        "en": "Diversity of environments matters more than hours in one environment for policy generalization — so the winning data business is a network, not a studio. Compare Praxis (60k workers via conglomerates) and Hub.",
+        "en": "Diversity of environments matters more than hours in one environment for policy generalization, so the winning data business is a network, not a studio. Compare Praxis (60k workers via conglomerates) and Hub.",
         "zh": "对策略泛化而言，环境的多样性比单一环境的时长更重要——所以赢的数据生意是网络，不是摄影棚。对照 Praxis（通过大集团触达 6 万名工人）和 Hub。"
       },
       "signals": {
@@ -1620,7 +1620,7 @@
         "zh": "由现实来打分的实时评估竞技场：EarningsBench 让模型在公司发布财报前预测季度业绩，由公布的数字评分；Koliseum 把这些“时点”环境打包卖给实验室；Kimpton OS 把同样的研究变成给基金的结构化交易建议（一家机构客户，管理规模 33 亿美元）。注意：其描述中“家族办公室 1,000 万美元”是创始人上一家对冲基金融的，不是 Kimpton。"
       },
       "learn": {
-        "en": "Static benchmarks leak into training data; a benchmark whose answers are printed by the market on a known future date cannot. That's a genuinely new evaluation primitive — and a textbook case of prior-company numbers sitting in a YC description.",
+        "en": "Static benchmarks leak into training data; a benchmark whose answers are printed by the market on a known future date cannot. That is a new evaluation primitive, and a textbook case of prior-company numbers sitting in a YC description.",
         "zh": "静态基准会泄漏进训练数据；答案由市场在已知的未来日期打印出来的基准不会。这是一个真正新的评估原语——也是“上一家公司的数字躺在 YC 描述里”的教科书案例。"
       },
       "signals": {
@@ -1641,11 +1641,11 @@
       "slug": "fabraix",
       "theme": "agent-reliability",
       "why": {
-        "en": "Nyx, a red-teaming agent that continuously attacks customer-facing AI through controlled replicas of SaaS products and websites — planting payloads in pages, documents and tool outputs. Claims vulnerabilities found in agents at dozens of Fortune 500 companies and a 78% attack success rate on AgentHarm versus 67% for GPT-5.6. Two founders; also authors of the ACE benchmark.",
+        "en": "Nyx, a red-teaming agent that continuously attacks customer-facing AI through controlled replicas of SaaS products and websites, planting payloads in pages, documents and tool outputs. Claims vulnerabilities found in agents at dozens of Fortune 500 companies and a 78% attack success rate on AgentHarm versus 67% for GPT-5.6. Two founders; also authors of the ACE benchmark.",
         "zh": "红队 agent Nyx，通过受控的 SaaS 产品和网站副本持续攻击面向客户的 AI——在网页、文档和工具输出里植入攻击载荷。自述已在数十家财富 500 强的 agent 中发现漏洞，在 AgentHarm 上攻击成功率 78%、对比 GPT-5.6 的 67%。两位创始人；也是 ACE 基准的作者。"
       },
       "learn": {
-        "en": "Agents change behavior when a model, prompt, tool or permission changes even if the code doesn't — so security testing has to be continuous and automated. Whoever owns the attacker model owns the category's benchmark.",
+        "en": "Agents change behavior when a model, prompt, tool or permission changes even if the code doesn't, so security testing has to be continuous and automated. Whoever owns the attacker model owns the category's benchmark.",
         "zh": "模型、提示、工具或权限一变，即便代码不变，agent 的行为也会变——所以安全测试必须持续且自动化。谁掌握攻击方模型，谁就掌握品类的基准。"
       },
       "signals": {
@@ -1670,7 +1670,7 @@
         "zh": "给会执行不可逆动作（退款、改记录、外发邮件）的 agent 做回归测试：Mirrors 从 agent 自己的生产轨迹重建它调用的专有工具，在 CI 里对每个提示/模型/工具改动、每个 PR 回放真实会话，并告诉你是 agent 退化了还是上游变了。2026 秋季，两人。"
       },
       "learn": {
-        "en": "The test fixture for agents is the trace. 'Most teams ship on vibes' is the honest state of agent engineering — the first company to make replay boring wins the CI slot.",
+        "en": "The test fixture for agents is the trace. 'Most teams ship on vibes' is an accurate description of agent engineering today; the first company to make replay boring wins the CI slot.",
         "zh": "agent 的测试夹具是轨迹。“多数团队凭感觉上线”是 agent 工程的真实现状——第一个把回放做得无聊的公司拿下 CI 这一格。"
       },
       "signals": {
@@ -1691,7 +1691,7 @@
       "slug": "inkbox",
       "theme": "agent-economy",
       "why": {
-        "en": "Persistent identities for agents — their own email address, phone number and iMessage — plus an agent-to-agent channel for delegation. Three founders. It's the contact-details layer that sits next to June's ID badges (Didit, Agentic Fabriq) and bank accounts (Sponge).",
+        "en": "Persistent identities for agents (their own email address, phone number and iMessage) plus an agent-to-agent channel for delegation. Three founders. It is the contact-details layer that sits next to June's ID badges (Didit, Agentic Fabriq) and bank accounts (Sponge).",
         "zh": "给 agent 的持久身份——自己的邮箱、电话号码和 iMessage——外加用于任务委派的 agent 间通道。三位创始人。这是紧挨着 6 月的“工牌”（Didit、Agentic Fabriq）和“银行账户”（Sponge）的联系方式层。"
       },
       "learn": {
@@ -1716,12 +1716,12 @@
       "slug": "talentpluto",
       "theme": "agent-economy",
       "why": {
-        "en": "'LinkedIn for agents': a 10-minute voice interview turns a professional's experience and intent into structured, searchable context; 27K+ professionals have done it and 50+ companies — Mercor, Warp, Rho — use it to find people. Five people on three founders. The stated end-state is a labor market where AI agents are the ones hiring.",
+        "en": "'LinkedIn for agents': a 10-minute voice interview turns a professional's experience and intent into structured, searchable context. 27K+ professionals have done it and 50+ companies (Mercor, Warp, Rho) use it to find people. Five people on three founders. The stated end-state is a labor market where AI agents are the ones hiring.",
         "zh": "“agent 版 LinkedIn”：10 分钟语音访谈把一个人的经历和意向变成结构化、可检索的上下文；已有 2.7 万多名专业人士完成，50 多家公司——Mercor、Warp、Rho——用它找人。三位创始人带 5 人。宣称的终局是一个由 AI agent 招人的劳动力市场。"
       },
       "learn": {
-        "en": "The agent economy needs a labor market where the demand side is an agent. Mercor as a customer is the tell: the marketplaces buying human expertise for AI are also buying the index of who has it.",
-        "zh": "agent 经济需要一个需求方是 agent 的劳动力市场。Mercor 作为客户是关键线索：为 AI 采购人类专业能力的市场，也在采购“谁拥有它”的索引。"
+        "en": "The agent economy needs a labor market where the demand side is an agent. Mercor as a customer matters: the marketplaces buying human expertise for AI are also buying the index of who has it.",
+        "zh": "agent 经济需要一个需求方是 agent 的劳动力市场。Mercor 作为客户很说明问题：为 AI 采购人类专业能力的市场，也在采购“谁拥有它”的索引。"
       },
       "signals": {
         "en": [
@@ -1741,11 +1741,11 @@
       "slug": "graphify-labs",
       "theme": "traction",
       "why": {
-        "en": "One person, and an open-source knowledge-graph tool that its description credits with 116K+ GitHub stars, 6.5M+ downloads and production use at Shopify, Datadog, JP Morgan, American Express, Harvey and Vanguard. The paid layer formally verifies each pull request against the graph — proof that a refactor or migration changed nothing, or the exact input that breaks it — and runs air-gapped.",
+        "en": "One person, and an open-source knowledge-graph tool that its description credits with 116K+ GitHub stars, 6.5M+ downloads and production use at Shopify, Datadog, JP Morgan, American Express, Harvey and Vanguard. The paid layer formally verifies each pull request against the graph (proof that a refactor or migration changed nothing, or the exact input that breaks it) and runs air-gapped.",
         "zh": "一个人，和一个开源知识图谱工具，其描述称有 11.6 万以上 GitHub star、650 万以上下载，并在 Shopify、Datadog、摩根大通、美国运通、Harvey 和 Vanguard 生产环境使用。付费层对每个 PR 做基于图谱的形式化验证——证明重构或迁移什么都没改，或给出让它出错的确切输入——且可离线部署。"
       },
       "learn": {
-        "en": "Open source as the new traction statement: stars and downloads are the solo founder's ARR. The claims are the company's own and unverified here, but the shape — massive OSS distribution, enterprise wedge on top — is the pattern to watch.",
+        "en": "Open source as the new traction statement: stars and downloads are the solo founder's ARR. The claims are the company's own and unverified here, but the shape (massive OSS distribution, enterprise wedge on top) is the pattern to watch.",
         "zh": "开源成为新的 traction 陈述：star 和下载量就是独立创始人的 ARR。这些数字是公司自述、此处未核实，但这个形态——巨大的开源分发、之上叠企业切口——正是该关注的模式。"
       },
       "signals": {
@@ -1770,7 +1770,7 @@
         "zh": "面向编程 agent 车队的开源（Apache-2.0）运行时：后台服务持有每个 agent 的终端会话，合上电脑、SSH 断线工作也不中断，并把车队变成一个注意力队列（工作中/阻塞/完成）。安卡拉的一个人；上线四个月 2.5 万 GitHub star、34 万下载，首月 500 个社区插件。"
       },
       "learn": {
-        "en": "The bottleneck moved from writing code to supervising the agents that write it — and the tool for that came from one developer outside the US, not a lab. The plugin count is the moat signal.",
+        "en": "The bottleneck moved from writing code to supervising the agents that write it, and the tool for that came from one developer outside the US, not a lab. The plugin count is the moat signal.",
         "zh": "瓶颈从写代码变成了监督写代码的 agent——而做这件事的工具来自美国之外的一位开发者，不是实验室。插件数量是护城河信号。"
       },
       "signals": {
@@ -1791,7 +1791,7 @@
       "slug": "hubble-ai",
       "theme": "traction",
       "why": {
-        "en": "An API that retrieves complete medical records using voice and browser agents to reach the providers APIs can't. Four weeks in: ten signed customers and 7-figure year-one revenue across platform and usage fees. Two founders (one scaled Grow Therapy — the $3B valuation cited is Grow's; the other built One Medical's first agents).",
+        "en": "An API that retrieves complete medical records using voice and browser agents to reach the providers APIs can't. Four weeks in: ten signed customers and 7-figure year-one revenue across platform and usage fees. Two founders; one scaled Grow Therapy (the $3B valuation cited is Grow's), the other built One Medical's first agents.",
         "zh": "用语音和浏览器 agent 触达 API 到不了的医疗机构、完整调取病历的 API。上线四周：签下十家客户，平台费加用量费首年七位数收入。两位创始人（一位曾扩张 Grow Therapy——引用的 30 亿美元估值是 Grow 的；另一位做过 One Medical 的首批 agent）。"
       },
       "learn": {
@@ -1816,11 +1816,11 @@
       "slug": "sentient-os",
       "theme": "traction",
       "why": {
-        "en": "An on-device LLM that wakes your Mac every night, reads what's new (mail, messages, files, transcripts) locally, and leaves your work prepared for the morning — with a custom LiteRT-LM fork that runs on 8 GB Macs and a marginal cost of ~$0. Soft-launched with one Reddit post: 2,000+ users in 48 hours. Its description states a ~$1M pre-seed from Afore and the a16z Speedrun scout fund. Fall 2026, two founders.",
+        "en": "An on-device LLM that wakes your Mac every night, reads what's new (mail, messages, files, transcripts) locally, and leaves your work prepared for the morning, with a custom LiteRT-LM fork that runs on 8 GB Macs and a marginal cost of ~$0. Soft-launched with one Reddit post: 2,000+ users in 48 hours. Its description states a ~$1M pre-seed from Afore and the a16z Speedrun scout fund. Fall 2026, two founders.",
         "zh": "一个每晚唤醒你 Mac 的本地 LLM，在本机读取新邮件、消息、文件和会议记录，把第二天的工作提前备好——自研 LiteRT-LM 分支可跑在 8 GB Mac 上，边际成本约为零。靠一条 Reddit 帖子软上线：48 小时 2,000 多用户。其描述称已从 Afore 和 a16z Speedrun scout 基金融到约 100 万美元 pre-seed。2026 秋季，两位创始人。"
       },
       "learn": {
-        "en": "Proactive AI needs inference over your entire life, and the only place that's both affordable and private is your own chip. Local-first is becoming a product strategy, not just a privacy stance — and consumer traction is now measured in hours.",
+        "en": "Proactive AI needs inference over your entire life, and the only place that's both affordable and private is your own chip. Local-first is becoming a product strategy as much as a privacy stance, and consumer traction is now measured in hours.",
         "zh": "主动式 AI 需要对你全部生活做推理，唯一既便宜又私密的地方是你自己的芯片。本地优先正在从隐私立场变成产品策略——而消费级 traction 如今以小时计。"
       },
       "signals": {
@@ -1841,11 +1841,11 @@
       "slug": "donkey",
       "theme": "agentic-commerce",
       "why": {
-        "en": "An AI-native trading company: upload a buying list and Donkey lands the whole container at one locked, delivered price with tariffs included — finding the real factory behind the customs record, stacking duty line by line, packing the box on weight and cube. Team in San Francisco and Wuhan; next step is shared containers so small buyers pool a box at container prices. Five people on two founders.",
+        "en": "An AI-native trading company: upload a buying list and Donkey lands the whole container at one locked, delivered price with tariffs included, finding the real factory behind the customs record, stacking duty line by line, packing the box on weight and cube. Team in San Francisco and Wuhan; next step is shared containers so small buyers pool a box at container prices. Five people on two founders.",
         "zh": "AI 原生贸易公司：上传采购清单，Donkey 把整个集装箱以一个含关税的锁定到岸价送到门——从报关记录找到真实工厂、逐行叠加关税、按重量和体积装箱。团队分布在旧金山和武汉；下一步是“拼柜”，让小买家以整柜价合装一个箱。两位创始人带 5 人。"
       },
       "learn": {
-        "en": "The agent replaces the trading company's rooms of people on the phone — the most China-relevant business model in the cohort, and a test of whether a locked delivered price can survive freight, FX and tariff volatility.",
+        "en": "The agent replaces the trading company's rooms of people on the phone. The most China-relevant business model in the cohort, and a test of whether a locked delivered price can survive freight, FX and tariff volatility.",
         "zh": "agent 替代了贸易公司里一屋子打电话的人——本期与中国关联最强的商业模式，也在检验一个锁定到岸价能否扛住运费、汇率和关税的波动。"
       },
       "signals": {

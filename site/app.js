@@ -57,7 +57,7 @@
       subLine: "{n} companies · {a} → {b} · updated {d}", noDataSub: "no data yet",
       noData: "No data yet — run <code>python3 scripts/yc.py update</code> first.",
       heroTitle: "Endless Frontier",
-      heroLede: "Every company Y Combinator has listed publicly from Fall 2025 onward — what the cohort looks like, and the ones worth your attention. Updated {d}.",
+      heroLede: "Every company Y Combinator has listed publicly since Fall 2025: what the cohort looks like, and the ones worth your attention. Updated {d}.",
       alertArrived: "{n} companies arrived after the last analyst review ({d}).",
       alertFlagged: "They are flagged on the Updates tab until the watchlist is refreshed.",
       alertBtn: "Review queue →",
